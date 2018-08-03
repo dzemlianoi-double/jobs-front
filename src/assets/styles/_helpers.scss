@@ -1,11 +1,11 @@
 @each $size in (0) {
   @each $prop in (t: top, b: bottom, l: left, r: right) {
     .m#{nth($prop, 1)}-#{$size} {
-      margin-#{nth($prop, 2)}: #{$size}px !important;
+      margin-#{nth($prop, 2)}: #{$size}px ;
     }
   }
 }
 
 .c-black {
-  color: black;
+  color: #000;
 }

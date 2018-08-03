@@ -19,13 +19,13 @@ class Header extends Component {
                   <li className="nav-item"><a href="about-us.html">About us</a></li>
                   <li className="nav-item"><a href="services.html">Services</a></li>
                   <li className="nav-item"><a href="portfolio.html">Portfolio</a></li>
-                   <li className="nav-item dropdown">
+                  <li className="nav-item dropdown">
                       <a className="dropdown-toggle" href="blog.html" role="button" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blog</a>
                      <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a className="dropdown-item" href="blog.html">Blog Archive</a>
                         <a className="dropdown-item" href="blog-single.html">Blog Single</a>
                       </div>
-                  </li>
+                    </li>
                     <li className="nav-item"><a href="contact.html">Contact us</a></li>
                     <li className="nav-item"><a href="404.html">404 Page</a></li>
                 </ul>

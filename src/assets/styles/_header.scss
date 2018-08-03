@@ -1,0 +1,110 @@
+#mu-hero {
+	background-color: #0091ea;
+	display: inline;
+	float: left;
+	width: 100%;
+}
+
+.mu-logo-area {
+	display: inline;
+	float: left;
+	width: 50%;
+}
+
+.mu-navbar .mu-logo {
+	color: #fff;
+	font-size: 36px;
+	font-weight: 600;
+}
+
+.mu-logo span{
+	display: inline-block;
+}
+
+.mu-logo img {
+	margin-top: -5px;
+}
+
+.mu-navbar .mu-logo:hover,
+.mu-navbar .mu-logo:focus {
+	color: #fff;
+}
+
+.mu-scrolldown-area {
+	display: inline;
+	float: left;
+	text-align: center;
+	width: 100%;
+}
+
+.mu-scrolldown {
+	color: #fff;
+	display: inline-block;
+	font-size: 40px;
+	margin-top: 50px;
+}
+
+.mu-scrolldown:hover,
+.mu-scrolldown:focus {
+	color: #fff;
+}
+
+.mu-navbar {
+	padding: 20px 0;
+}
+
+.mu-navbar-nav {
+	display: block;
+	text-align: right;
+	width: 100%;
+}
+
+.mu-navbar-nav li {
+	display: inline-block;
+	list-style: none;
+}
+
+.mu-navbar-nav li a {
+	-o-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	border-radius: 15px;
+	color: #fefeff;
+	display: inline-block;
+	font-size: 14px;
+	font-weight: 700;
+	padding: 9px 18px;
+	text-transform: uppercase;
+	transition: all 0.5s;
+}
+
+
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show > .nav-link {
+	color: #fff;
+}
+
+.mu-navbar-nav li.active a,
+.mu-navbar-nav li a:hover,
+.mu-navbar-nav li a:focus {
+	background-color: #fff;
+	color: #0091ea;
+}
+
+
+
+.mu-navbar-nav .dropdown-menu {
+	left: auto;
+	right: 0;
+}
+
+.mu-navbar-nav li .dropdown-menu a {
+	color: #444;
+	padding: 6px 15px;
+}
+
+.mu-navbar-nav li .dropdown-menu a:hover,
+.mu-navbar-nav li .dropdown-menu a:focus {
+	color: #0091ea;
+}

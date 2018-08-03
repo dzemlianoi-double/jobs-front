@@ -69,14 +69,13 @@
 	-webkit-transition: all 0.5s;
 	border-radius: 15px;
 	color: #fefeff;
-	display: inline-block;
+	display: block;
 	font-size: 14px;
 	font-weight: 700;
 	padding: 9px 18px;
 	text-transform: uppercase;
 	transition: all 0.5s;
 }
-
 
 .navbar-light .navbar-nav .active > .nav-link,
 .navbar-light .navbar-nav .nav-link.active,
@@ -91,8 +90,6 @@
 	background-color: #fff;
 	color: #0091ea;
 }
-
-
 
 .mu-navbar-nav .dropdown-menu {
 	left: auto;

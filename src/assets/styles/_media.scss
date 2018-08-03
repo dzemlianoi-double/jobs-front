@@ -9,8 +9,8 @@
 	}
 
 	.mu-quote-btn {
-		padding: 15px 45px;
 		margin-top: 15px;
+		padding: 15px 45px;
 	}
 
 	.mu-about-right ul li {
@@ -22,8 +22,8 @@
 	}
 
 	.mu-single-service-content {
-		width: 78%;
 		margin-left: 15px;
+		width: 78%;
 	}
 
 	.mu-video-close-btn {
@@ -31,8 +31,8 @@
 	}
 
 	.mu-video-right {
-		padding-right: 15%;
 		padding-left: 25px;
+		padding-right: 15%;
 	}
 
 	.mu-testimonial-slide .slick-prev {
@@ -48,11 +48,11 @@
 	}
 
 	.mu-social-media a {
-		margin-right: 3px;
-		width: 35px;
+		font-size: 15px;
 		height: 35px;
 		line-height: 35px;
-		font-size: 15px;
+		margin-right: 3px;
+		width: 35px;
 	}
 
 	/*About us page*/
@@ -62,8 +62,8 @@
 	}
 
 	.mu-single-team-content {
-		width: 74%;
 		padding: 10px 10px;
+		width: 74%;
 	}
 
 	.mu-single-team-content span {
@@ -110,9 +110,9 @@
 
 	.mu-navbar-nav {
 		display: flex;
+		margin-top: 10px;
 		text-align: left;
 		width: 100%;
-		margin-top: 10px;
 	}
 
 	.mu-navbar-nav li {
@@ -120,8 +120,8 @@
 	}
 
 	.mu-navbar .navbar-toggler {
-		color: #fff;
 		border-color: #fff;
+		color: #fff;
 		cursor: pointer;
 		padding: 10px 15px;
 	}
@@ -152,8 +152,8 @@
 	}
 
 	.mu-single-service-content {
-		width: 70%;
 		margin-left: 10px;
+		width: 70%;
 	}
 
 	.mu-video-iframe-area {
@@ -170,8 +170,8 @@
 	}
 
 	.mu-video-right {
-		padding-right: 5%;
 		padding-left: 15px;
+		padding-right: 5%;
 	}
 
 	.mu-single-counter span {
@@ -257,8 +257,8 @@
 	/*Blog Page*/
 
 	.mu-popular-content-widget .media > .mu-popular-post-img {
-		width: 75px;
 		margin-right: 5px;
+		width: 75px;
 	}
 
 	.mu-sidebar-widget-title {
@@ -309,8 +309,8 @@
 	}
 
 	.mu-call-to-action-area {
-		text-align: center;
 		padding: 50px 0;
+		text-align: center;
 	}
 
 	.mu-call-to-action-left h2 {
@@ -323,8 +323,8 @@
 	}
 
 	.mu-video-right {
-		padding-right: 5%;
 		padding: 10% 5%;
+		padding-right: 5%;
 	}
 
 	.mu-portfolio-area {
@@ -332,8 +332,8 @@
 	}
 
 	.mu-single-service {
-		margin-top: 20px;
 		margin-bottom: 20px;
+		margin-top: 20px;
 	}
 
 	.mu-single-service-content {
@@ -386,8 +386,8 @@
 	}
 
 	.mu-blog-item {
-		margin-top: 15px;
 		margin-bottom: 15px;
+		margin-top: 15px;
 	}
 
 	.mu-footer-top {
@@ -405,8 +405,8 @@
 	}
 
 	.mu-single-skills {
-		margin-top: 15px;
 		margin-bottom: 15px;
+		margin-top: 15px;
 	}
 
 	.mu-team-area {
@@ -434,8 +434,8 @@
 	}
 
 	.mu-popular-content-widget .media > .mu-popular-post-img {
-		width: 120px;
 		margin-right: 10px;
+		width: 120px;
 	}
 
 	.mu-sidebar-subscribe-widget .mu-subscribe-form input {
@@ -495,8 +495,8 @@
 	}
 
 	.mu-primary-btn {
-		padding: 12px 28px;
 		font-size: 14px;
+		padding: 12px 28px;
 	}
 
 	.mu-video-left {
@@ -512,10 +512,10 @@
 	}
 
 	.mu-video-close-btn {
-		top: 5px;
-		margin-top: 0;
 		height: 40px;
 		line-height: 35px;
+		margin-top: 0;
+		top: 5px;
 		width: 40px;
 	}
 
@@ -550,8 +550,8 @@
 	}
 
 	.mu-single-counter-content {
-		float: none;
 		display: inline-block;
+		float: none;
 	}
 
 	.mu-title h2 {
@@ -564,8 +564,8 @@
 	}
 
 	.mu-filter-item-content {
-		padding-top: 29%;
 		font-size: 18px;
+		padding-top: 29%;
 	}
 
 	.filtr-item h4 {
@@ -593,16 +593,16 @@
 	}
 
 	.mu-video-play-btn {
-		height: 40px;
-		width: 60px;
 		font-size: 16px;
+		height: 40px;
 		line-height: 40px;
+		width: 60px;
 	}
 
 	.slick-next,
 	.slick-prev {
-		width: 40px;
 		height: 40px;
+		width: 40px;
 	}
 
 	.slick-prev::before,
@@ -612,9 +612,9 @@
 
 	.scrollToTop {
 		font-size: 25px;
+		height: 45px;
 		line-height: 43px;
 		width: 45px;
-		height: 45px;
 	}
 
 	.mu-navbar {
@@ -653,9 +653,9 @@
 
 	.mu-blog-pagination .pagination .page-link {
 		font-size: 16px;
-		width: 35px;
 		height: 35px;
 		line-height: 33px;
+		width: 35px;
 	}
 
 	.mu-blog-pagination .pagination .page-item:first-child .page-link,
@@ -672,10 +672,10 @@
 	}
 
 	.mu-sidebar-social-widget .mu-social-media a {
-		width: 35px;
+		font-size: 16px;
 		height: 35px;
 		line-height: 35px;
-		font-size: 16px;
+		width: 35px;
 	}
 
 	/*Error Page*/
@@ -704,8 +704,8 @@
 	}
 
 	.mu-single-slide-content p {
-		margin-bottom: 0;
 		font-size: 12px;
+		margin-bottom: 0;
 	}
 
 	.mu-title h2 {
@@ -745,8 +745,8 @@
 	/*About Us page*/
 
 	.mu-single-team {
-		text-align: center;
 		padding: 10px 0;
+		text-align: center;
 	}
 
 	.mu-single-team-img,
@@ -765,8 +765,8 @@
 	}
 
 	.mu-popular-content-widget .media > .mu-popular-post-img {
-		width: 85px;
 		margin-right: 5px;
+		width: 85px;
 	}
 
 	.mu-sidebar-subscribe-widget .mu-subscribe-form input {
@@ -782,14 +782,14 @@
 	#respond input[type="email"],
 	#respond input[type="url"] {
 		height: 35px;
-		padding: 0 5px;
 		margin-bottom: 5px;
+		padding: 0 5px;
 		width: 100%;
 	}
 
 	#respond textarea {
-		padding: 10px;
 		height: 150px;
+		padding: 10px;
 	}
 
 	.mu-related-post .mu-related-post-title {
@@ -798,8 +798,8 @@
 	}
 
 	.mu-comments-area h2 {
-		margin-bottom: 10px;
 		font-size: 20px;
+		margin-bottom: 10px;
 	}
 
 	.mu-comments-area .comments .commentlist .children {
@@ -808,8 +808,8 @@
 
 	#respond .reply-title {
 		font-size: 22px;
-		padding-bottom: 5px;
 		margin-bottom: 20px;
+		padding-bottom: 5px;
 	}
 
 

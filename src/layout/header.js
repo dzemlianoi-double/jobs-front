@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
-class Header extends Component {
+export default class Header extends Component {
   render() {
     return (
       <header id="mu-hero">
@@ -13,11 +14,12 @@ class Header extends Component {
     			  <div className="collapse navbar-collapse" id="navbarSupportedContent">
     			    <ul className="navbar-nav mr-auto mu-navbar-nav">
     			      <li className="nav-item active">
-    			        <a href="index.html">Home</a>
+                  <Link to="/">Home</Link>
+
     			      </li>
-    			      <li className="nav-item"><a href="about-us.html">About us</a></li>
-    			      <li className="nav-item"><a href="services.html">Services</a></li>
-    			      <li className="nav-item"><a href="portfolio.html">Portfolio</a></li>
+    			      <li className="nav-item"><Link to="/about-us">About us</Link></li>
+    			      <li className="nav-item"><Link to="/services">Services</Link></li>
+    			      <li className="nav-item"><Link to="/portfolio">Portfolio</Link></li>
   			        <li className="nav-item dropdown">
 				          <a className="dropdown-toggle" href="blog.html" role="button" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blog</a>
 			            <div className="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -35,5 +37,3 @@ class Header extends Component {
     )
   }
 }
-
-export default Header;

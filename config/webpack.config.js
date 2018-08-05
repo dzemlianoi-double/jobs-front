@@ -5,7 +5,7 @@ module.exports = {
   mode: 'development',
   entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, 'dist'),// eslint-disable-line no-undef
+    path: path.resolve(__dirname, 'dist'), // eslint-disable-line no-undef
     filename: 'main.js',
     publicPath: '/dist'
 
@@ -44,6 +44,11 @@ module.exports = {
           'url-loader?limit=10000',
           'img-loader'
         ]
+      },
+      {
+        test: /\.json$/,
+        loader: 'json-loader',
+        include: path.resolve(__dirname, 'translations') // eslint-disable-line no-undef
       }
     ]
   },

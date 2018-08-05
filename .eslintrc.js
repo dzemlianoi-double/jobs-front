@@ -1,7 +1,11 @@
 module.exports = {
   "env": {
     "browser": true,
-    "es6": true
+    "es6": true,
+    "amd": true
+  },
+  "globals": {
+    "module": false
   },
   "extends": ["eslint:recommended",
   "plugin:react/recommended"],

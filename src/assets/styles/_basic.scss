@@ -4,7 +4,7 @@ html {
   font-family: 'Raleway', sans-serif;
 	font-size: 16px;
 	font-weight: 400;
-	overflow-x: hidden; 
+	overflow-x: hidden;
 	ul {
 		margin: 0;
 		padding: 0;
@@ -59,7 +59,7 @@ html {
 	code {
 		background-color: #ee6e73;
 		border-radius: 2px;
-		color: #fff;
+		color: $white;
 		padding: 2px 4px;
 	}
 	pre {

@@ -1,12 +1,11 @@
-const path = require('path')
-const webpack = require('webpack');
+const path = require('path');
 const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   mode: 'development',
   entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'dist'),// eslint-disable-line no-undef
     filename: 'main.js',
     publicPath: '/dist'
 
@@ -36,8 +35,8 @@ module.exports = {
         ]
       },
       {
-          test: /\.woff($|\?)|\.woff2($|\?)|\.ttf($|\?)|\.eot($|\?)|\.svg($|\?)/,
-          loader: 'url-loader'
+        test: /\.woff($|\?)|\.woff2($|\?)|\.ttf($|\?)|\.eot($|\?)|\.svg($|\?)/,
+        loader: 'url-loader'
       },
       {
         test: /\.(jpe?g|png|gif)$/i,
@@ -48,7 +47,10 @@ module.exports = {
       }
     ]
   },
+  devServer: {
+    historyApiFallback: true,
+  },
   plugins: [
     new Dotenv({path: './config/.env'})
   ]
-}
+};

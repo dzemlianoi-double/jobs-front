@@ -1,5 +1,5 @@
 files:
-  include: "**/*.scss"
+  include: "src/assets/**/*.scss"
   ignore:
     - node_modules/**
 syntax:

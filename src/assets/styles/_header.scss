@@ -12,7 +12,7 @@
 }
 
 .mu-navbar .mu-logo {
-	color: #fff;
+	color: $white;
 	font-size: 36px;
 	font-weight: 600;
 }
@@ -27,7 +27,7 @@
 
 .mu-navbar .mu-logo:hover,
 .mu-navbar .mu-logo:focus {
-	color: #fff;
+	color: $white;
 }
 
 .mu-scrolldown-area {
@@ -38,7 +38,7 @@
 }
 
 .mu-scrolldown {
-	color: #fff;
+	color: $white;
 	display: inline-block;
 	font-size: 40px;
 	margin-top: 50px;
@@ -46,7 +46,7 @@
 
 .mu-scrolldown:hover,
 .mu-scrolldown:focus {
-	color: #fff;
+	color: $white;
 }
 
 .mu-navbar {
@@ -81,13 +81,13 @@
 .navbar-light .navbar-nav .nav-link.active,
 .navbar-light .navbar-nav .nav-link.show,
 .navbar-light .navbar-nav .show > .nav-link {
-	color: #fff;
+	color: $white;
 }
 
 .mu-navbar-nav li.active a,
 .mu-navbar-nav li a:hover,
 .mu-navbar-nav li a:focus {
-	background-color: #fff;
+	background-color: $white;
 	color: #0091ea;
 }
 

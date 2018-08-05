@@ -1,3 +1,9 @@
 {
-  "hello": "Привет"
+  "menu": {
+    "main": "Главная",
+    "about_us": "О нас",
+    "vacancies": "Вакансии",
+    "contacts": "Контакты",
+    "services": "Услуги"
+  }
 }

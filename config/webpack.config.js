@@ -1,5 +1,6 @@
 const path = require('path');
 const Dotenv = require('dotenv-webpack');
+const dotenv = new Dotenv({path: './config/.env'});
 
 module.exports = {
   mode: 'development',
@@ -56,6 +57,6 @@ module.exports = {
     historyApiFallback: true,
   },
   plugins: [
-    new Dotenv({path: './config/.env'})
+    dotenv
   ]
 };

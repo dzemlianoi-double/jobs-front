@@ -10,7 +10,7 @@ export default class Footer extends Component {
               <div className="col-md-3">
                 <div className="mu-single-footer">
                   <img className="mu-footer-logo" src="../images/logo.png" alt="logo" />
-                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus. </p>
+                  <p>Оставьте свои контакты и мы свяжемся с вами в самое ближайшее время </p>
                   <div className="mu-social-media">
                     <a href="#"><i className="fa fa-facebook"></i></a>
                     <a className="mu-twitter" href="#"><i className="fa fa-twitter"></i></a>
@@ -43,7 +43,7 @@ export default class Footer extends Component {
               </div>
               <div className="col-md-3">
                 <div className="mu-single-footer">
-                  <h3>Useful link</h3>
+                  <h3>Разделы</h3>
                   <ul className="mu-useful-links">
                     <li><a href="#">Help Center</a></li>
                     <li><a href="#">Download Center</a></li>

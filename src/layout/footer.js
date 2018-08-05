@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 export default class Footer extends Component {
   render() {
@@ -24,20 +24,20 @@ export default class Footer extends Component {
                 <div className="mu-single-footer">
                   <h3>Twitter feed</h3>
                   <ul className="list-unstyled">
-                      <li className="media">
-                       <span className="fa fa-twitter"></span>
-                        <div className="media-body">
-                          <p><strong>@b_hero</strong> Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-                          <a href="#">2 hours ago</a>
-                        </div>
-                      </li>
-                      <li className="media">
-                        <span className="fa fa-twitter"></span>
-                        <div className="media-body">
-                          <p><strong>@b_hero</strong> Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-                          <a href="#">2 hours ago</a>
-                        </div>
-                      </li>
+                    <li className="media">
+                      <span className="fa fa-twitter"></span>
+                      <div className="media-body">
+                        <p><strong>@b_hero</strong> Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                        <a href="#">2 hours ago</a>
+                      </div>
+                    </li>
+                    <li className="media">
+                      <span className="fa fa-twitter"></span>
+                      <div className="media-body">
+                        <p><strong>@b_hero</strong> Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                        <a href="#">2 hours ago</a>
+                      </div>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -65,15 +65,15 @@ export default class Footer extends Component {
                     <li className="media">
                       <span className="fa fa-phone"></span>
                       <div className="media-body">
-                         <p>+00 123 456 789 00</p>
+                        <p>+00 123 456 789 00</p>
                         <p>+ 00 254 632 548 00</p>
                       </div>
                     </li>
                     <li className="media">
                       <span className="fa fa-envelope"></span>
                       <div className="media-body">
-                       <p>support@bhero.com</p>
-                       <p>help.behero@gmail.com</p>
+                        <p>support@bhero.com</p>
+                        <p>help.behero@gmail.com</p>
                       </div>
                     </li>
                   </ul>
@@ -94,6 +94,6 @@ export default class Footer extends Component {
           </div>
         </div>
       </footer>
-    )
+    );
   }
 }

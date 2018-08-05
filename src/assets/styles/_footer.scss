@@ -6,7 +6,7 @@
 }
 
 .mu-footer-top {
-	background-color: #0277bd;
+	background-color: $strong_blue_2;
 	display: inline;
 	float: left;
 	padding: 55px 0;
@@ -33,7 +33,7 @@
 }
 
 .mu-single-footer ul li {
-	border-bottom: 1px solid $strong_blue;
+	border-bottom: 1px solid $strong_blue_1;
 	font-size: 14px;
 	list-style: none;
 	margin-bottom: 10px;
@@ -75,7 +75,7 @@
 }
 
 .mu-footer-bottom {
-	background-color: #004f7f;
+	background-color: $strong_blue_5;
 	display: inline;
 	float: left;
 	padding: 20px 0;
@@ -90,7 +90,7 @@
 }
 
 .mu-social-media {
-	border-top: 1px solid $strong_blue;
+	border-top: 1px solid $strong_blue_1;
 	display: inline;
 	float: left;
 	padding-top: 12px;
@@ -98,7 +98,7 @@
 }
 
 .mu-social-media a {
-	background-color: #3b5998;
+	background-color: $strong_blue_3;
 	border: 1px solid #babcbe;
 	border-radius: 50%;
 	color: $white;

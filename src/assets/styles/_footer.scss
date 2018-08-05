@@ -1,5 +1,5 @@
 #mu-footer {
-	background-color: #fff;
+	background-color: $white;
 	display: inline;
 	float: left;
 	width: 100%;
@@ -14,7 +14,7 @@
 }
 
 .mu-single-footer {
-	color: #fff;
+	color: $white;
 	display: inline;
 	float: left;
 	font-size: 14px;
@@ -26,14 +26,14 @@
 }
 
 .mu-single-footer h3 {
-	color: #fff;
+	color: $white;
 	font-size: 18px;
 	margin-bottom: 35px;
 	text-transform: uppercase;
 }
 
 .mu-single-footer ul li {
-	border-bottom: 1px solid #1c85c4;
+	border-bottom: 1px solid $strong_blue;
 	font-size: 14px;
 	list-style: none;
 	margin-bottom: 10px;
@@ -45,7 +45,7 @@
 }
 
 .mu-single-footer ul li a {
-	color: #fff;
+	color: $white;
 }
 
 .mu-single-footer .mu-useful-links li {
@@ -90,7 +90,7 @@
 }
 
 .mu-social-media {
-	border-top: 1px solid #1c85c4;
+	border-top: 1px solid $strong_blue;
 	display: inline;
 	float: left;
 	padding-top: 12px;
@@ -101,7 +101,7 @@
 	background-color: #3b5998;
 	border: 1px solid #babcbe;
 	border-radius: 50%;
-	color: #fff;
+	color: $white;
 	display: inline-block;
 	font-size: 16px;
 	height: 40px;
@@ -132,18 +132,18 @@
 .mu-social-media a:hover,
 .mu-social-media a:focus {
 	border-color: #babcbe;
-	color: #fff;
+	color: $white;
 }
 
 .mu-copy-right {
-	color: #fff;
+	color: $white;
 	font-size: 14px;
 	margin-bottom: 0;
 }
 
 .mu-copy-right a {
 	-webkit-transition: all 0.5s;
-	color: #fff;
+	color: $white;
 	font-weight: 600;
 	transition: all 0.5s;
 }

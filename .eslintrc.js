@@ -9,9 +9,13 @@ module.exports = {
     "module": false
   },
   "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "parser": "babel-eslint",
   "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
     "ecmaFeatures": {
-      "jsx": true
+      "jsx": true,
+      "sourceType": "module"
     },
     "ecmaVersion": 2018,
     "sourceType": "module"

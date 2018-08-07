@@ -21,6 +21,11 @@ function addAddresses(addresses) {
   return { type: 'RECEIVE_ADDRESSES', payload: addresses };
 }
 
+function finishLoading() {
+  return { type: 'ADD_FLAG_TRUE', payload: true };
+}
+console.log(finishLoading());
+
 function addReceiveData(dispatch) {
   axios.post(process.env.API_HOST + external_routes.basic_conf).then(resp => {
     const data = resp.data;
@@ -28,7 +33,8 @@ function addReceiveData(dispatch) {
     dispatch(addNumbers(data.phone_numbers)),
     dispatch(addSocialLinks(data.social_links)),
     dispatch(addCoordinates(data.coordinates)),
-    dispatch(addAddresses(data.addresses));
+    dispatch(addAddresses(data.addresses)),
+    dispatch(finishLoading(true));
   });
 }
 

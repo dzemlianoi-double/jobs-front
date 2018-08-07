@@ -37,7 +37,7 @@ export default function contacts(state = initialState, action) {
   case 'FINISH_LOADING':
     return {
       ...state,
-      loading: false
+      loading: true
     };
   default:
     return state;

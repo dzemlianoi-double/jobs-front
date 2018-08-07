@@ -20,16 +20,16 @@
 }
 
 .spinner-wrapper {
+  left: 35%;
   position: absolute;
   top: 35%;
-  left: 35%;
 }
 
 div.spinner-content {
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   p {
     color: $strong-blue-5;
     font-family: 'Pacifico', cursive;
@@ -42,19 +42,19 @@ div.spinner-content {
 }
 
 .l1 {
+  animation: loading1 1s 0s infinite ease-in-out;
   background: $strong-blue-5;
   height: 7px;
-  width: 60px;
   margin: 13px;
-  animation:loading1 1s 0s infinite ease-in-out;
+  width: 60px;
 }
 
 .l2 {
   @extend .l1;
-  animation:loading2 .5s 0s infinite ease-in-out alternate;
+  animation: loading2 .5s 0s infinite ease-in-out alternate;
 }
 
 .l3 {
   @extend .l1;
-  animation:loading1 1s 0s infinite ease-in-out reverse;
+  animation: loading1 1s 0s infinite ease-in-out reverse;
 }

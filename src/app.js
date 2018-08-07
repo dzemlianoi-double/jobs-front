@@ -19,7 +19,7 @@ class App extends Component {
 
   render () {
     if (this.props.loading) {
-      return <Spinner />
+      return <Spinner />;
     } else {
       return(
         <div>

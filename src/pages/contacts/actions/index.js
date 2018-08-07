@@ -1,5 +1,5 @@
 import axios from 'axios';
-import external_path from '../../../config/external_routes';
+import external_routes from '../../../config/external_routes';
 
 function addEmails(emails) {
   return { type: 'RECEIVE_EMAILS', payload: emails };
@@ -22,7 +22,7 @@ function addAddresses(addresses) {
 }
 
 function addReceiveData(dispatch) {
-  axios.post(process.env.API_HOST+external_path.basic_conf).then(resp => {
+  axios.post(process.env.API_HOST + external_routes.basic_conf).then(resp => {
     const data = resp.data;
     dispatch(addEmails(data.emails)),
     dispatch(addNumbers(data.phone_numbers)),

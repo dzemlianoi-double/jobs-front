@@ -1,38 +1,47 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import T from '../store/translations';
-import routes from '../config/internal_routes';
+import internal_routes from '../config/internal_routes';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 class Footer extends Component {
+  static propTypes = {
+    phone_numbers: PropTypes.object.isRequired,
+    social_links: PropTypes.object.isRequired,
+    coordinates: PropTypes.object.isRequired,
+    addresses: PropTypes.object.isRequired,
+    emails: PropTypes.array.isRequired
+  };
+
   renderNumbers = () => {
     return Object.values(this.props.phone_numbers).map((phone_number) => {
       return phone_number;
-    })
+    });
   }
 
   renderSocialLinks = () => {
     return Object.values(this.props.social_links).map((social_link) => {
       return social_link;
-    })
+    });
   }
 
   renderCoordinates = () => {
     return Object.values(this.props.coordinates).map((coordinat) => {
       return coordinat;
-    })
+    });
   }
 
   renderAddresses = () => {
     return Object.values(this.props.addresses).map((address) => {
       return address;
-    })
+    });
   }
 
   renderEmails = () => {
     return this.props.emails.map((email) => {
       return email;
-    })
+    });
   }
 
   render() {
@@ -80,27 +89,27 @@ class Footer extends Component {
                   <h3>Разделы</h3>
                   <ul className="mu-useful-links">
                     <li>
-                      <Link to={routes.home}>
+                      <Link to={internal_routes.home}>
                         <T.span text="menu.main" />
                       </Link>
                     </li>
                     <li>
-                      <Link to={routes.about_us}>
+                      <Link to={internal_routes.about_us}>
                         <T.span text="menu.about_us" />
                       </Link>
                     </li>
                     <li>
-                      <Link to={routes.services}>
+                      <Link to={internal_routes.services}>
                         <T.span text="menu.services" />
                       </Link>
                     </li>
                     <li>
-                      <Link to={routes.vacancies}>
+                      <Link to={internal_routes.vacancies}>
                         <T.span text="menu.vacancies" />
                       </Link>
                     </li>
                     <li>
-                      <Link to={routes.contacts}>
+                      <Link to={internal_routes.contacts}>
                         <T.span text="menu.contacts" />
                       </Link>
                     </li>

@@ -1,4 +1,4 @@
-const routes = {
+const internal_routes = {
   home: '/',
   about_us: '/about_us',
   services: '/services',
@@ -6,4 +6,4 @@ const routes = {
   contacts: '/contacts'
 };
 
-export default routes;
+export default internal_routes;

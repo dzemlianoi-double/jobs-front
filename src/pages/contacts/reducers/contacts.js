@@ -4,7 +4,7 @@ const initialState = {
   social_links: {},
   coordinates: {},
   addresses: {},
-  loading: false
+  loading: true
 };
 
 export default function contacts(state = initialState, action) {
@@ -34,7 +34,7 @@ export default function contacts(state = initialState, action) {
       ...state,
       social_links: action.payload
     };
-  case 'ADD_FLAG_TRUE':
+  case 'FINISH_LOADING':
     return {
       ...state,
       loading: false

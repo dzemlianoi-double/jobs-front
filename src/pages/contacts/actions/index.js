@@ -22,9 +22,8 @@ function addAddresses(addresses) {
 }
 
 function finishLoading() {
-  return { type: 'ADD_FLAG_TRUE', payload: true };
+  return { type: 'FINISH_LOADING'};
 }
-console.log(finishLoading());
 
 function addReceiveData(dispatch) {
   axios.post(process.env.API_HOST + external_routes.basic_conf).then(resp => {
@@ -34,7 +33,7 @@ function addReceiveData(dispatch) {
     dispatch(addSocialLinks(data.social_links)),
     dispatch(addCoordinates(data.coordinates)),
     dispatch(addAddresses(data.addresses)),
-    dispatch(finishLoading(true));
+    dispatch(finishLoading());
   });
 }
 

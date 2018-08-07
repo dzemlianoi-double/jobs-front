@@ -33,6 +33,7 @@
     "i18n-react": "^0.6.4",
     "img-loader": "^3.0.0",
     "jquery": "^3.3.1",
+    "lodash": "^4.17.10",
     "mini-css-extract-plugin": "^0.4.0",
     "node-sass": "^4.9.2",
     "prop-types": "^15.6.1",
@@ -56,6 +57,7 @@
     "eslint-plugin-react": "^7.10.0",
     "husky": "^0.14.3",
     "json-loader": "^0.5.7",
+    "redux-devtools-extension": "^2.13.5",
     "sass-lint-auto-fix": "^0.11.1",
     "webpack-dev-server": "^3.1.4"
   }

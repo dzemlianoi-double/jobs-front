@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import T from '../store/translations';
+import routes from '../config/internal_routes';
 
 export default class Header extends Component {
   render() {
@@ -15,19 +16,19 @@ export default class Header extends Component {
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
               <ul className="navbar-nav mr-auto mu-navbar-nav">
                 <li className="nav-item active">
-                  <Link to="/"><T.span text="menu.main" /></Link>
+                  <Link to={routes.home}><T.span text="menu.main" /></Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="/about-us"><T.span text="menu.about_us" /></Link>
+                  <Link to={routes.about_us}><T.span text="menu.about_us" /></Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="/services"><T.span text="menu.services" /></Link>
+                  <Link to={routes.services}><T.span text="menu.services" /></Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="/vacancies"><T.span text="menu.vacancies" /></Link>
+                  <Link to={routes.vacancies}><T.span text="menu.vacancies" /></Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="/contacts"><T.span text="menu.contacts" /></Link>
+                  <Link to={routes.contacts}><T.span text="menu.contacts" /></Link>
                 </li>
               </ul>
             </div>

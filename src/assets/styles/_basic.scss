@@ -1,6 +1,6 @@
 body,
 html {
-  color: #666;
+  color: $gray-dark-1;
   font-family: 'Raleway', sans-serif;
 	font-size: 16px;
 	font-weight: 400;
@@ -15,7 +15,7 @@ html {
 		}
 	}
 	a {
-		color: #2f2f2f;
+		color: $gray-dark-2;
 		text-decoration: none;
 		&:hover,
 		&:focus {
@@ -57,26 +57,26 @@ html {
 		max-width: 100%;
 	}
 	code {
-		background-color: #ee6e73;
+		background-color: $soft-red;
 		border-radius: 2px;
 		color: $white;
 		padding: 2px 4px;
 	}
 	pre {
-		background-color: #f8f8f8;
-		border: 1px solid #eee;
+		background-color: $gray-light-1;
+		border: 1px solid $gray-light-2;
 		border-radius: 4px;
 		padding: 10px;
 		code {
 			background-color: transparent;
-			color: #333;
+			color: $gray-dark-3;
 		}
 	}
 	del{
-		text-decoration-color: #ee6e73;
+		text-decoration-color: $soft-red;
 	}
 	kbd {
-		background-color: #ddd;
+		background-color: $gray-light-3;
 		border-radius: 2px;
 		padding: 4px 6px;
 	}
@@ -93,10 +93,10 @@ html {
 		}
 	}
 	blockquote {
-		background-color: #f8f8f8;
-		border-left: 5px solid #0091ea;
+		background-color: $gray-light-1;
+		border-left: 5px solid $pure-blue;
 		border-radius: 0 4px 4px 0;
-		color: #323232;
+		color: $gray-dark-4;
 		font-weight: 600;
 		padding: 15px 15px;
 		p {

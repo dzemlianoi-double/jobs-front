@@ -33,7 +33,7 @@ function addReceiveData(dispatch) {
     dispatch(addSocialLinks(data.social_links)),
     dispatch(addCoordinates(data.coordinates)),
     dispatch(addAddresses(data.addresses)),
-    dispatch(finishLoading())
+    dispatch(finishLoading());
   });
 }
 

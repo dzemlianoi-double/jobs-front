@@ -55,7 +55,6 @@
 }
 
 .mu-single-footer .list-unstyled li {
-	margin-bottom: 20px;
 	padding-bottom: 10px;
 }
 
@@ -146,4 +145,10 @@
 	color: $white;
 	font-weight: 600;
 	transition: all 0.5s;
+}
+
+.media  {
+	.icon {
+		margin-top: 3px;
+	}
 }

@@ -4,6 +4,7 @@ import T from '../store/translations';
 import internal_routes from '../config/internal_routes';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import _ from 'lodash';
 
 class Footer extends Component {
   static propTypes = {
@@ -11,18 +12,30 @@ class Footer extends Component {
     social_links: PropTypes.object.isRequired,
     coordinates: PropTypes.object.isRequired,
     addresses: PropTypes.object.isRequired,
-    emails: PropTypes.array.isRequired
+    emails: PropTypes.array.isRequired,
+    vacancies: PropTypes.array.isRequired
   };
 
   renderNumbers = () => {
     return Object.values(this.props.phone_numbers).map((phone_number) => {
-      return phone_number;
+      return (
+        <div key={phone_number.toString()}>
+          <span className="fa fa-phone"></span>
+          <span>{phone_number}</span>
+        </div>
+      );
     });
   }
 
   renderSocialLinks = () => {
-    return Object.values(this.props.social_links).map((social_link) => {
-      return social_link;
+    return _.map(this.props.social_links, function (value, key){
+      const social_icon = 'fa fa-' + key;
+      const style_icons = 'mu-' + key;
+      return (
+        <a className={style_icons} href={value}>
+          <span key={value.toString()}><i className={social_icon}></i></span>
+        </a>
+      );
     });
   }
 
@@ -34,13 +47,39 @@ class Footer extends Component {
 
   renderAddresses = () => {
     return Object.values(this.props.addresses).map((address) => {
-      return address;
+      return (
+        <div key={address.toString()}>
+          <span className="fa fa-home"></span>
+          <span>{address}</span>
+        </div>
+      );
     });
   }
 
   renderEmails = () => {
     return this.props.emails.map((email) => {
-      return email;
+      return (
+        <div key={email.toString()}>
+          <span className="fa fa-envelope"></span>
+          <span>{email}</span>
+        </div>
+      );
+    });
+  }
+
+  renderVacancies = () => {
+    return _.map(this.props.vacancies, function (value, key) {// eslint-disable-line no-unused-vars
+      return (
+        <li className="media">
+          <span className="fa fa-clock-o icon"></span>
+          <div className="media-body">
+            <span key={value.title}><b>{value.title}</b></span>
+            <span key={value.country}>{value.country}, {value.city}</span><br/>
+            <p key={value.salary_min}>{value.salary_min}-{value.salary_max} rub</p>
+            <a href="#">Посмотреть</a>
+          </div>
+        </li>
+      );
     });
   }
 
@@ -55,25 +94,15 @@ class Footer extends Component {
                   <img className="mu-footer-logo" src="../images/logo.png" alt="logo" />
                   <p>Оставьте свои контакты и мы свяжемся с вами в самое ближайшее время </p>
                   <div className="mu-social-media">
-                    <a href="#"><i className="fa fa-facebook"></i></a>
-                    <a className="mu-twitter" href="#"><i className="fa fa-twitter"></i></a>
-                    <a className="mu-pinterest" href="#"><i className="fa fa-pinterest-p"></i></a>
-                    <a className="mu-google-plus" href="#"><i className="fa fa-google-plus"></i></a>
-                    <a className="mu-youtube" href="#"><i className="fa fa-youtube"></i></a>
+                    {this.renderSocialLinks()}
                   </div>
                 </div>
               </div>
               <div className="col-md-3">
                 <div className="mu-single-footer">
-                  <h3>Twitter feed</h3>
+                  <h3>Последние вакансии</h3>
                   <ul className="list-unstyled">
-                    <li className="media">
-                      <span className="fa fa-twitter"></span>
-                      <div className="media-body">
-                        <p><strong>@b_hero</strong> Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-                        <a href="#">2 hours ago</a>
-                      </div>
-                    </li>
+                    {this.renderVacancies()}
                     <li className="media">
                       <span className="fa fa-twitter"></span>
                       <div className="media-body">
@@ -121,23 +150,19 @@ class Footer extends Component {
                   <h3>Contact Information</h3>
                   <ul className="list-unstyled">
                     <li className="media">
-                      <span className="fa fa-home">{this.renderCoordinates()}</span>
+                      {this.renderCoordinates()}
                       <div className="media-body">
-                        <p>{this.renderAddresses()}</p>
+                        {this.renderAddresses()}
                       </div>
                     </li>
                     <li className="media">
-                      <span className="fa fa-phone"></span>
                       <div className="media-body">
-                        <p>{this.renderNumbers()}</p>
-                        <p>+ 00 254 632 548 00</p>
+                        {this.renderNumbers()}
                       </div>
                     </li>
                     <li className="media">
-                      <span className="fa fa-envelope"></span>
                       <div className="media-body">
-                        <p>{this.renderSocialLinks()}</p>
-                        <p>{this.renderEmails()}</p>
+                        {this.renderEmails()}
                       </div>
                     </li>
                   </ul>
@@ -169,6 +194,7 @@ function select(store) {
     social_links: store.contacts.social_links,
     coordinates: store.contacts.coordinates,
     addresses: store.contacts.addresses,
+    vacancies: store.jobs.last_vacancies
   };
 }
 

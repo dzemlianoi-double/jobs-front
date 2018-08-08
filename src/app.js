@@ -4,8 +4,8 @@ import Main from './layout/main';
 import Footer from './layout/footer';
 import { connect } from 'react-redux';
 import { addReceiveData } from './pages/contacts/actions/index';
-import Loader from 'react-loader-spinner';
 import PropTypes from 'prop-types';
+import Spinner from './layout/spinner';
 
 class App extends Component {
   static propTypes = {
@@ -19,11 +19,7 @@ class App extends Component {
 
   render () {
     if (this.props.loading) {
-      return(
-        <div className="text-center">
-          <Loader type="Audio" color="#85c8fd" width="250px" height="500px" />
-        </div>
-      );
+      return <Spinner />;
     } else {
       return(
         <div>

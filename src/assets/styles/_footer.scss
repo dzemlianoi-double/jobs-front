@@ -23,12 +23,13 @@
 
 .mu-footer-logo {
 	margin-bottom: 25px;
+	width: 110px;
 }
 
 .mu-single-footer h3 {
 	color: $white;
-	font-size: 18px;
-	margin-bottom: 35px;
+	font-size: 17px;
+	margin-bottom: 15px;
 	text-transform: uppercase;
 }
 
@@ -49,13 +50,13 @@
 }
 
 .mu-single-footer .mu-useful-links li {
-	line-height: 1;
-	margin-bottom: 15px;
-	padding-bottom: 15px;
+	// line-height: 1;
+	// margin-bottom: 15px;
+	// padding-bottom: 15px;
 }
 
 .mu-single-footer .list-unstyled li {
-	padding-bottom: 10px;
+	// padding-bottom: 10px;
 }
 
 .mu-single-footer .list-unstyled li.media span {
@@ -149,6 +150,21 @@
 
 .media  {
 	.icon {
-		margin-top: 3px;
+		margin-top: 5px;
+	}
+}
+
+.vacancies-list-footer {
+	padding: 0;
+	.media {
+		margin: 0;
+	}
+}
+
+.mu-useful-links {
+	li {
+		span {
+			margin-right: 10px;
+		}
 	}
 }

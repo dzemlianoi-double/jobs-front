@@ -4,6 +4,7 @@ import T from '../store/translations';
 import internal_routes from '../config/internal_routes';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import logo from '../assets/images/worker_logo.png';
 import _ from 'lodash';
 
 class Footer extends Component {
@@ -48,10 +49,12 @@ class Footer extends Component {
   renderAddresses = () => {
     return Object.values(this.props.addresses).map((address) => {
       return (
-        <div key={address.toString()}>
-          <span className="fa fa-home"></span>
-          <span>{address}</span>
-        </div>
+        <li key={address.toString()} className="media">
+          <span className="fa fa-home icon"></span>
+          <div className="media-body">
+            <span>{address}</span>
+          </div>
+        </li>
       );
     });
   }
@@ -75,7 +78,7 @@ class Footer extends Component {
           <div className="media-body">
             <span key={value.title}><b>{value.title}</b></span>
             <span key={value.country}>{value.country}, {value.city}</span><br/>
-            <p key={value.salary_min}>{value.salary_min}-{value.salary_max} rub</p>
+            <p key={value.salary_min}>{value.salary_min}-{value.salary_max} грн</p>
             <a href="#">Посмотреть</a>
           </div>
         </li>
@@ -91,7 +94,7 @@ class Footer extends Component {
             <div className="row">
               <div className="col-md-3">
                 <div className="mu-single-footer">
-                  <img className="mu-footer-logo" src="../images/logo.png" alt="logo" />
+                  <img className="mu-footer-logo" src={logo} alt="logo" />
                   <p>Оставьте свои контакты и мы свяжемся с вами в самое ближайшее время </p>
                   <div className="mu-social-media">
                     {this.renderSocialLinks()}
@@ -100,44 +103,42 @@ class Footer extends Component {
               </div>
               <div className="col-md-3">
                 <div className="mu-single-footer">
-                  <h3>Последние вакансии</h3>
-                  <ul className="list-unstyled">
+                  <h3>{T.translate('menu.last_vacancies')}</h3>
+                  <ul className="list-unstyled vacancies-list-footer">
                     {this.renderVacancies()}
-                    <li className="media">
-                      <span className="fa fa-twitter"></span>
-                      <div className="media-body">
-                        <p><strong>@b_hero</strong> Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-                        <a href="#">2 hours ago</a>
-                      </div>
-                    </li>
                   </ul>
                 </div>
               </div>
               <div className="col-md-3">
                 <div className="mu-single-footer">
-                  <h3>Разделы</h3>
+                  <h3>{T.translate('menu.sections')}</h3>
                   <ul className="mu-useful-links">
                     <li>
+                      <span><i className="fa fa-circle" aria-hidden="true"></i></span>
                       <Link to={internal_routes.home}>
                         <T.span text="menu.main" />
                       </Link>
                     </li>
                     <li>
+                      <span><i className="fa fa-circle" aria-hidden="true"></i></span>
                       <Link to={internal_routes.about_us}>
                         <T.span text="menu.about_us" />
                       </Link>
                     </li>
                     <li>
+                      <span><i className="fa fa-circle" aria-hidden="true"></i></span>
                       <Link to={internal_routes.services}>
                         <T.span text="menu.services" />
                       </Link>
                     </li>
                     <li>
+                      <span><i className="fa fa-circle" aria-hidden="true"></i></span>
                       <Link to={internal_routes.vacancies}>
                         <T.span text="menu.vacancies" />
                       </Link>
                     </li>
                     <li>
+                      <span><i className="fa fa-circle" aria-hidden="true"></i></span>
                       <Link to={internal_routes.contacts}>
                         <T.span text="menu.contacts" />
                       </Link>
@@ -147,14 +148,9 @@ class Footer extends Component {
               </div>
               <div className="col-md-3">
                 <div className="mu-single-footer">
-                  <h3>Contact Information</h3>
+                  <h3>{T.translate('menu.contact_inform')}</h3>
                   <ul className="list-unstyled">
-                    <li className="media">
-                      {this.renderCoordinates()}
-                      <div className="media-body">
-                        {this.renderAddresses()}
-                      </div>
-                    </li>
+                    {this.renderAddresses()}
                     <li className="media">
                       <div className="media-body">
                         {this.renderNumbers()}

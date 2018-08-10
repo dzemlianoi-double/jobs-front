@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import T from '../store/translations';
 import routes from '../config/internal_routes';
+import logo from '../assets/images/worker_logo.png';
 
 export default class Header extends Component {
   render() {
@@ -9,7 +10,7 @@ export default class Header extends Component {
       <header id="mu-hero">
         <div className="container">
           <nav className="navbar navbar-expand-lg navbar-light mu-navbar">
-            <Link to="/" className="navbar-brand mu-logo">{process.env.APP_NAME}</Link>
+            <Link to="/" className="navbar-brand mu-logo"><img src={logo}/></Link>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span className="fa fa-bars"></span>
             </button>

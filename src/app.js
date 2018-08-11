@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import Header from './layout/header';
 import Main from './layout/main';
 import Footer from './layout/footer';
-import { connect } from 'react-redux';
 import { addReceiveData, finishLoading } from './pages/contacts/actions/index';
 import { addReceiveDataLastVacancies } from './pages/vacancies/actions/index';
 import PropTypes from 'prop-types';
@@ -46,4 +47,4 @@ function select(store) {
   };
 }
 
-export default connect(select, mapPropsToDispatch)(App);
+export default withRouter(connect(select, mapPropsToDispatch)(App));

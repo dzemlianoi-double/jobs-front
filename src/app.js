@@ -6,7 +6,6 @@ import { connect } from 'react-redux';
 import { addReceiveData, finishLoading } from './pages/contacts/actions/index';
 import { addReceiveDataLastVacancies } from './pages/vacancies/actions/index';
 import PropTypes from 'prop-types';
-import Spinner from './layout/spinner';
 
 class App extends Component {
   static propTypes = {
@@ -23,17 +22,13 @@ class App extends Component {
   }
 
   render () {
-    if (this.props.loading) {
-      return <Spinner />;
-    } else {
-      return(
-        <div>
-          <Header />
-          <Main />
-          <Footer />
-        </div>
-      );
-    }
+    return(
+      <div>
+        <Header />
+        <Main />
+        <Footer />
+      </div>
+    );
   }
 }
 

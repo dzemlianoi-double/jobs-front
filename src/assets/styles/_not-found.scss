@@ -1,0 +1,104 @@
+.mu-error {
+  background-color: #fff;
+  display: inline;
+  float: left;
+  width: 100%;
+  .mu-error-area {
+    display: inline;
+    float: left;
+    padding: 100px 0;
+    text-align: center;
+    width: 100%;
+    .mu-title {
+      margin-bottom: 0;
+      h2 {
+        font-size: 24px;
+      }
+      p {
+        color: #323232;
+        font-size: 14px;
+      }
+    }
+    .mu-error-content {
+      display: inline;
+      float: left;
+      padding: 0 15%;
+      width: 100%;
+      .mu-error-text {
+        display: inline;
+        float: left;
+        width: 100%;
+        .mu-backdrop {
+          background-image: url('../images/error-bg.jpg');
+          background-size: cover;
+          height: 400px;
+          position: relative;
+          width: 100%;
+          .mu-text {
+            background-color: #fff;
+            border-radius: 2px;
+            color: #000;
+            font-size: 400px;
+            font-weight: 700;
+            height: 101%;
+            line-height: 300px;
+            margin-top: -1px;
+            mix-blend-mode: screen;
+            text-align: center;
+            width: 101%;
+          }
+          .mu-overlay {
+            background-color: #0091ea;
+            height: 100%;
+            mix-blend-mode: color;
+            position: absolute;
+            top: 0;
+            width: 100%;
+          }
+        }
+      }
+      .mu-error-search {
+        display: inline;
+        float: left;
+        width: 100%;
+        .mu-subscribe-form {
+          border: 1px solid #ddd;
+          border-radius: 25px;
+          display: flex;
+          float: left;
+          margin-top: 20px;
+          width: 100%;
+          input {
+            border: 1px solid #0091ea;
+            border: 0;
+            border-radius: 25px;
+            color: #000;
+            font-size: 14px;
+            height: 60px;
+            padding: 0 130px 0 20px;
+            padding: 0 170px 0 20px;
+            width: 100%;
+          }
+          .mu-subscribe-btn {
+          	background-color: #0091ea;
+          	border-radius: 24px;
+          	color: #fff;
+          	cursor: pointer;
+          	font-size: 18px;
+          	font-weight: 700;
+          	height: 48px;
+          	margin: 6px 10px 0 0;
+          	text-transform: uppercase;
+            width: 200px;
+          }
+        }
+      }
+      .mu-back-to-home {
+        color: #0091ea;
+        display: inline-block;
+        font-size: 14px;
+        margin-top: 60px;
+      }
+    }
+  }
+}

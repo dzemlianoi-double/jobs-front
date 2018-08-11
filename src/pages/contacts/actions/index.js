@@ -22,7 +22,7 @@ function addAddresses(addresses) {
 }
 
 function finishLoading() {
-  return { type: 'FINISH_LOADING'};
+  return { type: 'FINISH_LOADING' };
 }
 
 function addReceiveData(dispatch) {
@@ -32,11 +32,11 @@ function addReceiveData(dispatch) {
     dispatch(addNumbers(data.phone_numbers)),
     dispatch(addSocialLinks(data.social_links)),
     dispatch(addCoordinates(data.coordinates)),
-    dispatch(addAddresses(data.addresses)),
-    dispatch(finishLoading());
+    dispatch(addAddresses(data.addresses));
   });
 }
 
 module.exports = {
-  addReceiveData
+  addReceiveData,
+  finishLoading
 };

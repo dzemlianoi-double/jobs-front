@@ -30,13 +30,16 @@ const initialState = {
       age_min: 14,
       age_max: 65
     }
-  ]
+  ],
 };
 
 export default function jobs(state = initialState, action) {
   switch(action.type) {
-  case 'ADD_LIST':
-    return state;
+  case 'ADD_VACANCIES_LAST':
+    return {
+      ...state,
+      last_vacancies: action.payload
+    };
   default:
     return state;
   }

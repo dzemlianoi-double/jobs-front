@@ -3,38 +3,40 @@ import Header from './layout/header';
 import Main from './layout/main';
 import Footer from './layout/footer';
 import { connect } from 'react-redux';
-import { addReceiveData } from './pages/contacts/actions/index';
+import { addReceiveData, finishLoading } from './pages/contacts/actions/index';
+import { addReceiveDataLastVacancies } from './pages/vacancies/actions/index';
 import PropTypes from 'prop-types';
-import Spinner from './layout/spinner';
 
 class App extends Component {
   static propTypes = {
     addReceiveData: PropTypes.func.isRequired,
+    addReceiveDataLastVacancies: PropTypes.func.isRequired,
+    finishLoading: PropTypes.func.isRequired,
     loading: PropTypes.bool.isRequired
   };
 
   componentDidMount() {
     this.props.addReceiveData();
+    this.props.addReceiveDataLastVacancies();
+    this.props.finishLoading();
   }
 
   render () {
-    if (this.props.loading) {
-      return <Spinner />;
-    } else {
-      return(
-        <div>
-          <Header />
-          <Main />
-          <Footer />
-        </div>
-      );
-    }
+    return(
+      <div>
+        <Header />
+        <Main />
+        <Footer />
+      </div>
+    );
   }
 }
 
 function mapPropsToDispatch(dispatch) {
   return {
-    addReceiveData: () => dispatch(addReceiveData)
+    addReceiveData: () => dispatch(addReceiveData),
+    addReceiveDataLastVacancies: () => dispatch(addReceiveDataLastVacancies),
+    finishLoading: () => dispatch(finishLoading)
   };
 }
 

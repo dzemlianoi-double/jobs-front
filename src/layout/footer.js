@@ -88,7 +88,7 @@ class Footer extends Component {
 
   render() {
     return (
-      <footer id="mu-footer">
+      <footer className="mu-footer">
         <div className="mu-footer-top">
           <div className="container">
             <div className="row">

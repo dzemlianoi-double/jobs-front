@@ -7,7 +7,7 @@ import logo from '../assets/images/worker_logo.png';
 export default class Header extends Component {
   render() {
     return (
-      <header id="mu-hero">
+      <header className="mu-hero">
         <div className="container">
           <nav className="navbar navbar-expand-lg navbar-light mu-navbar">
             <Link to="/" className="navbar-brand mu-logo"><img src={logo}/></Link>

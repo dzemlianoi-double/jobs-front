@@ -1,10 +1,8 @@
 'use strict';
 
 import { combineReducers } from 'redux';
-import jobs from './pages/vacancies/reducers/jobs';
-import contacts from './pages/contacts/reducers/contacts';
+import basic from './pages/basic/reducers/basic';
 
 export default combineReducers({
-  jobs,
-  contacts
+  basic,
 });

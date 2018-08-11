@@ -185,12 +185,12 @@ class Footer extends Component {
 
 function select(store) {
   return {
-    emails: store.contacts.emails,
-    phone_numbers: store.contacts.phone_numbers,
-    social_links: store.contacts.social_links,
-    coordinates: store.contacts.coordinates,
-    addresses: store.contacts.addresses,
-    vacancies: store.jobs.last_vacancies
+    emails: store.basic.emails,
+    phone_numbers: store.basic.phone_numbers,
+    social_links: store.basic.social_links,
+    coordinates: store.basic.coordinates,
+    addresses: store.basic.addresses,
+    vacancies: store.basic.last_vacancies
   };
 }
 

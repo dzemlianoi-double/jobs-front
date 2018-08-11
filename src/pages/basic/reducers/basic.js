@@ -4,11 +4,17 @@ const initialState = {
   social_links: {},
   coordinates: {},
   addresses: {},
+  last_vacancies: [],
   loading: true
 };
 
-export default function contacts(state = initialState, action) {
-  switch(action.type) {
+export default function basic(state = initialState, action) {
+  switch (action.type) {
+  case 'ADD_VACANCIES_LAST':
+    return {
+      ...state,
+      last_vacancies: action.payload
+    };
   case 'RECEIVE_NUMBERS':
     return {
       ...state,
@@ -43,3 +49,4 @@ export default function contacts(state = initialState, action) {
     return state;
   }
 }
+

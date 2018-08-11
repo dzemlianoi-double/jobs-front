@@ -14,11 +14,13 @@
       h2 {
         font-size: 24px;
       }
+
       p {
         color: #323232;
         font-size: 14px;
       }
     }
+
     .mu-error-content {
       display: inline;
       float: left;
@@ -47,6 +49,7 @@
             text-align: center;
             width: 101%;
           }
+
           .mu-overlay {
             background-color: #0091ea;
             height: 100%;
@@ -57,6 +60,7 @@
           }
         }
       }
+
       .mu-error-search {
         display: inline;
         float: left;
@@ -79,6 +83,7 @@
             padding: 0 170px 0 20px;
             width: 100%;
           }
+
           .mu-subscribe-btn {
           	background-color: #0091ea;
           	border-radius: 24px;
@@ -93,6 +98,7 @@
           }
         }
       }
+
       .mu-back-to-home {
         color: #0091ea;
         display: inline-block;

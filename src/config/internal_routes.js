@@ -1,6 +1,6 @@
 const internal_routes = {
   home: '/',
-  who_we: '/who_we',
+  about_us: '/about_us',
   services: '/services',
   vacancies: '/vacancies',
   contacts: '/contacts' 

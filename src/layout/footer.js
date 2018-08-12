@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import T from '../store/translations';
-import internal_routes from '../config/internal_routes';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import logo from '../assets/images/worker_logo.png';
 import _ from 'lodash';
+
+import T from '../store/translations';
+import internal_routes from '../config/internal_routes';
+import logo from '../assets/images/worker_logo.png';
 
 class Footer extends Component {
   static propTypes = {
@@ -121,8 +122,8 @@ class Footer extends Component {
                     </li>
                     <li>
                       <span><i className="fa fa-circle" aria-hidden="true"></i></span>
-                      <Link to={internal_routes.who_we}>
-                        <T.span text="menu.who_we" />
+                      <Link to={internal_routes.about_us}>
+                        <T.span text="menu.about_us" />
                       </Link>
                     </li>
                     <li>

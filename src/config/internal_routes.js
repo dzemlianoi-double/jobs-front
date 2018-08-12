@@ -1,9 +1,9 @@
 const internal_routes = {
   home: '/',
-  about_us: '/about_us',
+  who_we: '/who_we',
   services: '/services',
   vacancies: '/vacancies',
-  contacts: '/contacts'
+  contacts: '/contacts' 
 };
 
 export default internal_routes;

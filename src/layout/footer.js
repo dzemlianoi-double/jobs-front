@@ -121,8 +121,8 @@ class Footer extends Component {
                     </li>
                     <li>
                       <span><i className="fa fa-circle" aria-hidden="true"></i></span>
-                      <Link to={internal_routes.about_us}>
-                        <T.span text="menu.about_us" />
+                      <Link to={internal_routes.who_we}>
+                        <T.span text="menu.who_we" />
                       </Link>
                     </li>
                     <li>

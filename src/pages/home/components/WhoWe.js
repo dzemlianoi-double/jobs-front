@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import img from '../../../assets/images/about-us.jpg';
 
 export default class WhoWe extends Component {
   render() {
@@ -19,7 +20,7 @@ export default class WhoWe extends Component {
                 <div className='row'>
                   <div className='col-md-6'>
                     <div className='mu-about-left'>
-                      <img className='' src='assets/images/about-us.jpg' alt='img' />
+                      <img src={img} alt='img' />
                     </div>
                     <div className='col-md-6'>
                       <div className='mu-about-right'>
@@ -44,7 +45,7 @@ export default class WhoWe extends Component {
               </div>
             </div>
           </div>
-        </div> 
+        </div>
       </section>
     );
   }

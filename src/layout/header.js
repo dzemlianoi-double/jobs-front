@@ -20,7 +20,7 @@ export default class Header extends Component {
                   <Link to={routes.home}><T.span text="menu.main" /></Link>
                 </li>
                 <li className="nav-item">
-                  <Link to={routes.about_us}><T.span text="menu.about_us" /></Link>
+                  <Link to={routes.who_we}><T.span text="menu.who_we" /></Link>
                 </li>
                 <li className="nav-item">
                   <Link to={routes.services}><T.span text="menu.services" /></Link>

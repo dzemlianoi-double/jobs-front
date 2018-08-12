@@ -57,7 +57,7 @@
 
 .mu-navbar-nav {
 	display: block;
-	text-align: right;
+	text-align: center;
 	width: 100%;
 }
 
@@ -73,9 +73,9 @@
 	border-radius: 15px;
 	color: #fefeff;
 	display: block;
-	font-size: 14px;
+	font-size: 12px;
 	font-weight: 700;
-	padding: 9px 18px;
+	padding: 8px 16px;
 	text-transform: uppercase;
 	transition: all 0.5s;
 }
@@ -107,4 +107,12 @@
 .mu-navbar-nav li .dropdown-menu a:hover,
 .mu-navbar-nav li .dropdown-menu a:focus {
 	color: #0091ea;
+}
+
+.last-nav-item {
+  text-align: left;
+}
+
+.nav-item {
+  vertical-align: middle;
 }

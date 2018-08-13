@@ -1,0 +1,129 @@
+#mu-testimonials {
+	background-attachment: fixed;
+	background-image: url("../images/worker_slider.jpg");
+	background-position: center center;
+	background-size: cover;
+	display: inline;
+	float: left;
+    margin: 100px 0;
+    width: 100%;
+
+    .mu-single-slide {
+        max-height: 500px;
+        min-height: 500px;
+        .images {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            margin: 100px 0;
+            img {
+        	z-index: 999;
+            }
+        }
+    }
+    // &::before {
+	// background: #20a8fd;
+	// bottom: 0;
+	// content: '';
+	// left: 0;
+	// top: 0;
+	// right: 0;
+	// opacity: 0.8;
+}
+
+// .mu-testimonials-area {
+// 	display: inline;
+// 	float: left;
+// 	padding: 150px 0 175px;
+// 	width: 100%;
+// 	position: relative;
+// 	z-index: 20;
+// }
+
+// .mu-testimonials-area h2 {
+// 	color: #fff;
+// 	text-align: center;
+// 	text-transform: uppercase;
+// }
+
+// .mu-testimonials-block {
+// 	display: inline;
+// 	float: left;
+// 	margin-top: 60px;
+// 	width: 100%;
+// }
+
+// .mu-testimonial-slide li{
+// 	list-style: none;
+// 	text-align: center;
+// }
+
+// .mu-client-quote {
+// 	font-size: 35px;
+// 	opacity: 0.7;
+// 	margin-bottom: 25px;
+// }
+
+// .mu-testimonial-slide li p {
+// 	color: #fff;
+// 	padding: 0 10%;
+// }
+
+// .mu-testimonial-slide .mu-rt-img {
+// 	border-radius: 50%;
+// 	width: 75px;
+// 	height: 75px;
+// 	display: inline-block;
+// 	border: 4px solid #f8f8f8;
+// 	margin-bottom: 25px;
+// }
+
+// .mu-rt-name {
+// 	margin-bottom: 5px;
+// 	color: #fff;
+// 	line-height: 1;
+// 	margin-top: 25px;
+// 	letter-spacing: 1px;
+// }
+
+// .mu-rt-title {
+// 	color: #fff;
+// 	font-size: 14px;
+// }
+
+// .mu-testimonial-slide .slick-dots {
+//     bottom: -50px;
+// }
+
+// .mu-testimonial-slide .slick-dots li {
+// 	background-color: #f8f8f8;
+// 	height: 4px;	
+// 	-webkit-transition: all 0.5s;
+// 	transition: all 0.5s;
+// }
+
+// .mu-testimonial-slide .slick-dots li button {
+// 	display: none;
+// }
+
+// .mu-testimonial-slide .slick-next {
+// 	right: -60px;
+// }
+
+// .mu-testimonial-slide .slick-prev {
+// 	left: -60px;
+// }
+
+// .mu-testimonial-slide .slick-prev:hover,
+// .mu-testimonial-slide .slick-prev:focus,
+// .mu-testimonial-slide .slick-next:hover,
+// .mu-testimonial-slide .slick-next:focus {
+//     color: #0091ea;
+// }
+
+// .mu-testimonial-slide .slick-prev:hover:before,
+// .mu-testimonial-slide .slick-prev:focus:before,
+// .mu-testimonial-slide .slick-next:hover:before,
+// .mu-testimonial-slide.slick-next:focus:before {
+//     color: #0091ea;
+// }

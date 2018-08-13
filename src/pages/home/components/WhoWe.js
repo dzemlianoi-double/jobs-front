@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import img from '../../../assets/images/about-us.jpg';
+import office from '../../../assets/images/office.jpg';
 
 export default class WhoWe extends Component {
   render() {
     return(
-      <section id='mu-about'>
+      <section className="mt-100" id='mu-about'>
         <div className='container'>
           <div className='row'>
             <div className='col-md-12'>
@@ -12,31 +12,48 @@ export default class WhoWe extends Component {
                 <div className='row'>
                   <div className='col-md-12'>
                     <div className='mu-title'>
-                      <h2>Who we are</h2>
-                      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa cum sociis.</p>
+                      <h2>Кто мы</h2>
+                      <p>
+                        Лицензированное агентство `Worker` оказывает помощь только в легальном трудоустройстве за рубежом.
+                        Мы молодая компания, профессиональные специалисты которой вышли из более крупного агентства.
+                        Менеджеры агентства имеют большой опыт работы в сфере трудоустройства за границей, 
+                        владеют доскональной информацией об условиях предлагаемой работы, тонкостях в оформлении, что и позволяет
+                        удовлетворить потребности любого кандидата.Живое общение со специалистами нашего агентства
+                        дает Вам возможность ознакомиться со всем спектром вопросом по выезду за рубеж в деталях.
+                        Скурпулёзный подход к каждому желающему выехать на работу - залог успеха нашего с Вами сотрудничества!
+                      </p>
                     </div>
                   </div>
                 </div>
                 <div className='row'>
                   <div className='col-md-6'>
                     <div className='mu-about-left'>
-                      <img src={img} alt='img' />
+                      <img src={office} alt='office' />
                     </div>
                   </div>  
                   <div className='col-md-6'>
                     <div className='mu-about-right'>
                       <ul>
                         <li>
-                          <h3>Our Mission</h3>
-                          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,</p>
+                          <h3>Наша Миссия</h3>
+                          <p> 
+                            Помогать настоящим специалистам своего дела находить комфортное место для работы
+                          </p>
                         </li>
                         <li>
-                          <h3>Our Vision</h3>
-                          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,</p>
+                          <h3>Наша Цель</h3>
+                          <p>
+                            Сделать процесс трудоустройства специалистов простым и как для работника, так и для работодателя
+                          </p>
                         </li>
                         <li>
-                          <h3>Our Valuse</h3>
-                          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,</p>
+                          <h3>Наши ценности</h3>
+                          <p>
+                            Открытость к общению и вопросам
+                            Честность перед собой и другими.
+                            Ответственность за каждого специалиста.
+                            Развитие себя как компании, клиентов и рынка в целом
+                          </p>
                         </li>
                       </ul>
                     </div>

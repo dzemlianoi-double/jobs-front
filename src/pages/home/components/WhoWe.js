@@ -4,7 +4,7 @@ import img from '../../../assets/images/about-us.jpg';
 export default class WhoWe extends Component {
   render() {
     return(
-      <section id='mu-about'>
+      <section className="mt-75" id='mu-about'>
         <div className='container'>
           <div className='row'>
             <div className='col-md-12'>
@@ -12,8 +12,7 @@ export default class WhoWe extends Component {
                 <div className='row'>
                   <div className='col-md-12'>
                     <div className='mu-title'>
-                      <h2>Who we are</h2>
-                      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa cum sociis.</p>
+                      <p>Кто мы</p>
                     </div>
                   </div>
                 </div>

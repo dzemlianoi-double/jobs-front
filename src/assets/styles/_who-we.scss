@@ -2,6 +2,7 @@
 	background-color: #fff;
 	display: inline;
 	float: left;
+	margin-bottom: 50px;
 	width: 100%;
 }
 
@@ -10,26 +11,17 @@
 	float: left;
 	padding: 100px 0;
 	width: 100%;
-}
-
-.mu-title {
-	display: inline;
-	float: left;
-	margin-bottom: 35px;
-	padding: 0 25%;
-	text-align: center;
-	width: 100%;
-}
-
-.mu-title h2 {
-	color: #323232;
-	font-size: 30px;
-	margin-bottom: 15px;
-	text-transform: uppercase;
-}
-
-.mu-title p {
-
+	.mu-title {
+		display: inline;
+		text-align: center;
+		width: 100%;
+		p {
+			color: #323232;
+			font-size: 30px;
+			margin-bottom: 35px;
+			text-transform: uppercase;
+		}
+	}
 }
 
 .mu-about-left {
@@ -45,8 +37,6 @@
 	padding-left: 15px;
 	width: 100%
 }
-
-.mu-about-right ul {}
 
 .mu-about-right ul li {
 	float: left;

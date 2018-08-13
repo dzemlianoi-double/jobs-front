@@ -104,7 +104,7 @@ class Footer extends Component {
               </div>
               <div className="col-md-3">
                 <div className="mu-single-footer">
-                  <h3>{T.translate('menu.last_vacancies')}</h3>
+                  <h3>{T.translate('footer.last_vacancies')}</h3>
                   <ul className="list-unstyled vacancies-list-footer">
                     {this.renderVacancies()}
                   </ul>
@@ -112,7 +112,7 @@ class Footer extends Component {
               </div>
               <div className="col-md-3">
                 <div className="mu-single-footer">
-                  <h3>{T.translate('menu.sections')}</h3>
+                  <h3>{T.translate('footer.sections')}</h3>
                   <ul className="mu-useful-links">
                     <li>
                       <span><i className="fa fa-circle" aria-hidden="true"></i></span>
@@ -149,7 +149,7 @@ class Footer extends Component {
               </div>
               <div className="col-md-3">
                 <div className="mu-single-footer">
-                  <h3>{T.translate('menu.contact_inform')}</h3>
+                  <h3>{T.translate('footer.contact_inform')}</h3>
                   <ul className="list-unstyled">
                     {this.renderAddresses()}
                     <li className="media">

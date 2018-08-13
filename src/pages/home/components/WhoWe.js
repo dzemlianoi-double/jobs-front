@@ -12,7 +12,7 @@ export default class WhoWe extends Component {
                 <div className='row'>
                   <div className='col-md-12'>
                     <div className='mu-title'>
-                      <p>Кто мы</p>
+                      <h2>Кто мы</h2>
                     </div>
                   </div>
                 </div>

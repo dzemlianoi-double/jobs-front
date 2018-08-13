@@ -1,24 +1,26 @@
 import React, { Component } from 'react';
 import Slider from 'react-slick';
-import slider_1 from '../../../assets/images/slider_1.jpg';
-import slider_3 from '../../../assets/images/slider_3.jpg';
-import slider_5 from '../../../assets/images/slider_5.jpg';
+import slider_7 from '../../../assets/images/slider_7.jpg';
+import slider_6 from '../../../assets/images/slider_6.jpg';
 
 export default class HeaderSlider extends Component {
   render() {
     const settings = {
       dots: true,
       infinite: true,
-      speed: 500,
       slidesToShow: 1,
-      slidesToScroll: 1
+      slidesToScroll: 1,
+      autoplay: true,
+      speed: 500,
+      autoplaySpeed: 2000,
+      cssEase: 'linear'
     };
     return (
       <div id="mu-slider">
         <Slider {...settings}>
           <div className="img-carousel mu-single-slide">
             <div className="image">
-              <img src={slider_5}/>
+              <img src={slider_7}/>
             </div>
             <div className="mu-single-slide-content-area">
               <div className="container">
@@ -37,7 +39,7 @@ export default class HeaderSlider extends Component {
           </div>
           <div className="img-carousel mu-single-slide">
             <div className="image">
-              <img src={slider_1}/>
+              <img src={slider_6}/>
             </div>
             <div className="mu-single-slide-content-area">
               <div className="container">
@@ -56,7 +58,7 @@ export default class HeaderSlider extends Component {
           </div>
           <div className="img-carousel mu-single-slide">
             <div className="image">
-              <img src={slider_3}/>
+              <img src={slider_6}/>
             </div>
             <div className="mu-single-slide-content-area">
               <div className="container">

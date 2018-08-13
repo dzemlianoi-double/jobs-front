@@ -116,3 +116,42 @@ html {
 		border: 0;
 	}
 }
+
+.mu-primary-btn {
+	background-color: #0091ea;
+	border-radius: 25px;
+	color: #fff;
+	display: inline-block;
+	font-size: 18px;
+	font-weight: 700;
+	padding: 15px 70px;
+	text-transform: uppercase;
+}
+
+.mu-primary-btn:hover,
+.mu-primary-btn:focus {
+	color: #fff;
+}
+
+
+.mu-send-msg-btn {
+	-webkit-transition: all 0.5s;
+	border-radius: 20px;
+	color: #555;
+	color: #fff;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: 400;
+	letter-spacing: 1px;
+	margin-top: 10px;
+	padding: 12px 20px;
+	text-align: center;
+	text-transform: uppercase;
+	transition: all 0.5s;
+	width: 170px;
+}
+
+.mu-send-msg-btn:hover,
+.mu-send-msg-btn:focus {
+	background-color: #fff;
+}

@@ -6,7 +6,7 @@ import { withRouter } from 'react-router-dom';
 import Header from './layout/header';
 import Main from './layout/main';
 import Footer from './layout/footer';
-import Spinner from './pages/basic/components/spinner';
+import Spinner from './pages/basic/components/Spinner';
 import { receiveBasicData } from './pages/basic/actions/index';
 
 class App extends Component {

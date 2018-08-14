@@ -5,20 +5,7 @@ const initialState = {
   coordinates: {},
   addresses: {},
   last_vacancies: [],
-  feedback: [
-    {
-      'first_name': 'Yessenia',
-      'last_name': 'Lebsack',
-      'avatar_url': 'https://s3.amazonaws.com/uifaces/faces/twitter/ehsandiary/128.jpg',
-      'text': 'Dolorem voluptatem dolore et delectus optio hic recusandae qui sed.'
-    },
-    {
-      'first_name': 'Lavon',
-      'last_name': 'Block',
-      'avatar_url': 'https://s3.amazonaws.com/uifaces/faces/twitter/sachingawas/128.jpg',
-      'text': 'Fugit aspernatur voluptatem dolor consectetur autem laudantium in.'
-    }
-  ],
+  reviews: [],
   loading: true
 };
 
@@ -29,6 +16,11 @@ export default function basic(state = initialState, action) {
       ...state,
       last_vacancies: action.payload
     };
+  case 'ADD_REVIEWS':
+    return {
+      ...state,
+      reviews: action.payload
+    };  
   case 'RECEIVE_NUMBERS':
     return {
       ...state,

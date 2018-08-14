@@ -4,50 +4,28 @@ import { connect } from 'react-redux';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 
+import Review from './Review';
+
+const SLIDER_SETTINGS = {
+  dots: true,
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  speed: 500,
+  autoplaySpeed: 2000,
+  cssEase: 'linear'
+};
+
 class ClientsSay extends Component {
   static propTypes = {
-    feedback: PropTypes.array.isRequired
+    reviews: PropTypes.array.isRequired
   };
-  renderFeedback = () => {
-    return _.map(this.props.feedback, function (value, key) {// eslint-disable-line no-unused-vars
-      return (
-        <section id="mu-testimonials">
-          <div className="container">
-            <div className="row">
-              <div className="col-md-12">
-                <div className="mu-testimonials-area">
-                  <div className="mu-testimonials-block">
-                    <ul className="mu-testimonial-slide">
-                      <li>
-                        <img className="mu-rt-img" src={value.avatar_url} alt="img"/>
-                        <h5 className="mu-rt-name">{value.name}</h5>
-                        <p>{value.text}</p>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      );
-    });
-  }
 
   render() {
-    const settings = {
-      dots: true,
-      infinite: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      speed: 500,
-      autoplaySpeed: 2000,
-      cssEase: 'linear'
-    };
     return (
       <div id="mu-testimonials">
-        <Slider {...settings}>
-          {this.renderFeedback()}
+        <Slider {...SLIDER_SETTINGS}>
+          {_.map(this.props.reviews, (review) => <Review key={review.id} review={review.attributes} />)}
         </Slider>
       </div>
     );
@@ -56,7 +34,7 @@ class ClientsSay extends Component {
 
 function select(store) {
   return {
-    feedback: store.basic.feedback
+    reviews: store.basic.reviews
   };
 }
 

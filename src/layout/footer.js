@@ -72,14 +72,15 @@ class Footer extends Component {
   }
 
   renderVacancies = () => {
-    return _.map(this.props.vacancies, function (value, key) {// eslint-disable-line no-unused-vars
+    return _.map(this.props.vacancies, (vacancy) => {
+      const vacancy_attr = vacancy.attributes;
       return (
-        <li className="media">
+        <li className="media" key={vacancy.id}>
           <span className="fa fa-clock-o icon"></span>
           <div className="media-body">
-            <span key={value.title}><b>{value.title}</b></span>
-            <span key={value.country}>{value.country}, {value.city}</span><br/>
-            <p key={value.salary_min}>{value.salary_min}-{value.salary_max} грн</p>
+            <span><b>{vacancy_attr.title}</b></span>
+            <span>{vacancy_attr.country}, {vacancy_attr.city}</span><br/>
+            <p>Зарплата от {vacancy_attr['salary-min']} грн</p>
             <a href="#">Посмотреть</a>
           </div>
         </li>

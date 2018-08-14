@@ -5,14 +5,6 @@ function addDataLastVacancies(last_vacancies) {
   return { type: 'ADD_VACANCIES_LAST', payload: last_vacancies };
 }
 
-function addReceiveDataLastVacancies() {
-  return (dispatch) => {
-    axios.get(process.env.API_HOST + external_routes.vacancies_last).then(resp => {
-      dispatch(addDataLastVacancies(resp.data));
-    });
-  };
-}
-
 function addEmails(emails) {
   return { type: 'RECEIVE_EMAILS', payload: emails };
 }
@@ -33,9 +25,9 @@ function addAddresses(addresses) {
   return { type: 'RECEIVE_ADDRESSES', payload: addresses };
 }
 
-// function addFeedback(feedback) {
-//   return {type: 'RECEIVE_FEEDBACK', payload: feedback};
-// }
+function addReviews(reviews) {
+  return { type: 'ADD_REVIEWS', payload: reviews };
+}
 
 function finishLoading() {
   return { type: 'FINISH_LOADING' };
@@ -50,7 +42,8 @@ function receiveBasicData() {
       dispatch(addSocialLinks(data.social_links)),
       dispatch(addCoordinates(data.coordinates)),
       dispatch(addAddresses(data.addresses));
-      dispatch(addReceiveDataLastVacancies());
+      dispatch(addDataLastVacancies(data.vacancies.data));
+      dispatch(addReviews(data.reviews.data));
     }).then(() => {
       dispatch(finishLoading());
     });
@@ -58,7 +51,5 @@ function receiveBasicData() {
 }
 
 module.exports = {
-  receiveBasicData,
-  addReceiveDataLastVacancies,
-  finishLoading
+  receiveBasicData
 };

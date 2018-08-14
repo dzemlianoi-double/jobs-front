@@ -7,12 +7,16 @@ const initialState = {
   last_vacancies: [],
   feedback: [
     {
-      'name': 'Ivan',
-      'text': 'hello world'
+      'first_name': 'Yessenia',
+      'last_name': 'Lebsack',
+      'avatar_url': 'https://s3.amazonaws.com/uifaces/faces/twitter/ehsandiary/128.jpg',
+      'text': 'Dolorem voluptatem dolore et delectus optio hic recusandae qui sed.'
     },
     {
-      'name': 'Ivan',
-      'text': 'hello world'
+      'first_name': 'Lavon',
+      'last_name': 'Block',
+      'avatar_url': 'https://s3.amazonaws.com/uifaces/faces/twitter/sachingawas/128.jpg',
+      'text': 'Fugit aspernatur voluptatem dolor consectetur autem laudantium in.'
     }
   ],
   loading: true

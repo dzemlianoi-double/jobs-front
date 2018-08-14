@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Slider from 'react-slick';
 import { connect } from 'react-redux';
-import avatar_1 from '../../../assets/images/avatar_1.jpg';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 
@@ -20,7 +19,7 @@ class ClientsSay extends Component {
                   <div className="mu-testimonials-block">
                     <ul className="mu-testimonial-slide">
                       <li>
-                        <img className="mu-rt-img" src={avatar_1} alt="img"/>
+                        <img className="mu-rt-img" src={value.avatar_url} alt="img"/>
                         <h5 className="mu-rt-name">{value.name}</h5>
                         <p>{value.text}</p>
                       </li>

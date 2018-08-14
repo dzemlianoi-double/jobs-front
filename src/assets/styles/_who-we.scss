@@ -15,7 +15,7 @@
 		display: inline;
 		text-align: center;
 		width: 100%;
-		p {
+		h2 {
 			color: #323232;
 			font-size: 30px;
 			margin-bottom: 35px;
@@ -55,4 +55,20 @@
 
 .mu-about-right p {
 	font-size: 14px;
+}
+
+.horizontal-line {
+	width: 80%;
+	height: 1px;
+	background-color: $strong-blue-1;
+	margin: 50px auto;
+	opacity: .3;
+}
+
+.horizontal-line-about {
+	width: 80%;
+	height: 1px;
+	background-color: $strong-blue-1;
+	margin: -50px auto;
+	opacity: .3;
 }

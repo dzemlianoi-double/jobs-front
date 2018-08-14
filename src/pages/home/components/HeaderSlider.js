@@ -76,6 +76,7 @@ export default class HeaderSlider extends Component {
             </div>
           </div>
         </Slider>
+        <div className="horizontal-line"></div>
       </div>
     );
   }

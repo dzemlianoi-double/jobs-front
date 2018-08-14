@@ -1,14 +1,3 @@
-.mu-single-slide:before {
-	background-color: #8481b0;
-	background-image: -moz-linear-gradient(left, #8481b0 55%, #73b58c 22%,#69bbd5 100%);
-	background-image: linear-gradient(left, #8481b0 55%, #73b58c 22%,#69bbd5 100%);
-	background-image: -webkit-linear-gradient(left, #8481b0 55%, #73b58c 22%,#69bbd5 100%);
-	background-image: -o-linear-gradient(left, #8481b0 55%, #73b58c 22%,#69bbd5 100%);
-	background-image: -ms-linear-gradient(left, #8481b0 55%, #73b58c 22%,#69bbd5 100%);
-	background-image: -webkit-gradient(linear, left bottom, right bottom, color-stop(55%,#8481b0), color-stop(22%,#73b58c),color-stop(100%,#69bbd5));
-	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr=#8481b0, endColorstr=#73b58c);
-}
-
 #mu-slider {
 	display: inline;
 	float: left;
@@ -32,6 +21,7 @@
 		align-items: center;
 		display: flex;
 		justify-content: center;
+		opacity: 0.6;
 	}
 }
 
@@ -65,15 +55,15 @@
 }
 
 .mu-single-slide-content h1 {
-	color: #fff;
 	font-size: 48px;
 	margin-bottom: 30px;
 	text-transform: uppercase;
 }
 
 .mu-single-slide-content p {
-	color: #fff;
-	font-size: 17px;
+	color: #000;
+	font-size: 19px;
+	font-weight: 800;
 	margin-bottom: 15px;
 }
 

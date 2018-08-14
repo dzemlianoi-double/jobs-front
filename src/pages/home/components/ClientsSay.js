@@ -1,38 +1,64 @@
 import React, { Component } from 'react';
 import Slider from 'react-slick';
-import answ1 from '../../../assets/images/answ1.jpg';
-import answ2 from '../../../assets/images/answ2.jpg';
-import answ3 from '../../../assets/images/answ3.jpg';
+import { connect } from 'react-redux';
+import avatar_1 from '../../../assets/images/avatar_1.jpg';
+import _ from 'lodash';
+import PropTypes from 'prop-types';
 
-export default class ClientsSay extends Component {
+class ClientsSay extends Component {
+  static propTypes = {
+    feedback: PropTypes.array.isRequired
+  };
+  renderFeedback = () => {
+    return _.map(this.props.feedback, function (value, key) {// eslint-disable-line no-unused-vars
+      return (
+        <section id="mu-testimonials">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-12">
+                <div className="mu-testimonials-area">
+                  <div className="mu-testimonials-block">
+                    <ul className="mu-testimonial-slide">
+                      <li>
+                        <img className="mu-rt-img" src={avatar_1} alt="img"/>
+                        <h5 className="mu-rt-name">{value.name}</h5>
+                        <p>{value.text}</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      );
+    });
+  }
+
   render() {
     const settings = {
       dots: true,
       infinite: true,
-      speed: 500,
       slidesToShow: 1,
-      slidesToScroll: 1
+      slidesToScroll: 1,
+      speed: 500,
+      autoplaySpeed: 2000,
+      cssEase: 'linear'
     };
     return (
       <div id="mu-testimonials">
         <Slider {...settings}>
-          <div className="mu-single-slide">
-            <div className="images">
-              <img src={answ1}/>
-            </div>
-          </div>
-          <div className="mu-single-slide">
-            <div className="images">
-              <img src={answ2}/>
-            </div>
-          </div>
-          <div className="mu-single-slide">
-            <div className="images">
-              <img src={answ3}/>
-            </div>
-          </div>
+          {this.renderFeedback()}
         </Slider>
       </div>
     );
   }
 }
+
+function select(store) {
+  return {
+    feedback: store.basic.feedback
+  };
+}
+
+export default connect(select)(ClientsSay);

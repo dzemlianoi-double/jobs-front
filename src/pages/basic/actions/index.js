@@ -33,6 +33,10 @@ function addAddresses(addresses) {
   return { type: 'RECEIVE_ADDRESSES', payload: addresses };
 }
 
+// function addFeedback(feedback) {
+//   return {type: 'RECEIVE_FEEDBACK', payload: feedback};
+// }
+
 function finishLoading() {
   return { type: 'FINISH_LOADING' };
 }

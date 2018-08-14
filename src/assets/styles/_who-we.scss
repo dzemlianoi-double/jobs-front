@@ -2,6 +2,7 @@
 	background-color: #fff;
 	display: inline;
 	float: left;
+	margin-bottom: 50px;
 	width: 100%;
 }
 
@@ -10,24 +11,17 @@
 	float: left;
 	padding: 0;
 	width: 100%;
-}
-
-.mu-title {
-	display: inline;
-	margin-bottom: 35px;
-	text-align: center;
-	width: 100%;
-}
-
-.mu-title h2 {
-	color: #323232;
-	font-size: 30px;
-	margin-bottom: 15px;
-	text-transform: uppercase;
-}
-
-.mu-title p {
-
+	.mu-title {
+		display: inline;
+		text-align: center;
+		width: 100%;
+		h2 {
+			color: #323232;
+			font-size: 30px;
+			margin-bottom: 35px;
+			text-transform: uppercase;
+		}
+	}
 }
 
 .mu-about-left {
@@ -43,8 +37,6 @@
 	padding-left: 15px;
 	width: 100%
 }
-
-.mu-about-right ul {}
 
 .mu-about-right ul li {
 	float: left;
@@ -63,4 +55,20 @@
 
 .mu-about-right p {
 	font-size: 14px;
+}
+
+.horizontal-line {
+	background-color: $strong-blue-1;
+	height: 1px;
+	margin: 50px auto;
+	opacity: .3;
+	width: 80%;
+}
+
+.horizontal-line-about {
+	background-color: $strong-blue-1;
+	height: 1px;
+	margin: -50px auto;
+	opacity: .3;
+	width: 80%;
 }

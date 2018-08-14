@@ -5,6 +5,16 @@ const initialState = {
   coordinates: {},
   addresses: {},
   last_vacancies: [],
+  feedback: [
+    {
+      'name': 'Ivan',
+      'text': 'hello world'
+    },
+    {
+      'name': 'Ivan',
+      'text': 'hello world'
+    }
+  ],
   loading: true
 };
 
@@ -39,6 +49,11 @@ export default function basic(state = initialState, action) {
     return {
       ...state,
       social_links: action.payload
+    };
+  case 'RECEIVE_FEEDBACK':
+    return {
+      ...state,
+      feedback: action.payload
     };
   case 'FINISH_LOADING':
     return {

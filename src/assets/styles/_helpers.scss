@@ -1,4 +1,4 @@
-@each $size in (0, 1, 2, 3, 10, 50, 100) {
+@each $size in (0, 1, 2, 3, 10, 15, 25, 50, 100) {
   @each $prop in (t: top, b: bottom, l: left, r: right) {
     .m#{nth($prop, 1)}-#{$size} {
       margin-#{nth($prop, 2)}: #{$size}px ;
@@ -24,7 +24,11 @@
   color: $white;
 }
 
-.mt-75 {
-  margin-top: 75px;
+.padding-0 {
+  padding: 0;
+}
+
+.padding-30 {
+  padding: 30px;
 }
 

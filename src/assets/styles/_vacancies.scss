@@ -1,0 +1,119 @@
+#mu-vacancies {
+	background-color: #fff;
+	display: inline;
+	float: left;
+	margin-bottom: 50px;
+	width: 100%;
+}
+
+.mu-vacancies-area {
+	display: inline;
+	float: left;
+	padding: 0;
+	width: 100%;
+	.mu-vacancies-search {
+        align-items: center;
+        background-color: $strong-blue-1;
+        display: flex;
+        height: 110px;
+        justify-content: space-evenly;
+        margin: 40px auto;
+        span {
+            color: $white;
+			font-size: 23px;
+        }
+        input {
+            border: 0;
+            border-radius: 2px;
+			padding: 8px;
+			width: 27%;
+		}
+		button {
+			background-color: #ffa500;
+			color: $white;
+			font-size: 22px;
+			padding: 5px 60px;
+		}
+	}
+	.main {
+		.mu-filter {
+			
+		}
+		.bread-dote {
+			background-color: #808080;
+		}
+		.how-vacancies {
+			background-color: $strong-blue-2;
+			padding: 20px 25px 25px;
+		}
+		.mu-vacancy {
+			border: 1px solid #000000;
+			padding: 15px 25px 5px;
+			.title-vacancy {
+				color: #0000ff;
+				font-size: 25px;
+				line-height: 1.1;
+				margin-bottom: 10px;
+			}
+			.desc {
+				font-size: 13px;
+			}
+			.city {
+				height: 80px;
+			}
+			.date-added {
+				color: #808080;
+				font-size: 12px;
+			}
+		}
+	}
+}
+
+.mu-filter {
+	display: inline;
+	float: left;
+	padding-right: 15px;
+	width: 100%;
+}
+
+.mu-vacancies-block {
+	display: inline;
+	float: left;
+	padding-left: 15px;
+	width: 100%
+}
+
+.mu-about-right ul li {
+	float: left;
+	list-style: none;
+	margin-bottom: 25px;
+}
+
+.mu-about-right ul li h3 {
+	border-bottom: 3px solid #e5e5e5;
+	color: #323232;
+	display: inline-block;
+	font-size: 20px;
+	margin-bottom: 15px;
+	padding-bottom: 5px;
+}
+
+.mu-about-right p {
+	font-size: 14px;
+}
+
+.horizontal-line {
+	background-color: $strong-blue-1;
+	height: 1px;
+	margin: 50px auto;
+	opacity: .3;
+	width: 80%;
+}
+
+.horizontal-line-about {
+	background-color: $strong-blue-1;
+	height: 1px;
+	margin: -50px auto;
+	opacity: .3;
+	width: 80%;
+}

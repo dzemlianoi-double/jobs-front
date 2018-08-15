@@ -45,23 +45,22 @@ export default class Vacancies extends Component {
                     <div className="row">
                       <div className='col-md-12 padding-30'>
                         <div className="row mu-vacancy">
-                            <div className="col-md-9">
-                              <p className="title-vacancy">
-                                <span>PHP Developer</span>
-                              </p>
-                              <p>Customer Accounts Orchestrator</p>
-                              <p className="desc">Aut consectetur ad quasi consequatur vel voluptatibus labore iure quidem. Doloribus quia asperiores aut aut quia aut. Aut vel eaque omnis. Beatae voluptatem ullam mollitia natus aliquid. Numquam ducimus et quibusdam corporis eveniet eveniet. Recusandae aut aut et voluptatem assumenda corrupti quasi.
-                                <a href="#">Полное описание</a>
-                              </p>
-                              <p className="date-added">Добавлено: 15.08.2018</p>
-                            </div>
-                            <div className="col-md-3">
-                              <p>20000 грн</p>
-                              <div className="city">Днепр</div>
-                              <p>Предложить другу</p>
-                              <button>Откликнуться</button>
-                            </div>
-
+                          <div className="col-md-9">
+                            <p className="title-vacancy">
+                              <span>PHP Developer</span>
+                            </p>
+                            <p>Customer Accounts Orchestrator</p>
+                            <p className="desc">Aut consectetur ad quasi consequatur vel voluptatibus labore iure quidem. Doloribus quia asperiores aut aut quia aut. Aut vel eaque omnis. Beatae voluptatem ullam mollitia natus aliquid. Numquam ducimus et quibusdam corporis eveniet eveniet. Recusandae aut aut et voluptatem assumenda corrupti quasi.
+                              <a href="#">Полное описание</a>
+                            </p>
+                            <p className="date-added">Добавлено: 15.08.2018</p>
+                          </div>
+                          <div className="col-md-3">
+                            <p className="salary">20000 грн</p>
+                            <div className="city">Днепр</div>
+                            <p className="send-friend">Предложить другу</p>
+                            <button>Откликнуться</button>
+                          </div>
                         </div>
                       </div>
                     </div>

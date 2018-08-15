@@ -1,4 +1,4 @@
-/*  */import React, { Component } from 'react';
+import React, { Component } from 'react';
 
 export default class Vacancies extends Component {
   render () {
@@ -20,24 +20,43 @@ export default class Vacancies extends Component {
                 <div className='row main'>
                   <div className='col-md-3 padding-0'>
                     <div className='mu-filter'>
-                    </div>
-                  </div>  
-                  <div className='col-md-9 padding-0'>
-                    <div className="row">
-                      <div className='col-md-12 mu-vacancies-block'>
-                        <div className="bread-dote">
-                          <span>122</span>
-                          <span>122</span>
+                      <div className="row">
+                        <div className="col-md-12">
+                          <div className="filter-salary">
+                            <p>Заработная плата</p>
+                            <div className="block-salary">
+                              <div className="row">
+                                <div className="col-md-6">
+                                  <input />
+                                </div>
+                                <div className="col-md-6">
+                                  <input />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="filter-experience-block">
+                            <p>Опыт Работы</p>
+                            <div className="row">
+                              <div className="col-md-12">
+                                <div className="filter-experience">
+                                  
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
+                  </div>
+                  <div className='col-md-9 padding-0'>
                     <div className="row">
                       <div className='col-md-12 mu-vacancies-list'>
                         <div className="how-vacancies">
-                          <p>Работа в Днепре</p>
+                          <p className="city-work">Работа в Днепре</p>
                           <p>
-                            <span>4859 вакансий</span>
-                            <span>100 000 грн средняя заработная плата</span>
+                            <span className="mean-works"><b>4859</b> вакансий</span>
+                            <span className="mean-salary"><b>100 000 грн</b> средняя заработная плата</span>
                           </p>
                         </div>
                       </div>
@@ -49,7 +68,7 @@ export default class Vacancies extends Component {
                             <p className="title-vacancy">
                               <span>PHP Developer</span>
                             </p>
-                            <p>Customer Accounts Orchestrator</p>
+                            <p className="title-company">Customer Accounts Orchestrator</p>
                             <p className="desc">Aut consectetur ad quasi consequatur vel voluptatibus labore iure quidem. Doloribus quia asperiores aut aut quia aut. Aut vel eaque omnis. Beatae voluptatem ullam mollitia natus aliquid. Numquam ducimus et quibusdam corporis eveniet eveniet. Recusandae aut aut et voluptatem assumenda corrupti quasi.
                               <a href="#">Полное описание</a>
                             </p>
@@ -57,8 +76,10 @@ export default class Vacancies extends Component {
                           </div>
                           <div className="col-md-3">
                             <p className="salary">20000 грн</p>
-                            <div className="city">Днепр</div>
-                            <p className="send-friend">Предложить другу</p>
+                            <div className="city">
+                              <span>Днепр</span>
+                            </div>
+                            <a href="#" className="send-friend">Предложить другу</a>
                             <button>Откликнуться</button>
                           </div>
                         </div>

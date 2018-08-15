@@ -34,12 +34,12 @@
 			font-size: 22px;
 			padding: 5px 75px;
 			&::before {
-				display: inline-block;
+				background: url('../images/search_ico_sm.png') no-repeat 0 0;
 		    content: '';
-		    width: 14px;
+		    display: inline-block;
 		    height: 14px;
-		    background: url(../images/search_ico_sm.png) no-repeat 0px 0px;
-		    margin: 0px 10px 0px 0px;
+		    margin: 0 10px 0 0;
+		    width: 14px;
 			}
 		}
 	}
@@ -47,13 +47,13 @@
 		.mu-filter {
 			padding: 7px 15px 10px;
 			.filter-salary {
+				color: #000000;
 				font-size: 18px;
-				color: black;
 			}
 			.block-salary {
 				background-color: $white;
-				padding: 10px 25px;
 				height: 80px;
+				padding: 10px 25px;
 				input {
 					width: 100%;
 				}
@@ -62,8 +62,8 @@
 				margin-top: 30px;
 				.filter-experience {
 					background-color: $white;
-					padding: 10px 25px;
 					height: 80px;
+					padding: 10px 25px;
 				}
 			}
 		}
@@ -74,17 +74,17 @@
 			background-color: $white;
 			padding: 2px 25px;
 			.city-work {
-				font-size: 25px;
 				color: #323232;
+				font-size: 25px;
 			}
 			.mean-works {
-				font-size: 18px;
 				color: #323232;
+				font-size: 18px;
 				margin-right: 10px;
 			}
 			.mean-salary {
-				font-size: 18px;
 				color: #323232;
+				font-size: 18px;
 				margin-left: 10px;
 			}
 		}
@@ -100,16 +100,16 @@
 				margin: 5px 0;
 			}
 			.title-company {
-				font-size: 18px;
 				color: inherit;
+				font-size: 18px;
 				margin-bottom: 5px;
 				&::before {
-					display: inline-block;
+					background: url('../images/house.png') no-repeat 0 0;
 			    content: '';
-			    width: 12px;
+			    display: inline-block;
 			    height: 14px;
 					margin: 0 5px -2px 0;
-			    background: url(../images/house.png) no-repeat 0px 0px;
+			    width: 12px;
 				}
 			}
 			.desc {
@@ -127,12 +127,12 @@
 				font-size: 14px;
 				height: 83px;
 				&::before {
-					display: inline-block;
+					background: url('../images/location_mini.png') no-repeat 0 0;
 			    content: '';
-			    width: 9px;
+			    display: inline-block;
 			    height: 14px;
 					margin: 0 5px -2px 0;
-			    background: url(../images/location_mini.png) no-repeat 0px 0px;
+			    width: 9px;
 				}
 			}
 			button {
@@ -140,16 +140,16 @@
 				color: $white;
 				font-size: 13px;
 				padding: 5px 0;
-				width: 100%;
 				text-transform: uppercase;
+				width: 100%;
 				&::after {
-					display: inline-block;
+					background: url('../images/arrow_long.png') no-repeat 0 0;
 			    content: '';
-			    width: 13px;
+			    display: inline-block;
 			    height: 12px;
-			    background: url(../images/arrow_long.png) no-repeat 0px 0px;
-			    margin-left: 5px;
 			    margin-bottom: -1px;
+			    margin-left: 5px;
+			    width: 13px;
 				}
 			}
 			.date-added {

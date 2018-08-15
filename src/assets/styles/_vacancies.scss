@@ -1,0 +1,215 @@
+#mu-vacancies {
+	background-color: #e0dbdb;
+	display: inline;
+	float: left;
+	margin-bottom: 50px;
+	width: 100%;
+}
+
+.mu-vacancies-area {
+	display: inline;
+	float: left;
+	padding: 0;
+	width: 100%;
+	.mu-vacancies-search {
+		align-items: center;
+		background-color: $strong-blue-1;
+		display: flex;
+		height: 110px;
+		justify-content: space-evenly;
+		margin: 40px auto;
+		span {
+			color: $white;
+			font-size: 23px;
+		}
+		input {
+			border: 0;
+			border-radius: 2px;
+			padding: 8px;
+			width: 27%;
+		}
+		button {
+			background-color: #ffa500;
+			color: $white;
+			font-size: 22px;
+			padding: 5px 75px;
+			&::before {
+				background: url('../images/search_ico_sm.png') no-repeat 0 0;
+		    content: '';
+		    display: inline-block;
+		    height: 14px;
+		    margin: 0 10px 0 0;
+		    width: 14px;
+			}
+		}
+	}
+	.main {
+		.mu-filter {
+			padding: 7px 15px 10px;
+			.filter-salary {
+				color: #000000;
+				font-size: 18px;
+			}
+			.block-salary {
+				background-color: $white;
+				height: 80px;
+				padding: 10px 25px;
+				input {
+					width: 100%;
+				}
+			}
+			.filter-experience-block {
+				margin-top: 30px;
+				.filter-experience {
+					background-color: $white;
+					height: 80px;
+					padding: 10px 25px;
+				}
+			}
+		}
+		.bread-dote {
+			background-color: #808080;
+		}
+		.how-vacancies {
+			background-color: $white;
+			padding: 2px 25px;
+			.city-work {
+				color: #323232;
+				font-size: 25px;
+			}
+			.mean-works {
+				color: #323232;
+				font-size: 18px;
+				margin-right: 10px;
+			}
+			.mean-salary {
+				color: #323232;
+				font-size: 18px;
+				margin-left: 10px;
+			}
+		}
+		.mu-vacancy {
+			background-color: #fff;
+			border-radius: 3px;
+			box-shadow: 0 2px 1px 0 rgba(0,0,0,0.1);
+			padding: 7px 15px 10px;
+			.title-vacancy {
+				color: $strong-blue-2;
+				font-size: 25px;
+				line-height: 1.1;
+				margin: 5px 0;
+			}
+			.title-company {
+				color: inherit;
+				font-size: 18px;
+				margin-bottom: 5px;
+				&::before {
+					background: url('../images/house.png') no-repeat 0 0;
+			    content: '';
+			    display: inline-block;
+			    height: 14px;
+					margin: 0 5px -2px 0;
+			    width: 12px;
+				}
+			}
+			.desc {
+				font-size: 13px;
+			}
+			.send-friend {
+				font-size: 13px;
+			}
+			.salary {
+				color: $strong-blue-2;
+				font-size: 25px;
+				margin: 0;
+			}
+			.city {
+				font-size: 14px;
+				height: 83px;
+				&::before {
+					background: url('../images/location_mini.png') no-repeat 0 0;
+			    content: '';
+			    display: inline-block;
+			    height: 14px;
+					margin: 0 5px -2px 0;
+			    width: 9px;
+				}
+			}
+			button {
+				background-color: #ffa500;
+				color: $white;
+				font-size: 13px;
+				padding: 5px 0;
+				text-transform: uppercase;
+				width: 100%;
+				&::after {
+					background: url('../images/arrow_long.png') no-repeat 0 0;
+			    content: '';
+			    display: inline-block;
+			    height: 12px;
+			    margin-bottom: -1px;
+			    margin-left: 5px;
+			    width: 13px;
+				}
+			}
+			.date-added {
+				color: #808080;
+				font-size: 12px;
+			}
+			&:hover {
+				background-color: #fffed7;
+				box-shadow: 0 2px 10px 0 rgba(0,0,0,0.2);
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+.mu-filter {
+	display: inline;
+	float: left;
+	padding-right: 15px;
+	width: 100%;
+}
+
+.mu-vacancies-block {
+	display: inline;
+	float: left;
+	padding-left: 15px;
+	width: 100%
+}
+
+.mu-about-right ul li {
+	float: left;
+	list-style: none;
+	margin-bottom: 25px;
+}
+
+.mu-about-right ul li h3 {
+	border-bottom: 3px solid #e5e5e5;
+	color: #323232;
+	display: inline-block;
+	font-size: 20px;
+	margin-bottom: 15px;
+	padding-bottom: 5px;
+}
+
+.mu-about-right p {
+	font-size: 14px;
+}
+
+.horizontal-line {
+	background-color: $strong-blue-1;
+	height: 1px;
+	margin: 50px auto;
+	opacity: .3;
+	width: 80%;
+}
+
+.horizontal-line-about {
+	background-color: $strong-blue-1;
+	height: 1px;
+	margin: -50px auto;
+	opacity: .3;
+	width: 80%;
+}

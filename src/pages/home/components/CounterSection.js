@@ -14,7 +14,7 @@ const defaultProps = {
 };
 
 const CounterSection = ({to, text, faClassName, speed}) => {
-  const fn = value => <span>{value}</span>;
+  const fn = value => <div className="counter-value" data-count={value}>{value}</div>;
   return (
     <div className="col-md-4 col-sm-6">
       <div className="mu-single-counter">

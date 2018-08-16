@@ -16,7 +16,7 @@ export default class HeaderSlider extends Component {
       cssEase: 'linear'
     };
     return (
-      <div id="mu-slider">
+      <div className="mu-slider">
         <Slider {...settings}>
           <div className="img-carousel mu-single-slide">
             <div className="image">

@@ -1,5 +1,5 @@
 .mu-error {
-  background-color: #fff;
+  background-color: $white;
   display: inline;
   float: left;
   width: 100%;
@@ -16,7 +16,7 @@
       }
 
       p {
-        color: #323232;
+        color: $gray-dark-4;
         font-size: 14px;
       }
     }
@@ -37,9 +37,9 @@
           position: relative;
           width: 100%;
           .mu-text {
-            background-color: #fff;
+            background-color: $white;
             border-radius: 2px;
-            color: #000;
+            color: $black;
             font-size: 400px;
             font-weight: 700;
             height: 101%;
@@ -51,7 +51,7 @@
           }
 
           .mu-overlay {
-            background-color: #0091ea;
+            background-color: $pure-blue;
             height: 100%;
             mix-blend-mode: color;
             position: absolute;
@@ -66,28 +66,26 @@
         float: left;
         width: 100%;
         .mu-subscribe-form {
-          border: 1px solid #ddd;
+          border: 1px solid $gray-light-3;
           border-radius: 25px;
           display: flex;
           float: left;
           margin-top: 20px;
           width: 100%;
           input {
-            border: 1px solid #0091ea;
-            border: 0;
+            border: 1px solid $pure-blue;
             border-radius: 25px;
-            color: #000;
+            color: $black;
             font-size: 14px;
             height: 60px;
-            padding: 0 130px 0 20px;
             padding: 0 170px 0 20px;
             width: 100%;
           }
 
           .mu-subscribe-btn {
-          	background-color: #0091ea;
+          	background-color: $pure-blue;
           	border-radius: 24px;
-          	color: #fff;
+          	color: $white;
           	cursor: pointer;
           	font-size: 18px;
           	font-weight: 700;
@@ -100,7 +98,7 @@
       }
 
       .mu-back-to-home {
-        color: #0091ea;
+        color: $pure-blue;
         display: inline-block;
         font-size: 14px;
         margin-top: 60px;

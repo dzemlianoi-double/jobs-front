@@ -1,5 +1,5 @@
-#mu-contact {
-	background-color: #fff;
+.mu-contact {
+	background-color: $white;
 	display: inline;
 	float: left;
 	width: 100%;
@@ -35,7 +35,7 @@
 }
 
 .mu-contact-form .mu-contact-icon {
-	color: #0091ea;
+	color: $pure-blue;
 	font-size: 14px;
 	left: 5px;
 	position: absolute;
@@ -46,10 +46,10 @@
 	-o-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
 	background: transparent;
-	border: 1px #ccc;
+	border: 1px $medium-gray-2;
 	border-radius: 0;
 	border-style: none none solid none;
-	color: #333;
+	color: $gray-dark-3;
 	font-size: 14px;
 	height: 45px;
 	margin-bottom: 24px;
@@ -60,41 +60,40 @@
 .mu-contact-form .form-group textarea {
 	-webkit-transition: all 0.5s;
 	background: transparent;
-	border: 1px #ccc;
+	border: 1px $medium-gray-2;
 	border-radius: 0;
 	border-style: none none solid none;
-	color: #333;
+	color: $gray-dark-3;
 	font-size: 14px;
 	height: 100px;
-	padding: 13px 25px;
 	padding: 10px;
 	transition: all 0.5s;
 }
 
 .mu-contact-form .form-control:focus {
-	background-color: #fff;
+	background-color: $white;
 	border-style: none none solid none;
     box-shadow: none;
     outline: 0;
 }
 
 .mu-contact-form .form-control::-webkit-input-placeholder {
-	color: #7e7e7e;
+	color: $medium-gray-1;
 	font-size: 14px;
 }
 
-.mu-contact-form .form-control:-moz-placeholder { /* Firefox 18- */
-	color: #7e7e7e;
+.mu-contact-form .form-control:-moz-placeholder {
+	color: $medium-gray-1;
 	font-size: 14px;
 }
 
-.mu-contact-form .form-control::-moz-placeholder {  /* Firefox 19+ */
-	color: #7e7e7e;
+.mu-contact-form .form-control::-moz-placeholder {
+	color: $medium-gray-1;
 	font-size: 14px;
 }
 
 .mu-contact-form .form-control:-ms-input-placeholder {
-	color: #7e7e7e;
+	color: $medium-gray-1;
 	font-size: 14px;
 }
 
@@ -103,29 +102,29 @@
 	padding: 12px 40px;
 }
 
-#form-messages {
-	background-color: #fff;
+.form-messages {
+	background-color: $white;
     margin-bottom: 10px;
 }
 
 .success {
 	-webkit-border-radius: 4px;
-	background-color: #dff0d8;
-	border: 1px solid #d6e9c6;
+	background-color: $greenish-white;
+	border: 1px solid $greenish-white;
 	border-radius: 4px;
-	color: #468847;
+	color: $dark-green;
 	margin-bottom: 0.75rem;
 	padding: 1em;
-	      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	      text-shadow: 0 1px 0 $rgb-05-gray;
 }
 
 .error {
 	-webkit-border-radius: 4px;
-	background-color: #f2dede;
-	border: 1px solid rgba(185, 74, 72, 0.3);
+	background-color: $reddish-white;
+	border: 1px solid $rgb-03-chestnut;
 	border-radius: 4px;
-	color: #b94a48;
+	color: $strong-red;
 	margin-bottom: 0.75rem;
 	padding: 1em;
-	      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	      text-shadow: 0 1px 0 $rgb-05-gray;
 }

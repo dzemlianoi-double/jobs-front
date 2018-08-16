@@ -1,5 +1,5 @@
-#mu-about {
-	background-color: #fff;
+.mu-about {
+	background-color: $white;
 	display: inline;
 	float: left;
 	margin-bottom: 50px;
@@ -16,7 +16,7 @@
 		text-align: center;
 		width: 100%;
 		h2 {
-			color: #323232;
+			color: $gray-dark-4;
 			font-size: 30px;
 			margin-bottom: 35px;
 			text-transform: uppercase;
@@ -45,8 +45,8 @@
 }
 
 .mu-about-right ul li h3 {
-	border-bottom: 3px solid #e5e5e5;
-	color: #323232;
+	border-bottom: 3px solid $light-gray;
+	color: $gray-dark-4;
 	display: inline-block;
 	font-size: 20px;
 	margin-bottom: 15px;

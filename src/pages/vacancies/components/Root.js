@@ -24,7 +24,7 @@ class Vacancies extends Component {
 
   render () {
     return (
-      <section id='mu-vacancies'>
+      <section className='mu-vacancies'>
         <div className='container'>
           <div className='row'>
             <div className='col-md-12'>

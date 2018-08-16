@@ -72,7 +72,7 @@ html {
 			color: $gray-dark-3;
 		}
 	}
-	del{
+	del {
 		text-decoration-color: $soft-red;
 	}
 	kbd {
@@ -118,9 +118,9 @@ html {
 }
 
 .mu-primary-btn {
-	background-color: #0091ea;
+	background-color: $pure-blue;
 	border-radius: 25px;
-	color: #fff;
+	color: $white;
 	display: inline-block;
 	font-size: 18px;
 	font-weight: 700;
@@ -130,15 +130,14 @@ html {
 
 .mu-primary-btn:hover,
 .mu-primary-btn:focus {
-	color: #fff;
+	color: $white;
 }
 
 
 .mu-send-msg-btn {
 	-webkit-transition: all 0.5s;
 	border-radius: 20px;
-	color: #555;
-	color: #fff;
+	color: $white;
 	cursor: pointer;
 	font-size: 14px;
 	font-weight: 400;
@@ -153,5 +152,5 @@ html {
 
 .mu-send-msg-btn:hover,
 .mu-send-msg-btn:focus {
-	background-color: #fff;
+	background-color: $white;
 }

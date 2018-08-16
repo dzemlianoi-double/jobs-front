@@ -4,7 +4,7 @@ import office from '../../../assets/images/office.jpg';
 export default class WhoWe extends Component {
   render() {
     return(
-      <section id='mu-about'>
+      <section className='mu-about'>
         <div className='container'>
           <div className='row'>
             <div className='col-md-12'>

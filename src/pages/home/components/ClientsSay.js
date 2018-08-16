@@ -23,7 +23,7 @@ class ClientsSay extends Component {
 
   render() {
     return (
-      <div id="mu-testimonials">
+      <div className="mu-testimonials">
         <Slider {...SLIDER_SETTINGS}>
           {_.map(this.props.reviews, (review) => <Review key={review.id} review={review.attributes} />)}
         </Slider>

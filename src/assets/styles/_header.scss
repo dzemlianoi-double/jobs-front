@@ -1,5 +1,5 @@
 .mu-hero {
-	background-color: #0091ea;
+	background-color: $pure-blue;
 	display: inline;
 	float: left;
 	width: 100%;
@@ -17,7 +17,7 @@
 	font-weight: 600;
 }
 
-.mu-logo span{
+.mu-logo span {
 	display: inline-block;
 }
 
@@ -71,7 +71,7 @@
 	-o-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
 	border-radius: 15px;
-	color: #fefeff;
+	color: $bluish-white;
 	display: block;
 	font-size: 12px;
 	font-weight: 700;
@@ -91,7 +91,7 @@
 .mu-navbar-nav li a:hover,
 .mu-navbar-nav li a:focus {
 	background-color: $white;
-	color: #0091ea;
+	color: $pure-blue;
 }
 
 .mu-navbar-nav .dropdown-menu {
@@ -100,13 +100,13 @@
 }
 
 .mu-navbar-nav li .dropdown-menu a {
-	color: #444;
+	color: $gray-dark-3;
 	padding: 6px 15px;
 }
 
 .mu-navbar-nav li .dropdown-menu a:hover,
 .mu-navbar-nav li .dropdown-menu a:focus {
-	color: #0091ea;
+	color: $pure-blue;
 }
 
 .last-nav-item {

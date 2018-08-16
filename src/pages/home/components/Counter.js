@@ -4,7 +4,7 @@ import CounterSection from './CounterSection';
 const Counter = () => {
   return (
     <div>
-      <section className="mt-75" id="mu-counter">
+      <section className="mt-75 mu-counter">
         <div className="container">
           <div className="row">
             <div className="col-md-12">

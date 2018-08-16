@@ -1,4 +1,4 @@
-#mu-slider {
+.mu-slider {
 	display: inline;
 	float: left;
 	width: 100%;
@@ -61,16 +61,16 @@
 }
 
 .mu-single-slide-content p {
-	color: #000;
+	color: $black;
 	font-size: 19px;
 	font-weight: 800;
 	margin-bottom: 15px;
 }
 
 .mu-primary-btn {
-	background-color: #0091ea;
+	background-color: $pure-blue;
 	border-radius: 25px;
-	color: #fff;
+	color: $white;
 	display: inline-block;
 	font-size: 18px;
 	font-weight: 700;
@@ -83,13 +83,13 @@
 .mu-slide .slick-prev:focus,
 .mu-slide .slick-next:hover,
 .mu-slide .slick-next:focus {
-    color: #0091ea;
+    color: $pure-blue;
 }
 .mu-slide .slick-prev:hover:before,
 .mu-slide .slick-prev:focus:before,
 .mu-slide .slick-next:hover:before,
 .mu-slide .slick-next:focus:before {
-    color: #0091ea;
+    color: $pure-blue;
 }
 
 .slick-dots {

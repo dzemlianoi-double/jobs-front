@@ -1,8 +1,5 @@
-/* Slider */
 .slick-slider
 {
-    -khtml-user-select: none;
-
     -moz-user-select: none;
     -ms-touch-action: pan-y;
 
@@ -35,7 +32,6 @@
 .slick-list.dragging
 {
     cursor: pointer;
-    cursor: hand;
 }
 
 .slick-slider .slick-track,
@@ -87,7 +83,6 @@
 .slick-slide img
 {
     display: block;
-    /*max-width: none;*/
 }
 .slick-slide.slick-loading img
 {
@@ -118,20 +113,15 @@
     display: none;
 }
 
-/* Slick Theme Color */
-
-/* Arrows */
 .slick-prev,
 .slick-next
-{   
+{
     -ms-transform: translate(0, -50%);
     -webkit-transform: translate(0, -50%);
-    background: #ebebeb;
+    background: $very-light-gray;
 
     border: 0;
-    color: #959595;
-
-    color: transparent;
+    color: $medium-gray-3;
 
     cursor: pointer;
     display: block;
@@ -153,8 +143,8 @@
 .slick-next:hover,
 .slick-next:focus
 {
-    background: #ebebeb;
-    color: #000;
+    background: $very-light-gray;
+    color: $black;
     outline: none;
 }
 .slick-prev:hover:before,
@@ -162,7 +152,7 @@
 .slick-next:hover:before,
 .slick-next:focus:before
 {
-    color: #000;
+    color: $black;
     opacity: 1;
 }
 .slick-prev.slick-disabled:before,
@@ -178,14 +168,14 @@
     -o-transition: all 0.5s;
     -webkit-font-smoothing: antialiased;
     -webkit-transition: all 0.5s;
-    color: #959595;
+    color: $medium-gray-3;
     font: normal normal normal 14px/1 FontAwesome;
     font-size: 25px;
     line-height: 1;
     transition: all 0.5s;
 }
 
-.slick-prev{
+.slick-prev {
     height: 50px;
     left: 40px;
     width: 50px;
@@ -205,7 +195,7 @@
     content: '\f054';
 }
 
-.slick-next{
+.slick-next {
     height: 50px;
     right: 40px;
     width: 50px;
@@ -227,7 +217,6 @@
     content: '←';
 }
 
-/* Dots */
 .slick-dotted.slick-slider
 {
     margin-bottom: 30px;
@@ -293,7 +282,7 @@
 {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    color: #000;
+    color: $black;
 
     content: '•';
     font-family: 'slick';
@@ -313,7 +302,7 @@
 }
 .slick-dots li.slick-active button:before
 {
-    color: #000;
+    color: $black;
     opacity: .75;
 }
 

@@ -5,7 +5,7 @@ export default class Contacts extends Component {
   render () {
     return (
       <main>
-        <section id="mu-contact">
+        <section className="mu-contact">
           <div className="container">
             <div className="row">
               <div className="col-md-12">
@@ -22,7 +22,7 @@ export default class Contacts extends Component {
                     <div className="row">
                       <div className="col-md-12">
                         <div className="mu-contact-form-area">
-                          <div id="form-messages"></div>
+                          <div className="form-messages"></div>
                           <form id="ajax-contact" method="post" action="mailer.php" className="mu-contact-form">
                             <div className="form-group">
                               <span className="fa fa-user mu-contact-icon"></span>
@@ -48,7 +48,7 @@ export default class Contacts extends Component {
                   </div>
                 </div>
               </div>
-              <div className="col-md-12" id="mu-google-map" >
+              <div className="col-md-12 mu-google-map">
                 <SimpleMap/>
               </div>
             </div>

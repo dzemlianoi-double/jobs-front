@@ -21,25 +21,25 @@ rules:
   no-duplicate-properties: 1
   no-empty-rulesets: 1
   no-extends: 0
-  no-ids: 1
+  no-ids: 0
   no-important: 1
   no-invalid-hex: 1
   no-mergeable-selectors: 1
   no-misspelled-properties: 1
-  no-qualifying-elements: 1
+  no-qualifying-elements: 0
   no-trailing-whitespace: 1
   no-trailing-zero: 1
-  no-transition-all: 1
+  no-transition-all: 0
   no-universal-selectors: 0
   no-url-domains: 1
   no-url-protocols: 1
   no-warn: 1
   property-units: 0
-  space-after-comma: 1
-  space-before-colon: 1
-  space-after-colon: 1
-  space-before-brace: 1
-  space-before-bang: 1
-  space-after-bang: 1
-  space-between-parens: 1
+  space-after-comma: 0
+  space-before-colon: 0
+  space-after-colon: 0
+  space-before-brace: 0
+  space-before-bang: 0
+  space-after-bang: 0
+  space-between-parens: 0
   space-around-operator: 1

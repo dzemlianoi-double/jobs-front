@@ -1,17 +1,19 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import _ from 'lodash';
-import { requestVacancies } from '../actions';
 import PropTypes from 'prop-types';
+import _ from 'lodash';
+
+import { requestVacancies } from '../actions';
 import Search from './Search';
-import Filters from './Filters';
+import Filters from './filters';
 import Vacancy from './Vacancy';
 import BasicInfo from './BasicInfo';
 
 class Vacancies extends Component {
   static propTypes = {
     requestVacancies: PropTypes.func.isRequired,
-    vacancies: PropTypes.array.isRequired
+    vacancies: PropTypes.array.isRequired,
+    filters: PropTypes.object.isRequired
   }
 
   componentDidMount() {
@@ -20,6 +22,48 @@ class Vacancies extends Component {
 
   get averageSalary() {
     return _.meanBy(this.props.vacancies, (vacancy) => vacancy.salary_min);
+  }
+
+  filterSalary = (vacancies) => {
+    const {salary_min, salary_max} = this.props.filters;
+
+    if (salary_max !== null && salary_min !== null){
+      return _.filter(vacancies, (vacancy) => vacancy.salary_min >= salary_min && vacancy.salary_min <= salary_max);
+    }else {
+      return vacancies;
+    }
+  }
+
+  filterAge = (vacancies) => {
+    const { age_min, age_max } = this.props.filters;
+
+    if (age_min !== null && age_max !== null) {
+      return _.filter(vacancies, (vacancy) => {
+        let age_min_is_between_range = vacancy.age_min >= age_min && vacancy.age_min <= age_max;
+        let age_max_is_between_range = vacancy.age_max >= age_min && vacancy.age_max <= age_max;
+        return age_min_is_between_range || age_max_is_between_range;
+      });
+    } else {
+      return vacancies;
+    }
+  }
+
+
+  filterExperience = (vacancies) => {
+    const { experience } = this.props.filters;
+
+    if (experience !== null) {
+      return _.filter(vacancies, (vacancy) => vacancy.experience <= experience);
+    } else {
+      return vacancies;
+    }
+  }
+
+  get filteredVacancies(){
+    let vacanciesBySalary = this.filterSalary(this.props.vacancies);
+    let vacanciesByExperience = this.filterExperience(vacanciesBySalary);
+    let vacanciesByAge = this.filterAge(vacanciesByExperience);
+    return vacanciesByAge;
   }
 
   render () {
@@ -33,8 +77,8 @@ class Vacancies extends Component {
                 <div className='row main'>
                   <Filters />
                   <div className='col-md-9 padding-0'>
-                    <BasicInfo count={this.props.vacancies.length} averageSalary={this.averageSalary} />
-                    {this.props.vacancies.map((vacancy => <Vacancy key={vacancy.id} vacancy={vacancy} />))}
+                    <BasicInfo count={this.filteredVacancies.length} averageSalary={this.averageSalary || 0} />
+                    {this.filteredVacancies.map((vacancy => <Vacancy key={vacancy.id} vacancy={vacancy} />))}
                   </div>
                 </div>
               </div>
@@ -49,7 +93,8 @@ class Vacancies extends Component {
 
 function select(store) {
   return {
-    vacancies: store.vacancies.list
+    vacancies: store.vacancies.list,
+    filters: store.vacancies.filters.used
   };
 }
 

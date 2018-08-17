@@ -2,13 +2,9 @@ import React, { Component } from 'react';
 import InputRange from 'react-input-range';
 
 export default class FilterExperience extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
+  state = {
       exper: 0
     };
-  }
   render(){
     return (
       <div className="filter-experience-block">

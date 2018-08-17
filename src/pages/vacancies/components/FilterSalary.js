@@ -2,13 +2,9 @@ import React, { Component } from 'react';
 import InputRange from 'react-input-range';
 
 export default class FilterSalary extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
+  state = {
       value: { min: 0, max: 20000 }
     };
-  }
   render(){
     return (
       <div className="filter-salary">

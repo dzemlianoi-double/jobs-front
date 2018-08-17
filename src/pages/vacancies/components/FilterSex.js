@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
 
 export default class FilterSex extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
+  state = {
       value: { min: 2, max: 2000 }
     };
-  }
   render(){
     return (
       <div className="filter-sex-block">

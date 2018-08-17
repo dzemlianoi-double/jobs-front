@@ -2,13 +2,9 @@ import React, { Component } from 'react';
 import InputRange from 'react-input-range';
 
 export default class FilterAge extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
+  state = {
       value: { min: 18, max: 65 }
     };
-  }
   render(){
     return (
       <div className="filter-age-block">

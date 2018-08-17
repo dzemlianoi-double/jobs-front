@@ -45,18 +45,49 @@
 	}
 	.main {
 		.mu-filter {
-			padding: 7px 15px 10px;
+			padding: 0 30px 0 0;
 			.filter-salary {
 				color: $black;
 				font-size: 18px;
 			}
 			.block-salary {
 				background-color: $white;
-				height: 80px;
 				padding: 10px 25px;
 				input {
 					width: 100%;
-				}
+        }
+        .apply {
+          text-align: center;
+          button {
+            background: none;
+            border: 1px solid $pure-blue;
+            border-radius: 3px;
+            color: $pure-blue;
+            font-size: 12px;
+            height: 30px;
+            padding: 0 10px;
+            &::after {
+              background: url('../images/select-small.png') no-repeat 0 0;
+              background-position: 0 -9px;
+              content: '';
+              display: inline-block;
+              height: 7px;
+              margin-left: 5px;
+              width: 9px;
+
+            }
+            &:hover {
+              background-color: #0288d1;
+              background-image: -moz-linear-gradient( -35deg, #0288d1 75%, #289ad8 75%);
+              background-image: -webkit-linear-gradient( -35deg, #0288d1 75%, #289ad8 75%);
+              background-image: -ms-linear-gradient( -35deg, #0288d1 75%, #289ad8 75%);
+              border: 0;
+              color: #fff;
+              line-height: 30px;
+              padding: 0 11px;
+            }
+          }
+        }
 			}
 			.filter-experience-block {
 				margin-top: 30px;
@@ -65,6 +96,34 @@
 					height: 80px;
 					padding: 10px 25px;
 				}
+			}
+			.filter-sex-block {
+				margin-top: 30px;
+				.filter-sex {
+					background-color: $white;
+					padding: 10px 25px;
+				} 
+			}
+			.filter-age-block {
+				margin-top: 30px;
+				.filter-age {
+					background-color: $white;
+					padding: 10px 25px;
+				} 
+			}
+			.filter-country-block {
+				margin-top: 30px;
+				.filter-country {
+					background-color: $white;
+					padding: 10px 25px;
+				}
+			}
+			.filter-service-block {
+				margin-top: 30px;
+				.filter-service {
+					background-color: $white;
+					padding: 10px 25px;
+				} 
 			}
 		}
 		.bread-dote {

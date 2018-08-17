@@ -29,14 +29,10 @@ export default class Vacancy extends Component {
 
   get sex() {
     switch(this.props.vacancy.sex) {
-    case('Male'):
-      return 'Мужской';
-    case('Female'):
-      return 'Женский';
-    case('Family'):
-      return 'Семейная пара';
-    default:
-      return 'Не имеет значения'; 
+    case('Male'): return 'Мужской';
+    case('Female'): return 'Женский';
+    case('Family'): return 'Семейная пара';
+    default: return 'Не имеет значения'; 
     }
   }
 

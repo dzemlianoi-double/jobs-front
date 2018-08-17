@@ -5,6 +5,7 @@
 	margin-bottom: 50px;
 	width: 100%;
 }
+
 .mu-vacancies-area {
 	display: inline;
 	float: left;
@@ -77,6 +78,7 @@
           background: $pure-blue;
           border: 1px solid $white;
         }
+
         .apply {
           text-align: right;
           button {
@@ -96,9 +98,11 @@
               margin-left: 5px;
               width: 9px;
             }
+
             &:hover::after {
               background-position: 0 -9px;
             }
+
             &:hover {
               background-color: $strong-blue-2;
               border: 0;
@@ -132,6 +136,7 @@
             border: 1px solid $white;
           }
         }
+
         .apply {
           text-align: right;
           button {
@@ -152,9 +157,11 @@
               margin-left: 5px;
               width: 9px;
             }
+
             &:hover::after {
               background-position: 0 -9px;
             }
+
             &:hover {
               background-color: $strong-blue-2;
               border: 0;
@@ -451,7 +458,7 @@
 			}
 			.city {
 				font-size: 14px;
-				height: 90px;
+				height: auto;
 				&::before {
 					background: url('../images/location_mini.png') no-repeat 0 0;
 			    content: '';
@@ -490,18 +497,21 @@
 		}
 	}
 }
+
 .mu-filter {
 	display: inline;
 	float: left;
 	padding-right: 15px;
 	width: 100%;
 }
+
 .mu-vacancies-block {
 	display: inline;
 	float: left;
 	padding-left: 15px;
 	width: 100%
 }
+
 .horizontal-line {
 	background-color: $strong-blue-1;
 	height: 1px;

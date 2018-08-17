@@ -31,8 +31,10 @@ export default class Filters extends Component {
               onChange={value => this.setState({ value })} />
             </div>
           </div>
-          <div className="col-md-12 mt-25 apply">
-            <button>Применить</button>
+          <div className="row">
+            <div className="col-md-12 mt-25 apply">
+              <button>Применить</button>
+            </div>
           </div>
         </div>
       </div>

@@ -16,11 +16,18 @@ export default class FilterExperience extends Component {
       <div className="row">
         <div className="col-md-12">
           <div className="filter-experience">
-            <InputRange
-            maxValue={10}
-            value={this.state.exper}
-            onChange={exper => this.setState({ exper })} />
-            <input value={this.state.exper}/>
+            <span>не более</span>
+            <input readOnly value={this.state.exper} />
+            <span>лет</span>
+              <InputRange
+              maxValue={10}
+              value={this.state.exper}
+              onChange={exper => this.setState({ exper })} />
+            <div className="row">
+              <div className="col-md-12 apply">
+                <button>применить</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>

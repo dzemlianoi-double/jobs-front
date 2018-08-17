@@ -10,8 +10,7 @@ const initialState = {
       age_min: null,
       age_max: null,
       speciality: null,
-      country: null,
-      sex: null,
+      country_list: [],
       experience_max: null
     },
     used: {
@@ -20,8 +19,8 @@ const initialState = {
       age_min: null,
       age_max: null,
       speciality: null,
-      country: null,
-      sex: null,
+      country_name: null,
+      sex_list: [],
       experience: null
     }
   }
@@ -46,7 +45,8 @@ export default function vacancies(state = initialState, action) {
           salary_max: _.maxBy(action.payload, 'salary_min').salary_min,
           age_min: _.minBy(action.payload, 'age_min').age_min,
           age_max: _.maxBy(action.payload, 'age_max').age_max,
-          experience_max: _.maxBy(action.payload, 'experience').experience
+          experience_max: _.maxBy(action.payload, 'experience').experience,
+          country_list: _.map(action.payload, (vacancy) => ({ value: vacancy.country_name, label: vacancy.country_name }))
         }
       }
     };

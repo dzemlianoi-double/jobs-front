@@ -5,6 +5,7 @@ import FilterExperience from './FilterExperience';
 import FilterSex from './FilterSex';
 import FilterCountry from './FilterCountry';
 import FilterService from './FilterService';
+import FilterAge from './FilterAge';
 
 export default class Filters extends Component {
   render(){
@@ -16,6 +17,7 @@ export default class Filters extends Component {
               <FilterSalary />
               <FilterExperience />
               <FilterSex />
+              <FilterAge />
               <FilterCountry />
               <FilterService />
             </div>

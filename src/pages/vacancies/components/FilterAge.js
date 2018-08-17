@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import InputRange from 'react-input-range';
 
-export default class FilterSalary extends Component {
+export default class FilterAge extends Component {
   state = {
-      value: { min: 0, max: 20000 }
+      value: { min: 18, max: 65 }
     };
   render(){
     return (
-      <div className="filter-salary">
-        <p>Заработная плата</p>
-        <div className="block-salary">
+      <div className="filter-age-block">
+        <p>Возраст</p>
+        <div className="filter-age">
           <div className="row">
             <div className="col-md-6">
               <input value={this.state.value.min}/>
@@ -21,8 +21,8 @@ export default class FilterSalary extends Component {
           <div className="row">
             <div className="col-md-12 mt-25">
               <InputRange
-                maxValue={20000}
-                minValue={0}
+                maxValue={65}
+                minValue={18}
                 value={this.state.value}
                 onChange={value => this.setState({ value })} />
             </div>

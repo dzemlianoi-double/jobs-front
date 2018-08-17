@@ -12,26 +12,31 @@ export default class FilterExperience extends Component {
   render(){
     return (
       <div className="filter-experience-block">
-      <p>Опыт Работы</p>
-      <div className="row">
-        <div className="col-md-12">
-          <div className="filter-experience">
-            <span>не более</span>
-            <input readOnly value={this.state.exper} />
-            <span>лет</span>
-              <InputRange
-              maxValue={10}
-              value={this.state.exper}
-              onChange={exper => this.setState({ exper })} />
-            <div className="row">
-              <div className="col-md-12 apply">
-                <button>применить</button>
+        <p>Опыт Работы</p>
+        <div className="row">
+          <div className="col-md-12">
+            <div className="filter-experience">
+              <span>не более</span>
+              <input readOnly value={this.state.exper} />
+              <span>лет</span>
+              <div className="row">
+                <div className="col-md-12 mt-15">
+                  <InputRange
+                    maxValue={10}
+                    value={this.state.exper}
+                    onChange={exper => this.setState({ exper })} 
+                  />
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-md-12 apply">
+                  <button>применить</button>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
     );
-  };
+  }
 }

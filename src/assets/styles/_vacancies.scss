@@ -5,7 +5,6 @@
 	margin-bottom: 50px;
 	width: 100%;
 }
-
 .mu-vacancies-area {
 	display: inline;
 	float: left;
@@ -67,7 +66,7 @@
           line-height: 30px;
           padding: 0 10px;
           width: 100%;
-        }
+				}
         .input-range__label {
           display: none;
         }
@@ -78,7 +77,6 @@
           background: $pure-blue;
           border: 1px solid $white;
         }
-
         .apply {
           text-align: right;
           button {
@@ -98,11 +96,9 @@
               margin-left: 5px;
               width: 9px;
             }
-
             &:hover::after {
               background-position: 0 -9px;
             }
-
             &:hover {
               background-color: $strong-blue-2;
               border: 0;
@@ -136,7 +132,6 @@
             border: 1px solid $white;
           }
         }
-
         .apply {
           text-align: right;
           button {
@@ -157,11 +152,9 @@
               margin-left: 5px;
               width: 9px;
             }
-
             &:hover::after {
               background-position: 0 -9px;
             }
-
             &:hover {
               background-color: $strong-blue-2;
               border: 0;
@@ -177,28 +170,221 @@
 				margin-top: 30px;
 				.filter-sex {
 					background-color: $white;
-					padding: 10px 25px;
+					border-radius: 3px;
+					padding: 20px 25px;
+					.filter-list {
+						li {
+							line-height: 19px;
+							list-style: none;
+							margin: -1px auto 0;
+							label {
+								border-bottom: 1px solid $solitude;
+								cursor: pointer;
+								margin: 0;
+								padding: 10px 24px 10px 0;
+								width: 100%;
+								span {
+									margin-left: 15px;
+								}
+							}
+						}
+					}
+					.apply {
+						text-align: right;
+						button {
+							background: none;
+							border: 1px solid $pure-blue;
+							border-radius: 3px;
+							color: $black;
+							font-size: 12px;
+							height: 30px;
+							margin-top: 20px;
+							padding: 0 10px;
+							text-transform: uppercase;
+							&::after {
+								background: url('../images/select-small.png') no-repeat 0 0;
+								content: '';
+								display: inline-block;
+								height: 7px;
+								margin-left: 5px;
+								width: 9px;
+							}
+							&:hover::after {
+								background-position: 0 -9px;
+							}
+							&:hover {
+								background-color: $strong-blue-2;
+								border: 0;
+								color: $white;
+								cursor: pointer;
+								line-height: 30px;
+								padding: 0 11px;
+							}
+						}
+					}
 				}
 			}
 			.filter-age-block {
 				margin-top: 30px;
 				.filter-age {
 					background-color: $white;
-					padding: 10px 25px;
+					border-radius: 3px;
+					box-shadow: 0 2px 1px 0 $gray-light-3;
+					padding: 20px 25px;
+					input {
+						-moz-box-shadow: inset 0 1px 0 $gray-light-1;
+						-webkit-box-shadow: inset 0 1px 0 $gray-light-1;
+						background-color: $gray-light-1;
+						border: 1px solid $gray-light-3;
+						border-radius: 3px;
+						box-shadow: inset 0 1px 0 $gray-light-1;
+						font-size: 13px;
+						height: 30px;
+						line-height: 30px;
+						padding: 0 10px;
+						width: 100%;
+					}
+					.input-range__label {
+						display: none;
+					}
+					.input-range__track--active {
+						background: $pure-blue;
+					}
+					.input-range__slider {
+						background: $pure-blue;
+						border: 1px solid $white;
+					}
+					.apply {
+						text-align: right;
+						button {
+							background: none;
+							border: 1px solid $pure-blue;
+							border-radius: 3px;
+							color: $black;
+							font-size: 12px;
+							height: 30px;
+							padding: 0 10px;
+							text-transform: uppercase;
+							&::after {
+								background: url('../images/select-small.png') no-repeat 0 0;
+								content: '';
+								display: inline-block;
+								height: 7px;
+								margin-left: 5px;
+								width: 9px;
+							}
+							&:hover::after {
+								background-position: 0 -9px;
+							}
+							&:hover {
+								background-color: $strong-blue-2;
+								border: 0;
+								color: $white;
+								cursor: pointer;
+								line-height: 30px;
+								padding: 0 11px;
+							}
+						}
+					}
 				}
 			}
 			.filter-country-block {
 				margin-top: 30px;
 				.filter-country {
 					background-color: $white;
-					padding: 10px 25px;
+					border-radius: 3px;
+					padding: 20px 25px;
+					.apply {
+						text-align: right;
+						button {
+							background: none;
+							border: 1px solid $pure-blue;
+							border-radius: 3px;
+							color: $black;
+							font-size: 12px;
+							height: 30px;
+							margin-top: 20px;
+							padding: 0 10px;
+							text-transform: uppercase;
+							&::after {
+								background: url('../images/select-small.png') no-repeat 0 0;
+								content: '';
+								display: inline-block;
+								height: 7px;
+								margin-left: 5px;
+								width: 9px;
+							}
+							&:hover::after {
+								background-position: 0 -9px;
+							}
+							&:hover {
+								background-color: $strong-blue-2;
+								border: 0;
+								color: $white;
+								cursor: pointer;
+								line-height: 30px;
+								padding: 0 11px;
+							}
+						}
+					}
 				}
 			}
 			.filter-service-block {
 				margin-top: 30px;
 				.filter-service {
 					background-color: $white;
-					padding: 10px 25px;
+					border-radius: 3px;
+					padding: 20px 25px;
+					.filter-list {
+						li {
+							line-height: 19px;
+							list-style: none;
+							margin: -1px auto 0;
+							label {
+								border-bottom: 1px solid $solitude;
+								cursor: pointer;
+								margin: 0;
+								padding: 10px 24px 10px 0;
+								width: 100%;
+								span {
+									margin-left: 15px;
+								}
+							}
+						}
+					}
+					.apply {
+						text-align: right;
+						button {
+							background: none;
+							border: 1px solid $pure-blue;
+							border-radius: 3px;
+							color: $black;
+							font-size: 12px;
+							height: 30px;
+							margin-top: 20px;
+							padding: 0 10px;
+							text-transform: uppercase;
+							&::after {
+								background: url('../images/select-small.png') no-repeat 0 0;
+								content: '';
+								display: inline-block;
+								height: 7px;
+								margin-left: 5px;
+								width: 9px;
+							}
+							&:hover::after {
+								background-position: 0 -9px;
+							}
+							&:hover {
+								background-color: $strong-blue-2;
+								border: 0;
+								color: $white;
+								cursor: pointer;
+								line-height: 30px;
+								padding: 0 11px;
+							}
+						}
+					}
 				}
 			}
 		}
@@ -304,21 +490,18 @@
 		}
 	}
 }
-
 .mu-filter {
 	display: inline;
 	float: left;
 	padding-right: 15px;
 	width: 100%;
 }
-
 .mu-vacancies-block {
 	display: inline;
 	float: left;
 	padding-left: 15px;
 	width: 100%
 }
-
 .horizontal-line {
 	background-color: $strong-blue-1;
 	height: 1px;

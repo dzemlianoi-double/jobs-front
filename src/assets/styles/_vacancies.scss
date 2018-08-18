@@ -90,6 +90,11 @@
             height: 30px;
             padding: 0 10px;
             text-transform: uppercase;
+            &.filter-disabled-button {
+              border: 1px solid #808080;
+              color: #808080;
+            }
+
             &::after {
               background: url('../images/select-small.png') no-repeat 0 0;
               content: '';
@@ -149,6 +154,11 @@
             margin-top: 20px;
             padding: 0 10px;
             text-transform: uppercase;
+            &.filter-disabled-button {
+              border: 1px solid #808080;
+              color: #808080;
+            }
+
             &::after {
               background: url('../images/select-small.png') no-repeat 0 0;
               content: '';
@@ -207,7 +217,11 @@
 							height: 30px;
 							margin-top: 20px;
 							padding: 0 10px;
-							text-transform: uppercase;
+              text-transform: uppercase;
+              &.filter-disabled-button {
+                border: 1px solid #808080;
+                color: #808080;
+              }
 							&::after {
 								background: url('../images/select-small.png') no-repeat 0 0;
 								content: '';
@@ -271,7 +285,11 @@
 							font-size: 12px;
 							height: 30px;
 							padding: 0 10px;
-							text-transform: uppercase;
+              text-transform: uppercase;
+              &.filter-disabled-button {
+                border: 1px solid #808080;
+                color: #808080;
+              }
 							&::after {
 								background: url('../images/select-small.png') no-repeat 0 0;
 								content: '';
@@ -312,7 +330,11 @@
 							height: 30px;
 							margin-top: 20px;
 							padding: 0 10px;
-							text-transform: uppercase;
+              text-transform: uppercase;
+              &.filter-disabled-button {
+                border: 1px solid #808080;
+                color: #808080;
+              }
 							&::after {
 								background: url('../images/select-small.png') no-repeat 0 0;
 								content: '';
@@ -370,7 +392,11 @@
 							height: 30px;
 							margin-top: 20px;
 							padding: 0 10px;
-							text-transform: uppercase;
+              text-transform: uppercase;
+              &.filter-disabled-button {
+                border: 1px solid #808080;
+                color: #808080;
+              }
 							&::after {
 								background: url('../images/select-small.png') no-repeat 0 0;
 								content: '';

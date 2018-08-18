@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import InputRange from 'react-input-range';
+import FilterButton from './FilterButton';
 
 export default class FilterExperience extends Component {
   static propTypes = {
@@ -9,11 +10,17 @@ export default class FilterExperience extends Component {
   }
   
   state = {
+    isUpdated: false,
     experience: 0
   };
 
   onExperienceUpdate = () => {
+    this.setState({ isUpdated: true });
     this.props.onFilterUpdate({ experience: this.state.experience });
+  }
+
+  changeValue = (experience) => {
+    this.setState({ experience, isUpdated: false });
   }
 
   render(){
@@ -25,22 +32,21 @@ export default class FilterExperience extends Component {
           <div className="col-md-12">
             <div className="filter-experience">
               <span>не более</span>
-              <input readOnly value={this.state.experience} />
+              <input readOnly value={this.state.experience} className="text-center" />
               <span>лет</span>
               <div className="row">
                 <div className="col-md-12 mt-15">
                   <InputRange
                     maxValue={this.props.experience_max}
                     value={this.state.experience}
-                    onChange={experience => this.setState({ experience })} 
+                    onChange={this.changeValue} 
                   />
                 </div>
               </div>
-              <div className="row">
-                <div className="col-md-12 apply">
-                  <button onClick={this.onExperienceUpdate}>Применить</button>
-                </div>
-              </div>
+              <FilterButton
+                isDisabled={this.state.isUpdated}
+                action={this.onExperienceUpdate}
+              />
             </div>
           </div>
         </div>

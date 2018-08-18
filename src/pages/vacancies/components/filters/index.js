@@ -20,7 +20,7 @@ class Filters extends Component {
   }
 
   render(){
-    const { salary_min, salary_max, age_min, age_max, experience_max, country_list } = this.props.filters.default;
+    const { salary_min, salary_max, age_min, age_max, experience_max, country_list, specialities_list } = this.props.filters.default;
     const { onFilterUpdate } = this.props;
     
     return (
@@ -49,7 +49,10 @@ class Filters extends Component {
                 country_list={country_list}
                 onFilterUpdate={onFilterUpdate}
               />
-              <FilterService />
+              <FilterService
+                specialities_list={specialities_list}
+                onFilterUpdate={onFilterUpdate}
+              />
             </div>
           </div>
         </div>

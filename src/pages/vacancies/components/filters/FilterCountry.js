@@ -39,6 +39,7 @@ export default class FilterCountry extends Component {
                 value={selectedOption}
                 onChange={this.handleChange}
                 options={this.options}
+                placeholder="Выберите страну..."
               />
               <div className="row">
                 <div className="col-md-12 apply">

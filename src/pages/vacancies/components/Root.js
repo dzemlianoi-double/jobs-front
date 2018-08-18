@@ -78,13 +78,25 @@ class Vacancies extends Component {
     }
   }
 
+  filterSpeciality = (vacancies) => {
+    const { specialities_list } = this.props.filters;
+    if (specialities_list.length === 0) {
+      return vacancies;
+    } else { 
+      return _.filter(vacancies, (vacancy) => {
+        return _.intersection(_.map(vacancy.specialities, 'title'), specialities_list).length > 0;
+      });
+    }
+  }
+
   get filteredVacancies(){
     let vacanciesBySalary = this.filterSalary(this.props.vacancies);
     let vacanciesByExperience = this.filterExperience(vacanciesBySalary);
     let vacanciesByAge = this.filterAge(vacanciesByExperience);
-    let vacanciesCountry = this.filterCountry(vacanciesByAge);
-    let vacanciesSex = this.filterSex(vacanciesCountry);
-    return vacanciesSex;
+    let vacanciesByCountry = this.filterCountry(vacanciesByAge);
+    let vacanciesBySex = this.filterSex(vacanciesByCountry);
+    let vacanciesBySpeciality = this.filterSpeciality(vacanciesBySex);
+    return vacanciesBySpeciality;
   }
 
   render () {

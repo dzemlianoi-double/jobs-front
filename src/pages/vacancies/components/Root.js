@@ -48,7 +48,6 @@ class Vacancies extends Component {
     }
   }
 
-
   filterExperience = (vacancies) => {
     const { experience } = this.props.filters;
 
@@ -59,11 +58,33 @@ class Vacancies extends Component {
     }
   }
 
+  filterCountry = (vacancies) => {
+    const { country_name } = this.props.filters;
+
+    if (country_name !== null) {
+      return _.filter(vacancies, (vacancy) => vacancy.country_name == country_name);
+    }else {
+      return vacancies;
+    }
+  }
+
+  filterSex = (vacancies) => {
+    const { sex_list } = this.props.filters;
+
+    if (sex_list.length === 0 || sex_list.includes('Any')) {
+      return vacancies;
+    } else {
+      return _.filter(vacancies, (vacancy) => sex_list.includes(vacancy.sex));
+    }
+  }
+
   get filteredVacancies(){
     let vacanciesBySalary = this.filterSalary(this.props.vacancies);
     let vacanciesByExperience = this.filterExperience(vacanciesBySalary);
     let vacanciesByAge = this.filterAge(vacanciesByExperience);
-    return vacanciesByAge;
+    let vacanciesCountry = this.filterCountry(vacanciesByAge);
+    let vacanciesSex = this.filterSex(vacanciesCountry);
+    return vacanciesSex;
   }
 
   render () {

@@ -1,19 +1,29 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Select from 'react-select';
  
-const options = [
-  { value: 'chocolate', label: 'Украина' },
-  { value: 'strawberry', label: 'Россия' },
-  { value: 'vanilla', label: 'Латвия' }
-];
- 
+const defaultOption = { value: null, label: 'Любая' };
+
 export default class FilterCountry extends Component {
+  static propTypes = {
+    onFilterUpdate: PropTypes.func.isRequired,
+    country_list: PropTypes.array.isRequired
+  }
+
   state = {
     selectedOption: null,
   }
 
   handleChange = (selectedOption) => {
     this.setState({ selectedOption });
+  }
+
+  onCountryUpdate = () => {
+    this.props.onFilterUpdate({ country_name: this.state.selectedOption.value });
+  }
+
+  get options() {
+    return [defaultOption, ...this.props.country_list];
   }
 
   render() {
@@ -28,11 +38,11 @@ export default class FilterCountry extends Component {
               <Select className="mt-10"
                 value={selectedOption}
                 onChange={this.handleChange}
-                options={options}
+                options={this.options}
               />
               <div className="row">
                 <div className="col-md-12 apply">
-                  <button>применить</button>
+                  <button onClick={this.onCountryUpdate}>Применить</button>
                 </div>
               </div>
             </div>

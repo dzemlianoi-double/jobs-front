@@ -2,13 +2,39 @@
 	display: inline;
 	float: left;
 	width: 100%;
+	margin: 0 auto;
 	.about-service {
-		color: $black;
-		font-size: 15px;
-		line-height: 1.4;
-	}
-	.service {
-		border: 1px dotted #8a2be2violet;
-		min-height: 250px;
+    padding: 25px 40px;
+    margin: 0 auto;
+		.service-block {
+			border: 1px solid $pure-blue;
+      min-height: 290px;
+      border-radius: 10px;
+      .title-service {
+        border-bottom: 1px solid $pure-blue;
+        text-align: center;
+        border-radius: 10px 10px 0 0 ;
+        padding: 10px 0;
+        background-color: $gray-light-2;
+      }
+      .description-service {
+        text-align: center;
+        padding: 10px;
+      }
+      .btn-use-service {
+        text-align: center;
+        button {
+          background-color: $white;
+          border: 1px solid $pure-blue;
+          padding: 8px 70px;
+          border-radius: 5px;
+          &:hover {
+            background-color: $pure-blue;
+            cursor: pointer;
+            color: $white;
+          }
+        }
+      }
+    }
 	}
 }

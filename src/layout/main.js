@@ -9,6 +9,7 @@ import Vacancies from '../pages/vacancies/components/Root';
 import Services from '../pages/services/components/Root';
 import Contacts from '../pages/contacts/components/Root';
 import NotFound from '../pages/NotFound';
+import Vacancy from '../pages/vacancy/Root';
 
 class Main extends Component {
   render() {
@@ -20,6 +21,7 @@ class Main extends Component {
           <Route exact path={internal_routes.vacancies} component={Vacancies} />
           <Route exact path={internal_routes.services} component={Services} />
           <Route exact path={internal_routes.contacts} component={Contacts} />
+          <Route exact path={internal_routes.vacancy} component={Vacancy} />
           <Route component={NotFound} />
         </Switch>
       </main>

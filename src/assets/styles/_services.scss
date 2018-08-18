@@ -1,0 +1,14 @@
+.services {
+	display: inline;
+	float: left;
+	width: 100%;
+	.about-service {
+		color: $black;
+		font-size: 15px;
+		line-height: 1.4;
+	}
+	.service {
+		border: 1px dotted #8a2be2violet;
+		min-height: 250px;
+	}
+}

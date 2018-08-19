@@ -5,6 +5,7 @@ export default class WhoWe extends Component {
   render() {
     return(
       <section className='mu-about'>
+        <div className="horizontal-line"></div>
         <div className='container'>
           <div className='row'>
             <div className='col-md-12'>

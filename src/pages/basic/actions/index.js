@@ -29,6 +29,10 @@ function addReviews(reviews) {
   return { type: 'ADD_REVIEWS', payload: reviews };
 }
 
+function addServices(services) {
+  return { type: 'ADD_SERVICES', payload: services };
+}
+
 function finishLoading() {
   return { type: 'FINISH_LOADING' };
 }
@@ -44,6 +48,7 @@ function receiveBasicData() {
       dispatch(addAddresses(data.addresses));
       dispatch(addDataLastVacancies(data.vacancies.data));
       dispatch(addReviews(data.reviews.data));
+      dispatch(addServices(data.services.data));
     }).then(() => {
       dispatch(finishLoading());
     });

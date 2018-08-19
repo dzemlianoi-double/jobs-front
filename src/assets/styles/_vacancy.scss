@@ -1,0 +1,79 @@
+.mu-vacancies {
+  .info-vacancy {
+    background-color: $white;
+    padding: 25px 25px;
+    .vacancy {
+      img {
+        height: 285px;
+      }
+
+      .title-vacancy {
+        color: $gray-dark-1;
+        font-size: 23px;
+        margin: 0;
+      }
+
+      .title-company {
+        color: inherit;
+        font-size: 18px;
+        margin: 0;
+        &::before {
+          background: url('../images/house.png') no-repeat 0 0;
+          content: '';
+          display: inline-block;
+          height: 14px;
+          margin: 0 10px -2px 0;
+          width: 12px;
+        }
+      }
+
+      .conditions {
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+        border: 1px solid $medium-gray;
+        border-radius: 3px;
+        min-height: 200px;
+        padding: 25px 25px 24px;
+        .wrapper-info {
+          border-bottom: 1px dotted $black;
+          overflow: hidden;
+          padding: 5px 15px;
+          div {
+            padding: 0;
+          }
+
+          .info {
+            line-height: 1.4;
+            margin-bottom: 0;
+          }
+        }
+
+        .btn-contacts {
+          background-color: $luminous-vivid-orange;
+          color: $white;
+          font-size: 22px;
+          padding: 5px 75px;
+          &::after {
+            background: url('../images/arrow_long.png') no-repeat 0 0;
+            content: '';
+            display: inline-block;
+            height: 12px;
+            margin-left: 5px;
+            width: 13px;
+          }
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  .about-vacancy {
+    font-size: 18px;
+    line-height: 0.9;
+    overflow: hidden;
+    word-wrap: break-word;
+  }
+}

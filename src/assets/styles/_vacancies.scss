@@ -1,8 +1,16 @@
-.mu-vacancies {
+a {
+	color: $black;
+	text-decoration: none;
+	&:hover {
+		color: $black;
+		text-decoration: none;
+	}
+}
+
+	.mu-vacancies {
 	background-color: $light-reddish-gray;
 	display: inline;
 	float: left;
-	margin-bottom: 50px;
 	width: 100%;
 }
 

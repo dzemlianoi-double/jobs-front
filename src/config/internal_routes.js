@@ -3,7 +3,8 @@ const internal_routes = {
   about_us: '/about_us',
   services: '/services',
   vacancies: '/vacancies',
-  contacts: '/contacts' 
+  contacts: '/contacts',
+  vacancy: '/vacancy' 
 };
 
 export default internal_routes;

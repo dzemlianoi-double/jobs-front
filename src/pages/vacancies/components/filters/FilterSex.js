@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
+import FilterButton from './FilterButton';
 
 const sex = [
   {
@@ -27,10 +28,12 @@ export default class FilterSex extends Component {
   }
 
   state = {
-    chosenSexes: []
+    chosenSexes: [],
+    isUpdated: false
   }
 
   onSexUpdate = () => {
+    this.setState({ isUpdated: true });
     this.props.onFilterUpdate({ sex_list: this.state.chosenSexes });
   }
 
@@ -43,7 +46,10 @@ export default class FilterSex extends Component {
     }else {
       this.setState({ chosenSexes: _.filter(this.state.chosenSexes, (sex) => sex != value) });
     }
+
+    this.setState({ isUpdated: false });
   }
+
   renderCheckboxes() {
     return _.map(sex, (option) => {
       return (
@@ -75,11 +81,10 @@ export default class FilterSex extends Component {
             <div className="filter-sex">
               <ul className="filter-list">
                 {this.renderCheckboxes()}
-                <div className="row">
-                  <div className="col-md-12 apply">
-                    <button onClick={this.onSexUpdate}>Применить</button>
-                  </div>
-                </div>
+                <FilterButton
+                  isDisabled={this.state.isUpdated}
+                  action={this.onSexUpdate}
+                />
               </ul>
             </div>
           </div>

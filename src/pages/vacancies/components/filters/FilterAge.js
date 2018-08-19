@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import InputRange from 'react-input-range';
+import FilterButton from './FilterButton';
 
 export default class FilterAge extends Component {
   static propTypes = {
@@ -10,16 +11,22 @@ export default class FilterAge extends Component {
   }
 
   state = {
+    isUpdated: false,
     value: {
       min: this.props.age_min,
       max: this.props.age_max
     }
   }
 
-  onSalaryUpdate = () => {
+  onAgeUpdate = () => {
     const { min, max } = this.state.value;
+    this.setState({ isUpdated: true });
 
     this.props.onFilterUpdate({ age_min: min, age_max: max });
+  }
+
+  changeValue = (value) => {
+    this.setState({ value, isUpdated: false });
   }
 
   render(){
@@ -43,14 +50,13 @@ export default class FilterAge extends Component {
                 maxValue={age_max}
                 minValue={age_min}
                 value={this.state.value}
-                onChange={value => this.setState({ value })} />
+                onChange={this.changeValue} />
             </div>
           </div>
-          <div className="row">
-            <div className="col-md-12 mt-25 apply">
-              <button onClick={this.onSalaryUpdate}>Применить</button>
-            </div>
-          </div>
+          <FilterButton
+            isDisabled={this.state.isUpdated}
+            action={this.onAgeUpdate}
+          />
         </div>
       </div>
     );

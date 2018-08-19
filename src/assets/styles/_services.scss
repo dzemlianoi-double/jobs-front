@@ -1,37 +1,39 @@
 .services {
 	display: inline;
 	float: left;
-	width: 100%;
 	margin: 0 auto;
+	width: 100%;
 	.about-service {
-    padding: 25px 40px;
     margin: 0 auto;
+    padding: 25px 40px;
 		.service-block {
 			border: 1px solid $pure-blue;
-      min-height: 290px;
       border-radius: 10px;
+      min-height: 290px;
       .title-service {
+        background-color: $gray-light-2;
         border-bottom: 1px solid $pure-blue;
-        text-align: center;
         border-radius: 10px 10px 0 0 ;
         padding: 10px 0;
-        background-color: $gray-light-2;
-      }
-      .description-service {
         text-align: center;
-        padding: 10px;
       }
+
+      .description-service {
+        padding: 10px;
+        text-align: center;
+      }
+
       .btn-use-service {
         text-align: center;
         button {
           background-color: $white;
           border: 1px solid $pure-blue;
-          padding: 8px 70px;
           border-radius: 5px;
+          padding: 8px 70px;
           &:hover {
             background-color: $pure-blue;
-            cursor: pointer;
             color: $white;
+            cursor: pointer;
           }
         }
       }

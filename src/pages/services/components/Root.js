@@ -1,9 +1,16 @@
 import React, { Component } from 'react';
+import BasicInfo from './BasicInfo';
+import _ from 'lodash';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
-export default class Services extends Component {
+class Services extends Component {
+  static propTypes = {
+    services: PropTypes.array.isRequired
+  };
+
   render () {
     return (
-                
       <section id="mu-pricing">
         <div className="container">
           <div className="row">
@@ -19,64 +26,7 @@ export default class Services extends Component {
                   <div className="col-md-12">
                     <div className="mu-pricing-content">
                       <ul className="mu-pricing-table">
-                        <li>
-                          <div className="mu-pricing-single">
-                            <div className="mu-pricing-single-icon">
-                              <span className="fa fa-user"></span>
-                            </div>
-                            <div className="mu-pricing-single-title">
-                              <h3>Рабочая виза и трудоустройство в Польше</h3>
-                            </div>
-                            <div className="mu-pricing-single-content">
-                              <ul>
-                                <li>Подбор вакансии. Рабочая виза. Трудоустройство. Дальнейшее сопровождение.</li>
-                              </ul>
-                            </div>
-                            <div className="mu-single-pricebox">
-                              <h4>29<span>грн</span></h4>
-                            </div>
-                            <a className="mu-buy-now-btn" href="#">Купить</a>
-                          </div>
-                        </li>
-                        <li>
-                          <div className="mu-pricing-single">
-                            <div className="mu-pricing-single-icon">
-                              <span className="fa fa-lock"></span>
-                            </div>
-                            <div className="mu-pricing-single-title">
-                              <h3>Visa-work</h3>
-                            </div>
-                            <div className="mu-pricing-single-content">
-                              <ul>
-                                <li>Полный пакет документов для получения визы. Вакансия бесплатная.</li>
-                              </ul>
-                            </div>
-                            <div className="mu-single-pricebox">
-                              <h4>2500&#8372;<span></span></h4>
-                            </div>
-                            <a className="mu-buy-now-btn" href="#">Купить</a>
-                          </div>
-                        </li>
-                        <li>
-                          <div className="mu-pricing-single">
-                            <div className="mu-pricing-single-icon">
-                              <span className="fa fa-paper-plane"></span>
-                            </div>
-                            <div className="mu-pricing-single-title">
-                              <h3>POLAND WORK</h3>
-                            </div>
-                            <div className="mu-pricing-single-content">
-                              <ul>
-                                <li>1.Приглашение 2.Страховка 3.Подбор вакансии 4.Анкета в визовый центр 5.Сопровождение</li>
-                                <li>Срок оформления: 2-4 недели</li>
-                              </ul>
-                            </div>
-                            <div className="mu-single-pricebox">
-                              <h4>229₴</h4>
-                            </div>
-                            <a className="mu-buy-now-btn" href="#">Купить</a>
-                          </div>
-                        </li>
+                        {_.map(this.props.services, (service) => <BasicInfo key={service.id} service={service.attributes} />)}
                       </ul>
                     </div>
                   </div>
@@ -89,3 +39,11 @@ export default class Services extends Component {
     );
   }
 }
+
+function select(store) {
+  return {
+    services: store.basic.services
+  };
+}
+
+export default connect(select)(Services);

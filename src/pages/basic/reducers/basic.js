@@ -6,6 +6,7 @@ const initialState = {
   addresses: {},
   last_vacancies: [],
   reviews: [],
+  services: [],
   loading: true
 };
 
@@ -50,6 +51,11 @@ export default function basic(state = initialState, action) {
     return {
       ...state,
       feedback: action.payload
+    };
+  case 'ADD_SERVICES':
+    return {
+      ...state,
+      services: action.payload
     };
   case 'FINISH_LOADING':
     return {

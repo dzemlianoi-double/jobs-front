@@ -1,6 +1,6 @@
 .mu-vacancies {
   .info-vacancy {
-    background-color: #fff;
+    background-color: $white;
     padding: 25px 25px;
     .vacancy {
       img {
@@ -30,12 +30,12 @@
       .conditions {
         -moz-border-radius: 3px;
         -webkit-border-radius: 3px;
-        border: 1px solid #d0d0d0;
+        border: 1px solid $medium-gray;
         border-radius: 3px;
         min-height: 200px;
         padding: 25px 25px 24px;
         .wrapper-info {
-          border-bottom: 1px dotted #000;
+          border-bottom: 1px dotted $black;
           overflow: hidden;
           padding: 5px 15px;
           div {

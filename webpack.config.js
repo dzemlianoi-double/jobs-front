@@ -8,7 +8,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'), // eslint-disable-line no-undef
     filename: 'main.js',
-    publicPath: '/dist'
+    publicPath: '/dist/'
 
   },
   module: {

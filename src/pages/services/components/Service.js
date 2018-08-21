@@ -14,7 +14,7 @@ const Service = ({ service }) => {
           <span className="fa fa-user"></span>
         </div>
         <div className="mu-pricing-single-title">
-          <h3>{service.name}</h3>
+          <h3 className="fs-16">{service.name}</h3>
         </div>
         <div className="mu-pricing-single-content">
           <ul>
@@ -24,7 +24,7 @@ const Service = ({ service }) => {
         <div className="mu-single-pricebox">
           <h4>{service.price}<span>грн</span></h4>
         </div>
-        <a className="mu-buy-now-btn" href="#">Купить</a>
+        <a className="mu-buy-now-btn" href="#">Подробнее</a>
       </div>
     </li>    
   );

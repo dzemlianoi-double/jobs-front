@@ -4,7 +4,9 @@ const internal_routes = {
   services: '/services',
   vacancies: '/vacancies',
   contacts: '/contacts',
-  vacancy: '/vacancy'
+  vacancy: function(id = null) {
+    return id ? `/vacancy/${id}` : '/vacancy/:id'; 
+  }
 };
 
 export default internal_routes;

@@ -8,6 +8,7 @@ import internal_routes from '../../../config/internal_routes';
 export default class Vacancy extends Component {
   static propTypes = {
     vacancy: PropTypes.shape({
+      id: PropTypes.number.isRequired,
       title: PropTypes.string.isRequired,
       country_name: PropTypes.string.isRequired,
       city: PropTypes.string.isRequired,
@@ -26,7 +27,7 @@ export default class Vacancy extends Component {
 
   get experience() {
     const { experience } = this.props.vacancy;
-    return experience == 0 ? 'Опыт работы не важен' : `Опыт работы от ${experience} лет`;
+    return experience ? `Опыт работы от ${experience} лет`: 'Опыт работы не важен';
   }
 
   get sex() {
@@ -39,13 +40,13 @@ export default class Vacancy extends Component {
   }
 
   render(){
-    const { title, country_name, city, info, salary_min, specialities, is_hot, created_at,
+    const { id, title, country_name, city, info, salary_min, specialities, is_hot, created_at,
       age_min, age_max, arrive_date } = this.props.vacancy;
 
     return (
       <div className="row">
         <div className='col-md-12 padding-30'>
-          <Link to={internal_routes.vacancy}>
+          <Link to={internal_routes.vacancy(id)}>
             <div className={`row mu-vacancy ${is_hot && 'vacancy-hot'}`}>
               <div className="col-md-9">
                 <p className="title-vacancy">

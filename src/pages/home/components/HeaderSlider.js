@@ -15,7 +15,7 @@ export default class HeaderSlider extends Component {
       slidesToScroll: 1,
       autoplay: true,
       speed: 500,
-      autoplaySpeed: 2000,
+      autoplaySpeed: 5000,
       cssEase: 'linear'
     };
     return (
@@ -30,8 +30,9 @@ export default class HeaderSlider extends Component {
                 <div className="row">
                   <div className="col-md-12">
                     <div className="mu-single-slide-content">
+                      <h1>Только проверенные вакансии</h1>
                       <p>
-                        Множество проверенных вакансий Каждый день список вакансий пополняется новыми предложениями для специалистов разных направлений
+                         Каждый день список вакансий пополняется новыми предложениями из разных стран для специалистов разных направлений 
                       </p>
                       <Link className="mu-primary-btn" to={internal_routes.vacancies}>Вакансии <span className="fa fa-long-arrow-right"></span></Link>
                     </div>
@@ -49,8 +50,9 @@ export default class HeaderSlider extends Component {
                 <div className="row">
                   <div className="col-md-12">
                     <div className="mu-single-slide-content">
+                      <h1>Качественное предоставление услуг.</h1>
                       <p>
-                        Качественное предоставление услуги. Кроме комплексного процесса трудоустройства, мы можем предоставить  ряд отдельных услуг, которые нужны для вашего трудоустройства
+                        Кроме комплексного процесса трудоустройства, мы можем предоставить ряд отдельных услуг, которые могут быть полезными для вашего трудоустройства за границей
                       </p>
                       <Link className="mu-primary-btn" to={internal_routes.services}>Услуги <span className="fa fa-long-arrow-right"></span></Link>
                     </div>
@@ -68,8 +70,9 @@ export default class HeaderSlider extends Component {
                 <div className="row">
                   <div className="col-md-12">
                     <div className="mu-single-slide-content">
+                      <h1>Опытная команда</h1>
                       <p>
-                        Мы опытная команда специалистов! Мы сертифицированная команда специалистов, которая всегда поможет вам в вопросах трудоустройства.
+                        Мы сертифицированная команда специалистов, которая всегда поможет вам в вопросах трудоустройства.
                       </p>
                       <Link className="mu-primary-btn" to={internal_routes.about_us}>О нас <span className="fa fa-long-arrow-right"></span></Link>
                     </div>

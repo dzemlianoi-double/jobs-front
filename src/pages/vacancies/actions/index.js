@@ -5,16 +5,16 @@ function receiveVacancies(vacancies) {
   return { type: 'RECEIVE_VACANCIES', payload: vacancies };
 }
 
+function receiveVacancy(vacancy) {
+  return { type: 'RECEIVE_VACANCY', payload: vacancy };
+}
+
 function setBaseFilters(vacancies) {
   return { type: 'SET_BASE_FILTERS', payload: vacancies };
 }
 
 function updateFilters(changedData) {
   return { type: 'UPDATE_FILTERS', payload: changedData };
-}
-
-function stopVacanciesLoading() {
-  return { type: 'STOP_VACANCIES_LOADING' };
 }
 
 function requestVacancies() {
@@ -28,7 +28,22 @@ function requestVacancies() {
   };
 }
 
+function stopVacanciesLoading() {
+  return { type: 'STOP_VACANCIES_LOADING' };
+}
+
+function requestVacancy(id) {
+  return (dispatch) => {
+    axios.get(process.env.API_HOST + external_routes.vacancy(id)).then(resp => {
+      dispatch(receiveVacancy(resp.data.vacancy));
+    }).then(() => {
+      dispatch(stopVacanciesLoading());
+    });
+  };
+}
+
 module.exports = {
   requestVacancies,
-  updateFilters
+  updateFilters,
+  requestVacancy
 };

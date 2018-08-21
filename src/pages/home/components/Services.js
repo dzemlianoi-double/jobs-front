@@ -12,16 +12,15 @@ class Services extends Component {
   render() {
     return(
       <section id="mu-service">
-        <div className="horizontal-line"></div>
         <div className="container">
           <div className="row">
             <div className="col-md-12">
               <div className="mu-service-area">
-                <div className="row">
+                <div className="row mb-30">
                   <div className="col-md-12">
                     <div className="mu-title">
-                      <h2 className="text-center">Our exclusive services</h2>
-                      <p className="text-center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa cum sociis.</p>
+                      <h2 className="text-center">Услуги</h2>
+                      <p className="text-center">Мы предоставляем широкий спектр услуг, которые помогут вам в вашем трудоустройстве в любой точке мира</p>
                     </div>
                   </div>
                 </div>
@@ -38,7 +37,6 @@ class Services extends Component {
             </div>
           </div>
         </div>
-        <div className="horizontal-line"></div>
       </section>
     );
   }

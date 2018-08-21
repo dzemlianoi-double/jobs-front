@@ -9,7 +9,7 @@ import LastVacancies from './LastVacancies';
 const SLIDER_SETTINGS = {
   dots: true,
   infinite: true,
-  slidesToShow: 1,
+  slidesToShow: 3,
   slidesToScroll: 1,
   speed: 500,
   autoplaySpeed: 2000,
@@ -23,10 +23,13 @@ class SliderLastVacancies extends Component {
 
   render() {
     return (
-      <div className="mu-testimonials">
-        <Slider {...SLIDER_SETTINGS}>
-          {_.map(this.props.last_vacancies, (last_vacancies) => <LastVacancies key={last_vacancies.id} last_vacancies={last_vacancies.attributes} />)}
-        </Slider>
+      <div>
+        <div className="horizontal-line pull-left"></div>
+        <div className="mu-testimonials">
+          <Slider {...SLIDER_SETTINGS}>
+            {_.map(this.props.last_vacancies, (last_vacancies) => <LastVacancies key={last_vacancies.id} last_vacancies={last_vacancies.attributes} />)}
+          </Slider>
+        </div>
       </div>
     );
   }

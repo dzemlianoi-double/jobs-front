@@ -21,7 +21,7 @@ class Main extends Component {
           <Route exact path={internal_routes.vacancies} component={Vacancies} />
           <Route exact path={internal_routes.services} component={Services} />
           <Route exact path={internal_routes.contacts} component={Contacts} />
-          <Route exact path={internal_routes.vacancy} component={Vacancy} />
+          <Route path={internal_routes.vacancy} component={Vacancy} />
           <Route component={NotFound} />
         </Switch>
       </main>

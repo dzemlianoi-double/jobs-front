@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const CallBack = () => {
   return (
-    <div id="mu-call-to-action">
+    <div id="mu-call-to-action" className="mt-50 mb-50">
       <div className="container">
         <div className="row">
           <div className="col-md-12">

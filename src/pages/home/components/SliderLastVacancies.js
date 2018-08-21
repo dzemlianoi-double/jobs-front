@@ -23,13 +23,10 @@ class SliderLastVacancies extends Component {
 
   render() {
     return (
-      <div>
-        <div className="horizontal-line pull-left"></div>
-        <div className="mu-testimonials">
-          <Slider {...SLIDER_SETTINGS}>
-            {_.map(this.props.last_vacancies, (last_vacancies) => <LastVacancies key={last_vacancies.id} last_vacancies={last_vacancies.attributes} />)}
-          </Slider>
-        </div>
+      <div className="mu-testimonials">
+        <Slider {...SLIDER_SETTINGS}>
+          {_.map(this.props.last_vacancies, (last_vacancies) => <LastVacancies key={last_vacancies.id} last_vacancies={last_vacancies.attributes} />)}
+        </Slider>
       </div>
     );
   }

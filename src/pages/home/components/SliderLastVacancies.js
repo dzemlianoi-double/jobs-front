@@ -9,7 +9,7 @@ import LastVacancies from './LastVacancies';
 const SLIDER_SETTINGS = {
   dots: true,
   infinite: true,
-  slidesToShow: 1,
+  slidesToShow: 3,
   slidesToScroll: 1,
   speed: 500,
   autoplaySpeed: 2000,

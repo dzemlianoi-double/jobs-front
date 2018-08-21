@@ -140,7 +140,7 @@
 
 .media  {
 	.icon {
-		margin-top: 5px;
+		margin: 5px 5px 0 0;
 	}
 }
 
@@ -148,6 +148,12 @@
 	padding: 0;
 	.media {
 		margin: 0;
+		p {
+			margin: 0;
+		}
+		a {
+			text-decoration: underline;
+		}
 	}
 }
 

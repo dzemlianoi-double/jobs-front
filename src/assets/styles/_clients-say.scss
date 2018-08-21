@@ -1,6 +1,6 @@
 .mu-testimonials {
 	background-attachment: fixed;
-	background-image: url("../images/worker_slider.jpg");
+	background-image: url("../images/img_feedback.jpg");
 	background-position: center center;
 	background-size: cover;
 	display: inline;
@@ -10,11 +10,11 @@
 }
 
 .mu-testimonials::before {
-	background: $pure-blue;
+	background: $black;
 	bottom: 0;
 	content: '';
 	left: 0;
-	opacity: 0.5;
+	opacity: 0.6;
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -22,9 +22,9 @@
 
 .mu-testimonials-area {
 	display: inline;
-    float: left;
-    max-height: 500px;
-    min-height: 500px;
+		float: left;
+		max-height: 500px;
+		min-height: 500px;
 	padding: 20px 0 175px;
 	position: relative;
 	width: 100%;
@@ -47,6 +47,9 @@
 .mu-testimonial-slide li {
 	list-style: none;
 	text-align: center;
+	.mu-primary-btn {
+		margin: 0;
+	}
 }
 
 .mu-client-quote {
@@ -83,7 +86,7 @@
 }
 
 .mu-testimonial-slide .slick-dots {
-    bottom: -50px;
+		bottom: -50px;
 }
 
 .mu-testimonial-slide .slick-dots li {
@@ -109,12 +112,12 @@
 .mu-testimonial-slide .slick-prev:focus,
 .mu-testimonial-slide .slick-next:hover,
 .mu-testimonial-slide .slick-next:focus {
-    color: $pure-blue;
+		color: $pure-blue;
 }
 
 .mu-testimonial-slide .slick-prev:hover:before,
 .mu-testimonial-slide .slick-prev:focus:before,
 .mu-testimonial-slide .slick-next:hover:before,
 .mu-testimonial-slide.slick-next:focus:before {
-    color: $pure-blue;
+		color: $pure-blue;
 }

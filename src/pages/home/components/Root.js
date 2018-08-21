@@ -6,16 +6,18 @@ import ClientsSay from './ClientsSay';
 import Counter from './Counter';
 import CallBack from './CallBack';
 import SliderLastVacancies from './SliderLastVacancies';
+import Services from './Services';
 
 export default class Home extends Component {
   render() {
     return (
       <div>
         <HeaderSlider />
-        <CallBack />
         <WhoWe />
-        <ClientsSay/>
         <Counter />
+        <Services />
+        <ClientsSay/>
+        <CallBack />
         <SliderLastVacancies />
       </div>
     );

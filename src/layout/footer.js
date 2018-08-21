@@ -22,7 +22,7 @@ class Footer extends Component {
     return Object.values(this.props.phone_numbers).map((phone_number) => {
       return (
         <div key={phone_number.toString()}>
-          <span className="fa fa-phone"></span>
+          <span className="fa fa-phone icon"></span>
           <span>{phone_number}</span>
         </div>
       );
@@ -64,7 +64,7 @@ class Footer extends Component {
     return this.props.emails.map((email) => {
       return (
         <div key={email.toString()}>
-          <span className="fa fa-envelope"></span>
+          <span className="fa fa-envelope icon"></span>
           <span>{email}</span>
         </div>
       );
@@ -116,31 +116,26 @@ class Footer extends Component {
                   <h3>{T.translate('footer.sections')}</h3>
                   <ul className="mu-useful-links">
                     <li>
-                      <span><i className="fa fa-circle" aria-hidden="true"></i></span>
                       <Link to={internal_routes.home}>
                         <T.span text="menu.main" />
                       </Link>
                     </li>
                     <li>
-                      <span><i className="fa fa-circle" aria-hidden="true"></i></span>
                       <Link to={internal_routes.about_us}>
                         <T.span text="menu.about_us" />
                       </Link>
                     </li>
                     <li>
-                      <span><i className="fa fa-circle" aria-hidden="true"></i></span>
                       <Link to={internal_routes.services}>
                         <T.span text="menu.services" />
                       </Link>
                     </li>
                     <li>
-                      <span><i className="fa fa-circle" aria-hidden="true"></i></span>
                       <Link to={internal_routes.vacancies}>
                         <T.span text="menu.vacancies" />
                       </Link>
                     </li>
                     <li>
-                      <span><i className="fa fa-circle" aria-hidden="true"></i></span>
                       <Link to={internal_routes.contacts}>
                         <T.span text="menu.contacts" />
                       </Link>
@@ -164,17 +159,6 @@ class Footer extends Component {
                       </div>
                     </li>
                   </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="mu-footer-bottom">
-          <div className="container">
-            <div className="row">
-              <div className="col-md-12">
-                <div className="mu-footer-bottom-area">
-                  <p className="mu-copy-right">&copy; Copyright <a rel="nofollow" href="http://markups.io">markups.io</a>. All right reserved.</p>
                 </div>
               </div>
             </div>

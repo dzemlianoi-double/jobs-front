@@ -4,7 +4,7 @@ const internal_routes = {
   services: '/services',
   vacancies: '/vacancies',
   contacts: '/contacts',
-  vacancy: '/vacancy' 
+  vacancy: '/vacancy'
 };
 
 export default internal_routes;

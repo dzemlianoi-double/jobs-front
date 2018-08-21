@@ -40,3 +40,60 @@
     }
 	}
 }
+
+#mu-service {
+	display: inline;
+	float: left;
+	padding: 15px 50px;
+	width: 100%;
+}
+
+.mu-service-area {
+	display: inline;
+	float: left;
+	width: 100%;
+}
+
+.mu-service-content {
+	display: inline;
+	float: left;
+	width: 100%;
+}
+
+.mu-single-service {
+	display: inline;
+	float: left;
+	margin-bottom: 35px;
+	margin-top: 35px;
+	width: 100%;
+}
+
+.mu-single-service-icon {
+	background-color: $pure-blue;
+	border-radius: 50%;
+	color: $white;
+	display: inline;
+	float: left;
+	font-size: 18px;
+	height: 48px;
+	line-height: 48px;
+	margin-right: 20px;
+	text-align: center;
+	width: 48px;
+}
+
+.mu-single-service-content {
+	display: inline;
+	float: left;
+	width: 80%;
+}
+
+.mu-single-service-content h3 {
+	color: $gray-dark-4;
+	font-size: 18px;
+	text-transform: uppercase;
+}
+
+.mu-single-service-content p {
+	font-size: 14px;
+}

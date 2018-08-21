@@ -11,6 +11,7 @@
 }
 
 .mu-single-slide {
+	background-color: $black;
 	display: inline;
 	float: left;
 	max-height: 500px;
@@ -18,10 +19,12 @@
 	position: relative;
 	width: 100%;
 	.image {
-		align-items: center;
+    -moz-opacity: 0.3;
+    align-items: center;
 		display: flex;
+		filter: alpha(opacity=30);
 		justify-content: center;
-		opacity: 0.6;
+		opacity: 0.3;
 	}
 }
 
@@ -61,7 +64,7 @@
 }
 
 .mu-single-slide-content p {
-	color: $black;
+	color: $white;
 	font-size: 19px;
 	font-weight: 800;
 	margin-bottom: 15px;
@@ -90,6 +93,15 @@
 .mu-slide .slick-next:hover:before,
 .mu-slide .slick-next:focus:before {
     color: $pure-blue;
+}
+
+.slick-slider {
+	button {
+		background: none;
+		&:hover {
+			background: none;
+		}
+	}
 }
 
 .slick-dots {

@@ -72,7 +72,7 @@ class Footer extends Component {
   }
 
   renderVacancies = () => {
-    return _.map(this.props.vacancies, (vacancy) => {
+    return _.map(this.props.vacancies.slice(0, 3), (vacancy) => {
       const vacancy_attr = vacancy.attributes;
       return (
         <li className="media" key={vacancy.id}>

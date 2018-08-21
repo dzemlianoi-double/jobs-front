@@ -81,7 +81,6 @@
 }
 
 .mu-pricing-single-title h3 {
-	font-size: 18px;
 	margin-bottom: 0;
 	text-transform: uppercase;
 }
@@ -89,8 +88,7 @@
 .mu-pricing-single-content {
 	display: inline;
   float: left;
-	max-height: 150px;
-	min-height: 150px;
+	height: 190px;
 	padding: 35px 0 15px;
 	width: 100%;
 }

@@ -2,6 +2,7 @@ import _ from 'lodash';
 
 const initialState = {
   list: [],
+  currentVacancy: {},
   loading: true,
   filters: {
     default: {
@@ -34,6 +35,11 @@ export default function vacancies(state = initialState, action) {
       ...state,
       list: action.payload
     };
+  case 'RECEIVE_VACANCY':
+    return {
+      ...state,
+      currentVacancy: action.payload
+    };
   case 'SET_BASE_FILTERS':
     return {
       ...state,
@@ -46,7 +52,7 @@ export default function vacancies(state = initialState, action) {
           age_min: _.minBy(action.payload, 'age_min').age_min,
           age_max: _.maxBy(action.payload, 'age_max').age_max,
           experience_max: _.maxBy(action.payload, 'experience').experience,
-          country_list: _.map(action.payload, (vacancy) => ({ value: vacancy.country_name, label: vacancy.country_name })),
+          country_list: _.uniqBy(_.map(action.payload, (vacancy) => ({ value: vacancy.country_name, label: vacancy.country_name })), 'label'),
           specialities_list: _.uniqBy(_.flatten(_.map(action.payload, (vacancy) => {
             return _.map(vacancy.specialities, (speciality) => ({ value: speciality.title, label: speciality.title }));
           })), 'label')

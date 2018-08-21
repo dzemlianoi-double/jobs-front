@@ -41,7 +41,7 @@ export default class FilterCountry extends Component {
                 isMulti
                 onChange={this.handleChange}
                 options={this.options}
-                placeholder="Выберите специальность..."
+                placeholder="Выберите специаль..."
               />
               <FilterButton
                 isDisabled={this.state.isUpdated}

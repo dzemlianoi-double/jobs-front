@@ -3,7 +3,7 @@ import CounterSection from './CounterSection';
 
 const Counter = () => {
   return (
-    <section className="mt-75" id="mu-counter">
+    <section className="mb-100 mb-100" id="mu-counter">
       <div className="container">
         <div className="row">
           <div className="col-md-12">

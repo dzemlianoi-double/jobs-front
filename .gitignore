@@ -1,4 +1,5 @@
 node_modules/
+base_template/*
 dist/*
 config/.env
 .DS_Store

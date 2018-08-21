@@ -1,8 +1,54 @@
 import React, { Component } from 'react';
-import house from '../../assets/images/house_1.jpg';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import _ from 'lodash';
 
-export default class Vacancy extends Component {
-  render () {
+import { requestVacancy } from '../vacancies/actions';
+
+class Vacancy extends Component {
+  static propTypes = {
+    requestVacancy: PropTypes.func.isRequired,
+    currentVacancy: PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      title: PropTypes.string.isRequired,
+      country_name: PropTypes.string.isRequired,
+      city: PropTypes.string.isRequired,
+      info: PropTypes.string.isRequired,
+      salary_min: PropTypes.string.isRequired,
+      specialities: PropTypes.string.isRequired,
+      is_hot: PropTypes.bool.isRequired,
+      created_at: PropTypes.isRequired,
+      age_min: PropTypes.number.isRequired,
+      age_max: PropTypes.number.isRequired,
+      experience: PropTypes.number.isRequired,
+      arrive_date: PropTypes.string.isRequired,
+      main_photo: PropTypes.string.isRequired,
+      sex: PropTypes.oneOf(['Any', 'Male', 'Female', 'Family']).isRequired
+    }),
+    match: PropTypes.object.isRequired
+  }
+
+  componentDidMount() {
+    this.props.requestVacancy(this.props.match.params.id);
+  }
+
+  get experience() {
+    const { experience } = this.props.currentVacancy;
+    return experience ? `Опыт работы от ${experience} лет` : 'Опыт работы не важен';
+  }
+
+  get sex() {
+    switch (this.props.currentVacancy.sex) {
+    case ('Male'): return 'Мужской';
+    case ('Female'): return 'Женский';
+    case ('Family'): return 'Семейная пара';
+    default: return 'Не имеет значения';
+    }
+  }
+
+  render() {
+    const { title, country_name, city, info, salary_min, specialities, age_min, age_max, main_photo } = this.props.currentVacancy;
+
     return (
       <section className='mu-vacancies'>
         <div className='container mt-50 mb-50'>
@@ -11,11 +57,11 @@ export default class Vacancy extends Component {
               <div className='row info-vacancy'>
                 <div className='col-md-12 padding-0'>
                   <div className="vacancy">
-                    <p className="title-vacancy">Фрезеровщик 3 разряда</p>
-                    <p className="title-company">Токарь, Фрезеровщик, Филантроп</p>
+                    <p className="title-vacancy">{title}</p>
+                    <p className="title-company">{!!specialities && _.map(specialities, 'title').join(', ')}</p>
                     <div className="row">
                       <div className="col-md-7 mt-10">
-                        <img src={house} />
+                        <img src={main_photo} />
                       </div>
                       <div className="col-md-5 mt-10">
                         <div className="conditions">
@@ -25,7 +71,7 @@ export default class Vacancy extends Component {
                                 <i className="fa fa-money fs-17 mr-2 color-strong-blue-2" aria-hidden="true"></i>
                                 Заработная плата:
                               </div>
-                              <div className="col-md-6 info">100500</div>
+                              <div className="col-md-6 info">{salary_min}</div>
                             </div>
                           </div>
                           <div className="wrapper-info">
@@ -34,7 +80,7 @@ export default class Vacancy extends Component {
                                 <i className="fa fa-map-pin fs-17 mr-2 color-strong-blue-2" aria-hidden="true"></i>
                                 Страна:
                               </div>
-                              <div className="col-md-6 info">Нигерия</div>
+                              <div className="col-md-6 info">{country_name}, {city}</div>
                             </div>
                           </div>
                           <div className="wrapper-info">
@@ -43,7 +89,7 @@ export default class Vacancy extends Component {
                                 <i className="fa fa-venus-mars fs-17 mr-2 color-strong-blue-2"></i>
                                 Пол:
                               </div>
-                              <div className="col-md-6 info">не имеет значение</div>
+                              <div className="col-md-6 info">{this.sex}</div>
                             </div>
                           </div>
                           <div className="wrapper-info">
@@ -52,7 +98,7 @@ export default class Vacancy extends Component {
                                 <i className="fa fa-user-times fs-17 mr-2 color-strong-blue-2"></i>
                                 Возраст:
                               </div>
-                              <div className="col-md-6 info">20 - 65 лет</div>
+                              <div className="col-md-6 info">{age_min} - {age_max} лет</div>
                             </div>
                           </div>
                           <div className="wrapper-info">
@@ -61,7 +107,7 @@ export default class Vacancy extends Component {
                                 <i className="fa fa-child fs-17 mr-2 color-strong-blue-2"></i>
                                 Опыт работы:
                               </div>
-                              <div className="col-md-6 info">от 2 лет</div>
+                              <div className="col-md-6 info">{this.experience}</div>
                             </div>
                           </div>
                           <div className="row">
@@ -77,24 +123,7 @@ export default class Vacancy extends Component {
                     <div className="col-md-12 mt-25">
                       <div className="about-vacancy">
                         <p>Описание вакансии:</p>
-                        <p>
-                            В небольшую аптеку на неполный рабочий день требуется уборщица.
-                        </p>
-                        <p>
-                            Рабочее время - утро или вечер - по согласованию.В режиме убрали и ушли. 
-                        </p>
-                        <p>
-                            Требования: без возрастных ограничений, при отсутствии серьезных проблем со здоровьем.
-                        </p>
-                        <p>
-                            Условия работы: ЗП выплачиваем вовремя, порядочность гарантируем.
-                        </p>
-                        <p>
-                            Телефон: 095−146−30−07, 098−070−75−08
-                        </p>
-                        <p>
-                            Контактное лицо: Ольга Алексеевна 
-                        </p>
+                        <p>{info}</p>
                       </div>
                     </div>
                   </div>
@@ -107,3 +136,17 @@ export default class Vacancy extends Component {
     );
   }
 }
+
+function select(store) {
+  return {
+    currentVacancy: store.vacancies.currentVacancy
+  };
+}
+
+function mapPropsToDispatch(dispatch) {
+  return {
+    requestVacancy: (id) => dispatch(requestVacancy(id))
+  };
+}
+
+export default connect(select, mapPropsToDispatch)(Vacancy);

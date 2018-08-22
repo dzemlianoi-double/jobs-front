@@ -505,6 +505,7 @@ a {
 			button {
 				background-color: $luminous-vivid-orange;
 				color: $white;
+				cursor: pointer;
 				font-size: 13px;
 				padding: 5px 0;
 				text-transform: uppercase;
@@ -556,4 +557,46 @@ a {
 
 .css-1492t68 {
   font-size: 12px;
+}
+
+.ReactModal__Content {
+	background-color: $black;
+	color: $white;
+	.modal-form-respond {
+		align-items: inherit;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		div {
+			align-items: center;
+			display: flex;
+			justify-content: space-between;
+			margin-top: 10px;
+			width: 100%;
+			label {
+				font-size: 18px;
+			}
+			input {
+				border: 0;
+				border-radius: 10px;
+				height: 30px;
+				padding: 5px;
+				width: 80%;
+				&:focus {
+					outline: none;
+				}
+			}
+		}
+		button {
+			background-color: $light-blue;
+			border: 0;
+			border-radius: 10px;
+			color: $white;
+			&:hover {
+				background-color: $white;
+				color: $light-blue;
+				cursor: pointer;
+			}
+		}
+	}
 }

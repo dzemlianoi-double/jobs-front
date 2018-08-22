@@ -11,24 +11,24 @@ class VacancyForm extends Component {
     const { handleSubmit } = this.props;
 
     return (
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="modal-form-respond">
         <div>
-          <label htmlFor="name">Имя</label>
+          <label htmlFor="name">Имя:</label>
           <Field name="name" component="input" type="text" />
         </div>
         <div>
-          <label htmlFor="phone_number">Телефон</label>
+          <label htmlFor="phone_number">Телефон:</label>
           <Field name="phone_number" component="input" type="text" />
         </div>
         <div>
-          <label htmlFor="email">Email</label>
+          <label htmlFor="email">Email:</label>
           <Field name="email" component="input" type="email" />
         </div>
         <div>
-          <label htmlFor="text">Дополнительная информация</label>
+          <label htmlFor="text">Дополнительная информация:</label>
           <Field name="text" component="input" />
         </div>
-        <button type="submit">Отправить</button>
+        <button type="submit">Отправить <span className="fa fa-long-arrow-right"></span></button>
       </form>
     );
   }  

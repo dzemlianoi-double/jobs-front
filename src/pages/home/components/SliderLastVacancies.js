@@ -25,7 +25,7 @@ class SliderLastVacancies extends Component {
     return (
       <div className="mu-testimonials">
         <Slider {...SLIDER_SETTINGS}>
-          {_.map(this.props.last_vacancies, (last_vacancies) => <LastVacancies key={last_vacancies.id} last_vacancies={last_vacancies.attributes} />)}
+          {_.map(this.props.last_vacancies, (last_vacancies) => <LastVacancies key={last_vacancies.id} last_vacancies={last_vacancies} />)}
         </Slider>
       </div>
     );

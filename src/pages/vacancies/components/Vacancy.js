@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import Moment from 'react-moment';
 import _ from 'lodash';
 import { Link } from 'react-router-dom';
+
 import internal_routes from '../../../config/internal_routes';
+import VacancyModal from './VacancyModal';
 
 export default class Vacancy extends Component {
   static propTypes = {
@@ -46,9 +48,9 @@ export default class Vacancy extends Component {
     return (
       <div className="row">
         <div className='col-md-12 padding-30'>
-          <Link to={internal_routes.vacancy(id)}>
-            <div className={`row mu-vacancy ${is_hot && 'vacancy-hot'}`}>
-              <div className="col-md-9">
+          <div className={`row mu-vacancy ${is_hot && 'vacancy-hot'}`}>
+            <div className="col-md-9">
+              <Link to={internal_routes.vacancy(id)}>
                 <p className="title-vacancy">
                   <span>{title}</span>
                 </p>
@@ -65,8 +67,10 @@ export default class Vacancy extends Component {
                   <span>Добавлено: </span>
                   <Moment format="DD.MM.YYYY">{created_at}</Moment>
                 </p>
-              </div>
-              <div className="col-md-3">
+              </Link>
+            </div>
+            <div className="col-md-3">
+              <Link to={internal_routes.vacancy(id)}>
                 <p className="salary">{salary_min} грн</p>
                 <div className="city">
                   <span>{country_name}, {city}</span>
@@ -84,10 +88,10 @@ export default class Vacancy extends Component {
                   </div>
                 </div>
                 <a href="#" className="send-friend">Предложить другу</a>
-                <button>Откликнуться</button>
-              </div>
+              </Link>
+              <VacancyModal />
             </div>
-          </Link>
+          </div>
         </div>
       </div>
     );

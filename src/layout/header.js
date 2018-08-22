@@ -16,7 +16,7 @@ class Header extends Component {
   renderNumbers = () => {
     return Object.values(this.props.phone_numbers).map((phone_number) => {
       return (
-        <div className="fs-13 c-white" key={`header-${phone_number.toString()}`}>
+        <div className="fs-13 c-white numbers mr-10" key={`header-${phone_number.toString()}`}>
           <span className="fa mr-1 fa-phone"></span>
           <span>{phone_number}</span>
         </div>
@@ -27,7 +27,7 @@ class Header extends Component {
   renderAddresses = () => {
     return Object.values(this.props.addresses).map((address) => {
       return (
-        <div className="fs-13 c-white" key={`header-${address.toString()}`}>
+        <div className="fs-13 c-white addresses" key={`header-${address.toString()}`}>
           <span className="fa fa-home icon mr-1"></span>
           <span>{address}</span>
         </div>
@@ -65,7 +65,7 @@ class Header extends Component {
                       <Link to={routes.contacts}><T.span text="menu.contacts" /></Link>
                     </li>
 
-                    <li className="nav-item last-nav-item ml-100 text-center">
+                    <li className="nav-item last-nav-item text-center">
                       <div>
                         <div className="nav-numbers-block inline-block m-auto text-left">
                           {this.renderNumbers()}

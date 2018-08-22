@@ -1,6 +1,7 @@
 const path = require('path');
 const Dotenv = require('dotenv-webpack');
 const dotenv = new Dotenv({path: './config/.env'});
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -50,6 +51,10 @@ module.exports = {
         test: /\.json$/,
         loader: 'json-loader',
         include: path.resolve(__dirname, 'translations') // eslint-disable-line no-undef
+      },
+      {
+        test: /\.html$/,
+        loader: 'html-loader'
       }
     ]
   },
@@ -57,6 +62,13 @@ module.exports = {
     historyApiFallback: true,
   },
   plugins: [
-    dotenv
+    dotenv,
+    new HtmlWebpackPlugin({
+      hash: true,
+      favicon: './src/assets/images/favicon.ico',
+      filename: './index.html',
+      title: 'Custom template',
+      inject: false,
+    })
   ]
 };

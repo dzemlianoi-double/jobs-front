@@ -110,7 +110,18 @@
 }
 
 .last-nav-item {
-  text-align: left;
+  .nav-numbers-block {
+		display: block;
+		.numbers {
+			display: inline;
+		}
+	}
+	.nav-addresses-block {
+		display: block;
+		.addresses {
+			display: inline;
+		}
+	}
 }
 
 .nav-item {

@@ -4,6 +4,7 @@ const initialState = {
   list: [],
   currentVacancy: {},
   loading: true,
+  modalVacancy: {},
   filters: {
     default: {
       salary_min: null,
@@ -75,6 +76,16 @@ export default function vacancies(state = initialState, action) {
       ...state,
       loading: false
     };
+  case 'OPEN_VACANCY_MODAL':
+    return {
+      ...state,
+      modalVacancy: action.payload
+    };
+  case 'CLOSE_VACANCY_MODAL':
+    return {
+      ...state,
+      modalVacancy: {}
+    };  
   default:
     return state;
   }

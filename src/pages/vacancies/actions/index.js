@@ -17,6 +17,22 @@ function updateFilters(changedData) {
   return { type: 'UPDATE_FILTERS', payload: changedData };
 }
 
+function openVacancyModal(vacancy) {
+  return { type: 'OPEN_VACANCY_MODAL', payload: vacancy};
+}
+
+function closeVacancyModal() {
+  return { type: 'CLOSE_VACANCY_MODAL' };
+}
+
+function saveVacancy() {
+  return(dispatch, getState) => {
+    const formValues = getState().form.vacancy.values;
+    const fullParams = { ...formValues, vacancy_id: getState().vacancies.modalVacancy.id };
+    axios.post(process.env.API_HOST + external_routes.create_claim, { claim: fullParams });
+  };
+}
+
 function requestVacancies() {
   return (dispatch) => {
     axios.get(process.env.API_HOST + external_routes.vacancies_list).then(resp => {
@@ -45,5 +61,8 @@ function requestVacancy(id) {
 module.exports = {
   requestVacancies,
   updateFilters,
-  requestVacancy
+  requestVacancy,
+  openVacancyModal,
+  closeVacancyModal,
+  saveVacancy
 };

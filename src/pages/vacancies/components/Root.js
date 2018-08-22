@@ -3,17 +3,23 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 
-import { requestVacancies } from '../actions';
+import { requestVacancies, openVacancyModal, closeVacancyModal, saveVacancy } from '../actions';
+import filteredVacancies from '../support/filters';
 import Search from './Search';
 import Filters from './filters';
 import Vacancy from './Vacancy';
 import BasicInfo from './BasicInfo';
+import VacancyModal from './VacancyModal';
 
 class Vacancies extends Component {
   static propTypes = {
     requestVacancies: PropTypes.func.isRequired,
+    openVacancyModal: PropTypes.func.isRequired,
+    closeVacancyModal: PropTypes.func.isRequired,
+    saveVacancy: PropTypes.func.isRequired,
     vacancies: PropTypes.array.isRequired,
-    filters: PropTypes.object.isRequired
+    filters: PropTypes.object.isRequired,
+    modalVacancy: PropTypes.object.isRequired
   }
 
   componentDidMount() {
@@ -25,84 +31,28 @@ class Vacancies extends Component {
     return _.meanBy(this.filteredVacancies, (vacancy) => vacancy.salary_min).toFixed(0);
   }
 
-  filterSalary = (vacancies) => {
-    const {salary_min, salary_max} = this.props.filters;
-
-    if (salary_max !== null && salary_min !== null){
-      return _.filter(vacancies, (vacancy) => vacancy.salary_min >= salary_min && vacancy.salary_min <= salary_max);
-    }else {
-      return vacancies;
-    }
+  get filteredVacancies() {
+    return filteredVacancies(this.props.vacancies, this.props.filters);
   }
 
-  filterAge = (vacancies) => {
-    const { age_min, age_max } = this.props.filters;
-
-    if (age_min !== null && age_max !== null) {
-      return _.filter(vacancies, (vacancy) => {
-        let age_min_is_between_range = vacancy.age_min >= age_min && vacancy.age_min <= age_max;
-        let age_max_is_between_range = vacancy.age_max >= age_min && vacancy.age_max <= age_max;
-        return age_min_is_between_range || age_max_is_between_range;
-      });
-    } else {
-      return vacancies;
-    }
-  }
-
-  filterExperience = (vacancies) => {
-    const { experience } = this.props.filters;
-
-    if (experience !== null) {
-      return _.filter(vacancies, (vacancy) => vacancy.experience <= experience);
-    } else {
-      return vacancies;
-    }
-  }
-
-  filterCountry = (vacancies) => {
-    const { country_name } = this.props.filters;
-
-    if (country_name !== null) {
-      return _.filter(vacancies, (vacancy) => vacancy.country_name == country_name);
-    }else {
-      return vacancies;
-    }
-  }
-
-  filterSex = (vacancies) => {
-    const { sex_list } = this.props.filters;
-
-    if (sex_list.length === 0 || sex_list.includes('Any')) {
-      return vacancies;
-    } else {
-      return _.filter(vacancies, (vacancy) => sex_list.includes(vacancy.sex));
-    }
-  }
-
-  filterSpeciality = (vacancies) => {
-    const { specialities_list } = this.props.filters;
-    if (specialities_list.length === 0) {
-      return vacancies;
-    } else { 
-      return _.filter(vacancies, (vacancy) => {
-        return _.intersection(_.map(vacancy.specialities, 'title'), specialities_list).length > 0;
-      });
-    }
-  }
-
-  get filteredVacancies(){
-    let vacanciesBySalary = this.filterSalary(this.props.vacancies);
-    let vacanciesByExperience = this.filterExperience(vacanciesBySalary);
-    let vacanciesByAge = this.filterAge(vacanciesByExperience);
-    let vacanciesByCountry = this.filterCountry(vacanciesByAge);
-    let vacanciesBySex = this.filterSex(vacanciesByCountry);
-    let vacanciesBySpeciality = this.filterSpeciality(vacanciesBySex);
-    return vacanciesBySpeciality;
+  get renderFilteredVacancies() {
+    return this.filteredVacancies.map((vacancy) => {
+      return (
+        <Vacancy 
+          key={vacancy.id}
+          vacancy={vacancy}
+          openVacancyModal={this.props.openVacancyModal}
+        />
+      );
+    });
   }
 
   render () {
+    const { modalVacancy, closeVacancyModal, saveVacancy } = this.props;
+    
     return (
       <section className='mu-vacancies'>
+        <VacancyModal modalVacancy={modalVacancy} closeVacancyModal={closeVacancyModal} saveVacancy={saveVacancy} />
         <div className='container'>
           <div className='row'>
             <div className='col-md-12'>
@@ -111,8 +61,8 @@ class Vacancies extends Component {
                 <div className='row main'>
                   <Filters />
                   <div className='col-md-9 padding-0'>
-                    <BasicInfo count={this.filteredVacancies.length} averageSalary={this.averageSalary || 0} />
-                    {this.filteredVacancies.map((vacancy => <Vacancy key={vacancy.id} vacancy={vacancy} />))}
+                    <BasicInfo count={this.filteredVacancies.length} averageSalary={this.averageSalary} />
+                    {this.renderFilteredVacancies}
                   </div>
                 </div>
               </div>
@@ -128,13 +78,17 @@ class Vacancies extends Component {
 function select(store) {
   return {
     vacancies: store.vacancies.list,
+    modalVacancy: store.vacancies.modalVacancy,
     filters: store.vacancies.filters.used
   };
 }
 
 function mapPropsToDispatch(dispatch) {
   return {
-    requestVacancies: () => dispatch(requestVacancies())
+    requestVacancies: () => dispatch(requestVacancies()),
+    saveVacancy: () => dispatch(saveVacancy()),
+    openVacancyModal: (vacancy) => dispatch(openVacancyModal(vacancy)),
+    closeVacancyModal: () => dispatch(closeVacancyModal())
   };
 }
 

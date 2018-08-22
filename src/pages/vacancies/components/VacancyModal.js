@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Modal from 'react-modal';
+import _ from 'lodash';
+
+import VacancyForm from './VacancyForm';
  
 const customStyles = {
   content : {
@@ -13,44 +17,28 @@ const customStyles = {
 };
 
 export default class VacancyModal extends Component {
-  constructor() {
-    super();
- 
-    this.state = {
-      modalIsOpen: false
-    };
- 
-    this.openModal = this.openModal.bind(this);
-    this.afterOpenModal = this.afterOpenModal.bind(this);
-    this.closeModal = this.closeModal.bind(this);
+  static propTypes = {
+    modalVacancy: PropTypes.object.isRequired,
+    closeVacancyModal: PropTypes.func.isRequired,
+    saveVacancy: PropTypes.func.isRequired,
   }
- 
-  openModal() {
-    this.setState({modalIsOpen: true});
+
+  closeModal = () => this.props.closeVacancyModal();
+  
+  get isModalOpen(){
+    return !_.isEmpty(this.props.modalVacancy);
   }
- 
-  afterOpenModal() {
-    this.subtitle.style.color = '#000';
-  }
- 
-  closeModal() {
-    this.setState({modalIsOpen: false});
-  }
- 
+
   render() {
     return (
       <div>
-        <button onClick={this.openModal}>Откликнуться</button>
         <Modal
-          isOpen={this.state.modalIsOpen}
-          onAfterOpen={this.afterOpenModal}
+          isOpen={this.isModalOpen}
           onRequestClose={this.closeModal}
           style={customStyles}
           contentLabel="Example Modal"
         >
-          <h2 ref={subtitle => this.subtitle = subtitle}>Hello</h2>
-          <button onClick={this.closeModal}>close</button>
-          <div>I am a modal</div>
+          <VacancyForm vacancy={this.props.closeVacancyModal} onSubmit={this.props.saveVacancy} />
         </Modal>
       </div>
     );

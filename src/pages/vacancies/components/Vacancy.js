@@ -5,10 +5,11 @@ import _ from 'lodash';
 import { Link } from 'react-router-dom';
 
 import internal_routes from '../../../config/internal_routes';
-import VacancyModal from './VacancyModal';
 
 export default class Vacancy extends Component {
   static propTypes = {
+    openVacancyModal: PropTypes.func.isRequired,
+    closeVacancyModal: PropTypes.func.isRequired,
     vacancy: PropTypes.shape({
       id: PropTypes.number.isRequired,
       title: PropTypes.string.isRequired,
@@ -39,6 +40,10 @@ export default class Vacancy extends Component {
     case('Family'): return 'Семейная пара';
     default: return 'Не имеет значения'; 
     }
+  }
+
+  openModal = () => {
+    this.props.openVacancyModal(this.props.vacancy);
   }
 
   render(){
@@ -89,7 +94,7 @@ export default class Vacancy extends Component {
                 </div>
                 <a href="#" className="send-friend">Предложить другу</a>
               </Link>
-              <VacancyModal />
+              <button onClick={this.openModal}>Откликнуться</button>
             </div>
           </div>
         </div>

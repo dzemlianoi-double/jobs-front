@@ -1,10 +1,11 @@
 const external_routes = {
-  basic_conf: '/basic_configurations',
-  vacancies_last: '/vacancies/last',
-  vacancies_list: '/vacancies',
-  services: '/services',
+  basic_conf: 'basic_configurations',
+  vacancies_last: 'vacancies/last',
+  vacancies_list: 'vacancies',
+  services: 'services',
+  create_claim: 'claims',
   vacancy: function(id) {
-    return `/vacancies/${id}`;
+    return `vacancies/${id}`;
   }
 };
 

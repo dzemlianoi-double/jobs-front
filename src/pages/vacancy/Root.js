@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import _ from 'lodash';
 
 import { requestVacancy } from '../vacancies/actions';
+import SliderLastVacancies from './SliderLastVacancies';
 
 class Vacancy extends Component {
   static propTypes = {
@@ -129,6 +130,11 @@ class Vacancy extends Component {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-12">
+              <SliderLastVacancies />
             </div>
           </div>
         </div>

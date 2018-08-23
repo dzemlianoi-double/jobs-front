@@ -11,24 +11,27 @@ class VacancyForm extends Component {
     const { handleSubmit } = this.props;
 
     return (
-      <form onSubmit={handleSubmit} className="modal-form-respond">
-        <div>
-          <label htmlFor="name">Имя:</label>
-          <Field name="name" component="input" type="text" />
+      <form onSubmit={handleSubmit} className="modal-form-respond mt-15">
+        <div className="form-group">
+          <label htmlFor="InputName">Имя:</label>
+          <Field id="InputName" name="name" className="form-control" placeholder="Имя" component="input" type="text" />
         </div>
-        <div>
-          <label htmlFor="phone_number">Телефон:</label>
-          <Field name="phone_number" component="input" type="text" />
+        <div className="form-group">
+          <label htmlFor="InputPhoneNumber">Телефон:</label>
+          <Field id="InputPhoneNumber" name="phone_number" className="form-control" placeholder="Телефон" component="input" type="text" />
         </div>
-        <div>
-          <label htmlFor="email">Email:</label>
-          <Field name="email" component="input" type="email" />
+        <div className="form-group">
+          <label htmlFor="InputEmail">Email address</label>
+          <Field name="email" id="InputEmail" className="form-control" placeholder="Email" component="input" type="email" />
         </div>
-        <div>
-          <label htmlFor="text">Дополнительная информация:</label>
-          <Field name="text" component="input" />
+        <div className="form-group">
+          <label htmlFor="InputInfo">Дополнительная информация:</label>
+          <Field id="InputInfo" name="text" className="form-control" placeholder="Дополнительная информация" component="textarea" />
         </div>
-        <button type="submit">Отправить <span className="fa fa-long-arrow-right"></span></button>
+        <div className="horizontal-line"></div>
+        <button type="submit">Отправить 
+          <span className="ml-1 fa fa-long-arrow-right"></span>
+        </button>
       </form>
     );
   }  

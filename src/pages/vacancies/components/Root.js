@@ -49,7 +49,6 @@ class Vacancies extends Component {
 
   render () {
     const { modalVacancy, closeVacancyModal, saveVacancy } = this.props;
-    
     return (
       <section className='mu-vacancies'>
         <VacancyModal modalVacancy={modalVacancy} closeVacancyModal={closeVacancyModal} saveVacancy={saveVacancy} />

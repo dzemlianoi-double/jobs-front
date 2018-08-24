@@ -6,7 +6,6 @@ a {
 		text-decoration: none;
 	}
 }
-
 	.mu-vacancies {
 	background-color: $light-reddish-gray;
 	display: inline;
@@ -86,46 +85,6 @@ a {
           background: $pure-blue;
           border: 1px solid $white;
         }
-
-        .apply {
-          text-align: right;
-          button {
-            background: none;
-            border: 1px solid $pure-blue;
-            border-radius: 3px;
-            color: $black;
-            font-size: 12px;
-            height: 30px;
-            padding: 0 10px;
-            text-transform: uppercase;
-            &.filter-disabled-button {
-              border: 1px solid $medium-gray;
-              color: $medium-gray;
-            }
-
-            &::after {
-              background: url('../images/select-small.png') no-repeat 0 0;
-              content: '';
-              display: inline-block;
-              height: 7px;
-              margin-left: 5px;
-              width: 9px;
-            }
-
-            &:hover::after {
-              background-position: 0 -9px;
-            }
-
-            &:hover {
-              background-color: $strong-blue-2;
-              border: 0;
-              color: $white;
-              cursor: pointer;
-              line-height: 30px;
-              padding: 0 11px;
-            }
-          }
-        }
 			}
 			.filter-experience-block {
 				margin-top: 30px;
@@ -149,47 +108,6 @@ a {
             border: 1px solid $white;
           }
         }
-
-        .apply {
-          text-align: right;
-          button {
-            background: none;
-            border: 1px solid $pure-blue;
-            border-radius: 3px;
-            color: $black;
-            font-size: 12px;
-            height: 30px;
-            margin-top: 20px;
-            padding: 0 10px;
-            text-transform: uppercase;
-            &.filter-disabled-button {
-              border: 1px solid $medium-gray;
-              color: $medium-gray;
-            }
-
-            &::after {
-              background: url('../images/select-small.png') no-repeat 0 0;
-              content: '';
-              display: inline-block;
-              height: 7px;
-              margin-left: 5px;
-              width: 9px;
-            }
-
-            &:hover::after {
-              background-position: 0 -9px;
-            }
-
-            &:hover {
-              background-color: $strong-blue-2;
-              border: 0;
-              color: $white;
-              cursor: pointer;
-              line-height: 30px;
-              padding: 0 11px;
-            }
-          }
-        }
 			}
 			.filter-sex-block {
 				margin-top: 30px;
@@ -211,43 +129,6 @@ a {
 								span {
 									margin-left: 15px;
 								}
-							}
-						}
-					}
-					.apply {
-						text-align: right;
-						button {
-							background: none;
-							border: 1px solid $pure-blue;
-							border-radius: 3px;
-							color: $black;
-							font-size: 12px;
-							height: 30px;
-							margin-top: 20px;
-							padding: 0 10px;
-              text-transform: uppercase;
-              &.filter-disabled-button {
-                border: 1px solid $medium-gray;
-                color: $medium-gray;
-              }
-							&::after {
-								background: url('../images/select-small.png') no-repeat 0 0;
-								content: '';
-								display: inline-block;
-								height: 7px;
-								margin-left: 5px;
-								width: 9px;
-							}
-							&:hover::after {
-								background-position: 0 -9px;
-							}
-							&:hover {
-								background-color: $strong-blue-2;
-								border: 0;
-								color: $white;
-								cursor: pointer;
-								line-height: 30px;
-								padding: 0 11px;
 							}
 						}
 					}
@@ -283,42 +164,6 @@ a {
 						background: $pure-blue;
 						border: 1px solid $white;
 					}
-					.apply {
-						text-align: right;
-						button {
-							background: none;
-							border: 1px solid $pure-blue;
-							border-radius: 3px;
-							color: $black;
-							font-size: 12px;
-							height: 30px;
-							padding: 0 10px;
-              text-transform: uppercase;
-              &.filter-disabled-button {
-                border: 1px solid $medium-gray;
-                color: $medium-gray;
-              }
-							&::after {
-								background: url('../images/select-small.png') no-repeat 0 0;
-								content: '';
-								display: inline-block;
-								height: 7px;
-								margin-left: 5px;
-								width: 9px;
-							}
-							&:hover::after {
-								background-position: 0 -9px;
-							}
-							&:hover {
-								background-color: $strong-blue-2;
-								border: 0;
-								color: $white;
-								cursor: pointer;
-								line-height: 30px;
-								padding: 0 11px;
-							}
-						}
-					}
 				}
 			}
 			.filter-country-block {
@@ -327,43 +172,6 @@ a {
 					background-color: $white;
 					border-radius: 3px;
 					padding: 20px 25px;
-					.apply {
-						text-align: right;
-						button {
-							background: none;
-							border: 1px solid $pure-blue;
-							border-radius: 3px;
-							color: $black;
-							font-size: 12px;
-							height: 30px;
-							margin-top: 20px;
-							padding: 0 10px;
-              text-transform: uppercase;
-              &.filter-disabled-button {
-                border: 1px solid $medium-gray;
-                color: $medium-gray;
-              }
-							&::after {
-								background: url('../images/select-small.png') no-repeat 0 0;
-								content: '';
-								display: inline-block;
-								height: 7px;
-								margin-left: 5px;
-								width: 9px;
-							}
-							&:hover::after {
-								background-position: 0 -9px;
-							}
-							&:hover {
-								background-color: $strong-blue-2;
-								border: 0;
-								color: $white;
-								cursor: pointer;
-								line-height: 30px;
-								padding: 0 11px;
-							}
-						}
-					}
 				}
 			}
 			.filter-service-block {
@@ -389,42 +197,41 @@ a {
 							}
 						}
 					}
-					.apply {
-						text-align: right;
-						button {
-							background: none;
-							border: 1px solid $pure-blue;
-							border-radius: 3px;
-							color: $black;
-							font-size: 12px;
-							height: 30px;
-							margin-top: 20px;
-							padding: 0 10px;
-              text-transform: uppercase;
-              &.filter-disabled-button {
-                border: 1px solid $medium-gray;
-                color: $medium-gray;
-              }
-							&::after {
-								background: url('../images/select-small.png') no-repeat 0 0;
-								content: '';
-								display: inline-block;
-								height: 7px;
-								margin-left: 5px;
-								width: 9px;
-							}
-							&:hover::after {
-								background-position: 0 -9px;
-							}
-							&:hover {
-								background-color: $strong-blue-2;
-								border: 0;
-								color: $white;
-								cursor: pointer;
-								line-height: 30px;
-								padding: 0 11px;
-							}
-						}
+				}
+			}
+			.apply {
+				text-align: right;
+				button {
+					background: none;
+					border: 1px solid $pure-blue;
+					border-radius: 3px;
+					color: $black;
+					font-size: 12px;
+					height: 30px;
+					padding: 0 10px;
+					text-transform: uppercase;
+					&.filter-disabled-button {
+						border: 1px solid $medium-gray;
+						color: $medium-gray;
+					}
+					&::after {
+						background: url('../images/select-small.png') no-repeat 0 0;
+						content: '';
+						display: inline-block;
+						height: 7px;
+						margin-left: 5px;
+						width: 9px;
+					}
+					&:hover::after {
+						background-position: 0 -9px;
+					}
+					&:hover {
+						background-color: $strong-blue-2;
+						border: 0;
+						color: $white;
+						cursor: pointer;
+						line-height: 30px;
+						padding: 0 11px;
 					}
 				}
 			}
@@ -505,6 +312,7 @@ a {
 			button {
 				background-color: $luminous-vivid-orange;
 				color: $white;
+				cursor: pointer;
 				font-size: 13px;
 				padding: 5px 0;
 				text-transform: uppercase;
@@ -556,4 +364,71 @@ a {
 
 .css-1492t68 {
   font-size: 12px;
+}
+.ReactModal__Content {
+	background-color: $black;
+	color: $white;
+	.header-modal-vacancy {
+		display: flex;
+		height: 40px;
+		justify-content: center;
+		.title-vacancy {
+			font-size: 18px;
+		}
+		.btn-close {
+			display: flex;
+			justify-content: space-between;
+			margin: -7px 0 20px 10px;
+			button {
+				background-color: $light-blue;
+				border-radius: 50%;
+				color: $white;
+				height: 40px;
+				&:hover {
+					background-color: $white;
+					color: $light-blue;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+	.horizontal-line {
+		background-color: $white;
+		margin: 10px 0;
+		width: 100%;
+	}
+	.modal-form-respond {
+		align-items: inherit;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		.horizontal-line {
+			margin: 8px 0 25px 0;
+		}
+			label {
+				font-size: 18px;
+				width: 100%;
+			}
+		.additional-info {
+			display: flex;
+			flex-direction: column;
+			label {
+				width: 100%;
+			}
+			textarea {
+				width: 100%;
+			}
+		}
+		button {
+			background-color: $light-blue;
+			border: 0;
+			border-radius: 10px;
+			color: $white;
+			&:hover {
+				background-color: $white;
+				color: $light-blue;
+				cursor: pointer;
+			}
+		}
+	}
 }

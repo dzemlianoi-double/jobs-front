@@ -107,7 +107,7 @@ class Footer extends Component {
             <span><b>{vacancy_attr.title}</b></span>
             <span>{vacancy_attr.country}, {vacancy_attr.city}</span><br/>
             <p>Зарплата от {vacancy_attr['salary-min']} грн</p>
-            <a href="#">Посмотреть</a>
+            <Link to={internal_routes.vacancy(vacancy.id)}>Посмотреть</Link>
           </div>
         </li>
       );

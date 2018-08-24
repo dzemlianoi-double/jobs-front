@@ -12,7 +12,8 @@ const customStyles = {
     right                 : 'auto',
     bottom                : 'auto',
     marginRight           : '-50%',
-    transform             : 'translate(-50%, -50%)'
+    transform             : 'translate(-50%, -50%)',
+    backgroundColor       : '#1c85c4'
   }
 };
 
@@ -29,7 +30,7 @@ export default class VacancyModal extends Component {
     return !_.isEmpty(this.props.modalVacancy);
   }
 
-  render() {
+  render() {    
     return (
       <div>
         <Modal
@@ -38,6 +39,16 @@ export default class VacancyModal extends Component {
           style={customStyles}
           contentLabel="Example Modal"
         >
+          <div className="header-modal-vacancy">
+            <span className="title-vacancy">
+              Отклик на - 
+              <b> {_.truncate(this.props.modalVacancy.title, { length: 40 })}</b>
+            </span>
+            <div className="btn-close ml-2">
+              <button onClick={this.closeModal}>X</button>
+            </div>
+          </div>
+          <div className="horizontal-line"></div>
           <VacancyForm vacancy={this.props.closeVacancyModal} onSubmit={this.props.saveVacancy} />
         </Modal>
       </div>

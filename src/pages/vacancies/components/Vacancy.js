@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Moment from 'react-moment';
 import _ from 'lodash';
 import { Link } from 'react-router-dom';
-
+import Only from '../../basic/components/Only';
 import internal_routes from '../../../config/internal_routes';
 
 export default class Vacancy extends Component {
@@ -64,10 +64,12 @@ export default class Vacancy extends Component {
                   {_.truncate(info, { length: 200 })}
                   <a href="#">Полное описание</a>
                 </p>
-                <p className="date-added m-b-3">
-                  <span>Дата заезда: </span>
-                  <Moment format="DD.MM.YYYY">{arrive_date}</Moment>
-                </p>
+                <Only if={!!arrive_date} skipDiv>
+                  <p className="date-added m-b-3">
+                    <span>Дата заезда: </span>
+                    {arrive_date && <Moment format="DD.MM.YYYY">{arrive_date}</Moment>}
+                  </p>
+                </Only>
                 <p className="date-added">
                   <span>Добавлено: </span>
                   <Moment format="DD.MM.YYYY">{created_at}</Moment>

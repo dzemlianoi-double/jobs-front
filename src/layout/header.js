@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 import T from '../store/translations';
 import routes from '../config/internal_routes';
 import logo from '../assets/images/worker_logo.png';
 
-class Header extends Component {
+export default class Header extends Component {
   static propTypes = {
     phone_numbers: PropTypes.object.isRequired,
     addresses: PropTypes.object.isRequired,
@@ -74,7 +73,7 @@ class Header extends Component {
                           {this.renderAddresses()}
                         </div>
                         <div>
-                          <span className="fs-13 c-white">Мы работаем с 9:00 - 20:00 ежедневно!</span>
+                          <span className="fs-13 c-white">Мы работаем с 9:00 - 18:00 c ПН по ПТ!</span>
                         </div>
                       </div>
                     </li>
@@ -88,16 +87,3 @@ class Header extends Component {
     );
   }
 }
-
-function select(store) {
-  return {
-    emails: store.basic.emails,
-    phone_numbers: store.basic.phone_numbers,
-    social_links: store.basic.social_links,
-    coordinates: store.basic.coordinates,
-    addresses: store.basic.addresses,
-    vacancies: store.basic.last_vacancies
-  };
-}
-
-export default connect(select)(Header);

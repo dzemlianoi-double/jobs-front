@@ -27,8 +27,8 @@ class Services extends Component {
                 <div className="row">
                   <div className="col-md-12">
                     <div className="mu-title">
-                      <h2>Our Pricing Table</h2>
-                      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa cum sociis.</p>
+                      <h2>Услуги</h2>
+                      <p>Мы предоставляем широкий спектр услуг, каждая из которых позволит вам гарантировать комфортное трудоустройство в любой точке мира</p>
                     </div>
                   </div>
                   <div className="col-md-12">

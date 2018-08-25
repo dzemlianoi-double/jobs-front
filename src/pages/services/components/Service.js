@@ -7,11 +7,14 @@ const propTypes = {
 };
 
 const Service = ({ service }) => {
+  const DEFAULT_ICON = 'user';
+  const servicePrice = service.price ? `${service.price} грн` : 'Бесплатно';
+
   return (
     <li>
       <div className="mu-pricing-single">
         <div className="mu-pricing-single-icon">
-          <span className="fa fa-user"></span>
+          <span className={`fa fa-${service.icon || DEFAULT_ICON}`}></span>
         </div>
         <div className="mu-pricing-single-title">
           <h3 className="fs-16">{service.name}</h3>
@@ -22,9 +25,9 @@ const Service = ({ service }) => {
           </ul>
         </div>
         <div className="mu-single-pricebox">
-          <h4>{service.price}<span>грн</span></h4>
+          <h4 className="fs-30">{servicePrice}</h4>
         </div>
-        <a className="mu-buy-now-btn" href="#">Подробнее</a>
+        <a className="mu-buy-now-btn" href="#">Узнать подробнее</a>
       </div>
     </li>    
   );

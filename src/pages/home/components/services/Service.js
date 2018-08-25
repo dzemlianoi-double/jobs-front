@@ -6,12 +6,13 @@ const propTypes = {
   service: PropTypes.object.isRequired
 };
 
-const Turn = ({ service }) => {
+const Service = ({ service }) => {
+  const DEFAULT_ICON = 'user';
   return (
     <div className="col-md-4">
       <div className="mu-single-service">
         <div className="mu-single-service-icon">
-          <i className="fa fa-shopping-cart" aria-hidden="true"></i>    
+          <i className={`fa fa-${service.icon || DEFAULT_ICON}`} aria-hidden="true"></i>    
         </div>
         <div className="mu-single-service-content">
           <h3>{service['name']}</h3>
@@ -22,6 +23,6 @@ const Turn = ({ service }) => {
   );
 };
 
-Turn.propTypes = propTypes;
+Service.propTypes = propTypes;
 
-export default Turn;
+export default Service;

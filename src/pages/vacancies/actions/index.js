@@ -29,7 +29,9 @@ function saveVacancy() {
   return(dispatch, getState) => {
     const formValues = getState().form.vacancy.values;
     const fullParams = { ...formValues, vacancy_id: getState().vacancies.modalVacancy.id };
-    axios.post(process.env.API_HOST + external_routes.create_claim, { claim: fullParams });
+    axios.post(process.env.API_HOST + external_routes.create_claim, { claim: fullParams }).then(() => {
+      dispatch(closeVacancyModal());
+    });
   };
 }
 

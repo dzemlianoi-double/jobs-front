@@ -12,7 +12,12 @@ import { receiveBasicData } from './pages/basic/actions/index';
 class App extends Component {
   static propTypes = {
     loading: PropTypes.bool.isRequired,
-    receiveBasicData: PropTypes.func.isRequired,
+    phone_numbers: PropTypes.object.isRequired,
+    social_links: PropTypes.object.isRequired,
+    addresses: PropTypes.object.isRequired,
+    emails: PropTypes.array.isRequired,
+    vacancies: PropTypes.array.isRequired,
+    receiveBasicData: PropTypes.func.isRequired
   };
 
   componentDidMount() {
@@ -20,12 +25,24 @@ class App extends Component {
   }
 
   render () {
-    if (this.props.loading) return <Spinner/>;
+    const { loading, emails, phone_numbers, social_links, vacancies, addresses} = this.props;
+    
+    if (loading) return <Spinner/>;
     return(
       <div>
-        <Header />
+        <Header
+          phone_numbers={phone_numbers}
+          addresses={addresses}
+        />
         <Main />
-        <Footer />
+        <Footer
+          emails={emails}
+          phone_numbers={phone_numbers}
+          social_links={social_links}
+          addresses={addresses}
+          vacancies={vacancies}
+          loading={loading}
+        />
       </div>
     );
   }
@@ -39,6 +56,12 @@ function mapPropsToDispatch(dispatch) {
 
 function select(store) {
   return {
+    emails: store.basic.emails,
+    phone_numbers: store.basic.phone_numbers,
+    social_links: store.basic.social_links,
+    coordinates: store.basic.coordinates,
+    addresses: store.basic.addresses,
+    vacancies: store.basic.last_vacancies,
     loading: store.basic.loading,
   };
 }

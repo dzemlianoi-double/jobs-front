@@ -14,11 +14,11 @@ class VacancyForm extends Component {
       <form onSubmit={handleSubmit} className="modal-form-respond mt-15">
         <div className="form-group">
           <label htmlFor="InputName">Имя:</label>
-          <Field id="InputName" name="name" className="form-control" placeholder="Имя" component="input" type="text" />
+          <Field id="InputName" name="name" className="form-control" placeholder="Иван Иванов" component="input" type="text" />
         </div>
         <div className="form-group">
           <label htmlFor="InputPhoneNumber">Телефон:</label>
-          <Field id="InputPhoneNumber" name="phone_number" className="form-control" placeholder="Телефон" component="input" type="text" />
+          <Field id="InputPhoneNumber" name="phone_number" className="form-control" placeholder="+38ххх-ххх-хх-хх" component="input" type="text" />
         </div>
         <div className="form-group">
           <label htmlFor="InputEmail">Email address</label>
@@ -26,7 +26,7 @@ class VacancyForm extends Component {
         </div>
         <div className="form-group">
           <label htmlFor="InputInfo">Дополнительная информация:</label>
-          <Field id="InputInfo" name="text" className="form-control" placeholder="Дополнительная информация" component="textarea" />
+          <Field id="InputInfo" name="text" className="form-control" component="textarea" />
         </div>
         <div className="horizontal-line"></div>
         <button type="submit">Отправить 

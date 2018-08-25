@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 
@@ -8,7 +7,7 @@ import T from '../store/translations';
 import internal_routes from '../config/internal_routes';
 import logo from '../assets/images/worker_logo.png';
 
-class Footer extends Component {
+export default class Footer extends Component {
   static propTypes = {
     phone_numbers: PropTypes.object.isRequired,
     social_links: PropTypes.object.isRequired,
@@ -17,32 +16,6 @@ class Footer extends Component {
     emails: PropTypes.array.isRequired,
     vacancies: PropTypes.array.isRequired
   };
-
-  constructor() {
-    super();
- 
-    this.state = {
-      modalIsOpen: false
-    };
- 
-    this.openModal = this.openModal.bind(this);
-    this.afterOpenModal = this.afterOpenModal.bind(this);
-    this.closeModal = this.closeModal.bind(this);
-  }
- 
-  openModal() {
-    this.setState({modalIsOpen: true});
-  }
- 
-  afterOpenModal() {
-    // references are now sync'd and can be accessed.
-    this.subtitle.style.color = '#f00';
-  }
- 
-  closeModal() {
-    this.setState({modalIsOpen: false});
-  }
- 
 
   renderNumbers = () => {
     return Object.values(this.props.phone_numbers).map((phone_number) => {
@@ -56,20 +29,14 @@ class Footer extends Component {
   }
 
   renderSocialLinks = () => {
-    return _.map(this.props.social_links, function (value, key){
-      const social_icon = 'fa fa-' + key;
-      const style_icons = 'mu-' + key;
+    return _.map(this.props.social_links, (href, socialName) => {
+      const social_icon = 'fa fa-' + socialName;
+      const style_icons = 'mu-' + socialName;
       return (
-        <a className={style_icons} href={value}>
-          <span key={value.toString()}><i className={social_icon}></i></span>
+        <a className={style_icons} href={href}>
+          <span key={socialName.toString()}><i className={social_icon}></i></span>
         </a>
       );
-    });
-  }
-
-  renderCoordinates = () => {
-    return Object.values(this.props.coordinates).map((coordinat) => {
-      return coordinat;
     });
   }
 
@@ -194,16 +161,3 @@ class Footer extends Component {
     );
   }
 }
-
-function select(store) {
-  return {
-    emails: store.basic.emails,
-    phone_numbers: store.basic.phone_numbers,
-    social_links: store.basic.social_links,
-    coordinates: store.basic.coordinates,
-    addresses: store.basic.addresses,
-    vacancies: store.basic.last_vacancies
-  };
-}
-
-export default connect(select)(Footer);

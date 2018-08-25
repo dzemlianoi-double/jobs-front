@@ -68,7 +68,6 @@ class Vacancies extends Component {
             </div>
           </div>
         </div>
-        <div className="horizontal-line"></div>
       </section>
     );
   }

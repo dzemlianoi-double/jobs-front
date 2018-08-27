@@ -52,6 +52,9 @@ class Vacancy extends Component {
     const { title, country_name, city, info, salary_min, specialities, age_min, age_max, main_photo } = this.props.currentVacancy;
     return (
       <section className='mu-vacancies'>
+        <a className="scrollToTop" href="#">
+          <i className="fa fa-angle-up"></i>
+        </a>
         <div className='container mt-50 mb-50'>
           <div className='row'>
             <div className='col-md-12'>

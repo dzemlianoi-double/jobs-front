@@ -21,6 +21,9 @@ class Home extends Component {
     const { services, reviews, last_vacancies } = this.props;
     return (
       <div>
+        <a className="scrollToTop" href="#">
+          <i className="fa fa-angle-up"></i>
+        </a>
         <HeaderSlider />
         <WhoWe />
         <Counter />

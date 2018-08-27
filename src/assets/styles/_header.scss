@@ -73,6 +73,7 @@
 	border-radius: 15px;
 	color: $bluish-white;
 	display: block;
+	// font-family: 'Intro';
 	font-size: 12px;
 	font-weight: 700;
 	padding: 8px 16px;
@@ -112,6 +113,14 @@
 .last-nav-item {
   .nav-numbers-block {
 		display: block;
+		a{
+			display: inline-block;
+			padding: 0;
+			&:hover,&:focus {
+				background: none;
+				color: $white;
+			}
+		}
 		.numbers {
 			display: inline;
 		}

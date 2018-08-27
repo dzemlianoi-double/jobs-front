@@ -4,7 +4,7 @@
     padding: 25px 25px;
     .vacancy {
       img {
-        height: 285px;
+        width: 100%;
       }
 
       .title-vacancy {
@@ -77,9 +77,19 @@
     white-space: pre-line;
     word-wrap: break-word;
     p {
-      font-size: 16px;
+      font-size: 20px;
       line-height: 1.5;
+      margin: 0;
       max-width: 40em;
     }
+
+    .info-vacancy {
+      margin: 0 0 10px 0;
+      padding: 0;
+    }
   }
+}
+
+.iframe-video {
+	// padding: 25px;
 }

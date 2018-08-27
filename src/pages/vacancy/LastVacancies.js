@@ -23,7 +23,7 @@ const LastVacancies = ({ last_vacancies }) => {
                     <img className="mu-rt-img" src={vacancy_attr['main-photo']} alt="img" />
                     <h5 className="mu-rt-name">{vacancy_attr['title']}</h5>
                     <p>{vacancy_attr.city}</p>
-                    <p>{_.truncate(vacancy_attr.info, { length: 150 })}</p>
+                    <p>{_.truncate(vacancy_attr.info, { length: 120 })}</p>
                     <Link to={internal_routes.vacancy(last_vacancies.id)} className="mu-primary-btn">
                       Перейти 
                       <span className="fa fa-long-arrow-right"></span>

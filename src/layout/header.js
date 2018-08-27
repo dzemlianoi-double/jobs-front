@@ -17,7 +17,7 @@ export default class Header extends Component {
       return (
         <div className="fs-13 c-white numbers mr-10" key={`header-${phone_number.toString()}`}>
           <span className="fa mr-1 fa-phone"></span>
-          <span>{phone_number}</span>
+          <a href={'tel:' + phone_number}>{phone_number}</a>
         </div>
       );
     });
@@ -64,12 +64,12 @@ export default class Header extends Component {
                       <Link to={routes.contacts}><T.span text="menu.contacts" /></Link>
                     </li>
 
-                    <li className="nav-item last-nav-item text-center">
+                    <li className="nav-item last-nav-item">
                       <div>
-                        <div className="nav-numbers-block inline-block m-auto text-left">
+                        <div className="nav-numbers-block inline-block">
                           {this.renderNumbers()}
                         </div>
-                        <div className="nav-addresses-block inline-block ml-10 text-left">
+                        <div className="nav-addresses-block inline-block">
                           {this.renderAddresses()}
                         </div>
                         <div>

@@ -43,7 +43,6 @@
 }
 
 .mu-single-counter span {
-	border-right: 1px solid $white;
 	color: $white;
 	display: inline-block;
 	float: left;
@@ -53,6 +52,7 @@
 }
 
 .mu-single-counter-content {
+	border-left: 1px solid $white;
 	display: inline;
 	float: left;
 	padding-left: 20px;

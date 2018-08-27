@@ -37,10 +37,9 @@ export default class Header extends Component {
   render() {
     return (
       <header className="mu-hero">
-        <div className="container-fluid">
+        <div className="container">
           <div className="row">
-            <div className="col-md-1"></div>
-            <div className="col-md-11">
+            <div className="col-md-12">
               <nav className="navbar navbar-expand-lg navbar-light mu-navbar">
                 <Link to={routes.home} className="navbar-brand mu-logo"><img src={logo} /></Link>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

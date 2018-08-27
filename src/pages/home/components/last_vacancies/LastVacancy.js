@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import _ from 'lodash';
 
+import T from '../../../../store/translations';
 import internal_routes from '../../../../config/internal_routes';
 
 const propTypes = {
@@ -25,8 +26,8 @@ const LastVacancy = ({ last_vacancies }) => {
                     <p>{vacancy_attr.city}</p>
                     <p>{_.truncate(vacancy_attr.info, { length: 150 })}</p>
                     <Link to={internal_routes.vacancy(last_vacancies.id)} className="mu-primary-btn">
-                      Перейти
-                      <span className="fa fa-long-arrow-right"></span>
+                      {T.translate('last_vacancy.go_over')}
+                      <span className="ml-2 fa fa-long-arrow-right"></span>
                     </Link>
                   </li>
                 </ul>

@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
+import T from '../../../../store/translations';
 import Service from './Service';
 import internal_routes from '../../../../config/internal_routes';
 
@@ -19,8 +20,8 @@ const Services = ({ services }) => {
               <div className="row mb-30">
                 <div className="col-md-12">
                   <div className="mu-title">
-                    <h2 className="text-center">Услуги</h2>
-                    <p className="text-center">Мы предоставляем широкий спектр услуг, которые помогут вам в вашем трудоустройстве в любой точке мира</p>
+                    <h2 className="text-center">{T.translate('services.caption_services')}</h2>
+                    <T.p text="services.some_text" className="text-center"/>
                   </div>
                 </div>
               </div>
@@ -36,7 +37,7 @@ const Services = ({ services }) => {
               <div className="row">
                 <div className="col-md-12 text-center">
                   <Link to={internal_routes.services} className="mu-primary-btn mt-50">
-                    <span className="mr-3">Все услуги</span>
+                    <T.span text={'services.all_services'} className="mr-3" /> 
                     <span className="fa fa-long-arrow-right"></span>
                   </Link>
                 </div>

@@ -1,4 +1,6 @@
 import React from 'react';
+
+import T from '../../../store/translations';
 import office from '../../../assets/images/office.jpg';
 
 const WhoWe = () => {
@@ -11,7 +13,7 @@ const WhoWe = () => {
               <div className='row'>
                 <div className='col-md-12'>
                   <div className='mu-title'>
-                    <h2>Кто мы</h2>
+                    <h2>{T.translate('who_we.caption_whowe')}</h2>
                   </div>
                 </div>
               </div>
@@ -25,25 +27,19 @@ const WhoWe = () => {
                   <div className='mu-about-right'>
                     <ul>
                       <li>
-                        <h3>Наша Миссия</h3>
-                        <p> 
-                          Помогать настоящим специалистам своего дела находить комфортное место для работы
-                        </p>
+                        <h3>{T.translate('who_we.our_mission')}</h3>
+                        <T.p text="who_we.text_mission" />
                       </li>
                       <li>
-                        <h3>Наша Цель</h3>
-                        <p>
-                          Сделать процесс трудоустройства специалистов простым и как для работника, так и для работодателя
-                        </p>
+                        <h3>{T.translate('who_we.our_goal')}</h3>
+                        <T.p text="who_we.text_goal" />
                       </li>
                       <li>
-                        <h3>Наши ценности</h3>
-                        <p>
-                          Открытость к общению и вопросам
-                          Честность перед собой и другими.
-                          Ответственность за каждого специалиста.
-                          Развитие себя как компании, клиентов и рынка в целом
-                        </p>
+                        <h3>{T.translate('who_we.our_values')}</h3>
+                        <T.p text="who_we.text_values_1" />
+                        <T.p text="who_we.text_values_2" />
+                        <T.p text="who_we.text_values_3" />
+                        <T.p text="who_we.text_values_4" />
                       </li>
                     </ul>
                   </div>

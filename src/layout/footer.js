@@ -22,7 +22,7 @@ export default class Footer extends Component {
       return (
         <div key={phone_number.toString()}>
           <span className="fa fa-phone icon"></span>
-          <span>{phone_number}</span>
+          <a href={'tel:' + phone_number}>{phone_number}</a>
         </div>
       );
     });
@@ -58,7 +58,7 @@ export default class Footer extends Component {
       return (
         <div key={email.toString()}>
           <span className="fa fa-envelope icon"></span>
-          <span>{email}</span>
+          <a href={'mailto:' + email}>{email}</a>
         </div>
       );
     });

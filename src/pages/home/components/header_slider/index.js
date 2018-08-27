@@ -5,7 +5,7 @@ import Slider from 'react-slick';
 import slide1 from '../../../../assets/images/home/header_slider/1.jpg';
 import slide2 from '../../../../assets/images/home/header_slider/2.jpg';
 import slide3 from '../../../../assets/images/home/header_slider/2.jpg';
-import HeaderSlide from './header_slide';
+import HeaderSlide from './HeaderSlide';
 
 const settings = {
   dots: true,

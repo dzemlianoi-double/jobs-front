@@ -20,9 +20,6 @@ class Services extends Component {
   render () {
     return (
       <section id="mu-pricing">
-        <a className="scrollToTop" href="#">
-          <i className="fa fa-angle-up"></i>
-        </a>
         <div className="container">
           <div className="row">
             <div className="col-md-12">

@@ -11,7 +11,6 @@ export default class Footer extends Component {
   static propTypes = {
     phone_numbers: PropTypes.object.isRequired,
     social_links: PropTypes.object.isRequired,
-    coordinates: PropTypes.object.isRequired,
     addresses: PropTypes.object.isRequired,
     emails: PropTypes.array.isRequired,
     vacancies: PropTypes.array.isRequired
@@ -33,8 +32,8 @@ export default class Footer extends Component {
       const social_icon = 'fa fa-' + socialName;
       const style_icons = 'mu-' + socialName;
       return (
-        <a className={style_icons} href={href}>
-          <span key={socialName.toString()}><i className={social_icon}></i></span>
+        <a  key={socialName.toString()} className={style_icons} href={href}>
+          <span><i className={social_icon}></i></span>
         </a>
       );
     });

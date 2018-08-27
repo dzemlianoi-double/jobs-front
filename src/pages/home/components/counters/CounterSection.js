@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const propTypes = {
   to: PropTypes.number.isRequired,
   speed: PropTypes.number.isRequired,
-  text: PropTypes.string.isRequired,
+  text: PropTypes.object.isRequired,
   faClassName: PropTypes.string.isRequired,
 };
 

@@ -51,9 +51,6 @@ class Vacancies extends Component {
     const { modalVacancy, closeVacancyModal, saveVacancy } = this.props;
     return (
       <section className='mu-vacancies'>
-        <a className="scrollToTop" href="#">
-          <i className="fa fa-angle-up"></i>
-        </a>
         <VacancyModal modalVacancy={modalVacancy} closeVacancyModal={closeVacancyModal} saveVacancy={saveVacancy} />
         <div className='container'>
           <div className='row'>

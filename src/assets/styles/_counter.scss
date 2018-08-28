@@ -43,7 +43,6 @@
 }
 
 .mu-single-counter span {
-	border-right: 1px solid $white;
 	color: $white;
 	display: inline-block;
 	float: left;
@@ -53,6 +52,7 @@
 }
 
 .mu-single-counter-content {
+	border-left: 1px solid $white;
 	display: inline;
 	float: left;
 	padding-left: 20px;
@@ -62,7 +62,7 @@
 
 .counter-value {
 	color: $white;
-	font-family: 'Helvetica', sans-serif;
+	font-family: 'Intro';
 	font-size: 36px;
 	font-weight: 700;
 	line-height: 1.2;
@@ -72,6 +72,7 @@
 
 .mu-counter-name {
 	color: $white;
+	font-family: 'Intro';
 	font-size: 24px;
 	font-weight: 400;
 	text-transform: uppercase;

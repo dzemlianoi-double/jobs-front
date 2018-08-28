@@ -1,5 +1,6 @@
 import React from 'react';
 import CounterSection from './CounterSection';
+import T from '../../../../store/translations';
 
 const Counter = () => {
   return (
@@ -10,9 +11,24 @@ const Counter = () => {
             <div className="mu-counter-area">
               <div className="mu-counter-block">
                 <div className="row">
-                  <CounterSection text={<div>Года Опыта</div>} to={4} faClassName={'clock-o'} />
-                  <CounterSection text={<div>Активных <br/> вакансии</div>} to={364} faClassName={'suitcase'} />
-                  <CounterSection text={<div>Специалиста <br /> получивших <br /> работу</div>} to={104} faClassName={'user'}  />
+                  <CounterSection text={
+                    <div>
+                      {T.translate('counter.experience')}
+                    </div>
+                  } to={4} faClassName={'clock-o'} />
+                  <CounterSection text={
+                    <div>
+                      {T.translate('counter.action')}<br/>
+                      {T.translate('counter.vacancy')}
+                    </div>
+                  } to={364} faClassName={'suitcase'} />
+                  <CounterSection text={
+                    <div>
+                      {T.translate('counter.expert')}<br/>
+                      {T.translate('counter.received')}<br/>
+                      {T.translate('counter.work')}
+                    </div>
+                  } to={104} faClassName={'user'}  />
                 </div>
               </div>
             </div>

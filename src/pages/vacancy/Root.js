@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
+import Iframe from 'react-iframe';
 
 import { requestVacancy } from '../vacancies/actions';
-import SliderLastVacancies from './SliderLastVacancies';
 
 class Vacancy extends Component {
   static propTypes = {
@@ -16,6 +16,7 @@ class Vacancy extends Component {
       city: PropTypes.string.isRequired,
       info: PropTypes.string.isRequired,
       salary_min: PropTypes.string.isRequired,
+      video_url: PropTypes.string.isRequired,
       specialities: PropTypes.string.isRequired,
       is_hot: PropTypes.bool.isRequired,
       created_at: PropTypes.isRequired,
@@ -49,7 +50,6 @@ class Vacancy extends Component {
 
   render() {
     const { title, country_name, city, info, salary_min, specialities, age_min, age_max, main_photo } = this.props.currentVacancy;
-
     return (
       <section className='mu-vacancies'>
         <div className='container mt-50 mb-50'>
@@ -121,20 +121,28 @@ class Vacancy extends Component {
                     </div>
                   </div>
                   <div className="row">
-                    <div className="col-md-12 mt-25">
+                    <div className="col-md-10 mt-25">
                       <div className="about-vacancy">
-                        <p>Описание вакансии:</p>
-                        <p>{info}</p>
+                        <p><b>Описание вакансии:</b></p>
+                        <p className="info-vacancy">{info}</p>
                       </div>
+                    </div>
+                  </div>
+                  <div className="row">
+                    <div className="col-md-12">
+                      <Iframe url="https://www.youtube.com/embed/kdFRCL_1X7k"
+                        // width="500px"
+                        height="500px"
+                        id="myId"
+                        className="iframe-video"
+                        display="initial"
+                        position="relative"
+                        allowFullScreen
+                      />
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-md-12">
-              <SliderLastVacancies />
             </div>
           </div>
         </div>

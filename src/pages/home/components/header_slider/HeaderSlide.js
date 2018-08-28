@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 const propTypes = {
-  image: PropTypes.isRequired,
+  image: PropTypes.string.isRequired,
   h1Text: PropTypes.string.isRequired,
   mainText: PropTypes.string.isRequired,
   route: PropTypes.string.isRequired,
@@ -23,7 +23,9 @@ const HeaderSlide = ({ image, h1Text, mainText, route, buttonText }) => {
               <div className="mu-single-slide-content">
                 <h1>{h1Text}</h1>
                 <p>{mainText}</p>
-                <Link className="mu-primary-btn" to={route}>{buttonText} <span className="fa fa-long-arrow-right"></span></Link>
+                <Link className="mu-primary-btn" to={route}>{buttonText} 
+                  <span className="fa fa-long-arrow-right"></span>
+                </Link>
               </div>
             </div>
           </div>

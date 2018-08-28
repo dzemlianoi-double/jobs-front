@@ -154,3 +154,28 @@ html {
 .mu-send-msg-btn:focus {
 	background-color: $white;
 }
+
+.scrollToTop {
+  -webkit-transition: all 0.5s ease 0s;
+	align-items: center;
+	background-color: $pure-blue;
+	bottom: 60px;
+	color: $white;
+	display: flex;
+	font-size: 30px;
+	height: 55px;
+	justify-content: center;
+	line-height: 50px;
+	position: fixed;
+	right: 20px;
+	text-align: center;
+	text-decoration: none;
+	transition: all 0.5s ease 0s;
+	width: 55px;
+	z-index: 999;
+}
+
+.scrollToTop:hover,
+.scrollToTop:focus {
+  color: $white;
+}

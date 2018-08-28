@@ -17,7 +17,7 @@ export default class Header extends Component {
       return (
         <div className="fs-13 c-white numbers mr-10" key={`header-${phone_number.toString()}`}>
           <span className="fa mr-1 fa-phone"></span>
-          <span>{phone_number}</span>
+          <a href={'tel:' + phone_number}>{phone_number}</a>
         </div>
       );
     });
@@ -37,10 +37,9 @@ export default class Header extends Component {
   render() {
     return (
       <header className="mu-hero">
-        <div className="container-fluid">
+        <div className="container">
           <div className="row">
-            <div className="col-md-1"></div>
-            <div className="col-md-11">
+            <div className="col-md-12">
               <nav className="navbar navbar-expand-lg navbar-light mu-navbar">
                 <Link to={routes.home} className="navbar-brand mu-logo"><img src={logo} /></Link>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,7 +48,7 @@ export default class Header extends Component {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul className="navbar-nav mr-auto mu-navbar-nav">
                     <li className="nav-item">
-                      <Link to={routes.home} activeClassName='active'><T.span text="menu.main" /></Link>
+                      <Link to={routes.home} className='active'><T.span text="menu.main" /></Link>
                     </li>
                     <li className="nav-item">
                       <Link to={routes.about_us}><T.span text="menu.about_us" /></Link>
@@ -64,12 +63,12 @@ export default class Header extends Component {
                       <Link to={routes.contacts}><T.span text="menu.contacts" /></Link>
                     </li>
 
-                    <li className="nav-item last-nav-item text-center">
+                    <li className="nav-item last-nav-item">
                       <div>
-                        <div className="nav-numbers-block inline-block m-auto text-left">
+                        <div className="nav-numbers-block inline-block">
                           {this.renderNumbers()}
                         </div>
-                        <div className="nav-addresses-block inline-block ml-10 text-left">
+                        <div className="nav-addresses-block inline-block">
                           {this.renderAddresses()}
                         </div>
                         <div>

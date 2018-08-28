@@ -17,6 +17,7 @@
 		width: 100%;
 		h2 {
 			color: $gray-dark-4;
+			font-family: 'Segoe';
 			font-size: 30px;
 			margin-bottom: 35px;
 			text-transform: uppercase;
@@ -48,13 +49,17 @@
 	border-bottom: 3px solid $light-gray;
 	color: $gray-dark-4;
 	display: inline-block;
+	font-family: 'Segoe';
 	font-size: 20px;
 	margin-bottom: 15px;
 	padding-bottom: 5px;
 }
 
 .mu-about-right p {
+	font-family: 'Segoe';
 	font-size: 14px;
+	line-height: 1.7;
+	margin: 0;
 }
 
 .horizontal-line {

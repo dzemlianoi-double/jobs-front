@@ -14,6 +14,9 @@ import Vacancy from '../pages/vacancy/Root';
 const Main = () => {
   return (
     <main>
+      <a className="scrollToTop" href="#">
+        <i className="fa fa-angle-up"></i>
+      </a>
       <Switch>
         <Route exact path={internal_routes.home} component={Home} />
         <Route exact path={internal_routes.about_us} component={AboutUs} />

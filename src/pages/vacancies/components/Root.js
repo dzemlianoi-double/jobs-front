@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 
-import { requestVacancies, openVacancyModal, closeVacancyModal, saveVacancy } from '../actions';
+import { requestVacancies, openVacancyModal, closeVacancyModal, saveVacancy, updateFilters } from '../actions';
+
 import filteredVacancies from '../support/filters';
 import Search from './Search';
 import Filters from './filters';
@@ -19,7 +20,8 @@ class Vacancies extends Component {
     saveVacancy: PropTypes.func.isRequired,
     vacancies: PropTypes.array.isRequired,
     filters: PropTypes.object.isRequired,
-    modalVacancy: PropTypes.object.isRequired
+    modalVacancy: PropTypes.object.isRequired,
+    onFilterUpdate: PropTypes.func.isRequired
   }
 
   componentDidMount() {
@@ -32,7 +34,7 @@ class Vacancies extends Component {
   }
 
   get filteredVacancies() {
-    return filteredVacancies(this.props.vacancies, this.props.filters);
+    return filteredVacancies(this.props.vacancies, this.props.filters.used);
   }
 
   get renderFilteredVacancies() {
@@ -48,7 +50,7 @@ class Vacancies extends Component {
   }
 
   render () {
-    const { modalVacancy, closeVacancyModal, saveVacancy } = this.props;
+    const { modalVacancy, closeVacancyModal, saveVacancy, vacancies, filters, onFilterUpdate } = this.props;
     return (
       <section className='mu-vacancies'>
         <VacancyModal modalVacancy={modalVacancy} closeVacancyModal={closeVacancyModal} saveVacancy={saveVacancy} />
@@ -58,7 +60,7 @@ class Vacancies extends Component {
               <div className='mu-vacancies-area'>
                 <Search />
                 <div className='row main'>
-                  <Filters />
+                  <Filters onFilterUpdate={onFilterUpdate} vacancies={vacancies} filters={filters} />
                   <div className='col-md-9 padding-0'>
                     <BasicInfo count={this.filteredVacancies.length} averageSalary={this.averageSalary} />
                     {this.renderFilteredVacancies}
@@ -77,7 +79,7 @@ function select(store) {
   return {
     vacancies: store.vacancies.list,
     modalVacancy: store.vacancies.modalVacancy,
-    filters: store.vacancies.filters.used
+    filters: store.vacancies.filters
   };
 }
 
@@ -86,7 +88,8 @@ function mapPropsToDispatch(dispatch) {
     requestVacancies: () => dispatch(requestVacancies()),
     saveVacancy: () => dispatch(saveVacancy()),
     openVacancyModal: (vacancy) => dispatch(openVacancyModal(vacancy)),
-    closeVacancyModal: () => dispatch(closeVacancyModal())
+    closeVacancyModal: () => dispatch(closeVacancyModal()),
+    onFilterUpdate: (changedData) => dispatch(updateFilters(changedData))
   };
 }
 

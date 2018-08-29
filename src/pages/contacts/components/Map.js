@@ -6,7 +6,7 @@ const AnyReactComponent = ({ text }) => <div>{text}</div>; // eslint-disable-lin
 
 class SimpleMap extends Component {
   static propTypes = {
-    center: PropTypes.number.isRequired,
+    center: PropTypes.object.isRequired,
     zoom: PropTypes.number.isRequired,
     text: PropTypes.array //????
   };

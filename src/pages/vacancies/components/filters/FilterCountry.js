@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Select from 'react-select';
 import FilterButton from './FilterButton';
- 
+import T from '../../../../store/translations';
+
 const defaultOption = { value: null, label: 'Любая' };
 
 export default class FilterCountry extends Component {
@@ -34,7 +35,7 @@ export default class FilterCountry extends Component {
  
     return (
       <div className="filter-country-block">
-        <p>Страна</p>
+        <T.p text="vacancies.country"/>
         <div className="row">
           <div className="col-md-12">
             <div className="filter-country">
@@ -42,7 +43,7 @@ export default class FilterCountry extends Component {
                 value={selectedOption}
                 onChange={this.handleChange}
                 options={this.options}
-                placeholder="Выберите страну..."
+                placeholder={T.translate('vacancies.select_country')}
               />
               <FilterButton
                 isDisabled={this.state.isUpdated}

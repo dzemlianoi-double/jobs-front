@@ -1,24 +1,28 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
+import T from '../../../store/translations';
 
-export default class BasicInfo extends Component {
-  static propTypes = {
-    count: PropTypes.number.isRequired,
-    averageSalary: PropTypes.number.isRequired,
-  }
-  render(){
+const propTypes = {
+  count: PropTypes.number.isRequired,
+  averageSalary: PropTypes.number.isRequired
+}
+
+ const BasicInfo = ({count, averageSalary}) => {
     return (
       <div className = "row" >
         <div className='col-md-12 mu-vacancies-list'>
           <div className="how-vacancies">
-            <p className="city-work">Найдено:</p>
+            <T.p text="vacancies.found" className="city-work"/>
             <p>
-              <span className="mean-works"><b>{this.props.count}</b> вакансий</span>
-              <span className="mean-salary"><b>{this.props.averageSalary} грн</b> средняя заработная плата</span>
+              <span className="mean-works"><b>{count}</b> {T.translate('vacancies.vacancies')}</span>
+              <span className="mean-salary"><b>{averageSalary} {T.translate('vacancies.valuta_uah')}</b> {T.translate('vacancies.mean_salary')}</span>
             </p>
           </div>
         </div>
       </div >
     );
   }
-}
+
+  BasicInfo.propTypes = propTypes;
+
+export default BasicInfo;

@@ -1,5 +1,6 @@
 import React from 'react';
 import CounterSection from './CounterSection';
+
 import T from '../../../../store/translations';
 
 const Counter = () => {

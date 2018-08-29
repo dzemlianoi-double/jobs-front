@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 import FilterButton from './FilterButton';
+import T from '../../../../store/translations';
 
 const sex = [
   {
@@ -75,7 +76,7 @@ export default class FilterSex extends Component {
   render(){
     return (
       <div className="filter-sex-block">
-        <p>Пол</p>
+        <T.p text="vacancies.sex" />
         <div className="row">
           <div className="col-md-12">
             <div className="filter-sex">

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import InputRange from 'react-input-range';
 import FilterButton from './FilterButton';
+import T from '../../../../store/translations';
 
 export default class FilterSalary extends Component {
   static propTypes = {
@@ -35,7 +36,7 @@ export default class FilterSalary extends Component {
 
     return (
       <div className="filter-salary">
-        <p>Заработная плата</p>
+        <T.p text="vacancies.salary" />
         <div className="block-salary">
           <div className="row">
             <div className="col-md-6">

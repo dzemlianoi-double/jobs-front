@@ -25,7 +25,7 @@ class Vacancies extends Component {
   componentDidMount() {
     this.props.requestVacancies();
   }
-
+  
   get averageSalary() {
     if (!this.filteredVacancies.length) { return 0; }
     return _.meanBy(this.filteredVacancies, (vacancy) => vacancy.salary_min).toFixed(0);

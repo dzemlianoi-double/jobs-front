@@ -2,6 +2,8 @@ import React from 'react';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 
+import T from '../../../store/translations';
+
 const propTypes = {
   service: PropTypes.object.isRequired
 };
@@ -27,7 +29,7 @@ const Service = ({ service }) => {
         <div className="mu-single-pricebox">
           <h4 className="fs-30">{servicePrice}</h4>
         </div>
-        <a className="mu-buy-now-btn" href="#">Узнать подробнее</a>
+        <a className="mu-buy-now-btn" href="#">{T.translate('services.more')}</a>
       </div>
     </li>    
   );

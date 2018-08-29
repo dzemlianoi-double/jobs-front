@@ -5,6 +5,7 @@ import _ from 'lodash';
 import { Link } from 'react-router-dom';
 import Only from '../../basic/components/Only';
 import internal_routes from '../../../config/internal_routes';
+import T from '../../../store/translations';
 
 export default class Vacancy extends Component {
   static propTypes = {
@@ -62,23 +63,23 @@ export default class Vacancy extends Component {
                 <p className="title-company">{!!specialities && _.map(specialities, 'title').join(', ')}</p>
                 <p className="desc">
                   {_.truncate(info, { length: 200 })}
-                  <a href="#">Полное описание</a>
+                  <T.a text="vacancy.full_description" href="#" />
                 </p>
                 <Only if={!!arrive_date} skipDiv>
                   <p className="date-added m-b-3">
-                    <span>Дата заезда: </span>
+                    <T.span text="arrival_date:" />
                     {arrive_date && <Moment format="DD.MM.YYYY">{arrive_date}</Moment>}
                   </p>
                 </Only>
                 <p className="date-added">
-                  <span>Добавлено: </span>
+                  <T.span text="added_by:" />
                   <Moment format="DD.MM.YYYY">{created_at}</Moment>
                 </p>
               </Link>
             </div>
             <div className="col-md-3">
               <Link to={internal_routes.vacancy(id)}>
-                <p className="salary">{salary_min} грн</p>
+                <p className="salary">{salary_min} {T.translate('vacancy.valuta_uah')}</p>
                 <div className="city">
                   <span>{country_name}, {city}</span>
                   <div>
@@ -91,12 +92,12 @@ export default class Vacancy extends Component {
                   </div>
                   <div>
                     <i className="fa fa-user-times fs-17 mr-1 color-strong-blue-2"></i>
-                    <span>{age_min} - {age_max} лет</span>
+                    <span>{age_min} - {age_max} {T.translate('vacancy.years')}</span>
                   </div>
                 </div>
-                <a href="#" className="send-friend">Предложить другу</a>
+                <T.a text="vacancy.suggest_friend" href="#" className="send-friend" />
               </Link>
-              <button onClick={this.openModal}>Откликнуться</button>
+              <button onClick={this.openModal}>{T.translate('vacancy.respond')}</button>
             </div>
           </div>
         </div>

@@ -1,15 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
+import T from '../../../store/translations';
 
-export default class Search extends Component {
-  render(){
-    return (
-      <div className='row'>
-        <div className='col-md-12 mu-vacancies-search'>
-          <span>Вакансия</span>
-          <input />
-          <button className="ml-25 btn btn-lg">Найти</button>
-        </div>
+const Search = () =>{
+  return (
+    <div className='row'>
+      <div className='col-md-12 mu-vacancies-search'>
+        <T.span text="vacancies.vacancy" />
+        <input />
+        <button className="ml-25 btn btn-lg">{T.translate('vacancies.find')}</button>
       </div>
-    );
-  }
+    </div>
+  );
 }
+
+export default Search

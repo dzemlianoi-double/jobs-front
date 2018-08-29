@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import InputRange from 'react-input-range';
 import FilterButton from './FilterButton';
+import T from '../../../../store/translations';
 
 export default class FilterExperience extends Component {
   static propTypes = {
@@ -27,13 +28,13 @@ export default class FilterExperience extends Component {
     
     return (
       <div className="filter-experience-block">
-        <p>Опыт Работы</p>
+        <T.p text="vacancies.age" />
         <div className="row">
           <div className="col-md-12">
             <div className="filter-experience">
-              <span>не более</span>
+              <T.span text="vacancies.no_more" />
               <input readOnly value={this.state.experience} className="text-center" />
-              <span>лет</span>
+              <T.span text="vacancies.years" />
               <div className="row">
                 <div className="col-md-12 mt-15">
                   <InputRange

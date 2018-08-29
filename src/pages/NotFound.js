@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import routes from '../config/internal_routes';
 
-export default class NotFound extends Component {
-  render () {
+const NotFound = () => {
     return (
       <section className="mu-error">
         <div className="container">
@@ -11,8 +12,7 @@ export default class NotFound extends Component {
                 <div className="row">
                   <div className="col-md-12">
                     <div className="mu-title">
-                      <h2>Упс! Этой страницы больше не существует</h2>
-                      <p>Небольшая инфа</p>
+                      <h2>Упс! Этой страницы не существует</h2>
                     </div>
                   </div>
                 </div>
@@ -23,13 +23,10 @@ export default class NotFound extends Component {
                       <div className="mu-overlay"></div>
                     </div>
                   </div>
-                  <div className="mu-error-search">
-                    <form className="mu-subscribe-form">
-                      <input className="input-search" placeholder="Write your e-mail here" type="email" />
-                      <button className="mu-subscribe-btn">Search</button>
-                    </form>
-                  </div>
-                  <a href="#" className="mu-back-to-home">На главную<span className="fa fa-long-arrow-right"></span></a>
+                  <Link to={routes.home} className="mu-back-to-home">
+                    На главную
+                    <span className="fa fa-long-arrow-right"></span>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -37,5 +34,5 @@ export default class NotFound extends Component {
         </div>
       </section>
     );
-  }
 }
+export default NotFound;

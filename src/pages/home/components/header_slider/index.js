@@ -4,7 +4,8 @@ import internal_routes from '../../../../config/internal_routes';
 import Slider from 'react-slick';
 import slide1 from '../../../../assets/images/home/header_slider/1.jpg';
 import slide2 from '../../../../assets/images/home/header_slider/2.jpg';
-import slide3 from '../../../../assets/images/home/header_slider/2.jpg';
+import slide3 from '../../../../assets/images/home/header_slider/3.jpg';
+import T from '../../../../store/translations';
 import HeaderSlide from './HeaderSlide';
 
 const settings = {
@@ -25,24 +26,24 @@ const HeaderSlider = () => {
       <Slider {...settings}>
         <HeaderSlide
           image={slide1}
-          h1Text="Только проверенные вакансии"
-          mainText="Каждый день список вакансий пополняется новыми предложениями из разных стран для специалистов разных направлений"
+          h1Text={T.translate('header_slider.text_vacancy')}
+          mainText={T.translate('header_slider.main_text_vacancy')}
           route={internal_routes.vacancies}
-          buttonText="Вакансии"
+          buttonText={T.translate('menu.vacancies')}
         />
         <HeaderSlide
           image={slide2}
-          h1Text="Качественное предоставление услуг"
-          mainText="Кроме комплексного процесса трудоустройства, мы можем предоставить ряд отдельных услуг, которые могут быть полезными для вашего трудоустройства за границей"
+          h1Text={T.translate('header_slider.text_services')}
+          mainText={T.translate('header_slider.main_text_services')}
           route={internal_routes.services}
-          buttonText="Услуги"
+          buttonText={T.translate('menu.services')}
         />
         <HeaderSlide
           image={slide3}
-          h1Text="Опытная команда"
-          mainText="Мы сертифицированная команда специалистов, которая всегда поможет вам в вопросах трудоустройства"
+          h1Text={T.translate('header_slider.text_about_us')}
+          mainText={T.translate('header_slider.main_text_about_us')}
           route={internal_routes.about_us}
-          buttonText="О нас"
+          buttonText={T.translate('menu.about_us')}
         />
       </Slider>
     </div>

@@ -10,7 +10,7 @@ const propTypes = {
 
 const Service = ({ service }) => {
   const DEFAULT_ICON = 'user';
-  const servicePrice = service.price ? `${service.price} грн` : 'Бесплатно';
+  const servicePrice = service.by_agreement ? 'По договоренности' : service.price ? `${service.price} грн` : 'Бесплатно';
 
   return (
     <li>

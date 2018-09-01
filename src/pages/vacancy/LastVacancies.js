@@ -25,7 +25,7 @@ const LastVacancies = ({ last_vacancies }) => {
                     <p>{vacancy_attr.city}</p>
                     <p>{_.truncate(vacancy_attr.info, { length: 120 })}</p>
                     <Link to={internal_routes.vacancy(last_vacancies.id)} className="mu-primary-btn">
-                      Перейти 
+                      Перейти
                       <span className="fa fa-long-arrow-right"></span>
                     </Link>
                   </li>

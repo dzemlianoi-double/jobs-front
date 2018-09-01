@@ -7,9 +7,9 @@ const propTypes = {
   children: PropTypes.node,
 };
 const Only = props => {
-  return props['if'] 
-    ? (props['skipDiv'] 
-      ? props.children 
+  return props['if']
+    ? (props['skipDiv']
+      ? props.children
       : <div>{props.children}</div>)
     : null;
 };

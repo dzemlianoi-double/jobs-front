@@ -28,8 +28,8 @@ class Services extends Component {
                 <div className="row">
                   <div className="col-md-12">
                     <div className="mu-title">
-                    <h2 className="text-center">{T.translate('services.caption_services')}</h2>
-                    <T.p text="services.some_text" className="text-center"/>
+                      <h2 className="text-center">{T.translate('services.caption_services')}</h2>
+                      <T.p text="services.some_text" className="text-center"/>
                     </div>
                   </div>
                   <div className="col-md-12">

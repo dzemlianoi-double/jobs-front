@@ -36,7 +36,7 @@ export default class FilterCountry extends Component {
         <T.p text="vacancies.specialities"/>
         <div className="row">
           <div className="col-md-12">
-            <div className="filter-service">
+            <div className="filter-country fs-07r">
               <Select
                 className="mt-10 basic-multi-select"
                 isMulti

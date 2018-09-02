@@ -7,8 +7,8 @@ export default class Search extends Component {
     return (
       <div className='row'>
         <div className='col-md-12 mu-vacancies-search'>
-          <div className="vacancy-label inline-block">
-            <T.span text="vacancies.vacancy" />
+          <div className="vacancy-label inline-block w-100">
+            <T.span text="vacancies.vacancy" className="inline-block ml-40 mr-50" />
             <SearchAutosuggestions {...this.props} />
           </div>
         </div>

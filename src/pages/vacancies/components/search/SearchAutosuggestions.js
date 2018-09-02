@@ -54,23 +54,25 @@ export default class SearchAutosuggestions extends Component {
     const { value, suggestions } = this.state;
 
     const inputProps = {
-      placeholder: 'Введите вакансию',
+      placeholder: 'Введите информацию о вакансии',
       value,
       onChange: this.onChange
     };
 
     return (
-      <div className="inline-block w-70p">
-        <Autosuggest
-          suggestions={suggestions}
-          onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
-          onSuggestionsClearRequested={this.onSuggestionsClearRequested}
-          getSuggestionValue={this.getSuggestionValue}
-          renderSuggestion={this.renderSuggestion}
-          inputProps={inputProps}
-          theme={theme}
-        />
-        <button className="ml-25 btn btn-lg float-right">Найти</button>
+      <div className="inline-block w-80p">
+        <div className="inline-block w-70p">
+          <Autosuggest
+            suggestions={suggestions}
+            onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
+            onSuggestionsClearRequested={this.onSuggestionsClearRequested}
+            getSuggestionValue={this.getSuggestionValue}
+            renderSuggestion={this.renderSuggestion}
+            inputProps={inputProps}
+            theme={theme}
+          />
+        </div>
+        <button className="ml-25 btn btn-lg">Найти</button>
       </div>
     );
   }

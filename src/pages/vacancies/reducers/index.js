@@ -85,7 +85,7 @@ export default function vacancies(state = initialState, action) {
     return {
       ...state,
       modalVacancy: {}
-    };  
+    };
   default:
     return state;
   }

@@ -23,7 +23,7 @@ class Vacancies extends Component {
     modalVacancy: PropTypes.object.isRequired,
     onFilterUpdate: PropTypes.func.isRequired
   }
-
+   
   componentDidMount() {
     this.props.requestVacancies();
   }

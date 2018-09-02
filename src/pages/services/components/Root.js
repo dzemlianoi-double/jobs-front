@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
+import T from '../../../store/translations';
 import Service from './Service';
 
 import { requestServices } from '../actions';
@@ -9,7 +10,7 @@ import { requestServices } from '../actions';
 class Services extends Component {
   static propTypes = {
     requestServices: PropTypes.func.isRequired,
-    services: PropTypes.object.isRequired
+    services: PropTypes.array.isRequired
   };
 
   componentDidMount = () => {
@@ -27,8 +28,8 @@ class Services extends Component {
                 <div className="row">
                   <div className="col-md-12">
                     <div className="mu-title">
-                      <h2>Услуги</h2>
-                      <p>Мы предоставляем широкий спектр услуг, каждая из которых позволит вам гарантировать комфортное трудоустройство в любой точке мира</p>
+                      <h2 className="text-center">{T.translate('services.caption_services')}</h2>
+                      <T.p text="services.some_text" className="text-center"/>
                     </div>
                   </div>
                   <div className="col-md-12">

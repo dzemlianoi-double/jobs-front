@@ -5,6 +5,7 @@ import _ from 'lodash';
 import Iframe from 'react-iframe';
 
 import { requestVacancy } from '../vacancies/actions';
+import Only from '../basic/components/Only';
 
 class Vacancy extends Component {
   static propTypes = {
@@ -15,9 +16,9 @@ class Vacancy extends Component {
       country_name: PropTypes.string.isRequired,
       city: PropTypes.string.isRequired,
       info: PropTypes.string.isRequired,
-      salary_min: PropTypes.string.isRequired,
+      salary_min: PropTypes.number.isRequired,
       video_url: PropTypes.string.isRequired,
-      specialities: PropTypes.string.isRequired,
+      specialities: PropTypes.array.isRequired,
       is_hot: PropTypes.bool.isRequired,
       created_at: PropTypes.isRequired,
       age_min: PropTypes.number.isRequired,
@@ -49,7 +50,7 @@ class Vacancy extends Component {
   }
 
   render() {
-    const { title, country_name, city, info, salary_min, specialities, age_min, age_max, main_photo } = this.props.currentVacancy;
+    const { title, country_name, city, info, salary_min, video_url, specialities, age_min, age_max, main_photo } = this.props.currentVacancy;
     return (
       <section className='mu-vacancies'>
         <div className='container mt-50 mb-50'>
@@ -128,19 +129,20 @@ class Vacancy extends Component {
                       </div>
                     </div>
                   </div>
-                  <div className="row">
-                    <div className="col-md-12">
-                      <Iframe url="https://www.youtube.com/embed/kdFRCL_1X7k"
-                        // width="500px"
-                        height="500px"
-                        id="myId"
-                        className="iframe-video"
-                        display="initial"
-                        position="relative"
-                        allowFullScreen
-                      />
+                  <Only if={!!video_url} skipDiv>
+                    <div className="row">
+                      <div className="col-md-12">
+                        <Iframe url={ video_url }
+                          height="500px"
+                          id="myId"
+                          className="iframe-video"
+                          display="initial"
+                          position="relative"
+                          allowFullScreen
+                        />
+                      </div>
                     </div>
-                  </div>
+                  </Only>
                 </div>
               </div>
             </div>

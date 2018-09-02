@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Modal from 'react-modal';
 import _ from 'lodash';
+import T from '../../../store/translations';
 
 import VacancyForm from './VacancyForm';
  
@@ -41,7 +42,7 @@ export default class VacancyModal extends Component {
         >
           <div className="header-modal-vacancy">
             <span className="title-vacancy">
-              Отклик на - 
+              {T.translate('vacancy_modal.response_to')} 
               <b> {_.truncate(this.props.modalVacancy.title, { length: 40 })}</b>
             </span>
             <div className="btn-close ml-2">

@@ -73,7 +73,7 @@ export default class Footer extends Component {
             <span><b>{vacancy_attr.title}</b></span>
             <span>{vacancy_attr.country}, {vacancy_attr.city}</span><br/>
             <p>Зарплата от {vacancy_attr['salary-min']} грн</p>
-            <Link to={internal_routes.vacancy(vacancy.id)}>Посмотреть</Link>
+            <Link to={internal_routes.vacancy(vacancy.id)}>{T.translate('footer.watch')}</Link>
           </div>
         </li>
       );

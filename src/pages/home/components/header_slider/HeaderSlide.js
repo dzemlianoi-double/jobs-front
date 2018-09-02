@@ -24,7 +24,7 @@ const HeaderSlide = ({ image, h1Text, mainText, route, buttonText }) => {
                 <h1>{h1Text}</h1>
                 <p>{mainText}</p>
                 <Link className="mu-primary-btn" to={route}>{buttonText} 
-                  <span className="fa fa-long-arrow-right"></span>
+                  <span className="ml-2 fa fa-long-arrow-right"></span>
                 </Link>
               </div>
             </div>

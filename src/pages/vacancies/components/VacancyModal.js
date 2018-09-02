@@ -4,7 +4,7 @@ import Modal from 'react-modal';
 import _ from 'lodash';
 import T from '../../../store/translations';
 
-import VacancyForm from './VacancyForm';
+import VacancyForm from './form';
  
 const customStyles = {
   content : {
@@ -43,7 +43,7 @@ export default class VacancyModal extends Component {
           <div className="header-modal-vacancy">
             <span className="title-vacancy">
               {T.translate('vacancy_modal.response_to')} 
-              <b> {_.truncate(this.props.modalVacancy.title, { length: 40 })}</b>
+              <b>{_.truncate(this.props.modalVacancy.title, { length: 40 })}</b>
             </span>
             <div className="btn-close ml-2">
               <button onClick={this.closeModal}>X</button>

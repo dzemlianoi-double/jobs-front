@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import SearchAutosuggestions from './SearchAutosuggestions';
-import T from '../../../store/translations';
+import T from '../../../../store/translations';
 
 export default class Search extends Component {
   render(){

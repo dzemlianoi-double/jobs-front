@@ -67,12 +67,12 @@ export default class Vacancy extends Component {
                 </p>
                 <Only if={!!arrive_date} skipDiv>
                   <p className="date-added m-b-3">
-                    <T.span text="arrival_date:" />
+                    <T.span text="vacancy.arrival_date:" />
                     {arrive_date && <Moment format="DD.MM.YYYY">{arrive_date}</Moment>}
                   </p>
                 </Only>
                 <p className="date-added">
-                  <T.span text="added_by:" />
+                  <T.span text="vacancy.added_by:" />
                   <Moment format="DD.MM.YYYY">{created_at}</Moment>
                 </p>
               </Link>

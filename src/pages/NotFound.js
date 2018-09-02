@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import routes from '../config/internal_routes';
+import T from '../store/translations';
 
 const NotFound = () => {
   return (
@@ -12,7 +13,7 @@ const NotFound = () => {
               <div className="row">
                 <div className="col-md-12">
                   <div className="mu-title">
-                    <h2>Упс! Этой страницы не существует</h2>
+                    <h2>{T.translate('page_404.some_text')} </h2>
                   </div>
                 </div>
               </div>
@@ -24,8 +25,8 @@ const NotFound = () => {
                   </div>
                 </div>
                 <Link to={routes.home} className="mu-back-to-home">
-                    На главную
-                  <span className="fa fa-long-arrow-right"></span>
+                  <T.span text="page_404.main" />
+                  <span className="fa fa-long-arrow-right ml-2"></span>
                 </Link>
               </div>
             </div>

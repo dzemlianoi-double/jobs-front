@@ -6,7 +6,8 @@ import _ from 'lodash';
 import { requestVacancies, openVacancyModal, closeVacancyModal, saveVacancy, updateFilters } from '../actions';
 
 import filteredVacancies from '../support/filters';
-import Search from './Search';
+
+import Search from './search';
 import Filters from './filters';
 import Vacancy from './Vacancy';
 import BasicInfo from './BasicInfo';
@@ -58,7 +59,9 @@ class Vacancies extends Component {
           <div className='row'>
             <div className='col-md-12'>
               <div className='mu-vacancies-area'>
-                <Search />
+                <Search 
+                  vacancies={this.props.vacancies}
+                />
                 <div className='row main'>
                   <Filters onFilterUpdate={onFilterUpdate} vacancies={vacancies} filters={filters} />
                   <div className='col-md-9 padding-0'>

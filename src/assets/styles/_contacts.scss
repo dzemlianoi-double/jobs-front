@@ -1,130 +1,70 @@
-.mu-contact {
-	background-color: $white;
-	display: inline;
+.contact-part {
 	float: left;
+	margin: 45px 0;
 	width: 100%;
 }
 
-.mu-contact-area {
-	display: inline;
-	float: left;
-	padding: 100px 0;
+.mb-30 {
+	margin-bottom: 30px;
+}
+
+.mt-20 {
+	margin-top: 20px;
+}
+
+.title-part-contact {
+	color: #1da1f2;
+}
+
+.titles-input {
+	color: #1da1f2;
+	display: inline-block;
+	font-weight: bold;
+	margin-bottom: 7px;
+}
+
+.inputs-fields {
+	background-color: #e8ecef;
+	margin-bottom: 30px;
+}
+
+.btn-contact-form-send {
+	background-color: #1da1f2;
+  border: 0;
+  border-radius: 10px;
+  color: #fff;
+}
+
+form .btn-contact-form-send {
+	height: 36px;
+	width: 100%;
+}
+
+.contact-map {
+	height: 200px;
+	margin-bottom: 20px;
+	margin-top: 70px;
+	overflow: hidden;
+}
+
+.img-contact-us-title {
+	background: #ededec;
+	display: flex;
+	flex-direction: column;
+	height: 53px;
+	justify-content: center;
+	margin: auto;
 	text-align: center;
-	width: 100%;
+	width: 53px;
 }
 
-.mu-contact-content {
-	display: inline;
-	float: left;
-	padding: 0 28%;
-	width: 100%;
+.icon-letter-call-home {
+	color: #1da1f2;
+	font-size: 21px;
 }
 
-.mu-contact-form-area {
-	display: inline;
-	float: left;
-	width: 100%;
-}
-
-.mu-contact-form {
-	text-align: center;
-}
-
-.mu-contact-form .form-group {
-	position: relative;
-}
-
-.mu-contact-form .mu-contact-icon {
-	color: $pure-blue;
-	font-size: 14px;
-	left: 5px;
-	position: absolute;
-	top: 15px;
-}
-
-.mu-contact-form .form-group input {
-	-o-transition: all 0.5s;
-	-webkit-transition: all 0.5s;
-	background: transparent;
-	border: 1px $medium-gray-2;
-	border-radius: 0;
-	border-style: none none solid none;
-	color: $gray-dark-3;
-	font-size: 14px;
-	height: 45px;
-	margin-bottom: 24px;
-	padding: 0 25px;
-	transition: all 0.5s;
-}
-
-.mu-contact-form .form-group textarea {
-	-webkit-transition: all 0.5s;
-	background: transparent;
-	border: 1px $medium-gray-2;
-	border-radius: 0;
-	border-style: none none solid none;
-	color: $gray-dark-3;
-	font-size: 14px;
-	height: 100px;
-	padding: 10px;
-	transition: all 0.5s;
-}
-
-.mu-contact-form .form-control:focus {
-	background-color: $white;
-	border-style: none none solid none;
-    box-shadow: none;
-    outline: 0;
-}
-
-.mu-contact-form .form-control::-webkit-input-placeholder {
-	color: $medium-gray-1;
-	font-size: 14px;
-}
-
-.mu-contact-form .form-control:-moz-placeholder {
-	color: $medium-gray-1;
-	font-size: 14px;
-}
-
-.mu-contact-form .form-control::-moz-placeholder {
-	color: $medium-gray-1;
-	font-size: 14px;
-}
-
-.mu-contact-form .form-control:-ms-input-placeholder {
-	color: $medium-gray-1;
-	font-size: 14px;
-}
-
-.mu-contact-form .button-default::after,
-.mu-contact-form .button-default > span {
-	padding: 12px 40px;
-}
-
-.form-messages {
-	background-color: $white;
-    margin-bottom: 10px;
-}
-
-.success {
-	-webkit-border-radius: 4px;
-	background-color: $greenish-white;
-	border: 1px solid $greenish-white;
-	border-radius: 4px;
-	color: $dark-green;
-	margin-bottom: 0.75rem;
-	padding: 1em;
-	      text-shadow: 0 1px 0 $rgb-05-gray;
-}
-
-.error {
-	-webkit-border-radius: 4px;
-	background-color: $reddish-white;
-	border: 1px solid $rgb-03-chestnut;
-	border-radius: 4px;
-	color: $strong-red;
-	margin-bottom: 0.75rem;
-	padding: 1em;
-	      text-shadow: 0 1px 0 $rgb-05-gray;
+.self-d-flex {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }

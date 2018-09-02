@@ -25,7 +25,7 @@ const NotFound = () => {
                   </div>
                 </div>
                 <Link to={routes.home} className="mu-back-to-home">
-                    <T.span text="page_404.main" />
+                  <T.span text="page_404.main" />
                   <span className="fa fa-long-arrow-right ml-2"></span>
                 </Link>
               </div>

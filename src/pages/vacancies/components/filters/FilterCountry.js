@@ -38,7 +38,7 @@ export default class FilterCountry extends Component {
         <T.p text="vacancies.country"/>
         <div className="row">
           <div className="col-md-12">
-            <div className="filter-country">
+            <div className="filter-country fs-07r">
               <Select className="mt-10"
                 value={selectedOption}
                 onChange={this.handleChange}

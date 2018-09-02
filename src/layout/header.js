@@ -22,7 +22,7 @@ export default class Header extends Component {
       );
     });
   }
-  
+
   renderAddresses = () => {
     return Object.values(this.props.addresses).map((address) => {
       return (
@@ -81,7 +81,7 @@ export default class Header extends Component {
               </nav>
             </div>
           </div>
-        </div>  
+        </div>
       </header>
     );
   }

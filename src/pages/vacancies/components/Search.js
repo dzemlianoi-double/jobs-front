@@ -1,7 +1,6 @@
 import React from 'react';
-import T from '../../../store/translations';
 
-const Search = () =>{
+const Search = () => {
   return (
     <div className='row'>
       <div className='col-md-12 mu-vacancies-search'>

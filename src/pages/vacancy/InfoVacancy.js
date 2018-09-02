@@ -1,5 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import T from '../../store/translations';
+
+const propTypes = {
+  country_name: PropTypes.string.isRequired,
+  city: PropTypes.string.isRequired,
+  salary_min: PropTypes.number.isRequired,
+  age_min: PropTypes.number.isRequired,
+  age_max: PropTypes.number.isRequired,
+  experience: PropTypes.number.isRequired,
+  sex: PropTypes.oneOf(['Any', 'Male', 'Female', 'Family']).isRequired
+};
 
 const InfoVacancy = ({ country_name, city, salary_min, age_min, age_max, experience, sex }) => {
   return (
@@ -27,7 +39,7 @@ const InfoVacancy = ({ country_name, city, salary_min, age_min, age_max, experie
           <div className="row">
             <div className="col-md-6 info">
               <i className="fa fa-venus-mars fs-17 mr-2 color-strong-blue-2"></i>
-              {T.translate('vacancy.sex')}              
+              {T.translate('vacancy.sex')}
             </div>
             <div className="col-md-6 info">{sex}</div>
           </div>
@@ -58,6 +70,8 @@ const InfoVacancy = ({ country_name, city, salary_min, age_min, age_max, experie
       </div>
     </div>
   );
-}
+};
+
+InfoVacancy.propTypes = propTypes;
 
 export default InfoVacancy;

@@ -92,6 +92,7 @@
     "salary": "Заработная плата:",
     "country": "Страна:",
     "sex": "Пол:",
+    "experience": "Опыт Работы",
     "age": "Возраст:",
     "full_description": "Полное описание",
     "arrival_date:": "Дата заезда:",
@@ -100,7 +101,12 @@
     "years": "лет",
     "suggest_friend": "Предложить другу",
     "respond": "Откликнуться",
-    "icon_uah": "₴"
+    "icon_uah": "₴",
+    "requirments": "Требования",
+    "schedule": "Рабочий график",
+    "accommodation": "Проживание",
+    "duties": "Обязанности",
+    "description_vacancy": "Описание вакансии:"
   },
   "page_404": {
     "some_text": "Упс! Этой страницы не существует!",

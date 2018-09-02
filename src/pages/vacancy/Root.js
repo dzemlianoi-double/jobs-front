@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import _ from 'lodash';
 import Iframe from 'react-iframe';
 
+import DescriptionVacancy from './DescriptionVacancy';
 import InfoVacancy from './InfoVacancy';
 import { requestVacancy } from '../vacancies/actions';
 import Only from '../basic/components/Only';
@@ -27,6 +28,10 @@ class Vacancy extends Component {
       experience: PropTypes.number.isRequired,
       arrive_date: PropTypes.string.isRequired,
       main_photo: PropTypes.string.isRequired,
+      requirments: PropTypes.string.isRequired,
+      schedule: PropTypes.string.isRequired,
+      accommodation: PropTypes.string.isRequired,
+      duties: PropTypes.string.isRequired,
       sex: PropTypes.oneOf(['Any', 'Male', 'Female', 'Family']).isRequired
     }),
     match: PropTypes.object.isRequired
@@ -51,7 +56,8 @@ class Vacancy extends Component {
   }
 
   render() {
-    const { title, country_name, city, info, salary_min, video_url, specialities, age_min, age_max, main_photo } = this.props.currentVacancy;
+    const { title, country_name, city, info, salary_min, video_url, specialities, 
+      age_min, age_max, main_photo, requirments, schedule, accommodation, duties } = this.props.currentVacancy;
     return (
       <section className='mu-vacancies'>
         <div className='container mt-50 mb-50'>
@@ -79,10 +85,13 @@ class Vacancy extends Component {
                   </div>
                   <div className="row">
                     <div className="col-md-10 mt-25">
-                      <div className="about-vacancy">
-                        <p><b>Описание вакансии:</b></p>
-                        <p className="info-vacancy">{info}</p>
-                      </div>
+                      <DescriptionVacancy 
+                        duties={duties}
+                        requirments={requirments}
+                        schedule={schedule}
+                        accommodation={accommodation}
+                        info={info}
+                      />
                     </div>
                   </div>
                   <Only if={!!video_url} skipDiv>

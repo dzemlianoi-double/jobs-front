@@ -1,4 +1,5 @@
 import React from 'react';
+import T from '../../../store/translations';
 
 const Search = () => {
   return (

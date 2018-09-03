@@ -6,12 +6,15 @@ import Iframe from 'react-iframe';
 
 import DescriptionVacancy from './DescriptionVacancy';
 import InfoVacancy from './InfoVacancy';
-import { requestVacancy } from '../vacancies/actions';
+import { requestVacancy, openVacancyModal, closeVacancyModal, saveVacancy } from '../vacancies/actions';
 import Only from '../basic/components/Only';
 
 class Vacancy extends Component {
   static propTypes = {
     requestVacancy: PropTypes.func.isRequired,
+    openVacancyModal: PropTypes.func.isRequired,
+    closeVacancyModal: PropTypes.func.isRequired,
+    saveVacancy: PropTypes.func.isRequired,
     currentVacancy: PropTypes.shape({
       id: PropTypes.number.isRequired,
       title: PropTypes.string.isRequired,
@@ -60,8 +63,8 @@ class Vacancy extends Component {
   }
 
   render() {
-    const { title, country_name, city, info, salary_min, video_url, specialities, 
-      age_min, age_max, main_photo, requirments, schedule, accommodation, duties } = this.props.currentVacancy;
+    const { title, info,video_url, specialities, main_photo, requirments, schedule,
+      accommodation, duties } = this.props.currentVacancy;
     return (
       <section className='mu-vacancies'>
         <div className='container mt-50 mb-50'>
@@ -76,12 +79,11 @@ class Vacancy extends Component {
                       <div className="col-md-7 mt-10">
                         <img src={main_photo} />
                       </div>
-                      <InfoVacancy 
-                        country_name={country_name}
-                        city={city}
-                        salary_min={salary_min}
-                        age_min={age_min}
-                        age_max={age_max}
+                      <InfoVacancy
+                        currentVacancy={this.props.currentVacancy}
+                        openVacancyModal={this.props.openVacancyModal}
+                        closeVacancyModal={this.props.closeVacancyModal}
+                        saveVacancy={this.props.saveVacancy}
                         sex={this.sex}
                         experience={this.experience}
                       />
@@ -130,7 +132,10 @@ function select(store) {
 
 function mapPropsToDispatch(dispatch) {
   return {
-    requestVacancy: (id) => dispatch(requestVacancy(id))
+    requestVacancy: (id) => dispatch(requestVacancy(id)),
+    saveVacancy: () => dispatch(saveVacancy()),
+    openVacancyModal: (vacancy) => dispatch(openVacancyModal(vacancy)),
+    closeVacancyModal: () => dispatch(closeVacancyModal())
   };
 }
 

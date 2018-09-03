@@ -76,16 +76,15 @@
     overflow: hidden;
     white-space: pre-line;
     word-wrap: break-word;
-    p {
+    .caption-description {
+      font-family: 'Intro';
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .main {
       font-size: 20px;
       line-height: 1.5;
-      margin: 0;
-      max-width: 40em;
-    }
-
-    .info-vacancy {
-      margin: 0 0 10px 0;
-      padding: 0;
+      margin: 10px 0;
     }
   }
 }

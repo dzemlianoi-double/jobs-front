@@ -102,10 +102,10 @@
     "suggest_friend": "Предложить другу",
     "respond": "Откликнуться",
     "icon_uah": "₴",
-    "requirments": "Требования",
-    "schedule": "Рабочий график",
-    "accommodation": "Проживание",
-    "duties": "Обязанности",
+    "requirments": "Требования:",
+    "schedule": "Рабочий график:",
+    "accommodation": "Проживание:",
+    "duties": "Обязанности:",
     "description_vacancy": "Описание вакансии:"
   },
   "page_404": {

@@ -15,25 +15,25 @@ const propTypes = {
 const DescriptionVacancy = ({ duties, requirments, schedule, accommodation, info }) => {
   return (
     <div className="about-vacancy">
-      <p><b>{T.translate('vacancy.description_vacancy')}</b></p>
       <Only if={!!duties}>
-        <p>{duties}</p>
-        <T.span text="vacancy.duties" />
+        <T.span text="vacancy.duties" className="caption-description" />
+        <p className="main"> {duties}</p>
       </Only>
       <Only if={!!requirments}>
-        <p>{requirments}</p>
-        <T.span text="vacancy.requirments" />
+        <T.span text="vacancy.requirments" className="caption-description" />
+        <p className="main"> {requirments}</p>
       </Only>
       <Only if={!!schedule}>
-        <p>{schedule}</p>
-        <T.span text="vacancy.schedule" />
+        <T.span text="vacancy.schedule" className="caption-description" />
+        <p className="main"> {schedule}</p>
       </Only>
       <Only if={!!accommodation}>
-        <p>{accommodation}</p>
-        <T.span text="vacancy.accommodation" />
+        <T.span text="vacancy.accommodation" className="caption-description" />
+        <p className="main"> {accommodation}</p>
       </Only>
       <Only if={!!info}>
-        <p className="info-vacancy">{info}</p>
+        <T.span text="vacancy.description_vacancy" className="caption-description" />
+        <p className="main">{info}</p>
       </Only>
     </div>
   );

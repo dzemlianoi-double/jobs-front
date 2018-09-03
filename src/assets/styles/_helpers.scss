@@ -1,4 +1,4 @@
-@each $size in (0, 1, 2, 3, 10, 15, 17, 25, 30, 50, 100, 120) {
+@each $size in (0, 1, 2, 3, 10, 15, 17, 25, 30, 40, 50, 100, 120) {
   @each $prop in (t: top, b: bottom, l: left, r: right) {
     .m#{nth($prop, 1)}-#{$size} {
       margin-#{nth($prop, 2)}: #{$size}px ;
@@ -12,12 +12,22 @@
   }
 }
 
+@each $size in (20) {
+  .w-#{$size} {
+    width: #{$size}px ;
+  }
+}
+
 .fs-07r {
   font-size: 0.7rem;
 }
 
 .w-70p {
   width: 70%;
+}
+
+.w-80p {
+  width: 80%;
 }
 
 .color-strong-blue-2 {
@@ -42,6 +52,10 @@
 
 .padding-30 {
   padding: 30px;
+}
+
+.w-100 {
+  width: 100%;
 }
 
 @font-face {

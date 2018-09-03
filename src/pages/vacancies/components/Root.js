@@ -55,9 +55,9 @@ class Vacancies extends Component {
     return (
       <section className='mu-vacancies'>
         <VacancyModal modalVacancy={modalVacancy} closeVacancyModal={closeVacancyModal} saveVacancy={saveVacancy} />
-        <div className='container'>
+        <div className='container-fluid'>
           <div className='row'>
-            <div className='col-md-12'>
+            <div className='col-md-10 offset-md-1'>
               <div className='mu-vacancies-area'>
                 <Search 
                   vacancies={this.props.vacancies}

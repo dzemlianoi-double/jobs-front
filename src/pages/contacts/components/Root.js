@@ -2,11 +2,13 @@ import React, { Component } from 'react';
 import SimpleMap from './Map';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import Reviews from '../..//home/components/reviews';
 
 class Contacts extends Component {
   static propTypes = {
     phone_nums: PropTypes.object.isRequired,
     emails: PropTypes.array.isRequired,
+    reviews: PropTypes.array.isRequired,
     addresses: PropTypes.object.isRequired
   };
 
@@ -50,14 +52,14 @@ class Contacts extends Component {
     return (
       <section className="contact-part d-inline">
         <div className="container-fluid">
-          <div className="row">
+          <div className="row mb-60">
             <div className="col-sm-1"></div>
             <div className="col col-sm-5">
               <div className="row">
                 <div className="col col-sm-12">
                   <div className="row mb-30">
                     <div className="col-sm-12">
-                      <h2>Contact Us</h2>
+                      <h2>Контакты</h2>
                     </div>
                   </div>
                   <div className="row mt-20">
@@ -105,12 +107,12 @@ class Contacts extends Component {
             <div className="col-sm-5">
               <div className="row mb-30">
                 <div className="col-sm-12 text-center">
-                  <h2 className="title-part-contact">Send us a message</h2>
+                  <h2 className="title-part-contact">Форма обратной связи</h2>
                 </div>
               </div>
               <form id="ajax-contact" method="post" action="mailer.php" className="contact-form">
                 <div className="form-group">
-                  <span className="titles-input">Name</span>
+                  <span className="titles-input">Имя</span>
                   <input type="text" className="form-control inputs-fields" id="name" name="name" required />
                 </div>
                 <div className="form-group">
@@ -118,7 +120,7 @@ class Contacts extends Component {
                   <input type="email" className="form-control inputs-fields" id="email" name="email" required />
                 </div>
                 <div className="form-group">
-                  <span className="titles-input">Your Message</span>
+                  <span className="titles-input">Дополнительная информация</span>
                   <textarea className="form-control inputs-fields" id="message" rows="6" name="message" required></textarea>
                 </div>
                 <div className="row">
@@ -130,6 +132,9 @@ class Contacts extends Component {
             </div>
             <div className="col-sm-1"></div>
           </div>
+          <div className="row">
+            <Reviews reviews={this.props.reviews}/>
+          </div>
         </div>
       </section>
     );
@@ -140,7 +145,8 @@ function select(store){
   return {
     phone_nums: store.basic.phone_numbers,
     emails: store.basic.emails,
-    addresses: store.basic.addresses
+    addresses: store.basic.addresses,
+    reviews: store.basic.reviews,
   };
 }
 

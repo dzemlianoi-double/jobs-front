@@ -32,11 +32,11 @@ export default class FilterCountry extends Component {
 
   render() {
     return (
-      <div className="filter-service-block">
+      <div className="filter-service-block mb-30">
         <T.p text="vacancies.specialities"/>
         <div className="row">
           <div className="col-md-12">
-            <div className="filter-country fs-07r">
+            <div className="filter-service fs-07r">
               <Select
                 className="mt-10 basic-multi-select"
                 isMulti

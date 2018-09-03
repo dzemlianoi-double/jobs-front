@@ -25,6 +25,7 @@ export default class Vacancy extends Component {
       age_max: PropTypes.number.isRequired,
       experience: PropTypes.number.isRequired,
       arrive_date: PropTypes.string.isRequired,
+      main_photo: PropTypes.string.isRequired,
       sex: PropTypes.oneOf(['Any', 'Male', 'Female', 'Family']).isRequired
     })
   }
@@ -48,19 +49,24 @@ export default class Vacancy extends Component {
   }
 
   render(){
-    const { id, title, country_name, city, info, salary_min, specialities, is_hot, created_at,
+    const { id, title, country_name, city, info, salary_min, specialities, is_hot, created_at, main_photo,
       age_min, age_max, arrive_date } = this.props.vacancy;
 
     return (
       <div className="row">
-        <div className='col-md-12 padding-30'>
+        <div className="col-md-3">
+          <img className="img-responsive vacancy-photo" src={main_photo} />
+        </div>
+        <div className='col-md-9 padding-30'>
           <div className={`row mu-vacancy ${is_hot && 'vacancy-hot'}`}>
             <div className="col-md-9">
               <Link to={internal_routes.vacancy(id)}>
                 <p className="title-vacancy">
                   <span>{title}</span>
                 </p>
-                <p className="title-company">{!!specialities && _.map(specialities, 'title').join(', ')}</p>
+                <Only if={!!specialities}>
+                  <p className="title-company">{!!specialities && _.map(specialities, 'title').join(', ')}</p>
+                </Only>
                 <p className="desc">
                   {_.truncate(info, { length: 200 })}
                   <T.a text="vacancy.full_description" href="#" />

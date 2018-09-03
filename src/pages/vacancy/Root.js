@@ -41,6 +41,10 @@ class Vacancy extends Component {
     this.props.requestVacancy(this.props.match.params.id);
   }
 
+  componentDidUpdate() {
+    this.props.requestVacancy(this.props.match.params.id);
+  }
+
   get experience() {
     const { experience } = this.props.currentVacancy;
     return experience ? `Опыт работы от ${experience} лет` : 'Опыт работы не важен';

@@ -89,13 +89,24 @@
     "response_to": "Отклик на -"
   },
   "vacancy": {
+    "salary": "Заработная плата:",
+    "country": "Страна:",
+    "sex": "Пол:",
+    "experience": "Опыт Работы",
+    "age": "Возраст:",
     "full_description": "Полное описание",
     "arrival_date:": "Дата заезда:",
     "added_by:": "Добавлено:",
     "valuta_uah": "грн",
     "years": "лет",
     "suggest_friend": "Предложить другу",
-    "respond": "Откликнуться"
+    "respond": "Откликнуться",
+    "icon_uah": "₴",
+    "requirments": "Требования:",
+    "schedule": "Рабочий график:",
+    "accommodation": "Проживание:",
+    "duties": "Обязанности:",
+    "description_vacancy": "Описание вакансии:"
   },
   "page_404": {
     "some_text": "Упс! Этой страницы не существует!",

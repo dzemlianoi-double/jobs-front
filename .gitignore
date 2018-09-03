@@ -3,3 +3,4 @@ base_template/*
 dist/*
 config/.env
 .DS_Store
+.vscode

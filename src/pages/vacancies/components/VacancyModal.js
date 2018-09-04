@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Modal from 'react-modal';
 import _ from 'lodash';
+
 import T from '../../../store/translations';
 
 import VacancyForm from './form';
@@ -25,18 +26,16 @@ export default class VacancyModal extends Component {
     saveVacancy: PropTypes.func.isRequired,
   }
 
-  closeModal = () => this.props.closeVacancyModal();
-  
   get isModalOpen(){
     return !_.isEmpty(this.props.modalVacancy);
   }
 
-  render() {    
+  render() {
     return (
       <div>
         <Modal
           isOpen={this.isModalOpen}
-          onRequestClose={this.closeModal}
+          onRequestClose={this.props.closeVacancyModal}
           style={customStyles}
           contentLabel="Example Modal"
         >
@@ -46,11 +45,14 @@ export default class VacancyModal extends Component {
               <b>{_.truncate(this.props.modalVacancy.title, { length: 40 })}</b>
             </span>
             <div className="btn-close ml-2">
-              <button onClick={this.closeModal}>X</button>
+              <button onClick={this.props.closeVacancyModal}>X</button>
             </div>
           </div>
           <div className="horizontal-line"></div>
-          <VacancyForm vacancy={this.props.closeVacancyModal} onSubmit={this.props.saveVacancy} />
+          <VacancyForm
+            vacancy={this.props.closeVacancyModal}
+            onSubmit={this.props.saveVacancy}
+          />
         </Modal>
       </div>
     );

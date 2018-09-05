@@ -5,13 +5,14 @@ import PropTypes from 'prop-types';
 import Review from './Review';
 
 const SLIDER_SETTINGS = {
-  dots: true,
+  dots: false,
   infinite: true,
   slidesToShow: 1,
   slidesToScroll: 1,
+  vertical: true,
+  verticalSwiping: true,
   speed: 500,
   autoplaySpeed: 2000,
-  cssEase: 'linear'
 };
 
 const propTypes = {

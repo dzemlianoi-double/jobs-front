@@ -58,8 +58,9 @@ export default class Vacancy extends Component {
           <img className="img-responsive vacancy-photo" src={main_photo} />
         </div>
         <div className='col-md-9 padding-30'>
+          <div className="hot-img"></div>
           <div className={`row mu-vacancy ${is_hot && 'vacancy-hot'}`}>
-            <div className="col-md-9">
+            <div className="col-md-8">
               <Link to={internal_routes.vacancy(id)}>
                 <p className="title-vacancy">
                   <span>{title}</span>
@@ -83,7 +84,7 @@ export default class Vacancy extends Component {
                 </p>
               </Link>
             </div>
-            <div className="col-md-3">
+            <div className="col-md-4">
               <Link to={internal_routes.vacancy(id)}>
                 <p className="salary">{salary_min} {T.translate('vacancy.valuta_uah')}</p>
                 <div className="city">

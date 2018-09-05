@@ -12,14 +12,15 @@ a {
 	float: left;
 	width: 100%;
 }
-
-.hot-img {
-	background-image: url('../images/hot-img.png');
-	background-repeat: no-repeat;
-	width: 150px;
-	height: 100px;
-	position: absolute;
-	right: 150px;
+.vacancy-hot {
+	.hot-img {
+		background-image: url('../images/hot-img.png');
+		background-repeat: no-repeat;
+		height: 100px;
+		position: absolute;
+		right: -85px;
+		width: 100px;
+	}
 }
 
 .mu-vacancies-area {
@@ -276,7 +277,6 @@ a {
 			box-shadow: 0 2px 1px 0 ;
       padding: 7px 15px 10px;
       &.vacancy-hot {
-				background-color: $yellowish-white;
 				box-shadow: 0 2px 10px 0 $rgb-02;
 				cursor: pointer;
       }
@@ -446,9 +446,14 @@ a {
 	}
 }
 
-.vacancy-photo {
-  margin-top: 33px;
-  max-height: 215px;
-  min-height: 195px;
-  vertical-align: middle
+.wrapper-image-vacancy {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.vacancy-photo {
+		max-height: 215px;
+		min-height: 195px;
+		vertical-align: middle;
+		border-radius: 50%;
+	}
 }

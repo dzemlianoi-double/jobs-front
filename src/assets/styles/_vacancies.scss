@@ -41,10 +41,10 @@ a {
       width: 50%;
     }
 		div.vacancy-label {
-			color: $white;
-			font-size: 23px;
-			display: flex;
 			align-items: center;
+			color: $white;
+			display: flex;
+			font-size: 23px;
     }
 		input {
 			border: 0;
@@ -57,15 +57,15 @@ a {
 			#react-autowhatever-auto-compleat {
 				background-color: $strong-blue-1;
 				max-height: 250px;
-				position: relative;
 				overflow-y: scroll;
-				z-index: 2;
+				position: relative;
 				width: 70%;
+				z-index: 2;
 				li {
 					&:hover {
-						cursor: pointer;
 						background-color: $white;
 						color: $strong-blue-1;
+						cursor: pointer;
 					}
 				}
 			}
@@ -73,9 +73,9 @@ a {
 		button {
 			background-color: $luminous-vivid-orange;
 			color: $white;
+			float: right;
 			font-size: 22px;
 			padding: 5px 75px;
-			float: right;
 			&::before {
 				background: url('../images/search_ico_sm.png') no-repeat 0 0;
 		    content: '';

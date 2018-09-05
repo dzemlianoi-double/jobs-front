@@ -13,7 +13,7 @@ class ContactForm extends Component {
     return (
       <form onSubmit={handleSubmit} className="contact-form">
         <div className="form-group mb-30 cont-inputs">
-          <span className="titles-input">Name</span>
+          <span className="titles-input">Имя</span>
           <Field
             label=""
             className="form-control"
@@ -35,7 +35,7 @@ class ContactForm extends Component {
           />
         </div>
         <div className="form-group mb-30 cont-inputs">
-          <span className="titles-input">Your Message</span>
+          <span className="titles-input">Дополнительная информация</span>
           <Field
             className="form-control"
             component="textarea"

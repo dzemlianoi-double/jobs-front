@@ -1,41 +1,29 @@
+.cont-inputs div{
+	display: inline;
+}
+
 .contact-part {
 	float: left;
 	margin: 45px 0;
 	width: 100%;
 }
 
-.mb-30 {
-	margin-bottom: 30px;
-}
-
-.mt-20 {
-	margin-top: 20px;
-}
-
 .title-part-contact {
-	color: #1da1f2;
+	color: $light-blue;
 }
 
 .titles-input {
-	color: #1da1f2;
+	color: $light-blue;
 	display: inline-block;
 	font-weight: bold;
-	margin-bottom: 7px;
-}
-
-.inputs-fields {
-	background-color: #e8ecef;
-	margin-bottom: 30px;
+	margin-bottom: 10px;
 }
 
 .btn-contact-form-send {
-	background-color: #1da1f2;
+	background-color: $light-blue;
   border: 0;
   border-radius: 10px;
-  color: #fff;
-}
-
-form .btn-contact-form-send {
+  color: $white;
 	height: 36px;
 	width: 100%;
 }
@@ -48,7 +36,7 @@ form .btn-contact-form-send {
 }
 
 .img-contact-us-title {
-	background: #ededec;
+	background: $light-gray-3;
 	display: flex;
 	flex-direction: column;
 	height: 53px;
@@ -59,7 +47,7 @@ form .btn-contact-form-send {
 }
 
 .icon-letter-call-home {
-	color: #1da1f2;
+	color: $light-blue;
 	font-size: 21px;
 }
 

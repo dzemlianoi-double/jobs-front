@@ -8,7 +8,7 @@ const propTypes = {
   type: PropTypes.string.isRequired,
   meta: PropTypes.object.isRequired
 };
-const renderField = ({ input, label, placeholder, type, meta: { touched, error, warning } }) => {
+const renderField = ({ input, label, placeholder, type, meta: { touched, error } }) => {
   return (
     <div>
       <label>
@@ -16,7 +16,7 @@ const renderField = ({ input, label, placeholder, type, meta: { touched, error, 
       </label>
       <div>
         <input {...input} className="form-control" placeholder={placeholder} type={type} />
-        {touched && ((error && <span className="text-danger"> {error} </span>) || (warning && <span> {warning} </span>))}
+        {touched && ((error && <span className="text-danger"> {error} </span>))}
       </div>
     </div>
   );

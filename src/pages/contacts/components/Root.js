@@ -3,13 +3,17 @@ import SimpleMap from './Map';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Reviews from '../..//home/components/reviews';
+import ContactForm from './ContactForm';
+
+import { saveContacts } from '../actions';
 
 class Contacts extends Component {
   static propTypes = {
     phone_nums: PropTypes.object.isRequired,
     emails: PropTypes.array.isRequired,
     reviews: PropTypes.array.isRequired,
-    addresses: PropTypes.object.isRequired
+    addresses: PropTypes.object.isRequired,
+    onSubmit: PropTypes.func.isRequired
   };
 
   renderNumbers = () => {
@@ -110,25 +114,7 @@ class Contacts extends Component {
                   <h2 className="title-part-contact">Форма обратной связи</h2>
                 </div>
               </div>
-              <form id="ajax-contact" method="post" action="mailer.php" className="contact-form">
-                <div className="form-group">
-                  <span className="titles-input">Имя</span>
-                  <input type="text" className="form-control inputs-fields" id="name" name="name" required />
-                </div>
-                <div className="form-group">
-                  <span className="titles-input">Email</span>
-                  <input type="email" className="form-control inputs-fields" id="email" name="email" required />
-                </div>
-                <div className="form-group">
-                  <span className="titles-input">Дополнительная информация</span>
-                  <textarea className="form-control inputs-fields" id="message" rows="6" name="message" required></textarea>
-                </div>
-                <div className="row">
-                  <div className="col-sm-12">
-                    <button type="submit" className="btn-contact-form-send">Отправить<span className="ml-1 fa fa-long-arrow-right"></span></button>
-                  </div>
-                </div>
-              </form>
+              <ContactForm onSubmit={this.props.onSubmit} />
             </div>
             <div className="col-sm-1"></div>
           </div>
@@ -150,4 +136,10 @@ function select(store){
   };
 }
 
-export default connect(select)(Contacts);
+function mapDispatchToProps(dispatch) {
+  return {
+    onSubmit: () => dispatch(saveContacts())
+  };
+}
+
+export default connect(select, mapDispatchToProps)(Contacts);

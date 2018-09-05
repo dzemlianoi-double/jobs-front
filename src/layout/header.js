@@ -72,7 +72,7 @@ export default class Header extends Component {
                           {this.renderAddresses()}
                         </div>
                         <div>
-                          <span className="fs-13 c-white">Мы работаем с 9:00 - 18:00 c ПН по ПТ!</span>
+                          <span className="fs-13 c-white">Мы работаем с 10:00 - 18:00 c ПН по ПТ!</span>
                         </div>
                       </div>
                     </li>

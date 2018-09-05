@@ -56,12 +56,13 @@ export default class SearchAutosuggestions extends Component {
     const inputProps = {
       placeholder: 'Введите информацию о вакансии',
       value,
-      onChange: this.onChange
+      onChange: this.onChange,
+      className: 'input-search'
     };
 
     return (
       <div className="inline-block w-80p">
-        <div className="inline-block w-70p">
+        <div className="inline-block block-search-vacancy w-55p">
           <Autosuggest
             suggestions={suggestions}
             onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
@@ -70,6 +71,7 @@ export default class SearchAutosuggestions extends Component {
             renderSuggestion={this.renderSuggestion}
             inputProps={inputProps}
             theme={theme}
+            id='auto-compleat'
           />
         </div>
         <button className="ml-25 btn btn-lg">Найти</button>

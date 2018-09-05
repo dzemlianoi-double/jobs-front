@@ -9,7 +9,7 @@ import T from '../../../../store/translations';
 import HeaderSlide from './HeaderSlide';
 
 const settings = {
-  dots: true,
+  dots: false,
   infinite: true,
   slidesToShow: 1,
   slidesToScroll: 1,

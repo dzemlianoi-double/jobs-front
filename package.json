@@ -10,7 +10,8 @@
     "scss-lint-fix": "sass-lint-auto-fix",
     "scss-full-lint": "npm run scss-lint && npm run scss-lint-fix",
     "precommit": "npm run scss-full-lint && eslint --fix .",
-    "prepush": "npm run scss-full-lint && eslint --fix ."
+    "prepush": "npm run scss-full-lint && eslint --fix .",
+    "esl": "eslint --fix ."
   },
   "keywords": [],
   "author": "",

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import Counter from './counters';
 import Reviews from './reviews';
 import Services from './services';
 import HeaderSlider from './header_slider';
@@ -23,7 +22,6 @@ class Home extends Component {
       <div>
         <HeaderSlider />
         <WhoWe />
-        <Counter />
         <Services services={services} />
         <Reviews reviews={reviews} />
         <CallBack />

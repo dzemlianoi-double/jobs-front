@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import LastVacancy from './LastVacancy';
 
 const SLIDER_SETTINGS = {
-  dots: true,
+  dots: false,
   infinite: true,
   slidesToShow: 3,
   slidesToScroll: 1,

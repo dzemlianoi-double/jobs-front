@@ -12,6 +12,7 @@ a {
 	float: left;
 	width: 100%;
 }
+
 .vacancy-hot {
 	.hot-img {
 		background-image: url('../images/hot-img.png');
@@ -42,18 +43,39 @@ a {
 		div.vacancy-label {
 			color: $white;
 			font-size: 23px;
+			display: flex;
+			align-items: center;
     }
 		input {
 			border: 0;
 			border-radius: 2px;
       padding: 8px;
-      width: 100%;
+      width: 70%;
+		}
+		.block-search-vacancy {
+			position: absolute;
+			#react-autowhatever-auto-compleat {
+				background-color: $strong-blue-1;
+				max-height: 250px;
+				position: relative;
+				overflow-y: scroll;
+				z-index: 2;
+				width: 70%;
+				li {
+					&:hover {
+						cursor: pointer;
+						background-color: $white;
+						color: $strong-blue-1;
+					}
+				}
+			}
 		}
 		button {
 			background-color: $luminous-vivid-orange;
 			color: $white;
 			font-size: 22px;
 			padding: 5px 75px;
+			float: right;
 			&::before {
 				background: url('../images/search_ico_sm.png') no-repeat 0 0;
 		    content: '';
@@ -447,13 +469,13 @@ a {
 }
 
 .wrapper-image-vacancy {
+	align-items: center;
 	display: flex;
 	justify-content: center;
-	align-items: center;
 	.vacancy-photo {
+		border-radius: 50%;
 		max-height: 215px;
 		min-height: 195px;
 		vertical-align: middle;
-		border-radius: 50%;
 	}
 }

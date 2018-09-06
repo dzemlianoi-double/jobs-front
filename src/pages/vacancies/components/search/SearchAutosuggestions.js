@@ -54,7 +54,7 @@ export default class SearchAutosuggestions extends Component {
     const { value, suggestions } = this.state;
 
     const inputProps = {
-      placeholder: 'Введите информацию о вакансии',
+      placeholder: 'Поиск вакансии',
       value,
       onChange: this.onChange,
       className: 'input-search'

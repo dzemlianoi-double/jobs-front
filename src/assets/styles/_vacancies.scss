@@ -49,8 +49,8 @@ a {
 		input {
 			border: 0;
 			border-radius: 2px;
-      padding: 8px;
-      width: 70%;
+      padding: 4px;
+      width: 98%;
 		}
 		.block-search-vacancy {
 			position: absolute;
@@ -59,9 +59,13 @@ a {
 				max-height: 250px;
 				overflow-y: scroll;
 				position: relative;
-				width: 70%;
+				width: 98%;
 				z-index: 2;
 				li {
+					span {
+						font-size: 15px;
+						margin-left: 5px;
+					}
 					&:hover {
 						background-color: $white;
 						color: $strong-blue-1;
@@ -72,10 +76,11 @@ a {
 		}
 		button {
 			background-color: $luminous-vivid-orange;
+			border: 0;
 			color: $white;
 			float: right;
 			font-size: 22px;
-			padding: 5px 75px;
+			padding: 4px 75px;
 			&::before {
 				background: url('../images/search_ico_sm.png') no-repeat 0 0;
 		    content: '';
@@ -403,17 +408,19 @@ a {
 .ReactModal__Content {
 	background-color: $black;
 	color: $white;
+	max-width: 500px;
+	min-width: 500px;
 	.header-modal-vacancy {
+		align-items: center;
 		display: flex;
-		height: 40px;
-		justify-content: center;
+		justify-content: space-between;
 		.title-vacancy {
 			font-size: 18px;
 		}
 		.btn-close {
+			align-items: center;
 			display: flex;
 			justify-content: space-between;
-			margin: -7px 0 20px 10px;
 			button {
 				background-color: $light-blue;
 				border-radius: 50%;

@@ -42,7 +42,7 @@ export default class VacancyModal extends Component {
           <div className="header-modal-vacancy">
             <span className="title-vacancy">
               {T.translate('vacancy_modal.response_to')} 
-              <b>{_.truncate(this.props.modalVacancy.title, { length: 40 })}</b>
+              <b>{_.truncate(this.props.modalVacancy.title, { length: 100 })}</b>
             </span>
             <div className="btn-close ml-2">
               <button onClick={this.props.closeVacancyModal}>X</button>

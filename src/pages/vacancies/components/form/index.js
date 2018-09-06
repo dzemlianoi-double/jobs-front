@@ -21,7 +21,7 @@ class VacancyForm extends Component {
               name="name" 
               label={T.translate('vacancy_form.name')}
               component={renderField}
-              placeholder="Иван Рубан"
+              placeholder="Ваше Имя"
               type="text"
             />
           </div>

@@ -1,5 +1,6 @@
 const initialState = {
   list: [],
+  modalService: {},
   loading: true
 };
 
@@ -15,6 +16,16 @@ export default function services(state = initialState, action) {
     return {
       ...state,
       loading: false
+    };
+  case 'OPEN_SERVICES_MODAL':
+    return {
+      ...state,
+      modalService: action.payload
+    };
+  case 'CLOSE_SERVICES_MODAL':
+    return {
+      ...state,
+      modalService: {}
     };
   default:
     return state;

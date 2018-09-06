@@ -1,3 +1,5 @@
+@import 'variables';
+
 #mu-pricing {
 	background-color: $white;
 	display: inline;
@@ -133,6 +135,7 @@
 .mu-buy-now-btn:hover,
 .mu-buy-now-btn:focus {
 	color: $white;
+	cursor: pointer;
 }
 
 .mu-standard-pricing .mu-pricing-single {
@@ -156,4 +159,74 @@
 	margin-bottom: 35px;
 	padding: 8px 48px;
 	text-transform: uppercase;
+}
+
+.ReactModal__Content {
+	background-color: $black;
+	color: $white;
+	max-width: 500px;
+	min-width: 500px;
+	.header-modal-vacancy {
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+		.title-vacancy {
+			font-size: 18px;
+		}
+		.btn-close {
+			align-items: center;
+			display: flex;
+			justify-content: space-between;
+			button {
+				background-color: $light-blue;
+				border-radius: 50%;
+				color: $white;
+				height: 40px;
+				&:hover {
+					background-color: $white;
+					color: $light-blue;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+	.horizontal-line {
+		background-color: $white;
+		margin: 10px 0;
+		width: 100%;
+	}
+	.modal-form-respond {
+		align-items: inherit;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		.horizontal-line {
+			margin: 8px 0 25px 0;
+		}
+			label {
+				font-size: 18px;
+				width: 100%;
+			}
+		.additional-info {
+			display: flex;
+			flex-direction: column;
+			label {
+				width: 100%;
+			}
+			textarea {
+				width: 100%;
+			}
+		}
+		button {
+			background-color: $light-blue;
+			border: 0;
+			border-radius: 10px;
+			color: $white;
+			&:hover {
+				background-color: $white;
+				color: $light-blue;
+				cursor: pointer;
+			}
+		}
+	}
 }

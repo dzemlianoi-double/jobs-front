@@ -444,6 +444,11 @@ a {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+		.form-group {
+			div {
+				height: 80px;
+			}
+		}
 		.horizontal-line {
 			margin: 8px 0 25px 0;
 		}

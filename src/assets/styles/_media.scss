@@ -1,4 +1,10 @@
-@media (max-width: 1199px) {
+@media (max-width: 1400px) {
+	.ReactModal__Content {
+		max-width: 500px;
+		min-width: 500px;
+	}
+}
+	@media (max-width: 1199px) {
 
 	.mu-single-slide-content-area {
 		padding: 6% 10%;
@@ -504,6 +510,11 @@
 }
 
 @media (max-width: 480px) {
+	.ReactModal__Content {
+		max-width: 450px;
+		min-width: 360px;
+	}
+
 	.mu-single-slide-content a.mu-primary-btn {
 		display: none;
 	}
@@ -649,6 +660,11 @@
 	}
 }
 @media (max-width: 360px) {
+	.ReactModal__Content {
+		max-width: 320px;
+		min-width: 300px;
+	}
+
 	.mu-single-slide-content h1 {
 		font-size: 18px;
 		margin-bottom: 5px;
@@ -765,6 +781,10 @@
 }
 
 @media (max-width: 320px) {
+	.ReactModal__Content {
+		max-width: 300px;
+		min-width: 300px;
+	}
 	.mu-single-slide-content-area {
 		padding: 2% 0%;
 	}

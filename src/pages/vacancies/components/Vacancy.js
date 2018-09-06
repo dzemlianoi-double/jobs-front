@@ -17,8 +17,8 @@ export default class Vacancy extends Component {
       country_name: PropTypes.string.isRequired,
       city: PropTypes.string.isRequired,
       info: PropTypes.string.isRequired,
-      salary_min: PropTypes.string.isRequired,
-      specialities: PropTypes.string.isRequired,
+      salary_min: PropTypes.number.isRequired,
+      specialities: PropTypes.array.isRequired,
       is_hot: PropTypes.bool.isRequired,
       created_at: PropTypes.isRequired,
       age_min: PropTypes.number.isRequired,
@@ -70,7 +70,7 @@ export default class Vacancy extends Component {
                 </Only>
                 <p className="desc">
                   {_.truncate(info, { length: 200 })}
-                  <T.a text="vacancy.full_description" href="#" />
+                  {T.translate('vacancy.full_description')}
                 </p>
                 <Only if={!!arrive_date} skipDiv>
                   <p className="date-added m-b-3">

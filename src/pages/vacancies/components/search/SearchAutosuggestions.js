@@ -7,7 +7,7 @@ import theme from '../../../../assets/styles/autosuggestion.scss';
 
 export default class SearchAutosuggestions extends Component {
   static propTypes = {
-    vacancies: PropTypes.object.isRequired
+    vacancies: PropTypes.array.isRequired
   }
 
   state = {

@@ -8,6 +8,7 @@ import DescriptionVacancy from './DescriptionVacancy';
 import InfoVacancy from './InfoVacancy';
 import { requestVacancy, openVacancyModal, closeVacancyModal, saveVacancy } from '../vacancies/actions';
 import Only from '../basic/components/Only';
+import default_img from '../../assets/images/default_img_vacancy.jpg';
 
 class Vacancy extends Component {
   static propTypes = {
@@ -74,11 +75,20 @@ class Vacancy extends Component {
                 <div className='col-md-12 padding-0'>
                   <div className="vacancy">
                     <p className="title-vacancy">{title}</p>
-                    <p className="title-company">{!!specialities && _.map(specialities, 'title').join(', ')}</p>
+                    <Only if={specialities != 0} skipDiv>
+                      <p className="title-company">{specialities && _.map(specialities, 'title').join(', ')}</p>
+                    </Only>
                     <div className="row">
-                      <div className="col-md-7 mt-10">
-                        <img src={main_photo} />
-                      </div>
+                      <Only if={!main_photo} skipDiv>
+                        <div className="col-md-7 mt-10 noimg-vacancy">
+                          <img src={default_img} />
+                        </div>
+                      </Only>
+                      <Only if={main_photo} skipDiv>
+                        <div className="col-md-7 mt-10">
+                          <img src={main_photo} />
+                        </div>
+                      </Only>
                       <InfoVacancy
                         currentVacancy={this.props.currentVacancy}
                         openVacancyModal={this.props.openVacancyModal}

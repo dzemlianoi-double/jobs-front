@@ -479,7 +479,21 @@ a {
 		}
 	}
 }
-
+.wrapper-image-vacancy-noimg {
+	align-items: center;
+	background-color: $pure-blue;
+	border: 1px solid $pure-blue;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	.icon-noimg-vacancy {
+		width: 65%;
+		i {
+			color: $pure-blue;
+			font-size: 20px;
+		}
+	}
+}
 .wrapper-image-vacancy {
 	align-items: center;
 	display: flex;

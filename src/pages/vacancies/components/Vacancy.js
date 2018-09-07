@@ -3,9 +3,11 @@ import PropTypes from 'prop-types';
 import Moment from 'react-moment';
 import _ from 'lodash';
 import { Link } from 'react-router-dom';
+
 import Only from '../../basic/components/Only';
 import internal_routes from '../../../config/internal_routes';
 import T from '../../../store/translations';
+import default_img from '../../../assets/images/worker_logo.png';
 
 export default class Vacancy extends Component {
   static propTypes = {
@@ -57,16 +59,27 @@ export default class Vacancy extends Component {
         <div className='col-md-12 padding-30'>
           <div className={`row mu-vacancy ${is_hot && 'vacancy-hot'}`}>
             <div className="hot-img"></div>
-            <div className="col-md-3 wrapper-image-vacancy">
-              <img className="img-responsive vacancy-photo" src={main_photo} />
-            </div>
+            <Only if={!main_photo} skipDiv>
+              <div className="col-md-3 wrapper-image-vacancy-noimg">
+                <div className="icon-noimg-vacancy">
+                  <img className="img-responsive vacancy-photo" src={default_img} />                    
+                </div>
+              </div>
+            </Only>
+            <Only if={main_photo} skipDiv>
+              <div className="col-md-3 wrapper-image-vacancy">
+                <div>
+                  <img className="img-responsive vacancy-photo" src={main_photo} />
+                </div>
+              </div>
+            </Only>
             <div className="col-md-5">
               <Link to={internal_routes.vacancy(id)}>
                 <p className="title-vacancy">
                   <span>{title}</span>
                 </p>
-                <Only if={!!specialities}>
-                  <p className="title-company">{!!specialities && _.map(specialities, 'title').join(', ')}</p>
+                <Only if={specialities.length != 0}>
+                  <p className="title-company">{specialities && _.map(specialities, 'title').join(', ')}</p>
                 </Only>
                 <p className="desc">
                   {_.truncate(info, { length: 200 })}

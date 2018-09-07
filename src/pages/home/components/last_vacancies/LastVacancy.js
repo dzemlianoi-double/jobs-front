@@ -26,8 +26,8 @@ const LastVacancy = ({ last_vacancies }) => {
                       <img className="mu-rt-img" src={vacancy_attr['main-photo']} alt="img" />
                     </Only>
                     <Only if={!vacancy_attr['main-photo']} skipDiv>
-                      <div className="mu-rt-img-noimg">
-                        <i className="fa fa-briefcase" aria-hidden="true"></i>                  
+                      <div className="mu-rt-noimg">
+                        <i className="fa fa-briefcase" aria-hidden="true"></i>
                       </div>
                     </Only> 
                     <h5 className="mu-rt-name">{vacancy_attr.title}</h5>

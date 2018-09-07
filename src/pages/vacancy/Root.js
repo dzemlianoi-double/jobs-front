@@ -75,7 +75,7 @@ class Vacancy extends Component {
                 <div className='col-md-12 padding-0'>
                   <div className="vacancy">
                     <p className="title-vacancy">{title}</p>
-                    <Only if={specialities != 0} skipDiv>
+                    <Only if={_.size(specialities) != 0}>
                       <p className="title-company">{specialities && _.map(specialities, 'title').join(', ')}</p>
                     </Only>
                     <div className="row">

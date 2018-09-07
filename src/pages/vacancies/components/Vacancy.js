@@ -62,7 +62,7 @@ export default class Vacancy extends Component {
             <Only if={!main_photo} skipDiv>
               <div className="col-md-3 wrapper-image-vacancy-noimg">
                 <div className="icon-noimg-vacancy">
-                  <img className="img-responsive vacancy-photo" src={default_img} />                    
+                  <img className="img-responsive vacancy-photo" src={default_img} />
                 </div>
               </div>
             </Only>

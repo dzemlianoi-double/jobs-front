@@ -4,19 +4,21 @@ import PropTypes from 'prop-types';
 
 import T from '../../../store/translations';
 import Service from './Service';
-
-import { requestServices } from '../actions';
+import { requestServices, openServiceModal, closeServiceModal, saveService } from '../actions';
 
 class Services extends Component {
   static propTypes = {
     requestServices: PropTypes.func.isRequired,
+    openServiceModal: PropTypes.func.isRequired,
+    closeServiceModal: PropTypes.func.isRequired,
+    saveService: PropTypes.func.isRequired,
+    modalService: PropTypes.func.isRequired,
     services: PropTypes.array.isRequired
   };
 
   componentDidMount = () => {
     this.props.requestServices();
   };
-  
 
   render () {
     return (
@@ -35,7 +37,16 @@ class Services extends Component {
                   <div className="col-md-12">
                     <div className="mu-pricing-content">
                       <ul className="mu-pricing-table">
-                        {this.props.services.map((service) => <Service key={service.id} service={service} />)}
+                        {this.props.services.map((service) => 
+                          <Service 
+                            key={service.id} 
+                            service={service} 
+                            openServiceModal={this.props.openServiceModal}
+                            closeServiceModal={this.props.closeServiceModal}
+                            saveService={this.props.saveService}
+                            modalService={this.props.modalService}
+                          />
+                        )}
                       </ul>
                     </div>
                   </div>
@@ -52,12 +63,16 @@ class Services extends Component {
 function select(store) {
   return {
     services: store.services.list,
+    modalService: store.services.modalService
   };
 }
 
 function mapPropsToDispatch(dispatch) {
   return {
-    requestServices: () => dispatch(requestServices())
+    requestServices: () => dispatch(requestServices()),
+    openServiceModal: (services) => dispatch(openServiceModal(services)),
+    closeServiceModal: () => dispatch(closeServiceModal()),
+    saveService: () => dispatch(saveService())
   };
 }
 

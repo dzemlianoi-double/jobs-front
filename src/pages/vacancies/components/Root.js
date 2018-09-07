@@ -24,11 +24,11 @@ class Vacancies extends Component {
     modalVacancy: PropTypes.object.isRequired,
     onFilterUpdate: PropTypes.func.isRequired
   }
-   
+
   componentDidMount() {
     this.props.requestVacancies();
   }
-  
+
   get averageSalary() {
     if (!this.filteredVacancies.length) { return 0; }
     return _.meanBy(this.filteredVacancies, (vacancy) => vacancy.salary_min).toFixed(0);
@@ -41,7 +41,7 @@ class Vacancies extends Component {
   get renderFilteredVacancies() {
     return this.filteredVacancies.map((vacancy) => {
       return (
-        <Vacancy 
+        <Vacancy
           key={vacancy.id}
           vacancy={vacancy}
           openVacancyModal={this.props.openVacancyModal}
@@ -59,7 +59,7 @@ class Vacancies extends Component {
           <div className='row'>
             <div className='col-md-10 offset-md-1'>
               <div className='mu-vacancies-area'>
-                <Search 
+                <Search
                   vacancies={this.props.vacancies}
                 />
                 <div className='row main'>

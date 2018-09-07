@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import T from '../../../store/translations';
 import Service from './Service';
 import { requestServices, openServiceModal, closeServiceModal, saveService } from '../actions';
+import CallBack from './CallBack';
 
 class Services extends Component {
   static propTypes = {
@@ -37,10 +38,10 @@ class Services extends Component {
                   <div className="col-md-12">
                     <div className="mu-pricing-content">
                       <ul className="mu-pricing-table">
-                        {this.props.services.map((service) => 
-                          <Service 
-                            key={service.id} 
-                            service={service} 
+                        {this.props.services.map((service) =>
+                          <Service
+                            key={service.id}
+                            service={service}
                             openServiceModal={this.props.openServiceModal}
                             closeServiceModal={this.props.closeServiceModal}
                             saveService={this.props.saveService}
@@ -55,6 +56,7 @@ class Services extends Component {
             </div>
           </div>
         </div>
+        <CallBack />
       </section>
     );
   }
@@ -77,4 +79,3 @@ function mapPropsToDispatch(dispatch) {
 }
 
 export default connect(select, mapPropsToDispatch)(Services);
-

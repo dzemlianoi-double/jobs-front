@@ -6,6 +6,7 @@ import Reviews from '../..//home/components/reviews';
 import ContactForm from './ContactForm';
 
 import { saveContacts } from '../actions';
+import T from '../../../store/translations';
 
 class Contacts extends Component {
   static propTypes = {
@@ -13,7 +14,8 @@ class Contacts extends Component {
     emails: PropTypes.array.isRequired,
     reviews: PropTypes.array.isRequired,
     addresses: PropTypes.object.isRequired,
-    onSubmit: PropTypes.func.isRequired
+    onSubmit: PropTypes.func.isRequired,
+    social_links: PropTypes.object.isRequired
   };
 
   renderNumbers = () => {
@@ -21,7 +23,7 @@ class Contacts extends Component {
       return (
         <div className="row" key={`contacts-${phone_number.toString()}`}>
           <div className="col-sm-12">
-            <span>{phone_number}</span>
+            <a className="link-and-nums-contacts" href={'tel:' + phone_number}>{phone_number}</a>
           </div>
         </div>
       );
@@ -52,6 +54,18 @@ class Contacts extends Component {
     });
   }
 
+  renderSocialLinks = () => {
+    return Object.values(this.props.social_links).map((social_link) => {
+      return (
+        <div className="row" key={`social_link-${social_link.toString()}`}>
+          <div className="col-sm-12">
+            <a className="link-and-nums-contacts" href={social_link} >{social_link}</a>
+          </div>
+        </div>
+      );
+    });
+  }
+
   render () {
     return (
       <section className="contact-part d-inline">
@@ -63,7 +77,7 @@ class Contacts extends Component {
                 <div className="col col-sm-12">
                   <div className="row mb-30">
                     <div className="col-sm-12">
-                      <h2>Контакты</h2>
+                      <h2>{T.translate('contacts_titles.contacts_info')}</h2>
                     </div>
                   </div>
                   <div className="row mt-20">
@@ -96,6 +110,16 @@ class Contacts extends Component {
                       {this.renderAddresses()}
                     </div>
                   </div>
+                  <div className="row mt-20">
+                    <div className="col-2 col-sm-2 d-flex">
+                      <div className="img-contact-us-title">
+                        <span className="fa fa-facebook icon-letter-call-home"></span>
+                      </div>
+                    </div>
+                    <div className="col-10 col-sm-10 self-d-flex">
+                      {this.renderSocialLinks()}
+                    </div>
+                  </div>
                 </div>
               </div>
               <div className="row">
@@ -111,7 +135,7 @@ class Contacts extends Component {
             <div className="col-sm-5">
               <div className="row mb-30">
                 <div className="col-sm-12 text-center">
-                  <h2 className="title-part-contact">Форма обратной связи</h2>
+                  <h2 className="title-part-contact">{T.translate('contacts_titles.message_from_user')}</h2>
                 </div>
               </div>
               <ContactForm onSubmit={this.props.onSubmit} />
@@ -133,6 +157,7 @@ function select(store){
     emails: store.basic.emails,
     addresses: store.basic.addresses,
     reviews: store.basic.reviews,
+    social_links: store.basic.social_links
   };
 }
 

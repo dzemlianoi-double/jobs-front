@@ -1,12 +1,13 @@
 #mu-call-to-action {
 	float: left;
 	//margin: 120px 0;
-    position: relative;
-    width: 100%;
+  position: relative;
+  width: 100%;
+	border-radius: 5px;
+	box-shadow: 0 0 14px #e0dbdb;
 }
 
 #mu-call-to-action:before {
-	background: $strong-blue-2;
 	bottom: 0;
 	content: '';
 	left: 0;
@@ -19,12 +20,12 @@
 	display: inline;
 	float: left;
 	padding: 30px 0;
-    text-align: center;
-    width: 100%;
+  text-align: center;
+  width: 100%;
 }
 
 .mu-call-to-action-left {
-	color: $white;
+	color: $strong-blue-2;
 	display: inline;
 	max-width: 70%;
 }
@@ -40,8 +41,8 @@
 }
 
 .mu-quote-btn {
-	background-color: $white;
-	color: $strong-blue-2;
+	background-color: $strong-blue-2;
+	color: $white;
     margin: 20px 0 0 0;
     padding: 10px 40px;
     i {
@@ -53,5 +54,5 @@
 
 .mu-quote-btn:hover,
 .mu-quote-btn:focus {
-	color: $strong-blue-2;
+	color: $white;
 }

@@ -120,6 +120,20 @@ class Contacts extends Component {
                       {this.renderSocialLinks()}
                     </div>
                   </div>
+                  <div className="row mt-20">
+                    <div className="col-2 col-sm-2 d-flex">
+                      <div className="img-contact-us-title">
+                        <span className="fa fa-clock-o icon-letter-call-home"></span>
+                      </div>
+                    </div>
+                    <div className="col-10 col-sm-10 self-d-flex">
+                      <div className="row">
+                        <div className="col-sm-12">
+                          <span>Мы работаем с 10:00 - 18:00 c ПН по ПТ!</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div className="row">

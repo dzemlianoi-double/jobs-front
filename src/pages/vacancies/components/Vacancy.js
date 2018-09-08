@@ -40,7 +40,7 @@ export default class Vacancy extends Component {
     case('Male'): return 'Мужской';
     case('Female'): return 'Женский';
     case('Family'): return 'Семейная пара';
-    default: return 'Не имеет значения'; 
+    default: return 'Не имеет значения';
     }
   }
 

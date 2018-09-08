@@ -91,7 +91,7 @@ class Vacancy extends Component {
                   </div>
                   <div className="row">
                     <div className="col-md-10 mt-25">
-                      <DescriptionVacancy 
+                      <DescriptionVacancy
                         duties={duties}
                         requirments={requirments}
                         schedule={schedule}

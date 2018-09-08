@@ -5,6 +5,7 @@ import _ from 'lodash';
 
 import T from '../../../../store/translations';
 import internal_routes from '../../../../config/internal_routes';
+import Only from '../../../basic/components/Only';
 
 const propTypes = {
   last_vacancies: PropTypes.object.isRequired
@@ -21,7 +22,14 @@ const LastVacancy = ({ last_vacancies }) => {
               <div className="mu-testimonials-block">
                 <ul className="mu-testimonial-slide">
                   <li>
-                    <img className="mu-rt-img" src={vacancy_attr['main-photo']} alt="img" />
+                    <Only if={vacancy_attr['main-photo']} skipDiv>
+                      <img className="mu-rt-img" src={vacancy_attr['main-photo']} alt="img" />
+                    </Only>
+                    <Only if={!vacancy_attr['main-photo']} skipDiv>
+                      <div className="mu-rt-noimg">
+                        <i className="fa fa-briefcase" aria-hidden="true"></i>
+                      </div>
+                    </Only> 
                     <h5 className="mu-rt-name">{vacancy_attr.title}</h5>
                     <p>{vacancy_attr.city}</p>
                     <p>{_.truncate(vacancy_attr.info, { length: 150 })}</p>

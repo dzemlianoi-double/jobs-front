@@ -4,7 +4,7 @@ import { Field, reduxForm } from 'redux-form';
 import renderField from '../../vacancies/components/form/renderField';
 
 import T from '../../../store/translations';
-import { validate } from '../../vacancies/components/form/validateForm';
+import { validateForm } from '../../validateForm';
 
 class ServiceForm extends Component {
   static propTypes = {
@@ -17,12 +17,13 @@ class ServiceForm extends Component {
       <div>
         <form onSubmit={handleSubmit} className="modal-form-respond mt-15">
           <div className="form-group">
-            <Field 
-              name="name" 
+            <Field
+              name="name"
               label={T.translate('vacancy_form.name')}
               component={renderField}
               placeholder="Ваше Имя"
               type="text"
+              validate={[validateForm.isRequired, validateForm.maxLength15]}
             />
           </div>
           <div className="form-group">
@@ -32,6 +33,7 @@ class ServiceForm extends Component {
               placeholder="+380хх-ххх-хх-хх"
               component={renderField}
               type="text"
+              validate={[validateForm.isRequired, validateForm.isValidNumber]}
             />
           </div>
           <div className="form-group">
@@ -43,6 +45,7 @@ class ServiceForm extends Component {
               component={renderField}
               type="email"
               label={T.translate('vacancy_form.email')}
+              validate={[validateForm.isRequired, validateForm.isValidEmail]}
             />
           </div>
           <div className="form-group">
@@ -63,4 +66,4 @@ class ServiceForm extends Component {
   }
 }
 
-export default reduxForm({ form: 'services', validate })(ServiceForm);
+export default reduxForm({ form: 'services' })(ServiceForm);

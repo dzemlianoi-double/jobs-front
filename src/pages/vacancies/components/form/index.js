@@ -4,11 +4,11 @@ import { Field, reduxForm } from 'redux-form';
 import T from '../../../../store/translations';
 
 import renderField from './renderField';
-import { validate } from './validateForm';
- 
+import { validateForm } from '../../../validateForm';
+
 class VacancyForm extends Component {
   static propTypes = {
-    handleSubmit: PropTypes.func.isRequired
+    handleSubmit: PropTypes.func.isRequired,
   }
 
   render() {
@@ -17,12 +17,13 @@ class VacancyForm extends Component {
       <div>
         <form onSubmit={handleSubmit} className="modal-form-respond mt-15">
           <div className="form-group">
-            <Field 
-              name="name" 
+            <Field
+              name="name"
               label={T.translate('vacancy_form.name')}
               component={renderField}
               placeholder="Ваше Имя"
               type="text"
+              validate={[validateForm.isRequired, validateForm.maxLength15]}
             />
           </div>
           <div className="form-group">
@@ -32,6 +33,7 @@ class VacancyForm extends Component {
               placeholder="+380хх-ххх-хх-хх"
               component={renderField}
               type="text"
+              validate={[validateForm.isRequired, validateForm.isValidNumber]}
             />
           </div>
           <div className="form-group">
@@ -43,6 +45,7 @@ class VacancyForm extends Component {
               component={renderField}
               type="email"
               label={T.translate('vacancy_form.email')}
+              validate={[validateForm.isRequired, validateForm.isValidEmail]}
             />
           </div>
           <div className="form-group">
@@ -63,4 +66,4 @@ class VacancyForm extends Component {
   }
 }
 
-export default reduxForm({ form: 'vacancy', validate })(VacancyForm);
+export default reduxForm({ form: 'vacancy' })(VacancyForm);

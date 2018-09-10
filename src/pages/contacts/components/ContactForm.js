@@ -4,6 +4,8 @@ import { Field, reduxForm } from 'redux-form';
 import renderField from '../../vacancies/components/form/renderField';
 import T from '../../../store/translations';
 
+import { validateForm } from '../../validateForm';
+
 class ContactForm extends Component {
   static propTypes = {
     handleSubmit: PropTypes.func.isRequired
@@ -22,6 +24,7 @@ class ContactForm extends Component {
             type="text"
             name="name"
             placeholder=""
+            validate={[validateForm.isRequired, validateForm.maxLength15]}
           />
         </div>
         <div className="form-group mb-30 cont-inputs">
@@ -33,6 +36,7 @@ class ContactForm extends Component {
             type="text"
             name="email"
             placeholder=""
+            validate={[validateForm.isRequired, validateForm.isValidEmail]}
           />
         </div>
         <div className="form-group mb-30 cont-inputs">
@@ -44,6 +48,7 @@ class ContactForm extends Component {
             type="text"
             name="phone_number"
             placeholder=""
+            validate={[validateForm.isRequired, validateForm.isValidNumber]}
           />
         </div>
         <div className="form-group mb-30 cont-inputs">

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import InputRange from 'react-input-range';
 import FilterButton from './FilterButton';
 import T from '../../../../store/translations';
+import Only from '../../../basic/components/Only';
 
 export default class FilterSalary extends Component {
   static propTypes = {
@@ -30,6 +31,11 @@ export default class FilterSalary extends Component {
     this.setState({ value, isUpdated: false });
   }
 
+	resetValue = () => {
+		const { salary_max, salary_min } = this.props;
+		this.props.onFilterUpdate({ salary_min: salary_min, salary_max: salary_max });
+		this.setState({ isUpdated: false });
+	}
 
   render() {
     const { salary_min, salary_max } = this.props;
@@ -38,6 +44,13 @@ export default class FilterSalary extends Component {
       <div className="filter-salary">
         <T.p text="vacancies.salary" />
         <div className="block-salary">
+					<div className="row">
+						<div className="col-md-12 mb-10 btn-reset-filter">
+							<Only if={this.state.isUpdated} skipDiv>
+									<button onClick={this.resetValue}>сбросить фильтр</button>
+							</Only>
+						</div>
+					</div>
           <div className="row">
             <div className="col-md-6">
               <input value={this.state.value.min || this.props.salary_min}/>

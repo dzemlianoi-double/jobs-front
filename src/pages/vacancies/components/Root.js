@@ -59,9 +59,7 @@ class Vacancies extends Component {
           <div className='row'>
             <div className='col-md-10 offset-md-1'>
               <div className='mu-vacancies-area'>
-                <Search
-                  vacancies={this.props.vacancies}
-                />
+                <Search vacancies={this.props.vacancies} />
                 <div className='row main'>
                   <Filters onFilterUpdate={onFilterUpdate} vacancies={vacancies} filters={filters} />
                   <div className='col-md-9 padding-0'>

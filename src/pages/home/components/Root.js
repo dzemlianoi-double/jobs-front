@@ -7,7 +7,7 @@ import Services from './services';
 import HeaderSlider from './header_slider';
 import LastVacancies from './last_vacancies';
 import WhoWe from './WhoWe';
-import CallBack from './CallBack'
+import CallBack from './CallBack';
 
 class Home extends Component {
   static propTypes = {

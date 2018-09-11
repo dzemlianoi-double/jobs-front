@@ -11,8 +11,8 @@ import FilterSex from './FilterSex';
 const propTypes = {
   vacancies: PropTypes.array.isRequired,
   filters: PropTypes.object.isRequired,
-	onFilterUpdate: PropTypes.func.isRequired,
-	valueMax: PropTypes.number.isRequired
+  onFilterUpdate: PropTypes.func.isRequired,
+  valueMax: PropTypes.number.isRequired
 };
 
 const Filters = ({ onFilterUpdate, filters }) =>  {

@@ -14,9 +14,9 @@ export default class FilterSalary extends Component {
 
   state = {
     isUpdated: false,
-    value: { 
-      min: this.props.salary_min, 
-      max: this.props.salary_max, 
+    value: {
+      min: this.props.salary_min,
+      max: this.props.salary_max,
     }
   };
 
@@ -31,32 +31,31 @@ export default class FilterSalary extends Component {
     this.setState({ value, isUpdated: false });
   }
 
-	resetValue = () => {
-		const { salary_max, salary_min } = this.props;
-		this.props.onFilterUpdate({ salary_min: salary_min, salary_max: salary_max });
-		this.setState({ isUpdated: false });
-	}
+  resetValue = () => {
+    const { salary_max, salary_min } = this.props;
+    this.props.onFilterUpdate({ salary_min: salary_min, salary_max: salary_max });
+    this.setState({ isUpdated: false });
+  }
 
   render() {
     const { salary_min, salary_max } = this.props;
-
     return (
       <div className="filter-salary">
         <T.p text="vacancies.salary" />
         <div className="block-salary">
-					<div className="row">
-						<div className="col-md-12 mb-10 btn-reset-filter">
-							<Only if={this.state.isUpdated} skipDiv>
-									<button onClick={this.resetValue}>сбросить фильтр</button>
-							</Only>
-						</div>
-					</div>
+          <div className="row">
+            <div className="col-md-12 mb-10 btn-reset-filter">
+              <Only if={this.state.isUpdated} skipDiv>
+                <button onClick={this.resetValue}>сбросить фильтр</button>
+              </Only>
+            </div>
+          </div>
           <div className="row">
             <div className="col-md-6">
-              <input value={this.state.value.min || this.props.salary_min}/>
+              <input value={this.state.value.min || this.props.salary_min} />
             </div>
             <div className="col-md-6">
-              <input value={this.state.value.max || this.props.salary_max}/>
+              <input value={this.state.value.max || this.props.salary_max} />
             </div>
           </div>
           <div className="row">

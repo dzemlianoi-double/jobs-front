@@ -1,18 +1,18 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-
+import React from 'react';
 import 'react-input-range/lib/css/index.css';
-import FilterSalary from './FilterSalary';
-import FilterExperience from './FilterExperience';
-import FilterSex from './FilterSex';
-import FilterCountry from './FilterCountry';
-import FilterService from './FilterService';
 import FilterAge from './FilterAge';
+import FilterCountry from './FilterCountry';
+import FilterExperience from './FilterExperience';
+import FilterSalary from './FilterSalary';
+import FilterService from './FilterService';
+import FilterSex from './FilterSex';
 
 const propTypes = {
   vacancies: PropTypes.array.isRequired,
   filters: PropTypes.object.isRequired,
-  onFilterUpdate: PropTypes.func.isRequired
+  onFilterUpdate: PropTypes.func.isRequired,
+  valueMax: PropTypes.number.isRequired
 };
 
 const Filters = ({ onFilterUpdate, filters }) =>  {

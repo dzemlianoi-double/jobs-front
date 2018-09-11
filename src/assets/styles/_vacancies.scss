@@ -94,6 +94,20 @@ a {
 	.main {
 		.mu-filter {
       padding: 0 30px 0 0;
+      .btn-reset-filter {
+        align-items: center;
+        display: flex;
+        justify-content: flex-end;
+        button {
+          background: none;
+          color: $pure-blue;
+          cursor: pointer;
+          margin: 0;
+          padding: 0;
+          text-decoration: underline;
+        }
+      }
+
       p {
         color: $black;
         font-size: 22px;
@@ -304,9 +318,9 @@ a {
 			box-shadow: 0 2px 1px 0 ;
       padding: 7px 15px 10px;
       &.vacancy-hot {
-				box-shadow: 0 2px 10px 0 $rgb-02;
+				background-color: $yellowish-white;
+        box-shadow: 0 2px 10px 0 $rgb-02;
         cursor: pointer;
-        background-color: $yellowish-white;
       }
 			.title-vacancy {
 				color: $strong-blue-2;

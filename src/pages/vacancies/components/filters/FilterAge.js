@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import InputRange from 'react-input-range';
 import FilterButton from './FilterButton';
 import T from '../../../../store/translations';
+import Only from '../../../basic/components/Only';
 
 export default class FilterAge extends Component {
   static propTypes = {
@@ -30,6 +31,12 @@ export default class FilterAge extends Component {
     this.setState({ value, isUpdated: false });
   }
 
+  resetValue = () => {
+    const { age_min, age_max } = this.props;
+    this.props.onFilterUpdate({ age_min: age_min, age_max: age_max });
+    this.setState({ isUpdated: false });
+  }
+
   render(){
     const { age_min, age_max } = this.props;
 
@@ -37,6 +44,13 @@ export default class FilterAge extends Component {
       <div className="filter-age-block">
         <T.p text="vacancies.age" />
         <div className="filter-age">
+          <div className="row">
+            <div className="col-md-12 mb-10 btn-reset-filter">
+              <Only if={this.state.isUpdated} skipDiv>
+                <button onClick={this.resetValue}>сбросить фильтр</button>
+              </Only>
+            </div>
+          </div>
           <div className="row">
             <div className="col-md-6">
               <input value={this.state.value.min || age_min}/>

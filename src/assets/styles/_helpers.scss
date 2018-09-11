@@ -35,11 +35,15 @@
 }
 
 .color-strong-blue-2 {
-  color: $strong-blue-2;
+  color: $strong-blue-2 !important;
 }
 
 .inline-block {
   display: inline-block;
+}
+
+.bgc-white{
+  background-color: $white !important;
 }
 
 .c-black {
@@ -48,6 +52,10 @@
 
 .c-white {
   color: $white;
+}
+
+.bgc-strong-blue-2 {
+  background-color: $strong-blue-2;
 }
 
 .padding-0 {

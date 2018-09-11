@@ -15,6 +15,10 @@ const propTypes = {
 const DescriptionVacancy = ({ duties, requirments, schedule, accommodation, info }) => {
   return (
     <div className="about-vacancy">
+      <Only if={!!info}>
+        <T.span text="vacancy.description_vacancy" className="caption-description" />
+        <p className="main">{info}</p>
+      </Only>
       <Only if={!!duties}>
         <T.span text="vacancy.duties" className="caption-description" />
         <p className="main"> {duties}</p>
@@ -30,10 +34,6 @@ const DescriptionVacancy = ({ duties, requirments, schedule, accommodation, info
       <Only if={!!accommodation}>
         <T.span text="vacancy.accommodation" className="caption-description" />
         <p className="main"> {accommodation}</p>
-      </Only>
-      <Only if={!!info}>
-        <T.span text="vacancy.description_vacancy" className="caption-description" />
-        <p className="main">{info}</p>
       </Only>
     </div>
   );

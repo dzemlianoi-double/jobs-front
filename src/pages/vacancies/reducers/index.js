@@ -16,6 +16,7 @@ const initialState = {
       experience_max: null
     },
     used: {
+      search: '',
       salary_min: null,
       salary_max: null,
       age_min: null,
@@ -68,6 +69,28 @@ export default function vacancies(state = initialState, action) {
         used: {
           ...state.filters.used,
           ...action.payload
+        }
+      }
+    };
+  case 'CUSTOM_SEARCH':
+    return {
+      ...state,
+      filters: {
+        ...state.filters,
+        used: {
+          ...state.filters.used,
+          search: action.payload
+        }
+      }
+    };
+  case 'RESET_SEARCH':
+    return {
+      ...state,
+      filters: {
+        ...state.filters,
+        used: {
+          ...state.filters.used,
+          search: ''
         }
       }
     };

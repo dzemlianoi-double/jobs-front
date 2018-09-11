@@ -3,7 +3,15 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 
-import { requestVacancies, openVacancyModal, closeVacancyModal, saveVacancy, updateFilters } from '../actions';
+import { 
+  requestVacancies,
+  openVacancyModal,
+  closeVacancyModal,
+  saveVacancy,
+  updateFilters,
+  customSearch,
+  resetSearch
+} from '../actions';
 
 import filteredVacancies from '../support/filters';
 
@@ -22,7 +30,9 @@ class Vacancies extends Component {
     vacancies: PropTypes.array.isRequired,
     filters: PropTypes.object.isRequired,
     modalVacancy: PropTypes.object.isRequired,
-    onFilterUpdate: PropTypes.func.isRequired
+    onFilterUpdate: PropTypes.func.isRequired,
+    customSearch: PropTypes.func.isRequired,
+    resetSearch: PropTypes.func.isRequired,
   }
 
   componentDidMount() {
@@ -34,12 +44,20 @@ class Vacancies extends Component {
     return _.meanBy(this.filteredVacancies, (vacancy) => vacancy.salary_min).toFixed(0);
   }
 
+  get neededVacancies() {
+    return this.props.filters.used.search ? this.searchableVacancies : this.filteredVacancies;
+  }
+
+  get searchableVacancies() {
+    return this.props.vacancies.filter(vacancy => vacancy.title.includes(this.props.filters.used.search));
+  }
+
   get filteredVacancies() {
     return filteredVacancies(this.props.vacancies, this.props.filters.used);
   }
 
-  get renderFilteredVacancies() {
-    return this.filteredVacancies.map((vacancy) => {
+  get renderVacancies() {
+    return this.neededVacancies.map((vacancy) => {
       return (
         <Vacancy
           key={vacancy.id}
@@ -51,7 +69,7 @@ class Vacancies extends Component {
   }
 
   render () {
-    const { modalVacancy, closeVacancyModal, saveVacancy, vacancies, filters, onFilterUpdate } = this.props;
+    const { modalVacancy, closeVacancyModal, saveVacancy, vacancies, filters, onFilterUpdate, customSearch, resetSearch } = this.props;
     return (
       <section className='mu-vacancies'>
         <VacancyModal modalVacancy={modalVacancy} closeVacancyModal={closeVacancyModal} saveVacancy={saveVacancy} />
@@ -59,12 +77,12 @@ class Vacancies extends Component {
           <div className='row'>
             <div className='col-md-10 offset-md-1'>
               <div className='mu-vacancies-area'>
-                <Search vacancies={this.props.vacancies} />
+                <Search vacancies={vacancies} customSearch={customSearch} resetSearch={resetSearch} search={filters.used.search} />
                 <div className='row main'>
                   <Filters onFilterUpdate={onFilterUpdate} vacancies={vacancies} filters={filters} />
                   <div className='col-md-9 padding-0'>
-                    <BasicInfo count={this.filteredVacancies.length} averageSalary={this.averageSalary} />
-                    {this.renderFilteredVacancies}
+                    <BasicInfo count={this.neededVacancies.length} averageSalary={this.averageSalary} />
+                    {this.renderVacancies}
                   </div>
                 </div>
               </div>
@@ -90,7 +108,9 @@ function mapPropsToDispatch(dispatch) {
     saveVacancy: () => dispatch(saveVacancy()),
     openVacancyModal: (vacancy) => dispatch(openVacancyModal(vacancy)),
     closeVacancyModal: () => dispatch(closeVacancyModal()),
-    onFilterUpdate: (changedData) => dispatch(updateFilters(changedData))
+    onFilterUpdate: (changedData) => dispatch(updateFilters(changedData)),
+    customSearch: (text) => dispatch(customSearch(text)),
+    resetSearch: () => dispatch(resetSearch())
   };
 }
 

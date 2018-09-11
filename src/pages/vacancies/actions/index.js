@@ -25,6 +25,14 @@ function closeVacancyModal() {
   return { type: 'CLOSE_VACANCY_MODAL' };
 }
 
+function customSearch(text) {
+  return { type: 'CUSTOM_SEARCH', payload: text };
+}
+
+function resetSearch() {
+  return { type: 'RESET_SEARCH' };
+}
+
 function saveVacancy() {
   return(dispatch, getState) => {
     const formValues = getState().form.vacancy.values;
@@ -66,5 +74,7 @@ module.exports = {
   requestVacancy,
   openVacancyModal,
   closeVacancyModal,
-  saveVacancy
+  saveVacancy,
+  customSearch,
+  resetSearch
 };

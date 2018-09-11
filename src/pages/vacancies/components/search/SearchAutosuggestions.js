@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Autosuggest from 'react-autosuggest';
 import AutosuggestHighlightMatch from 'autosuggest-highlight/match';
 import AutosuggestHighlightParse from 'autosuggest-highlight/parse';
 import theme from '../../../../assets/styles/autosuggestion.scss';
+import Only from '../../../basic/components/Only';
 
-export default class SearchAutosuggestions extends Component {
+class SearchAutosuggestions extends Component {
   static propTypes = {
-    vacancies: PropTypes.array.isRequired
+    vacancies: PropTypes.array.isRequired,
+    customSearch: PropTypes.func.isRequired,
+    resetSearch: PropTypes.func.isRequired,
+    search: PropTypes.string.isRequired,
+    history: PropTypes.func.isRequired
   }
 
   state = {
@@ -34,7 +40,7 @@ export default class SearchAutosuggestions extends Component {
     const matches = AutosuggestHighlightMatch(suggestionText, query);
     const parts = AutosuggestHighlightParse(suggestionText, matches);
     return (
-      <span className={'suggestion-content'}>
+      <span className='suggestion-content' onClick={() => this.onFullSearch(suggestion.id)}>
         <span className="name">
           {
             parts.map((part, index) => {
@@ -45,9 +51,23 @@ export default class SearchAutosuggestions extends Component {
               );
             })
           }
+          <span>- {suggestion.city}</span>
         </span>
       </span>
     );
+  }
+
+  onFullSearch = (id) => {
+    this.props.history.push(`/vacancy/${id}`);
+  }
+
+  onCustomSearch = () => {
+    this.props.customSearch(this.state.value);
+  }
+
+  onResetSearch = () => {
+    this.props.resetSearch();
+    this.setState({ value: ''});
   }
 
   render() {
@@ -63,6 +83,9 @@ export default class SearchAutosuggestions extends Component {
     return (
       <div className="inline-block w-80p">
         <div className="inline-block block-search-vacancy w-55p">
+          <Only if={!!this.props.search}>
+            <div className="close-vacancy" onClick={this.onResetSearch}>x</div>
+          </Only>
           <Autosuggest
             suggestions={suggestions}
             onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
@@ -74,8 +97,10 @@ export default class SearchAutosuggestions extends Component {
             id='auto-compleat'
           />
         </div>
-        <button className="ml-25 btn btn-lg">Найти</button>
+        <button className="ml-25 btn btn-lg" onClick={this.onCustomSearch}>Найти</button>
       </div>
     );
   }
 }
+
+export default withRouter(SearchAutosuggestions);

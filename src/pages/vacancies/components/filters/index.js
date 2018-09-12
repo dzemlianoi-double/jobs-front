@@ -8,14 +8,17 @@ import FilterSex from './FilterSex';
 import FilterCountry from './FilterCountry';
 import FilterService from './FilterService';
 import FilterAge from './FilterAge';
+import UsedFilters from './UsedFilters';
 
 const propTypes = {
   vacancies: PropTypes.array.isRequired,
   filters: PropTypes.object.isRequired,
-  onFilterUpdate: PropTypes.func.isRequired
+  onFilterUpdate: PropTypes.func.isRequired,
+  onResetAllFilters: PropTypes.func.isRequired,
+  
 };
 
-const Filters = ({ onFilterUpdate, filters }) =>  {
+const Filters = ({ onFilterUpdate, onResetAllFilters, filters }) =>  {
   const { salary_min, salary_max, age_min, age_max, experience_max, country_list, specialities_list } = filters.default;
   
   return (
@@ -23,6 +26,11 @@ const Filters = ({ onFilterUpdate, filters }) =>  {
       <div className='mu-filter'>
         <div className="row">
           <div className="col-md-12">
+            <UsedFilters 
+              filters={filters.used}
+              onResetAllFilters={onResetAllFilters}
+              cancelFilter={onFilterUpdate}
+            />
             <FilterSalary 
               salary_min={salary_min}
               salary_max={salary_max}

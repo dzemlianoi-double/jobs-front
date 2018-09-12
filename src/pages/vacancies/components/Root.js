@@ -10,7 +10,8 @@ import {
   saveVacancy,
   updateFilters,
   customSearch,
-  resetSearch
+  resetSearch,
+  resetAllFilters
 } from '../actions';
 
 import filteredVacancies from '../support/filters';
@@ -33,6 +34,7 @@ class Vacancies extends Component {
     onFilterUpdate: PropTypes.func.isRequired,
     customSearch: PropTypes.func.isRequired,
     resetSearch: PropTypes.func.isRequired,
+    onResetAllFilters: PropTypes.func.isRequired
   }
 
   componentDidMount() {
@@ -69,7 +71,8 @@ class Vacancies extends Component {
   }
 
   render () {
-    const { modalVacancy, closeVacancyModal, saveVacancy, vacancies, filters, onFilterUpdate, customSearch, resetSearch } = this.props;
+    const { modalVacancy, closeVacancyModal, saveVacancy, vacancies, filters, onFilterUpdate, customSearch,
+      resetSearch, onResetAllFilters } = this.props;
     return (
       <section className='mu-vacancies'>
         <VacancyModal modalVacancy={modalVacancy} closeVacancyModal={closeVacancyModal} saveVacancy={saveVacancy} />
@@ -79,7 +82,7 @@ class Vacancies extends Component {
               <div className='mu-vacancies-area'>
                 <Search vacancies={vacancies} customSearch={customSearch} resetSearch={resetSearch} search={filters.used.search} />
                 <div className='row main'>
-                  <Filters onFilterUpdate={onFilterUpdate} vacancies={vacancies} filters={filters} />
+                  <Filters onFilterUpdate={onFilterUpdate} vacancies={vacancies} filters={filters} onResetAllFilters={onResetAllFilters} />
                   <div className='col-md-9 padding-0'>
                     <BasicInfo count={this.neededVacancies.length} averageSalary={this.averageSalary} />
                     {this.renderVacancies}
@@ -110,7 +113,8 @@ function mapPropsToDispatch(dispatch) {
     closeVacancyModal: () => dispatch(closeVacancyModal()),
     onFilterUpdate: (changedData) => dispatch(updateFilters(changedData)),
     customSearch: (text) => dispatch(customSearch(text)),
-    resetSearch: () => dispatch(resetSearch())
+    resetSearch: () => dispatch(resetSearch()),
+    onResetAllFilters: () => dispatch(resetAllFilters())
   };
 }
 

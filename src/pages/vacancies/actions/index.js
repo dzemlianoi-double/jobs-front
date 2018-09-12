@@ -30,7 +30,17 @@ function customSearch(text) {
 }
 
 function resetSearch() {
+  return (dispatch) => {
+    dispatch(resetSearchResults());
+    dispatch(resetAllFilters());
+  };
+}
+function resetSearchResults() {
   return { type: 'RESET_SEARCH' };
+}
+
+function resetAllFilters() {
+  return { type: 'RESET_ALL_FILTERS' };
 }
 
 function saveVacancy() {
@@ -76,5 +86,6 @@ module.exports = {
   closeVacancyModal,
   saveVacancy,
   customSearch,
-  resetSearch
+  resetSearch,
+  resetAllFilters
 };

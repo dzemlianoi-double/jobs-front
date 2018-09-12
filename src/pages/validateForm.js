@@ -9,11 +9,11 @@ export const validateForm = {
   },
 
   isValidNumber: function(value) {
-    return /^\+380\d{2}\d{3}\d{2}\d{2}$/i.test(value) ? undefined : 'Не верный номер телефона';
+    return /^\+380\d{2}\d{3}\d{2}\d{2}$/i.test(value) ? undefined : 'Неверный номер телефона';
   },
 
   isValidEmail: function(value) {
-    return /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) ? undefined : 'Не верный email';
+    return /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) ? undefined : 'Неверный email';
   },
 
 };

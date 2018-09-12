@@ -8,10 +8,9 @@
     "webpack-dev": "webpack-dev-server --open --config=webpack.dev.js --mode development",
     "scss-lint": "sass-lint -v --config=sass-lint.config.yml",
     "scss-lint-fix": "sass-lint-auto-fix",
-    "scss-full-lint": "npm run scss-lint && npm run scss-lint-fix",
+    "scss-full-lint": "npm run scss-lint-fix && npm run scss-lint",
     "precommit": "npm run scss-full-lint && eslint --fix .",
-    "prepush": "npm run scss-full-lint && eslint --fix .",
-    "esl": "eslint --fix ."
+    "prepush": "npm run scss-full-lint && eslint --fix ."
   },
   "keywords": [],
   "author": "",

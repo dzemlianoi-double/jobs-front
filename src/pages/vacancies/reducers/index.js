@@ -72,6 +72,14 @@ export default function vacancies(state = initialState, action) {
         }
       }
     };
+  case 'RESET_ALL_FILTERS':
+    return {
+      ...state,
+      filters: {
+        ...state.filters,
+        used: initialState.filters.used
+      }
+    };  
   case 'CUSTOM_SEARCH':
     return {
       ...state,

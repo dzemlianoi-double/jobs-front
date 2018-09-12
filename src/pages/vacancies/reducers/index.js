@@ -2,6 +2,7 @@ import _ from 'lodash';
 
 const initialState = {
   list: [],
+  order: null,
   currentVacancy: {},
   loading: true,
   modalVacancy: {},
@@ -34,13 +35,11 @@ export default function vacancies(state = initialState, action) {
   switch (action.type) {
   case 'RECEIVE_VACANCIES':
     return {
-      ...state,
-      list: action.payload
+      ...state, list: action.payload
     };
   case 'RECEIVE_VACANCY':
     return {
-      ...state,
-      currentVacancy: action.payload
+      ...state, currentVacancy: action.payload
     };
   case 'SET_BASE_FILTERS':
     return {
@@ -72,6 +71,7 @@ export default function vacancies(state = initialState, action) {
         }
       }
     };
+
   case 'RESET_ALL_FILTERS':
     return {
       ...state,
@@ -104,18 +104,19 @@ export default function vacancies(state = initialState, action) {
     };
   case 'STOP_VACANCIES_LOADING':
     return {
-      ...state,
-      loading: false
+      ...state, loading: false
+    };
+  case 'CHANGE_ORDER':
+    return {
+      ...state, order: action.payload
     };
   case 'OPEN_VACANCY_MODAL':
     return {
-      ...state,
-      modalVacancy: action.payload
+      ...state, modalVacancy: action.payload
     };
   case 'CLOSE_VACANCY_MODAL':
     return {
-      ...state,
-      modalVacancy: {}
+      ...state, modalVacancy: {}
     };
   default:
     return state;

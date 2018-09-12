@@ -55,45 +55,51 @@ export default class UsedFilters extends Component {
           <div className="col-md-12">
             <div className="filter">
               <Only if={this.hasSomeFiltersOn()}>
-                <ul className="filter-list">
+                <ul className="filter-list-used mb-15">
                   <Only if={salary_min && salary_max}>
                     <li>
-                      <span>Зарплата: <b>{salary_min}</b>-<b>{salary_max}</b> грн</span>
-                      <span onClick={this.onCancelSalaryFilter}>x</span>
+                      <i className="fa fa-circle fs-7 color-strong-blue-2" aria-hidden="true"></i>
+                      <span className="fs-15">Зарплата: <b>{salary_min}</b>-<b>{salary_max}</b> <T.span text="vacancy.icon_uah"/></span>
+                      <i onClick={this.onCancelSalaryFilter} className="fa fa-times-circle color-strong-blue-2" aria-hidden="true"></i>
                     </li>
                   </Only>
                   <Only if={experience}>
                     <li>
-                      <span>Опыт работы: от <b>{experience}</b> лет</span>
-                      <span onClick={this.onCancelExperienceFilter}>x</span>
+                      <i className="fa fa-circle fs-7 color-strong-blue-2" aria-hidden="true"></i>
+                      <span className="fs-15">Опыт работы: от <b>{experience}</b> лет</span>
+                      <i onClick={this.onCancelExperienceFilter} className="fa fa-times-circle color-strong-blue-2" aria-hidden="true"></i>
                     </li>
                   </Only>
                   <Only if={sex_list.length}>
                     <li>
-                      <span>Пол: <b>{this.choosenSexes}</b></span>
-                      <span onClick={this.onCancelSexFilter}>x</span>
+                      <i className="fa fa-circle fs-7 color-strong-blue-2" aria-hidden="true"></i>
+                      <span className="fs-15">Пол: <b>{this.choosenSexes}</b></span>
+                      <i onClick={this.onCancelSexFilter} className="fa fa-times-circle color-strong-blue-2" aria-hidden="true"></i>
                     </li>
                   </Only>
                   <Only if={age_min && age_max}>
                     <li>
-                      <span>Возраст: <b>{age_min}</b>-<b>{age_max}</b></span>
-                      <span onClick={this.onCancelAgeFilter}>x</span>
+                      <i className="fa fa-circle fs-7 color-strong-blue-2" aria-hidden="true"></i>
+                      <span className="fs-15">Возраст: <b>{age_min}</b>-<b>{age_max}</b></span>
+                      <i onClick={this.onCancelAgeFilter} className="fa fa-times-circle color-strong-blue-2" aria-hidden="true"></i>
                     </li>
                   </Only>
                   <Only if={country_name}>
                     <li>
-                      <span>Cтрана: <b>{country_name}</b></span>
-                      <span onClick={this.onCancelCountryNameFilter}>x</span>
+                      <i className="fa fa-circle fs-7 color-strong-blue-2" aria-hidden="true"></i>
+                      <span className="fs-15">Cтрана: <b>{country_name}</b></span>
+                      <i onClick={this.onCancelCountryNameFilter} className="fa fa-times-circle color-strong-blue-2" aria-hidden="true"></i>
                     </li>
                   </Only>
                   <Only if={specialities_list.length}>
                     <li>
-                      <span>Cпециальность: <b>{specialities_list.join(', ')}</b></span>
-                      <span onClick={this.onCancelSpecialitiesListFilter}>x</span>
+                      <i className="fa fa-circle fs-7 color-strong-blue-2" aria-hidden="true"></i>
+                      <span className="fs-15">Cпециальность: <b>{specialities_list.join(', ')}</b></span>
+                      <i onClick={this.onCancelSpecialitiesListFilter} className="fa fa-times-circle color-strong-blue-2" aria-hidden="true"></i>
                     </li>
                   </Only>
                 </ul>
-                <span onClick={this.props.onResetAllFilters}>Сбросить все фильтра</span>
+                <span className="reset-filters" onClick={this.props.onResetAllFilters}>Сбросить все фильтра</span>
               </Only>
               <Only if={!this.hasSomeFiltersOn()}>
                 <span>Нет выбранных фильтров</span>

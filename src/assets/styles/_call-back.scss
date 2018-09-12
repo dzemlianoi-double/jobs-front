@@ -25,7 +25,6 @@
 }
 
 .mu-call-to-action-left {
-	color: $strong-blue-2;
 	display: inline;
 	max-width: 70%;
 }
@@ -41,15 +40,13 @@
 }
 
 .mu-quote-btn {
-	background-color: $strong-blue-2;
-	color: $white;
-    margin: 20px 0 0 0;
-    padding: 10px 40px;
-    i {
-        &::before {
-            padding: 0 0 0 10px;
-        }
-    }
+  margin: 20px 0 0 0;
+  padding: 10px 40px;
+  i {
+      &::before {
+          padding: 0 0 0 10px;
+      }
+  }
 }
 
 .mu-quote-btn:hover,

@@ -1,4 +1,4 @@
-@each $size in (0, 1, 2, 3, 10, 15, 17, 20, 25, 30, 40, 50, 80, 100, 120) {
+@each $size in (0, 1, 2, 3, 5, 6, 10, 15, 17, 20, 25, 30, 40, 50, 80, 100, 120) {
   @each $prop in (t: top, b: bottom, l: left, r: right) {
     .m#{nth($prop, 1)}-#{$size} {
       margin-#{nth($prop, 2)}: #{$size}px ;
@@ -24,6 +24,10 @@
 
 .fs-07r {
   font-size: 0.7rem;
+}
+
+.w-30p {
+  width: 30%;
 }
 
 .w-70p {

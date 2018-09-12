@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Moment from 'react-moment';
 import _ from 'lodash';
 import { Link } from 'react-router-dom';
-
+import { FacebookShareButton, FacebookIcon, TelegramShareButton, TelegramIcon, ViberShareButton, ViberIcon} from 'react-share';
 import Only from '../../basic/components/Only';
 import internal_routes from '../../../config/internal_routes';
 import T from '../../../store/translations';
@@ -32,6 +32,10 @@ export default class Vacancy extends Component {
     })
   }
 
+  state = {
+    showShare: false
+  }
+
   get experience() {
     const { experience } = this.props.vacancy;
     return experience ? `Опыт работы от ${experience} лет`: 'Опыт работы не важен';
@@ -44,6 +48,14 @@ export default class Vacancy extends Component {
     case('Family'): return 'Семейная пара';
     default: return 'Не имеет значения';
     }
+  }
+
+  get shareUrl() {
+    return `https://worker.dp.ua/vacancy/${this.props.vacancy.id}`;
+  }
+
+  get title() {
+    return `Worker.dp.ua - Трудоустройство за границей | Вакансия - ${this.props.vacancy.title} - ${this.props.vacancy.salary_min} - ${this.props.vacancy.city}`;
   }
 
   openModal = () => {
@@ -96,6 +108,18 @@ export default class Vacancy extends Component {
                   <Moment format="DD.MM.YYYY">{created_at}</Moment>
                 </p>
               </Link>
+              <p className="inline-block float-left date-added mt-6 mr-15">Поделиться</p>
+              <div className="inline-block text-center align-middle">
+                <FacebookShareButton url={this.shareUrl} quote={this.title} className="inline-block text-center mr-6 ml-6" round={true}>
+                  <FacebookIcon round={true} size={30} />
+                </FacebookShareButton>
+                <TelegramShareButton url={this.shareUrl} title={this.title} className="inline-block mr-6 ml-6" round={true}>
+                  <TelegramIcon round={true} size={30} />
+                </TelegramShareButton>
+                <ViberShareButton url={this.shareUrl} title={this.title} className="inline-block mr-6 ml-6" >
+                  <ViberIcon round={true} size={30} />
+                </ViberShareButton>
+              </div>
             </div>
             <div className="col-md-4">
               <Link to={internal_routes.vacancy(id)}>
@@ -115,7 +139,6 @@ export default class Vacancy extends Component {
                     <span>{age_min} - {age_max} {T.translate('vacancy.years')}</span>
                   </div>
                 </div>
-                <T.a text="vacancy.suggest_friend" href="#" className="send-friend" />
               </Link>
               <button onClick={this.openModal}>{T.translate('vacancy.respond')}</button>
             </div>

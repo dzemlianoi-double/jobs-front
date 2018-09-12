@@ -35,6 +35,11 @@ function resetSearch() {
     dispatch(resetAllFilters());
   };
 }
+
+function changeOrder(order) {
+  return { type: 'CHANGE_ORDER', payload: order };
+}
+
 function resetSearchResults() {
   return { type: 'RESET_SEARCH' };
 }
@@ -87,5 +92,6 @@ module.exports = {
   saveVacancy,
   customSearch,
   resetSearch,
-  resetAllFilters
+  resetAllFilters,
+  changeOrder
 };

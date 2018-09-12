@@ -11,7 +11,8 @@ import {
   updateFilters,
   customSearch,
   resetSearch,
-  resetAllFilters
+  resetAllFilters,
+  changeOrder
 } from '../actions';
 
 import filteredVacancies from '../support/filters';
@@ -34,7 +35,9 @@ class Vacancies extends Component {
     onFilterUpdate: PropTypes.func.isRequired,
     customSearch: PropTypes.func.isRequired,
     resetSearch: PropTypes.func.isRequired,
-    onResetAllFilters: PropTypes.func.isRequired
+    onResetAllFilters: PropTypes.func.isRequired,
+    changeOrder: PropTypes.func.isRequired,
+    order: PropTypes.string
   }
 
   componentDidMount() {
@@ -44,6 +47,21 @@ class Vacancies extends Component {
   get averageSalary() {
     if (!this.filteredVacancies.length) { return 0; }
     return _.meanBy(this.filteredVacancies, (vacancy) => vacancy.salary_min).toFixed(0);
+  }
+
+  get choosenOrder() {
+    switch(this.props.order) {
+    case 'hot': return [['hot'], ['desc']];
+    case 'date': return [['created_at'], ['desc']];
+    case 'salary': return [['salary_min'], ['desc']];
+    case 'name_asc': return [['title'], ['asc']];
+    case 'name_desc': return [['title'], ['desc']];
+    default: return [['hot'], ['desc']];
+    }
+  }
+
+  get resultVacancies() {
+    return _.orderBy(this.neededVacancies, ...this.choosenOrder);
   }
 
   get neededVacancies() {
@@ -59,7 +77,7 @@ class Vacancies extends Component {
   }
 
   get renderVacancies() {
-    return this.neededVacancies.map((vacancy) => {
+    return this.resultVacancies.map((vacancy) => {
       return (
         <Vacancy
           key={vacancy.id}
@@ -72,7 +90,7 @@ class Vacancies extends Component {
 
   render () {
     const { modalVacancy, closeVacancyModal, saveVacancy, vacancies, filters, onFilterUpdate, customSearch,
-      resetSearch, onResetAllFilters } = this.props;
+      resetSearch, onResetAllFilters, order, changeOrder } = this.props;
     return (
       <section className='mu-vacancies'>
         <VacancyModal modalVacancy={modalVacancy} closeVacancyModal={closeVacancyModal} saveVacancy={saveVacancy} />
@@ -84,7 +102,7 @@ class Vacancies extends Component {
                 <div className='row main'>
                   <Filters onFilterUpdate={onFilterUpdate} vacancies={vacancies} filters={filters} onResetAllFilters={onResetAllFilters} />
                   <div className='col-md-9 padding-0'>
-                    <BasicInfo count={this.neededVacancies.length} averageSalary={this.averageSalary} />
+                    <BasicInfo count={this.resultVacancies.length} averageSalary={this.averageSalary} order={order} changeOrder={changeOrder} />
                     {this.renderVacancies}
                   </div>
                 </div>
@@ -100,6 +118,7 @@ class Vacancies extends Component {
 function select(store) {
   return {
     vacancies: store.vacancies.list,
+    order: store.vacancies.order,
     modalVacancy: store.vacancies.modalVacancy,
     filters: store.vacancies.filters
   };
@@ -114,7 +133,8 @@ function mapPropsToDispatch(dispatch) {
     onFilterUpdate: (changedData) => dispatch(updateFilters(changedData)),
     customSearch: (text) => dispatch(customSearch(text)),
     resetSearch: () => dispatch(resetSearch()),
-    onResetAllFilters: () => dispatch(resetAllFilters())
+    onResetAllFilters: () => dispatch(resetAllFilters()),
+    changeOrder: (order) => dispatch(changeOrder(order))
   };
 }
 

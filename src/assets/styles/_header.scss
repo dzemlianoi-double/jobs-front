@@ -1,7 +1,9 @@
 .mu-hero {
-	background-color: $pure-blue;
-	display: inline;
-	float: left;
+  background-color: $pure-blue;
+  z-index: 100;
+  position: fixed;
+  left: 0;
+  top: 0;
 	width: 100%;
 }
 

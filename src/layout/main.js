@@ -13,7 +13,7 @@ import Vacancy from '../pages/vacancy/Root';
 
 const Main = () => {
   return (
-    <main>
+    <main className="mt-80">
       <a className="scrollToTop" href="#">
         <i className="fa fa-angle-up"></i>
       </a>

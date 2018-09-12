@@ -12,6 +12,20 @@ export default class Header extends Component {
     addresses: PropTypes.object.isRequired,
   };
 
+  state = {
+    scrolled: false
+  }
+
+  componentDidMount() {
+    this.handleScroll();
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll = () => {
+    if (window.scrollY && !this.state.scrolled) { this.setState({ scrolled: true }); }
+    if (!window.scrollY && this.state.scrolled) { this.setState({ scrolled: false }); }
+  }
+
   renderNumbers = () => {
     return Object.values(this.props.phone_numbers).map((phone_number) => {
       return (
@@ -36,7 +50,7 @@ export default class Header extends Component {
 
   render() {
     return (
-      <header className="mu-hero">
+      <header className={`mu-hero ${this.state.scrolled ? 'opacity-07' : null}`}>
         <div className="container">
           <div className="row">
             <div className="col-md-12">

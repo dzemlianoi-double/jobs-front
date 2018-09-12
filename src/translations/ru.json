@@ -76,7 +76,15 @@
     "valuta_uah": "грн",
     "mean_salary": "средняя заработная плата",
     "find": "Найти",
-    "vacancy": "Вакансия"
+    "vacancy": "Вакансия",
+    "filters": {
+      "sex": {
+        "any": "Любой",
+        "male": "Мужской",
+        "female": "Женский",
+        "family": "Семья"
+      }
+    }
   },
   "vacancy_form": {
     "name": "Имя:",

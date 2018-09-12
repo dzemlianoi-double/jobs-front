@@ -28,7 +28,7 @@ export default class FilterExperience extends Component {
     
     return (
       <div className="filter-experience-block">
-        <T.p text="vacancies.age" />
+        <T.p text="vacancies.experience" />
         <div className="row">
           <div className="col-md-12">
             <div className="filter-experience">

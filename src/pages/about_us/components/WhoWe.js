@@ -5,7 +5,7 @@ import office from '../../../assets/images/office.jpg';
 
 const WhoWe = () => {
   return(
-    <section className='mu-about mt-120'>
+    <section className='mu-about mt-80'>
       <div className='container'>
         <div className='row'>
           <div className='col-md-12'>

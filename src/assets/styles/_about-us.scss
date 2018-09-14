@@ -1,0 +1,54 @@
+.part-about-us{
+  .about-us-pluses {
+    i {
+      color: $strong-blue-2;
+      font-size: 32px;
+      margin-right: 27px;
+    }
+
+    li {
+      display: inline-block;
+      font-weight: bold;
+      list-style: none !important;
+      word-break: break-word;
+    }
+  }
+  margin-bottom: 60px;
+  overflow: hidden;
+  padding-bottom: 70px;
+}
+
+.back-img{
+  background-blend-mode: overlay;
+  background-image: url("../images/about_us.jpg"), linear-gradient(45deg, #212121, #3e86b1);
+  background-size: cover;
+  margin-bottom: 50px;
+  padding-bottom: 5pc;
+}
+
+.title-about-company {
+  color: $white;
+  font-size: 45px;
+  margin: 50px 0;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.who-are-we {
+  color: $white;
+  font-size: 22px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.text-about-company {
+  color: $strong-blue-2;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.text-company-pluses {
+  border-radius: 5px;
+  box-shadow: 0 0 14px $light-reddish-gray;
+  padding: 60px;
+}

@@ -15,12 +15,12 @@ const BasicInfo = ({count, averageSalary, order, changeOrder}) => {
     <div className = "row" >
       <div className='col-md-12 mu-vacancies-list'>
         <div className="how-vacancies">
-          <T.p text="vacancies.found" className="city-work"/>
-          <p>
+          <T.span text="vacancies.found" className="city-work mr-15"/>
+          <span>
             <span className="mean-works"><b>{count}</b> {T.translate('vacancies.vacancies')}</span>
             <span className="mean-salary"><b>{averageSalary} {T.translate('vacancies.valuta_uah')}</b> {T.translate('vacancies.mean_salary')}</span>
-            <Sorting order={order} changeOrder={changeOrder} />
-          </p>
+          </span>
+          <Sorting order={order} changeOrder={changeOrder} />
         </div>
       </div>
     </div >

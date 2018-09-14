@@ -28,14 +28,14 @@ export default class Sorting extends Component {
 
   render() {
     return (
-      <span className="float-right">
-        <span>Сортировать по:</span>
+      <p className="sort-block">
+        <span className="fs-20 mr-15">Сортировать по:</span>
         <Select
           value={this.state.selectedOption}
           onChange={this.handleChange}
           options={options}
         />
-      </span>
+      </p>
     );
   }
 }

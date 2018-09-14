@@ -6,7 +6,7 @@
   }
 }
 
-@each $size in (11, 13, 16, 18, 20, 25, 30, 50) {
+@each $size in (7, 11, 13, 15, 16, 18, 20, 25, 30, 50) {
   .fs-#{$size} {
     font-size: #{$size}px ;
   }

@@ -108,8 +108,8 @@ export default class Vacancy extends Component {
                   <Moment format="DD.MM.YYYY">{created_at}</Moment>
                 </p>
               </Link>
-              <p className="inline-block float-left date-added mt-6 mr-15">Поделиться</p>
-              <div className="inline-block text-center align-middle">
+              <p className="inline-block float-left date-added mt-6 mr-15">{T.translate('vacancy.share')}</p>
+              <div className="block-share inline-block text-center align-middle">
                 <FacebookShareButton url={this.shareUrl} quote={this.title} className="inline-block text-center mr-6 ml-6" round={true}>
                   <FacebookIcon round={true} size={30} />
                 </FacebookShareButton>

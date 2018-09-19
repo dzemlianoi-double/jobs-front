@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import VacancyModal from '../vacancies/components/VacancyModal';
+import { FacebookShareButton, FacebookIcon, TelegramShareButton, TelegramIcon, ViberShareButton, ViberIcon } from 'react-share';
 
+import VacancyModal from '../vacancies/components/VacancyModal';
 import T from '../../store/translations';
 
 export default class InfoVacancy extends Component {
@@ -10,6 +11,8 @@ export default class InfoVacancy extends Component {
     closeVacancyModal: PropTypes.func.isRequired,
     saveVacancy: PropTypes.func.isRequired,
     currentVacancy: PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      title: PropTypes.string.isRequired,
       country_name: PropTypes.string.isRequired,
       city: PropTypes.string.isRequired,
       salary_min: PropTypes.number.isRequired,
@@ -21,7 +24,16 @@ export default class InfoVacancy extends Component {
   };
 
   state = {
-    modalVacancy: {}
+    modalVacancy: {},
+    showShare: false
+  }
+
+  get shareUrl() {
+    return `https://worker.dp.ua/vacancy/${this.props.currentVacancy.id}`;
+  }
+
+  get title() {
+    return `Worker.dp.ua - Трудоустройство за границей | Вакансия - ${this.props.currentVacancy.title} - ${this.props.currentVacancy.salary_min} - ${this.props.currentVacancy.city}`;
   }
 
   openModal = () => {
@@ -89,6 +101,22 @@ export default class InfoVacancy extends Component {
           <div className="row">
             <div className="col-md-12 mt-25 text-center">
               <button onClick={this.openModal} className="btn-contacts">{T.translate('vacancy.respond')}</button>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-12 mt-25 text-center">
+              <div className="block-share inline-block text-center align-middle">
+                <p className="inline-block float-left date-added mt-6 mr-15">{T.translate('vacancy.share')}</p>
+                <FacebookShareButton url={this.shareUrl} quote={this.title} className="inline-block text-center mr-6 ml-6" round={true}>
+                  <FacebookIcon round={true} size={30} />
+                </FacebookShareButton>
+                <TelegramShareButton url={this.shareUrl} title={this.title} className="inline-block mr-6 ml-6" round={true}>
+                  <TelegramIcon round={true} size={30} />
+                </TelegramShareButton>
+                <ViberShareButton url={this.shareUrl} title={this.title} className="inline-block mr-6 ml-6" >
+                  <ViberIcon round={true} size={30} />
+                </ViberShareButton>
+              </div>
             </div>
           </div>
         </div>

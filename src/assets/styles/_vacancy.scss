@@ -55,6 +55,18 @@
           }
         }
 
+        .block-share {
+          .SocialMediaShareButton {
+            &:hover {
+              cursor: pointer;
+            }
+
+            &:focus {
+              outline: none;
+            }
+          }
+        }
+
         .btn-contacts {
           background-color: $luminous-vivid-orange;
           color: $white;

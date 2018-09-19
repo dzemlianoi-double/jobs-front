@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import WhoWe from './WhoWe';
+
+import WhoWe from '../../home/components/WhoWe';
 import T from '../../../store/translations';
 
 export default class AboutUs extends Component {
@@ -12,7 +13,7 @@ export default class AboutUs extends Component {
               <div className="col">
                 <div className="row">
                   <div className="col">
-                    <h1 className="title-about-company">О компании</h1>
+                    <h1 className="title-about-company">{T.translate('about_us.about_company')}</h1>
                   </div>
                 </div>
                 <div className="row">

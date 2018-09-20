@@ -1,4 +1,4 @@
-.part-about-us{
+.part-about-us {
   .about-us-pluses {
     i {
       color: $strong-blue-2;
@@ -18,9 +18,9 @@
   padding-bottom: 70px;
 }
 
-.back-img{
+.back-img {
   background-blend-mode: overlay;
-  background-image: url("../images/about_us.jpg"), linear-gradient(45deg, #212121, #3e86b1);
+  background-image: url("../images/about_us.jpg"), linear-gradient(45deg, $nero, $curious-blue);
   background-size: cover;
   margin-bottom: 50px;
   padding-bottom: 5pc;

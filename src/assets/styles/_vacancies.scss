@@ -1,134 +1,144 @@
 a {
-	color: $black;
-	text-decoration: none;
-	&:hover {
-		color: $black;
-		text-decoration: none;
-	}
+  color: $black;
+  text-decoration: none;
+  &:hover {
+    color: $black;
+    text-decoration: none;
+  }
 }
-	.mu-vacancies {
-	background-color: $light-reddish-gray;
-	display: inline;
-	float: left;
-	width: 100%;
+
+.mu-vacancies {
+  background-color: $light-reddish-gray;
+  display: inline;
+  float: left;
+  width: 100%;
 }
 
 .vacancy-hot {
-	.hot-img {
-		background-image: url('../images/hot-img.png');
-		background-repeat: no-repeat;
-		height: 100px;
-		position: absolute;
-		right: -85px;
-		width: 100px;
-	}
+  .hot-img {
+    background-image: url('../images/hot-img.png');
+    background-repeat: no-repeat;
+    height: 100px;
+    position: absolute;
+    right: -85px;
+    width: 100px;
+  }
 }
 
 .mu-vacancies-area {
-	display: inline;
-	float: left;
-	padding: 0;
-	width: 100%;
-	.mu-vacancies-search {
-		align-items: center;
-		background-color: $strong-blue-1;
-		display: flex;
-		height: 110px;
-		justify-content: space-evenly;
-		margin: 40px auto;
+  display: inline;
+  float: left;
+  padding: 0;
+  width: 100%;
+  .mu-vacancies-search {
+    align-items: center;
+    background-color: $strong-blue-1;
+    display: flex;
+    height: 110px;
+    justify-content: space-evenly;
+    margin: 40px auto;
     .react-autosuggest__container {
       display: inline-block;
       width: 50%;
     }
-		div.vacancy-label {
-			align-items: center;
-			color: $white;
-			display: flex;
-			font-size: 23px;
+
+    div.vacancy-label {
+      align-items: center;
+      color: $white;
+      display: flex;
+      font-size: 23px;
     }
-		input {
-			border: 0;
-			border-radius: 2px;
+
+    input {
+      border: 0;
+      border-radius: 2px;
       padding: 4px 4px 4px 10px;
       width: 98%;
-		}
-		.block-search-vacancy {
-			position: absolute;
-			#react-autowhatever-auto-compleat {
-				background-color: $strong-blue-1;
-				max-height: 250px;
-				overflow-y: scroll;
-				position: relative;
-				width: 98%;
-				z-index: 2;
-				li {
-					span {
-						font-size: 15px;
-						margin-left: 5px;
-					}
-					&:hover {
-						background-color: $white;
-						color: $strong-blue-1;
-						cursor: pointer;
-					}
-				}
-			}
-		}
-		button {
-			background-color: $luminous-vivid-orange;
-			border: 0;
-			color: $white;
-			float: right;
-			font-size: 22px;
-			padding: 4px 75px;
-			&::before {
-				background: url('../images/search_ico_sm.png') no-repeat 0 0;
-		    content: '';
-		    display: inline-block;
-		    height: 14px;
-		    margin: 0 10px 0 0;
-		    width: 14px;
-			}
-		}
-	}
-	.main {
-		.mu-filter {
+    }
+
+    .block-search-vacancy {
+      position: absolute;
+      #react-autowhatever-auto-compleat {
+        background-color: $strong-blue-1;
+        max-height: 250px;
+        overflow-y: scroll;
+        position: relative;
+        width: 98%;
+        z-index: 2;
+        li {
+          span {
+            font-size: 15px;
+            margin-left: 5px;
+          }
+
+          &:hover {
+            background-color: $white;
+            color: $strong-blue-1;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    button {
+      background-color: $luminous-vivid-orange;
+      border: 0;
+      color: $white;
+      float: right;
+      font-size: 22px;
+      padding: 4px 75px;
+      &::before {
+        background: url('../images/search_ico_sm.png') no-repeat 0 0;
+        content: '';
+        display: inline-block;
+        height: 14px;
+        margin: 0 10px 0 0;
+        width: 14px;
+      }
+    }
+  }
+
+  .main {
+    .mu-filter {
       padding: 0 30px 0 0;
       p {
         color: $black;
         font-size: 22px;
-	  }
-	  .filter-block {
-		  ul {
-			  div {
-          margin-top: 15px;
-          li {
-            align-items: center;
-            display: flex;
-            justify-content: space-between;
-            .fa-times-circle {
-              &:hover {
-                cursor: pointer;
+      }
+
+      .filter-block {
+        ul {
+          div {
+            margin-top: 15px;
+            li {
+              align-items: center;
+              display: flex;
+              justify-content: space-between;
+              .fa-times-circle {
+                &:hover {
+                  cursor: pointer;
+                }
               }
             }
           }
-			  }
-		  }
-		  .reset-filters {
-			  display: flex;
-			  justify-content: flex-end;
-			  &:hover {
-				  color: $pure-blue;
-				  cursor: pointer;
-			  }
-		  }
-	  }
-			.block-salary {
+        }
+
+        .reset-filters {
+          display: flex;
+          justify-content: flex-end;
+          &:hover {
+            color: $pure-blue;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .block-salary {
         background-color: $white;
-				border-radius: 3px;
+        border-radius: 3px;
         box-shadow: 0 2px 1px 0 $gray-light-3;
         padding: 20px 25px;
-				input {
+        input {
           -moz-box-shadow: inset 0 1px 0 $gray-light-1;
           -webkit-box-shadow: inset 0 1px 0 $gray-light-1;
           background-color: $gray-light-1;
@@ -140,7 +150,7 @@ a {
           line-height: 30px;
           padding: 0 10px;
           width: 100%;
-				}
+        }
         .input-range__label {
           display: none;
         }
@@ -151,10 +161,11 @@ a {
           background: $pure-blue;
           border: 1px solid $white;
         }
-			}
-			.filter-experience-block {
-				margin-top: 30px;
-				.filter-experience {
+      }
+
+      .filter-experience-block {
+        margin-top: 30px;
+        .filter-experience {
           background-color: $white;
           border-radius: 3px;
           padding: 20px 25px;
@@ -174,395 +185,438 @@ a {
             border: 1px solid $white;
           }
         }
-			}
-			.filter-sex-block {
-				margin-top: 30px;
-				.filter-sex {
-					background-color: $white;
-					border-radius: 3px;
-					padding: 20px 25px;
-					.filter-list {
-						li {
-							line-height: 19px;
-							list-style: none;
-							margin: -1px auto 0;
-							label {
-								border-bottom: 1px solid $solitude;
-								cursor: pointer;
-								margin: 0;
-								padding: 10px 24px 10px 0;
-								width: 100%;
-								span {
-									margin-left: 15px;
-								}
-							}
-						}
-					}
-				}
+      }
+
+      .filter-sex-block {
+        margin-top: 30px;
+        .filter-sex {
+          background-color: $white;
+          border-radius: 3px;
+          padding: 20px 25px;
+          .filter-list {
+            li {
+              line-height: 19px;
+              list-style: none;
+              margin: -1px auto 0;
+              label {
+                border-bottom: 1px solid $solitude;
+                cursor: pointer;
+                margin: 0;
+                padding: 10px 24px 10px 0;
+                width: 100%;
+                span {
+                  margin-left: 15px;
+                }
+              }
+            }
+          }
+        }
       }
 
       .filter-block {
-				margin-top: 30px;
-				.filter {
-					background-color: $white;
-					border-radius: 3px;
-					padding: 20px 25px;
-					.filter-list {
-						li {
-							line-height: 19px;
-							list-style: none;
-							margin: -1px auto 0;
-							label {
-								border-bottom: 1px solid $solitude;
-								cursor: pointer;
-								margin: 0;
-								padding: 10px 24px 10px 0;
-								width: 100%;
-								span {
-									margin-left: 15px;
-								}
-							}
-						}
-					}
-				}
-			}
-			.filter-age-block {
-				margin-top: 30px;
-				.filter-age {
-					background-color: $white;
-					border-radius: 3px;
-					box-shadow: 0 2px 1px 0 $gray-light-3;
-					padding: 20px 25px;
-					input {
-						-moz-box-shadow: inset 0 1px 0 $gray-light-1;
-						-webkit-box-shadow: inset 0 1px 0 $gray-light-1;
-						background-color: $gray-light-1;
-						border: 1px solid $gray-light-3;
-						border-radius: 3px;
-						box-shadow: inset 0 1px 0 $gray-light-1;
-						font-size: 13px;
-						height: 30px;
-						line-height: 30px;
-						padding: 0 10px;
-						width: 100%;
-					}
-					.input-range__label {
-						display: none;
-					}
-					.input-range__track--active {
-						background: $pure-blue;
-					}
-					.input-range__slider {
-						background: $pure-blue;
-						border: 1px solid $white;
-					}
-				}
-			}
-			.filter-country-block {
-				margin-top: 30px;
-				.filter-country {
-					background-color: $white;
-					border-radius: 3px;
-					padding: 20px 25px;
-				}
-			}
-			.filter-service-block {
-				margin-top: 30px;
-				.filter-service {
-					background-color: $white;
-					border-radius: 3px;
-					padding: 20px 25px;
-					.filter-list {
-						li {
-							line-height: 19px;
-							list-style: none;
-							margin: -1px auto 0;
-							label {
-								border-bottom: 1px solid $solitude;
-								cursor: pointer;
-								margin: 0;
-								padding: 10px 24px 10px 0;
-								width: 100%;
-								span {
-									margin-left: 15px;
-								}
-							}
-						}
-					}
-				}
-			}
-			.apply {
-				text-align: right;
-				button {
-					background: none;
-					border: 1px solid $pure-blue;
-					border-radius: 3px;
-					color: $black;
-					font-size: 12px;
-					height: 30px;
-					padding: 0 10px;
-					text-transform: uppercase;
-					&.filter-disabled-button {
-						border: 1px solid $medium-gray;
-						color: $medium-gray;
-					}
-					&::after {
-						background: url('../images/select-small.png') no-repeat 0 0;
-						content: '';
-						display: inline-block;
-						height: 7px;
-						margin-left: 5px;
-						width: 9px;
-					}
-					&:hover::after {
-						background-position: 0 -9px;
-					}
-					&:hover {
-						background-color: $strong-blue-2;
-						border: 0;
-						color: $white;
-						cursor: pointer;
-						line-height: 30px;
-						padding: 0 11px;
-					}
-				}
-			}
-		}
-		.bread-dote {
-			background-color: $medium-gray;
-		}
-		.how-vacancies {
-			background-color: $white;
-			padding: 2px 25px;
-			.city-work {
-				color: $gray-dark-4;
-				font-size: 25px;
-			}
-			.mean-works {
-				color: $gray-dark-4;
-				font-size: 18px;
-				margin-right: 10px;
-			}
-			.mean-salary {
-				color: $gray-dark-4;
-				font-size: 18px;
-				margin-left: 10px;
-			}
-			.sort-block {
-				margin: 15px 0;
-				.css-10nd86i {
-					display: inline-block;
-    				width: 23%;
-				}
-			}
-		}
-		.mu-vacancy {
-			background-color: $white;
-			border-radius: 3px;
-			box-shadow: 0 2px 1px 0 ;
+        margin-top: 30px;
+        .filter {
+          background-color: $white;
+          border-radius: 3px;
+          padding: 20px 25px;
+          .filter-list {
+            li {
+              line-height: 19px;
+              list-style: none;
+              margin: -1px auto 0;
+              label {
+                border-bottom: 1px solid $solitude;
+                cursor: pointer;
+                margin: 0;
+                padding: 10px 24px 10px 0;
+                width: 100%;
+                span {
+                  margin-left: 15px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .filter-age-block {
+        margin-top: 30px;
+        .filter-age {
+          background-color: $white;
+          border-radius: 3px;
+          box-shadow: 0 2px 1px 0 $gray-light-3;
+          padding: 20px 25px;
+          input {
+            -moz-box-shadow: inset 0 1px 0 $gray-light-1;
+            -webkit-box-shadow: inset 0 1px 0 $gray-light-1;
+            background-color: $gray-light-1;
+            border: 1px solid $gray-light-3;
+            border-radius: 3px;
+            box-shadow: inset 0 1px 0 $gray-light-1;
+            font-size: 13px;
+            height: 30px;
+            line-height: 30px;
+            padding: 0 10px;
+            width: 100%;
+          }
+          .input-range__label {
+            display: none;
+          }
+          .input-range__track--active {
+            background: $pure-blue;
+          }
+          .input-range__slider {
+            background: $pure-blue;
+            border: 1px solid $white;
+          }
+        }
+      }
+
+      .filter-country-block {
+        margin-top: 30px;
+        .filter-country {
+          background-color: $white;
+          border-radius: 3px;
+          padding: 20px 25px;
+        }
+      }
+
+      .filter-service-block {
+        margin-top: 30px;
+        .filter-service {
+          background-color: $white;
+          border-radius: 3px;
+          padding: 20px 25px;
+          .filter-list {
+            li {
+              line-height: 19px;
+              list-style: none;
+              margin: -1px auto 0;
+              label {
+                border-bottom: 1px solid $solitude;
+                cursor: pointer;
+                margin: 0;
+                padding: 10px 24px 10px 0;
+                width: 100%;
+                span {
+                  margin-left: 15px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .apply {
+        text-align: right;
+        button {
+          background: none;
+          border: 1px solid $pure-blue;
+          border-radius: 3px;
+          color: $black;
+          font-size: 12px;
+          height: 30px;
+          padding: 0 10px;
+          text-transform: uppercase;
+          &.filter-disabled-button {
+            border: 1px solid $medium-gray;
+            color: $medium-gray;
+          }
+
+          &::after {
+            background: url('../images/select-small.png') no-repeat 0 0;
+            content: '';
+            display: inline-block;
+            height: 7px;
+            margin-left: 5px;
+            width: 9px;
+          }
+
+          &:hover::after {
+            background-position: 0 -9px;
+          }
+
+          &:hover {
+            background-color: $strong-blue-2;
+            border: 0;
+            color: $white;
+            cursor: pointer;
+            line-height: 30px;
+            padding: 0 11px;
+          }
+        }
+      }
+    }
+
+    .bread-dote {
+      background-color: $medium-gray;
+    }
+
+    .how-vacancies {
+      background-color: $white;
+      padding: 2px 25px;
+      .city-work {
+        color: $gray-dark-4;
+        font-size: 25px;
+      }
+
+      .mean-works {
+        color: $gray-dark-4;
+        font-size: 18px;
+        margin-right: 10px;
+      }
+
+      .mean-salary {
+        color: $gray-dark-4;
+        font-size: 18px;
+        margin-left: 10px;
+      }
+
+      .sort-block {
+        margin: 15px 0;
+        .css-10nd86i {
+          display: inline-block;
+          width: 23%;
+        }
+      }
+    }
+
+    .mu-vacancy {
+      background-color: $white;
+      border-radius: 3px;
+      box-shadow: 0 2px 1px 0;
       padding: 7px 15px 10px;
       &.vacancy-hot {
-				background-color: $yellowish-white;
+        background-color: $yellowish-white;
         box-shadow: 0 2px 10px 0 $rgb-02;
         cursor: pointer;
       }
-			.title-vacancy {
-				color: $strong-blue-2;
-				font-size: 25px;
-				line-height: 1.1;
-				margin: 5px 0;
-			}
-			.title-company {
-				color: inherit;
-				font-size: 18px;
-				margin-bottom: 5px;
-				&::before {
-					background: url('../images/house.png') no-repeat 0 0;
-			    content: '';
-			    display: inline-block;
-			    height: 14px;
-					margin: 0 5px -2px 0;
-			    width: 12px;
+
+      .title-vacancy {
+        color: $strong-blue-2;
+        font-size: 25px;
+        line-height: 1.1;
+        margin: 5px 0;
+      }
+
+      .title-company {
+        color: inherit;
+        font-size: 18px;
+        margin-bottom: 5px;
+        &::before {
+          background: url('../images/house.png') no-repeat 0 0;
+          content: '';
+          display: inline-block;
+          height: 14px;
+          margin: 0 5px -2px 0;
+          width: 12px;
+        }
+      }
+
+      .desc {
+        font-size: 13px;
+      }
+
+      .send-friend {
+        font-size: 13px;
+      }
+
+      .salary {
+        color: $strong-blue-2;
+        font-size: 25px;
+        margin: 0;
+      }
+
+      .city {
+        font-size: 14px;
+        height: auto;
+        &::before {
+          background: url('../images/location_mini.png') no-repeat 0 0;
+          content: '';
+          display: inline-block;
+          height: 14px;
+          margin: 0 10px -2px 0;
+          width: 9px;
+        }
+      }
+
+      button {
+        background-color: $luminous-vivid-orange;
+        color: $white;
+        cursor: pointer;
+        font-size: 13px;
+        padding: 5px 0;
+        text-transform: uppercase;
+        width: 100%;
+        &::after {
+          background: url('../images/arrow_long.png') no-repeat 0 0;
+          content: '';
+          display: inline-block;
+          height: 12px;
+          margin-bottom: -1px;
+          margin-left: 5px;
+          width: 13px;
+        }
+      }
+
+      .date-added {
+        color: $medium-gray;
+        font-size: 12px;
+      }
+
+      &:hover {
+        background-color: $yellowish-white;
+        box-shadow: 0 2px 10px 0 $rgb-02;
+        cursor: pointer;
+      }
+
+      .block-share {
+        .SocialMediaShareButton {
+					&:hover {
+						cursor: pointer;
+					}
+					&:focus {
+						outline: none;
+					}
 				}
-			}
-			.desc {
-				font-size: 13px;
-			}
-			.send-friend {
-				font-size: 13px;
-			}
-			.salary {
-				color: $strong-blue-2;
-				font-size: 25px;
-				margin: 0;
-			}
-			.city {
-				font-size: 14px;
-				height: auto;
-				&::before {
-					background: url('../images/location_mini.png') no-repeat 0 0;
-			    content: '';
-			    display: inline-block;
-			    height: 14px;
-					margin: 0 10px -2px 0;
-			    width: 9px;
-				}
-			}
-			button {
-				background-color: $luminous-vivid-orange;
-				color: $white;
-				cursor: pointer;
-				font-size: 13px;
-				padding: 5px 0;
-				text-transform: uppercase;
-				width: 100%;
-				&::after {
-					background: url('../images/arrow_long.png') no-repeat 0 0;
-			    content: '';
-			    display: inline-block;
-			    height: 12px;
-			    margin-bottom: -1px;
-			    margin-left: 5px;
-			    width: 13px;
-				}
-			}
-			.date-added {
-				color: $medium-gray;
-				font-size: 12px;
-			}
-			&:hover {
-				background-color: $yellowish-white;
-				box-shadow: 0 2px 10px 0 $rgb-02;
-				cursor: pointer;
-			}
-		}
-	}
+      }
+    }
+  }
 }
 
 .mu-filter {
-	display: inline;
-	float: left;
-	padding-right: 15px;
-	width: 100%;
+  display: inline;
+  float: left;
+  padding-right: 15px;
+  width: 100%;
 }
 
 .mu-vacancies-block {
-	display: inline;
-	float: left;
-	padding-left: 15px;
-	width: 100%
+  display: inline;
+  float: left;
+  padding-left: 15px;
+  width: 100%
 }
 
 .horizontal-line {
-	background-color: $strong-blue-1;
-	height: 1px;
-	margin: 50px auto;
-	opacity: .3;
-	width: 80%;
+  background-color: $strong-blue-1;
+  height: 1px;
+  margin: 50px auto;
+  opacity: .3;
+  width: 80%;
 }
 
 .css-1492t68 {
   font-size: 12px;
 }
+
 .ReactModal__Content {
-	background-color: $black;
-	color: $white;
-	max-width: 500px;
-	min-width: 500px;
-	.header-modal-vacancy {
-		align-items: center;
-		display: flex;
-		justify-content: space-between;
-		.title-vacancy {
-			font-size: 18px;
-		}
-		.btn-close {
-			align-items: center;
-			display: flex;
-			justify-content: space-between;
-			button {
-				background-color: $light-blue;
-				border-radius: 50%;
-				color: $white;
-				height: 40px;
-				&:hover {
-					background-color: $white;
-					color: $light-blue;
-					cursor: pointer;
-				}
-			}
-		}
-	}
-	.horizontal-line {
-		background-color: $white;
-		margin: 10px 0;
-		width: 100%;
-	}
-	.modal-form-respond {
-		align-items: inherit;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		.form-group {
-			div {
-				height: 80px;
-			}
-		}
-		.horizontal-line {
-			margin: 8px 0 25px 0;
-		}
-			label {
-				font-size: 18px;
-				width: 100%;
-			}
-		.additional-info {
-			display: flex;
-			flex-direction: column;
-			label {
-				width: 100%;
-			}
-			textarea {
-				width: 100%;
-			}
-		}
-		button {
-			background-color: $light-blue;
-			border: 0;
-			border-radius: 10px;
-			color: $white;
-			&:hover {
-				background-color: $white;
-				color: $light-blue;
-				cursor: pointer;
-			}
-		}
-	}
+  background-color: $black;
+  color: $white;
+  max-width: 500px;
+  min-width: 500px;
+  .header-modal-vacancy {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    .title-vacancy {
+      font-size: 18px;
+    }
+
+    .btn-close {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      button {
+        background-color: $light-blue;
+        border-radius: 50%;
+        color: $white;
+        height: 40px;
+        &:hover {
+          background-color: $white;
+          color: $light-blue;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .horizontal-line {
+    background-color: $white;
+    margin: 10px 0;
+    width: 100%;
+  }
+
+  .modal-form-respond {
+    align-items: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .form-group {
+      div {
+        height: 80px;
+      }
+    }
+
+    .horizontal-line {
+      margin: 8px 0 25px 0;
+    }
+
+    label {
+      font-size: 18px;
+      width: 100%;
+    }
+
+    .additional-info {
+      display: flex;
+      flex-direction: column;
+      label {
+        width: 100%;
+      }
+
+      textarea {
+        width: 100%;
+      }
+    }
+
+    button {
+      background-color: $light-blue;
+      border: 0;
+      border-radius: 10px;
+      color: $white;
+      &:hover {
+        background-color: $white;
+        color: $light-blue;
+        cursor: pointer;
+      }
+    }
+  }
 }
 
 .wrapper-image-vacancy-noimg {
-	align-items: center;
-	background-color: $pure-blue;
-	border: 1px solid $pure-blue;
-	border-radius: 50%;
-	display: flex;
-	justify-content: center;
-	.icon-noimg-vacancy {
-		width: 65%;
-		i {
-			color: $pure-blue;
-			font-size: 20px;
-		}
-	}
+  align-items: center;
+  background-color: $pure-blue;
+  border: 1px solid $pure-blue;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  .icon-noimg-vacancy {
+    width: 65%;
+    i {
+      color: $pure-blue;
+      font-size: 20px;
+    }
+  }
 }
 
 .wrapper-image-vacancy {
-	align-items: center;
-	display: flex;
-	justify-content: center;
-	.vacancy-photo {
-		border-radius: 50%;
-		max-height: 215px;
-		min-height: 195px;
-		vertical-align: middle;
-	}
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  .vacancy-photo {
+    border-radius: 50%;
+    max-height: 215px;
+    min-height: 195px;
+    vertical-align: middle;
+  }
 }

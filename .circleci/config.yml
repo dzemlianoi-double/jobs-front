@@ -1,0 +1,29 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/jobs-front
+    # The primary container is an instance of the first image listed. The job's commands run in this container.
+    docker:
+      - image: circleci/node:10.7.0
+    steps:
+      - checkout
+      - run:
+          name: Update npm
+          command: 'sudo npm install -g npm@latest'
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: Install npm wee
+          command: npm install
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build
+      - run:
+          name: Shipit
+          command: 'shipit prod deploy'

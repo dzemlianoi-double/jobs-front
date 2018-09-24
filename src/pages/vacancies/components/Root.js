@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 
-import { 
+import {
   requestVacancies,
   openVacancyModal,
   closeVacancyModal,
@@ -22,6 +22,7 @@ import Filters from './filters';
 import Vacancy from './Vacancy';
 import BasicInfo from './BasicInfo';
 import VacancyModal from './VacancyModal';
+import MetaTitle from '../../utils/components/MetaTitle';
 
 class Vacancies extends Component {
   static propTypes = {
@@ -93,6 +94,7 @@ class Vacancies extends Component {
       resetSearch, onResetAllFilters, order, changeOrder } = this.props;
     return (
       <section className='mu-vacancies'>
+        <MetaTitle title="vacancies" />
         <VacancyModal modalVacancy={modalVacancy} closeVacancyModal={closeVacancyModal} saveVacancy={saveVacancy} />
         <div className='container-fluid'>
           <div className='row'>

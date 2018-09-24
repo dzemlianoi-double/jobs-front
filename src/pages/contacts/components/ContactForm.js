@@ -4,7 +4,7 @@ import { Field, reduxForm } from 'redux-form';
 import renderField from '../../vacancies/components/form/renderField';
 import T from '../../../store/translations';
 
-import { validateForm } from '../../validateForm';
+import { validateForm } from '../../utils/components/validateForm';
 
 class ContactForm extends Component {
   static propTypes = {

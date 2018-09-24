@@ -9,6 +9,7 @@ import InfoVacancy from './InfoVacancy';
 import { requestVacancy, openVacancyModal, closeVacancyModal, saveVacancy } from '../vacancies/actions';
 import Only from '../basic/components/Only';
 import default_img from '../../assets/images/default_img_vacancy.jpg';
+import MetaTitle from '../utils/components/MetaTitle';
 
 class Vacancy extends Component {
   static propTypes = {
@@ -68,6 +69,7 @@ class Vacancy extends Component {
       accommodation, duties } = this.props.currentVacancy;
     return (
       <section className='mu-vacancies'>
+        <MetaTitle title={title}/>
         <div className='container mt-50 mb-50'>
           <div className='row'>
             <div className='col-md-12'>

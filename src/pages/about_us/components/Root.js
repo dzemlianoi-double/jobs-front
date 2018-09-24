@@ -3,10 +3,13 @@ import React, { Component } from 'react';
 import WhoWe from '../../home/components/WhoWe';
 import T from '../../../store/translations';
 
+import MetaTitle from '../../utils/components/MetaTitle';
+
 export default class AboutUs extends Component {
   render () {
     return (
       <section className="part-about-us">
+        <MetaTitle title="about_us" />
         <div className="container-fluid">
           <div className="row">
             <div className="col back-img">

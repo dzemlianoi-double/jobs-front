@@ -8,6 +8,7 @@ import HeaderSlider from './header_slider';
 import LastVacancies from './last_vacancies';
 import WhoWe from './WhoWe';
 import CallBack from './CallBack';
+import MetaTitle from '../../utils/components/MetaTitle';
 
 class Home extends Component {
   static propTypes = {
@@ -20,6 +21,7 @@ class Home extends Component {
     const { services, reviews, last_vacancies } = this.props;
     return (
       <div>
+        <MetaTitle title="main" />
         <HeaderSlider />
         <WhoWe />
         <Services services={services} />

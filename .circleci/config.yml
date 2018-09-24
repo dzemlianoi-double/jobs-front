@@ -17,3 +17,6 @@ jobs:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
             - node_modules
+      - run: 
+          name: Shipit_start
+          command: 'shipit prod deploy'

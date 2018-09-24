@@ -7,6 +7,7 @@ import ContactForm from './ContactForm';
 
 import { saveContacts } from '../actions';
 import T from '../../../store/translations';
+import MetaTitle from '../../utils/components/MetaTitle';
 
 class Contacts extends Component {
   static propTypes = {
@@ -69,6 +70,7 @@ class Contacts extends Component {
   render () {
     return (
       <section className="contact-part d-inline">
+        <MetaTitle title="contacts" />
         <div className="container-fluid">
           <div className="row mb-60">
             <div className="col-sm-1"></div>

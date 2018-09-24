@@ -6,6 +6,7 @@ import T from '../../../store/translations';
 import Service from './Service';
 import { requestServices, openServiceModal, closeServiceModal, saveService } from '../actions';
 import CallBack from './CallBack';
+import MetaTitle from '../../utils/components/MetaTitle';
 
 class Services extends Component {
   static propTypes = {
@@ -24,6 +25,7 @@ class Services extends Component {
   render () {
     return (
       <section id="mu-pricing">
+        <MetaTitle title="services" />
         <div className="container">
           <div className="row">
             <div className="col-md-12">

@@ -1,8 +1,6 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/jobs-front
-    # The primary container is an instance of the first image listed. The job's commands run in this container.
     docker:
       - image: circleci/node:10.7.0
     steps:
@@ -19,11 +17,3 @@ jobs:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
             - node_modules
-workflows:
-  version: 2
-  build_and_test:
-    jobs:
-      - build
-      - run:
-          name: Shipit_start
-          command: 'shipit prod deploy'

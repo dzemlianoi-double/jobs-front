@@ -25,5 +25,5 @@ workflows:
     jobs:
       - build
       - run:
-          name: Shipit
+          name: Shipit_start
           command: 'shipit prod deploy'

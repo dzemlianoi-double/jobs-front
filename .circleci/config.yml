@@ -3,6 +3,7 @@ jobs:
   build:
     docker:
       - image: circleci/node:10.7.0
+    working_directory: ~/my-app
     steps:
       - checkout
       - run:
@@ -19,4 +20,4 @@ jobs:
             - node_modules
       - run: 
           name: Shipit_start
-          command: 'shipit prod deploy'
+          command: 'cd ~/my-app && shipit prod deploy'

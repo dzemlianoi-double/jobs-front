@@ -19,5 +19,8 @@ jobs:
           paths:
             - node_modules
       - run: 
+          name: go_to_folder
+          command: 'cd /home/circleci/project'
+      - run: 
           name: Shipit_start
-          command: 'cd ~/my-app && shipit prod deploy'
+          command: 'shipit prod deploy'

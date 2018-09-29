@@ -70,7 +70,7 @@ class Vacancies extends Component {
   }
 
   get searchableVacancies() {
-    return this.props.vacancies.filter(vacancy => vacancy.title.includes(this.props.filters.used.search));
+    return this.props.vacancies.filter(vacancy => vacancy.title.toLowerCase().includes(this.props.filters.used.searchtoLowerCase()));
   }
 
   get filteredVacancies() {

@@ -35,7 +35,7 @@ export default class FilterSalary extends Component {
     const { salary_min, salary_max } = this.props;
 
     return (
-      <div className="filter-salary">
+      <div className="filter filter-salary mt-30">
         <T.p text="vacancies.salary" />
         <div className="block-salary">
           <div className="row">

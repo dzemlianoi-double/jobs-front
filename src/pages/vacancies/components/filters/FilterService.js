@@ -32,7 +32,7 @@ export default class FilterCountry extends Component {
 
   render() {
     return (
-      <div className="filter-service-block mb-30">
+      <div className="filter filter-service-block mt-30 mb-30">
         <T.p text="vacancies.specialities"/>
         <div className="row">
           <div className="col-md-12">

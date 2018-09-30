@@ -34,7 +34,7 @@ export default class FilterAge extends Component {
     const { age_min, age_max } = this.props;
 
     return (
-      <div className="filter-age-block">
+      <div className="filter filter-age-block mt-30">
         <T.p text="vacancies.age" />
         <div className="filter-age">
           <div className="row">

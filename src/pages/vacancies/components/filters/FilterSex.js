@@ -75,7 +75,7 @@ export default class FilterSex extends Component {
 
   render(){
     return (
-      <div className="filter-sex-block">
+      <div className="filter filter-sex-block mt-30">
         <T.p text="vacancies.sex" />
         <div className="row">
           <div className="col-md-12">

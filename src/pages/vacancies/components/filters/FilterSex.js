@@ -54,7 +54,7 @@ export default class FilterSex extends Component {
   renderCheckboxes() {
     return _.map(sex, (option) => {
       return (
-        <li>
+        <li key={option.value}>
           <div className="row">
             <div className="col-md-12">
               <label>

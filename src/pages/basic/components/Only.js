@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const propTypes = {
-  if: PropTypes.bool,
+  if: PropTypes.oneOfType([PropTypes.bool, PropTypes.number]),
   skipDiv: PropTypes.bool,
   children: PropTypes.node,
 };

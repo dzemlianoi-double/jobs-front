@@ -33,10 +33,10 @@ class Vacancy extends Component {
       experience: PropTypes.number.isRequired,
       arrive_date: PropTypes.string.isRequired,
       main_photo: PropTypes.string.isRequired,
-      requirments: PropTypes.string.isRequired,
-      schedule: PropTypes.string.isRequired,
-      accommodation: PropTypes.string.isRequired,
-      duties: PropTypes.string.isRequired,
+      requirments: PropTypes.string,
+      schedule: PropTypes.string,
+      accommodation: PropTypes.string,
+      duties: PropTypes.string,
       sex: PropTypes.oneOf(['Any', 'Male', 'Female', 'Family']).isRequired
     }),
     match: PropTypes.object.isRequired
@@ -46,13 +46,14 @@ class Vacancy extends Component {
     this.props.requestVacancy(this.props.match.params.id);
   }
 
-  componentDidUpdate() {
-    this.props.requestVacancy(this.props.match.params.id);
-  }
-
   get experience() {
     const { experience } = this.props.currentVacancy;
     return experience ? `Опыт работы от ${experience} лет` : 'Опыт работы не важен';
+  }
+
+  get url_video() {
+    const { video_url } = this.props.currentVacancy;
+    return video_url ? {video_url} : '';
   }
 
   get sex() {
@@ -115,7 +116,7 @@ class Vacancy extends Component {
                   <Only if={!!video_url} skipDiv>
                     <div className="row">
                       <div className="col-md-12">
-                        <Iframe url={ video_url }
+                        <Iframe url={ this.url_video }
                           height="500px"
                           id="myId"
                           className="iframe-video"

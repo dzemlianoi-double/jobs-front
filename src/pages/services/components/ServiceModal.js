@@ -22,7 +22,7 @@ const customStyles = {
 export default class ServiceModal extends Component {
   static propTypes = {
     modalServices: PropTypes.object,
-    modalService: PropTypes.func.isRequired,
+    modalService: PropTypes.object.isRequired,
     closeServiceModal: PropTypes.func.isRequired,
     saveService: PropTypes.func.isRequired
   }

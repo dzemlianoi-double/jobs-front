@@ -6,8 +6,8 @@ import T from '../../../../store/translations';
 
 export default class FilterAge extends Component {
   static propTypes = {
-    age_min: PropTypes.number.isRequired,
-    age_max: PropTypes.number.isRequired,
+    age_min: PropTypes.number,
+    age_max: PropTypes.number,
     onFilterUpdate: PropTypes.func.isRequired,
   }
 

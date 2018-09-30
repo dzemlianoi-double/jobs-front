@@ -13,7 +13,7 @@ class SearchAutosuggestions extends Component {
     customSearch: PropTypes.func.isRequired,
     resetSearch: PropTypes.func.isRequired,
     search: PropTypes.string.isRequired,
-    history: PropTypes.func.isRequired
+    history: PropTypes.object.isRequired
   }
 
   state = {

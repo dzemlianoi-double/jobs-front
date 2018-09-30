@@ -22,7 +22,7 @@ const LastVacancy = ({ last_vacancies }) => {
               <div className="mu-testimonials-block">
                 <ul className="mu-testimonial-slide">
                   <li>
-                    <Only if={vacancy_attr['main-photo']} skipDiv>
+                    <Only if={!_.isEmpty(vacancy_attr['main-photo'])} skipDiv>
                       <img className="mu-rt-img" src={vacancy_attr['main-photo']} alt="img" />
                     </Only>
                     <Only if={!vacancy_attr['main-photo']} skipDiv>

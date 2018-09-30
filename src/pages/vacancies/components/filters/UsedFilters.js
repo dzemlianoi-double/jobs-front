@@ -30,7 +30,7 @@ export default class UsedFilters extends Component {
   }
 
   onCancelSexFilter = () => {
-    return this.props.cancelFilter({ sex: [] });
+    return this.props.cancelFilter({ sex_list: [] });
   }
 
   onCancelAgeFilter = () => {

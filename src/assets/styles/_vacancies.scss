@@ -1,3 +1,7 @@
+.loading {
+  height: 500px;
+}
+
 a {
   color: $black;
   text-decoration: none;
@@ -41,21 +45,18 @@ a {
       display: inline-block;
       width: 50%;
     }
-
     div.vacancy-label {
       align-items: center;
       color: $white;
       display: flex;
       font-size: 23px;
     }
-
     input {
       border: 0;
       border-radius: 2px;
       padding: 4px 4px 4px 10px;
       width: 98%;
     }
-
     .block-search-vacancy {
       position: absolute;
       .close-vacancy {
@@ -80,7 +81,6 @@ a {
             font-size: 15px;
             margin-left: 5px;
           }
-
           &:hover {
             background-color: $white;
             color: $strong-blue-1;
@@ -89,7 +89,6 @@ a {
         }
       }
     }
-
     button {
       background-color: $luminous-vivid-orange;
       border: 0;
@@ -107,7 +106,6 @@ a {
       }
     }
   }
-
   .main {
     .mu-filter {
       padding: 0 30px 0 0;
@@ -115,14 +113,12 @@ a {
         color: $black;
         font-size: 22px;
       }
-
       .filter {
         background-color: $white;
         border-radius: 3px;
         box-shadow: 4px 5px 25px -6px $black;
         padding: 20px 25px;
       }
-
       .filter-block {
         ul {
           div {
@@ -139,7 +135,6 @@ a {
             }
           }
         }
-
         .reset-filters {
           display: flex;
           justify-content: flex-end;
@@ -148,7 +143,6 @@ a {
             cursor: pointer;
           }
         }
-
         .filter-list {
           li {
             line-height: 19px;
@@ -167,7 +161,6 @@ a {
           }
         }
       }
-
       .block-salary {
         input {
           -moz-box-shadow: inset 0 1px 0 $gray-light-1;
@@ -193,7 +186,6 @@ a {
           border: 1px solid $white;
         }
       }
-
       .filter-experience {
         input {
           border: 0;
@@ -211,7 +203,6 @@ a {
           border: 1px solid $white;
         }
       }
-
       .filter-sex {
         .filter-list {
           li {
@@ -231,7 +222,6 @@ a {
           }
         }
       }
-
       .filter-age {
         input {
           -moz-box-shadow: inset 0 1px 0 $gray-light-1;
@@ -257,7 +247,6 @@ a {
           border: 1px solid $white;
         }
       }
-
       .filter-service {
         .filter-list {
           li {
@@ -277,7 +266,6 @@ a {
           }
         }
       }
-
       .apply {
         text-align: right;
         button {
@@ -293,7 +281,6 @@ a {
             border: 1px solid $medium-gray;
             color: $medium-gray;
           }
-
           &::after {
             background: url('../images/select-small.png') no-repeat 0 0;
             content: '';
@@ -302,11 +289,9 @@ a {
             margin-left: 5px;
             width: 9px;
           }
-
           &:hover::after {
             background-position: 0 -9px;
           }
-
           &:hover {
             background-color: $strong-blue-2;
             border: 0;
@@ -318,11 +303,9 @@ a {
         }
       }
     }
-
     .bread-dote {
       background-color: $medium-gray;
     }
-
     .how-vacancies {
       background-color: $white;
       border-radius: 3px;
@@ -332,19 +315,16 @@ a {
         color: $gray-dark-4;
         font-size: 25px;
       }
-
       .mean-works {
         color: $gray-dark-4;
         font-size: 18px;
         margin-right: 10px;
       }
-
       .mean-salary {
         color: $gray-dark-4;
         font-size: 18px;
         margin-left: 10px;
       }
-
       .sort-block {
         margin: 15px 0;
         .css-10nd86i {
@@ -353,7 +333,6 @@ a {
         }
       }
     }
-
     .mu-vacancy {
       background-color: $white;
       border-radius: 3px;
@@ -365,7 +344,6 @@ a {
         line-height: 1.1;
         margin: 5px 0;
       }
-
       .title-company {
         color: inherit;
         font-size: 18px;
@@ -379,21 +357,17 @@ a {
           width: 12px;
         }
       }
-
       .desc {
         font-size: 13px;
       }
-
       .send-friend {
         font-size: 13px;
       }
-
       .salary {
         color: $strong-blue-2;
         font-size: 25px;
         margin: 0;
       }
-
       .city {
         font-size: 14px;
         height: auto;
@@ -406,7 +380,6 @@ a {
           width: 9px;
         }
       }
-
       button {
         background-color: $luminous-vivid-orange;
         color: $white;
@@ -425,23 +398,19 @@ a {
           width: 13px;
         }
       }
-
       .date-added {
         color: $medium-gray;
         font-size: 12px;
       }
-
       &:hover {
         background-color: $yellowish-white;
         cursor: pointer;
       }
-
       .block-share {
         .SocialMediaShareButton {
           &:hover {
             cursor: pointer;
           }
-
           &:focus {
             outline: none;
           }
@@ -489,7 +458,6 @@ a {
     .title-vacancy {
       font-size: 18px;
     }
-
     .btn-close {
       align-items: center;
       display: flex;
@@ -507,13 +475,11 @@ a {
       }
     }
   }
-
   .horizontal-line {
     background-color: $white;
     margin: 10px 0;
     width: 100%;
   }
-
   .modal-form-respond {
     align-items: inherit;
     display: flex;
@@ -524,28 +490,23 @@ a {
         height: 80px;
       }
     }
-
     .horizontal-line {
       margin: 8px 0 25px 0;
     }
-
     label {
       font-size: 18px;
       width: 100%;
     }
-
     .additional-info {
       display: flex;
       flex-direction: column;
       label {
         width: 100%;
       }
-
       textarea {
         width: 100%;
       }
     }
-
     button {
       background-color: $light-blue;
       border: 0;

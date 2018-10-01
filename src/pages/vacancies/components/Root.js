@@ -23,6 +23,7 @@ import Vacancy from './Vacancy';
 import BasicInfo from './BasicInfo';
 import VacancyModal from './VacancyModal';
 import MetaTitle from '../../utils/components/MetaTitle';
+import Spinnre from '../../basic/components/Spinner';
 
 class Vacancies extends Component {
   static propTypes = {
@@ -41,7 +42,12 @@ class Vacancies extends Component {
     order: PropTypes.string
   }
 
+  state = {
+    loading: true
+  };
+
   componentDidMount() {
+    setTimeout(() => this.setState({ loading: false }), 1500);
     this.props.requestVacancies();
   }
 
@@ -92,6 +98,14 @@ class Vacancies extends Component {
   render () {
     const { modalVacancy, closeVacancyModal, saveVacancy, vacancies, filters, onFilterUpdate, customSearch,
       resetSearch, onResetAllFilters, order, changeOrder } = this.props;
+    const { loading } = this.state;
+    if (loading) {
+      return (
+        <div className="loading">
+          <Spinnre/>
+        </div>
+      );
+    }
     return (
       <section className='mu-vacancies'>
         <MetaTitle title="vacancies" />

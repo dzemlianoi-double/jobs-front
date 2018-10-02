@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 
+import { Link } from 'react-router-dom';
+import internal_routes from '../../../config/internal_routes';
 import ServiceModal from './ServiceModal';
 import T from '../../../store/translations';
 
@@ -44,6 +46,8 @@ export default class Service extends Component {
           <div className="mu-single-pricebox">
             <h4 className="fs-30">{servicePrice}</h4>
           </div>
+          <Link className="mu-buy-now-btn" to={internal_routes.service(service.id)}>{service.id}</Link>
+
           <button onClick={this.openModal} className="mu-buy-now-btn">
             {T.translate('services.more')}
           </button>

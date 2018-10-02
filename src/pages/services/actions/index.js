@@ -5,6 +5,10 @@ function receiveServices(services) {
   return { type: 'RECEIVE_SERVICES', payload: services };
 }
 
+function receiveService(service) {
+  return { type: 'RECEIVE_SERVICE', payload: service };
+}
+
 function openServiceModal(service) {
   return { type: 'OPEN_SERVICES_MODAL', payload: service };
 }
@@ -27,6 +31,16 @@ function requestServices() {
   };
 }
 
+function requestService(id) {
+  return (dispatch) => {
+    axios.get(process.env.API_HOST + external_routes.service(id)).then(resp => {
+      dispatch(receiveService(resp.data.service));
+    }).then(() => {
+      dispatch(stopServicesLoading());
+    });
+  };
+}
+
 function saveService() {
   return(dispatch, getState) => {
     const formValues = getState().form.services.values;
@@ -39,6 +53,7 @@ function saveService() {
 
 module.exports = {
   requestServices,
+  requestService,
   openServiceModal,
   closeServiceModal,
   saveService

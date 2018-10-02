@@ -1,6 +1,7 @@
 const initialState = {
   list: [],
   modalService: {},
+  currentService: {},
   loading: true
 };
 
@@ -11,6 +12,11 @@ export default function services(state = initialState, action) {
     return {
       ...state,
       list: action.payload
+    };
+  case 'RECEIVE_SERVICE':
+    return {
+      ...state,
+      currentService: action.payload
     };
   case 'STOP_SERVICES_LOADING':
     return {

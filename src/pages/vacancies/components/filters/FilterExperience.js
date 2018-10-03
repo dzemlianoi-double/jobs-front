@@ -6,7 +6,7 @@ import T from '../../../../store/translations';
 
 export default class FilterExperience extends Component {
   static propTypes = {
-    experience_max: PropTypes.number.isRequired,
+    experience_max: PropTypes.number,
     onFilterUpdate: PropTypes.func.isRequired,
   }
   

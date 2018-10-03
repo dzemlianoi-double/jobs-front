@@ -18,7 +18,7 @@ export default class InfoVacancy extends Component {
       age_min: PropTypes.number.isRequired,
       age_max: PropTypes.number.isRequired,
     }),
-    experience: PropTypes.number.isRequired,
+    experience: PropTypes.string.isRequired,
     sex: PropTypes.oneOf(['Any', 'Male', 'Female', 'Family']).isRequired
   };
 

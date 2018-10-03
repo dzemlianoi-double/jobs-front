@@ -6,16 +6,16 @@ import T from '../../../../store/translations';
 
 export default class FilterSalary extends Component {
   static propTypes = {
-    salary_min: PropTypes.number.isRequired,
-    salary_max: PropTypes.number.isRequired,
-    onFilterUpdate: PropTypes.func.isRequired,
+    salary_min: PropTypes.number,
+    salary_max: PropTypes.number,
+    onFilterUpdate: PropTypes.func.isRequired
   }
 
   state = {
     isUpdated: false,
     value: { 
-      min: this.props.salary_min, 
-      max: this.props.salary_max, 
+      min: this.props.salary_min,
+      max: this.props.salary_max,
     }
   };
 
@@ -49,10 +49,13 @@ export default class FilterSalary extends Component {
           <div className="row">
             <div className="col-md-12 mt-25">
               <InputRange
+                formatLabel={value => `${value}cm`}
                 maxValue={salary_max}
                 minValue={salary_min}
                 value={this.state.value}
-                onChange={this.changeValue} />
+                onChange={this.changeValue} 
+                indexBy={salary_max}  
+              />
             </div>
           </div>
           <FilterButton

@@ -25,8 +25,8 @@ export default class Vacancy extends Component {
       created_at: PropTypes.isRequired,
       age_min: PropTypes.number.isRequired,
       age_max: PropTypes.number.isRequired,
-      experience: PropTypes.number.isRequired,
-      arrive_date: PropTypes.string.isRequired,
+      experience: PropTypes.number,
+      arrive_date: PropTypes.string,
       main_photo: PropTypes.string.isRequired,
       sex: PropTypes.oneOf(['Any', 'Male', 'Female', 'Family']).isRequired
     })
@@ -70,7 +70,7 @@ export default class Vacancy extends Component {
                 </div>
               </div>
             </Only>
-            <Only if={main_photo} skipDiv>
+            <Only if={main_photo !== null} skipDiv>
               <div className="col-md-3 wrapper-image-vacancy">
                 <div>
                   <img className="img-responsive vacancy-photo" src={main_photo} />

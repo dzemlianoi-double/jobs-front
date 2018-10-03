@@ -34,7 +34,7 @@ export default class FilterCountry extends Component {
     const { selectedOption } = this.state;
  
     return (
-      <div className="filter-country-block">
+      <div className="filter filter-country-block mt-30">
         <T.p text="vacancies.country"/>
         <div className="row">
           <div className="col-md-12">

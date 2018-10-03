@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import _ from 'lodash';
 import Iframe from 'react-iframe';
 
+import '../../assets/styles/_vacancy.scss';
 import DescriptionVacancy from './DescriptionVacancy';
 import InfoVacancy from './InfoVacancy';
 import { requestVacancy, openVacancyModal, closeVacancyModal, saveVacancy } from '../vacancies/actions';

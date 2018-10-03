@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import routes from '../config/internal_routes';
 import T from '../store/translations';
+import '../assets/styles/_not-found.scss';
 
 const NotFound = () => {
   return (

@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import WhoWe from '../../home/components/WhoWe';
 import T from '../../../store/translations';
 
+import '../../../assets/styles/_about-us.scss';
 import MetaTitle from '../../utils/components/MetaTitle';
 
 export default class AboutUs extends Component {

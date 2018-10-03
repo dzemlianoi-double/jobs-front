@@ -1,5 +1,6 @@
 import React from 'react';
 
+import '../../../assets/styles/_who-we.scss';
 import T from '../../../store/translations';
 import office from '../../../assets/images/office.jpg';
 

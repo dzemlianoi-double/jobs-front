@@ -17,6 +17,7 @@ import {
 
 import filteredVacancies from '../support/filters';
 
+import '../../../assets/styles/_vacancies.scss';
 import Search from './search';
 import Filters from './filters';
 import Vacancy from './Vacancy';

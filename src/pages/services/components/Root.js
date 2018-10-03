@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
+import '../../../assets/styles/_services.scss';
+import '../../../assets/styles/_pricing.scss';
 import T from '../../../store/translations';
 import Service from './Service';
 import { requestServices, openServiceModal, closeServiceModal, saveService } from '../actions';

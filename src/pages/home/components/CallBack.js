@@ -2,6 +2,7 @@ import React from 'react';
 import internal_routes from '../../../config/internal_routes';
 import { Link } from 'react-router-dom';
 
+import '../../../assets/styles/_call-back.scss';
 import T from '../../../store/translations';
 
 const CallBack = () => {

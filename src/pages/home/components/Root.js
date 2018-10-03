@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
+import '../../../assets/styles/_clients-say.scss';
+import '../../../assets/styles/_slider.scss';
+import '../../../assets/styles/_slick.scss';
 import Reviews from './reviews';
 import Services from './services';
 import HeaderSlider from './header_slider';

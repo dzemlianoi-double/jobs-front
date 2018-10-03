@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import Reviews from '../..//home/components/reviews';
 import ContactForm from './ContactForm';
 
+import '../../../assets/styles/_contacts.scss';
 import { saveContacts } from '../actions';
 import T from '../../../store/translations';
 import MetaTitle from '../../utils/components/MetaTitle';

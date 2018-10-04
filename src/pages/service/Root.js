@@ -51,7 +51,7 @@ class Service extends Component {
                 <p className="title-service">{name}</p>
                 <div className="row">
                   <div className="col-md-12">
-                    <img className="mt-10" src={main_photo}/>
+                    <img src={main_photo}/>
                     <span className="about-service">{full_description}</span>
                   </div>
                 </div>

@@ -3,7 +3,7 @@ const internal_routes = {
   about_us: '/about_us',
   services: '/services',
   service: function (id = null) {
-    return id ? `/servic/${id}` : '/servic/:id';
+    return id ? `/service/${id}` : '/service/:id';
   },
   vacancies: '/vacancies',
   contacts: '/contacts',

@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Field, reduxForm } from 'redux-form';
-import renderField from '../../vacancies/components/form/renderField';
+import renderField from '../vacancies/components/form/renderField';
 
-import T from '../../../store/translations';
-import { validateForm } from '../../utils/components/validateForm';
+import T from '../../store/translations';
+import { validateForm } from '../utils/components/validateForm';
 
 class ServiceForm extends Component {
   static propTypes = {

@@ -4,17 +4,13 @@ import PropTypes from 'prop-types';
 
 import T from '../../../store/translations';
 import Service from './Service';
-import { requestServices, openServiceModal, closeServiceModal, saveService } from '../actions';
+import { requestServices } from '../actions';
 import CallBack from './CallBack';
 import MetaTitle from '../../utils/components/MetaTitle';
 
 class Services extends Component {
   static propTypes = {
     requestServices: PropTypes.func.isRequired,
-    openServiceModal: PropTypes.func.isRequired,
-    closeServiceModal: PropTypes.func.isRequired,
-    saveService: PropTypes.func.isRequired,
-    modalService: PropTypes.func.isRequired,
     services: PropTypes.array.isRequired
   };
 
@@ -44,10 +40,6 @@ class Services extends Component {
                           <Service
                             key={service.id}
                             service={service}
-                            openServiceModal={this.props.openServiceModal}
-                            closeServiceModal={this.props.closeServiceModal}
-                            saveService={this.props.saveService}
-                            modalService={this.props.modalService}
                           />
                         )}
                       </ul>
@@ -67,16 +59,12 @@ class Services extends Component {
 function select(store) {
   return {
     services: store.services.list,
-    modalService: store.services.modalService
   };
 }
 
 function mapPropsToDispatch(dispatch) {
   return {
-    requestServices: () => dispatch(requestServices()),
-    openServiceModal: (services) => dispatch(openServiceModal(services)),
-    closeServiceModal: () => dispatch(closeServiceModal()),
-    saveService: () => dispatch(saveService())
+    requestServices: () => dispatch(requestServices())
   };
 }
 

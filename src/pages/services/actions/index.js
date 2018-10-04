@@ -25,8 +25,7 @@ function requestServices() {
   return (dispatch) => {
     axios.get(process.env.API_HOST + external_routes.services).then(resp => {
       dispatch(receiveServices(resp.data.services));
-    }).then(() => {
-      dispatch(stopServicesLoading());
+    }).then(() => { dispatch(stopServicesLoading());
     });
   };
 }
@@ -35,8 +34,7 @@ function requestService(id) {
   return (dispatch) => {
     axios.get(process.env.API_HOST + external_routes.service(id)).then(resp => {
       dispatch(receiveService(resp.data.service));
-    }).then(() => {
-      dispatch(stopServicesLoading());
+    }).then(() => { dispatch(stopServicesLoading());
     });
   };
 }

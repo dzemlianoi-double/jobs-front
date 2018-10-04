@@ -1,0 +1,60 @@
+.info-service {
+  background-color: $light-reddish-gray;
+  display: inline;
+  float: left;
+  width: 100%;
+  .wrapper-service {
+    background-color: $white;
+    padding: 25px 25px;
+    .title-service {
+      color: $gray-dark-1;
+      font-size: 23px;
+      font-weight: bold;
+      margin: 0;
+      margin-bottom: 10px;
+    }
+
+    img {
+      float: left;
+      margin: 10px 35px 0 0;
+      width: 50%;
+    }
+
+    .payload-service {
+      align-items: center;
+      background-color: $pure-blue;
+      display: flex;
+      justify-content: space-evenly;
+      margin-top: 10px;
+      span {
+        color: $white;
+        font-size: 23px;
+        text-align: center;
+      }
+
+      button {
+        background-color: $luminous-vivid-orange;
+        color: $white;
+        cursor: pointer;
+        font-size: 17px;
+        margin: 10px;
+        padding: 5px 0;
+        text-transform: uppercase;
+        width: 16%;
+        &::after {
+          background: url('../images/arrow_long.png') no-repeat 0 0;
+          content: '';
+          display: inline-block;
+          height: 12px;
+          margin-bottom: -1px;
+          margin-left: 5px;
+          width: 13px;
+        }
+      }
+    }
+
+    .about-service {
+      font-size: 20px;
+    }
+  }
+}

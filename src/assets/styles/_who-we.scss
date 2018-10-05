@@ -1,79 +1,120 @@
 .mu-about {
-	background-color: $white;
-	display: inline;
-	float: left;
-	margin-bottom: 110px;
-	width: 100%;
+  background-color: $white;
+  display: inline;
+  float: left;
+  margin-bottom: 110px;
+  width: 100%;
 }
 
 .mu-about-area {
-	display: inline;
-	float: left;
-	padding: 0;
-	width: 100%;
-	.mu-title {
-		display: inline;
-		text-align: center;
-		width: 100%;
-		h2 {
-			color: $gray-dark-4;
-			font-family: 'Segoe';
-			font-size: 30px;
-			margin-bottom: 35px;
-			text-transform: uppercase;
-		}
-	}
+  display: inline;
+  float: left;
+  padding: 0;
+  width: 100%;
+  .mu-title {
+    display: inline;
+    text-align: center;
+    width: 100%;
+    h2 {
+      color: $gray-dark-4;
+      font-family: 'Segoe';
+      font-size: 30px;
+      margin-bottom: 35px;
+      text-transform: uppercase;
+    }
+
+    .we-title {
+      color: $gray-dark-4;
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 30px;
+    }
+  }
 }
 
 .mu-about-left {
-	display: inline;
-	float: left;
-	padding-right: 15px;
-	width: 100%;
+  display: inline;
+  float: left;
+  padding-right: 15px;
+  width: 100%;
+}
+
+.img {
+  background-image: url('../images/home/certificate.jpg');
+  background-size: cover;
+  height: 370px;
 }
 
 .mu-about-right {
-	display: inline;
-	float: left;
-	padding-left: 15px;
-	width: 100%
+  display: inline;
+  float: left;
+  padding-left: 15px;
+  width: 100%
 }
 
 .mu-about-right ul li {
-	float: left;
-	list-style: none;
-	margin-bottom: 25px;
+  float: left;
+  list-style: none;
+  margin-bottom: 25px;
+  a {
+    color: $pure-blue;
+    font-family: 'Segoe';
+    font-size: 14px;
+  }
+  p,
+  span {
+    font-family: 'Segoe';
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0;
+  }
+}
+
+.mu-about-left ul li {
+  float: left;
+  list-style: none;
+  margin: 25px 0;
+  p,
+  span {
+    font-family: 'Segoe';
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0;
+  }
 }
 
 .mu-about-right ul li h3 {
-	border-bottom: 3px solid $light-gray;
-	color: $gray-dark-4;
-	display: inline-block;
-	font-family: 'Segoe';
-	font-size: 20px;
-	margin-bottom: 15px;
-	padding-bottom: 5px;
+  border-bottom: 3px solid $light-gray;
+  color: $gray-dark-4;
+  display: inline-block;
+  font-family: 'Segoe';
+  font-size: 20px;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
 }
 
-.mu-about-right p {
-	font-family: 'Segoe';
-	font-size: 14px;
-	line-height: 1.7;
-	margin: 0;
+.mu-about-left ul li h3 {
+  border-bottom: 3px solid $light-gray;
+  color: $gray-dark-4;
+  display: inline-block;
+  font-family: 'Segoe';
+  font-size: 20px;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
 }
 
 .horizontal-line {
-	background-color: $strong-blue-1;
-	height: 1px;
-	margin: 50px auto;
-	opacity: .3;
-	width: 80%;
+  background-color: $strong-blue-1;
+  height: 1px;
+  margin: 50px auto;
+  opacity: .3;
+  width: 80%;
 }
 
 .horizontal-line-about {
-	background-color: $strong-blue-1;
-	height: 1px;
-	margin: -50px auto;
-	opacity: .3;
-	width: 80%;
+  background-color: $strong-blue-1;
+  height: 1px;
+  margin: -50px auto;
+  opacity: .3;
+  width: 80%;
 }

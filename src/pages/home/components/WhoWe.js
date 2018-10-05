@@ -58,14 +58,14 @@ const WhoWe = () => {
                         <T.p text="who_we.offer_value" />
                         <T.span text="who_we.offer_package_value_1" />
                         <T.span text="who_we.more" />
-                        <Link className="display-inline" to="/services"> {T.translate('who_we.packege_profi')}</Link>
+                        <Link className="display-inline" to="/service/26"> {T.translate('who_we.packege_profi')}</Link>
                         <p>
                           <T.span text="who_we.offer_package_value_2" />
-                          <Link className="display-inline" to="/services"> {T.translate('who_we.packege_biometric_passport')}</Link>
+                          <Link className="display-inline" to="/service/25"> {T.translate('who_we.packege_biometric_passport')}</Link>
                         </p>
                         <T.span text="who_we.offer_package_value_3" />
                         <T.span text="who_we.more" />
-                        <Link className="display-inline" to="/services"> {T.translate('who_we.packege_standart')}</Link>
+                        <Link className="display-inline" to="/service/2"> {T.translate('who_we.packege_standart')}</Link>
                       </li>
                     </ul>
                   </div>

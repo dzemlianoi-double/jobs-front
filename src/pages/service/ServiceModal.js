@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Modal from 'react-modal';
 import _ from 'lodash';
 
-import T from '../../../store/translations';
+import T from '../../store/translations';
 
 import ServiceForm from './ServiceForm';
  
@@ -21,8 +21,7 @@ const customStyles = {
 
 export default class ServiceModal extends Component {
   static propTypes = {
-    modalServices: PropTypes.object,
-    modalService: PropTypes.func.isRequired,
+    modalService: PropTypes.object.isRequired,
     closeServiceModal: PropTypes.func.isRequired,
     saveService: PropTypes.func.isRequired
   }

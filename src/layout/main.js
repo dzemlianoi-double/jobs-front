@@ -10,6 +10,7 @@ import Services from '../pages/services/components/Root';
 import Contacts from '../pages/contacts/components/Root';
 import NotFound from '../pages/NotFound';
 import Vacancy from '../pages/vacancy/Root';
+import Service from '../pages/service/Root';
 
 const Main = () => {
   return (
@@ -22,6 +23,7 @@ const Main = () => {
         <Route exact path={internal_routes.about_us} component={AboutUs} />
         <Route exact path={internal_routes.vacancies} component={Vacancies} />
         <Route exact path={internal_routes.services} component={Services} />
+        <Route exact path={internal_routes.service()} component={Service} />
         <Route exact path={internal_routes.contacts} component={Contacts} />
         <Route path={internal_routes.vacancy()} component={Vacancy} />
         <Route component={NotFound} />

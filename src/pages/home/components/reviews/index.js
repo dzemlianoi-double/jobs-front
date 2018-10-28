@@ -21,7 +21,7 @@ const propTypes = {
 
 const Reviews = ({ reviews }) => {
   return (
-    <div className="mu-testimonials mt-100">
+    <div className="mu-testimonials">
       <Slider {...SLIDER_SETTINGS}>
         {reviews.map((review) => <Review key={review.id} review={review.attributes} />)}
       </Slider>

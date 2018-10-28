@@ -2,7 +2,6 @@
   background-color: $white;
   display: inline;
   float: left;
-  margin-bottom: 110px;
   width: 100%;
 }
 
@@ -35,14 +34,20 @@
 .mu-about-left {
   display: inline;
   float: left;
-  padding-right: 15px;
+  padding-left: 15px;
   width: 100%;
 }
 
-.img {
+.img-certificate {
   background-image: url('../images/home/certificate.jpg');
   background-size: cover;
   height: 370px;
+}
+
+.img-nakaz {
+  background-image: url('../images/home/nakaz.jpg');
+  background-size: cover;
+  height: 780px;
 }
 
 .mu-about-right {

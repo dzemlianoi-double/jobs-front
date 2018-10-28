@@ -13,7 +13,7 @@ const propTypes = {
 const Service = ({ service }) => {
   const DEFAULT_ICON = 'user';
   const service_attr = service.attributes;
-  const servicePrice = service_attr.by_agreement ? 'По договоренности' : service_attr.price ? `${service_attr.price} грн` : 'Бесплатно';
+  const servicePrice = service_attr['by-agreement'] ? 'По договоренности' : service_attr.price ? `${service_attr.price} грн` : 'Бесплатно';
   return (
     <li>
       <div className="mu-pricing-single">

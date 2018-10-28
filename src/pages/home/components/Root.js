@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 
 import Reviews from './reviews';
 import Services from './services';
-import HeaderSlider from './header_slider';
 import LastVacancies from './last_vacancies';
 import WhoWe from './WhoWe';
 import CallBack from './CallBack';
@@ -22,12 +21,11 @@ class Home extends Component {
     return (
       <div>
         <MetaTitle title="main" />
-        <HeaderSlider />
+        <LastVacancies last_vacancies={last_vacancies} />
         <WhoWe />
         <Services services={services} />
-        <Reviews reviews={reviews} />
         <CallBack />
-        <LastVacancies last_vacancies={last_vacancies} />
+        <Reviews reviews={reviews} />
       </div>
     );
   }

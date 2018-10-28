@@ -17,7 +17,7 @@ const Services = ({ services }) => {
         <div className="row">
           <div className="col-md-12">
             <div className="mu-service-area">
-              <div className="row mb-30">
+              <div className="row">
                 <div className="col-md-12">
                   <div className="mu-title">
                     <h2 className="text-center">{T.translate('services.caption_services')}</h2>
@@ -26,20 +26,20 @@ const Services = ({ services }) => {
                 </div>
               </div>
               <div className="row">
-                <div className="col-md-12">
-                  <div className="mu-service-content">
-                    <div className="row">
-                      {services.map((service) => <Service key={service.id} service={service.attributes} />)}
-                    </div>
-                  </div>
+                <div className="col-md-12 text-center">
+                  <Link to={internal_routes.services} className="mu-primary-btn mt-50">
+                    <T.span text={'services.all_services'} className="mr-3" />
+                    <span className="fa fa-long-arrow-right"></span>
+                  </Link>
                 </div>
               </div>
               <div className="row">
                 <div className="col-md-12 text-center">
-                  <Link to={internal_routes.services} className="mu-primary-btn mt-50">
-                    <T.span text={'services.all_services'} className="mr-3" /> 
-                    <span className="fa fa-long-arrow-right"></span>
-                  </Link>
+                  <div className="mu-pricing-content">
+                    <ul className="mu-pricing-table">
+                      {services.map((service) => <Service key={service.id} service={service} />)}
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>

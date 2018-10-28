@@ -5,7 +5,7 @@ import T from '../../../store/translations';
 
 const WhoWe = () => {
   return(
-    <section className='mu-about mt-120'>
+    <section className='mu-about mt-80 mb-80'>
       <div className='container'>
         <div className='row'>
           <div className='col-md-12'>
@@ -22,36 +22,15 @@ const WhoWe = () => {
                 <div className='col-md-6'>
                   <div className='row'>
                     <div className='col-md-12'>
-                      <div className="img"></div>
+                      <div className="img-certificate"></div>
                     </div>
                   </div>
-                  <div className='mu-about-left'>
+                  <div className='mu-about-left mt-25'>
                     <ul>
                       <li>
                         <h3>{T.translate('who_we.we_provide')}</h3>
                         <T.p text="who_we.provide_values_1" />
                         <T.p text="who_we.provide_values_2" />
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div className='col-md-6'>
-                  <div className='mu-about-right'>
-                    <ul>
-                      <li>
-                        <h3>{T.translate('who_we.our_benefits')}</h3>
-                        <T.p text="who_we.benefits_values_1" />
-                        <T.p text="who_we.benefits_values_2" />
-                        <T.p text="who_we.benefits_values_3" />
-                        <T.p text="who_we.benefits_values_4" />
-                      </li>
-                      <li>
-                        <h3>{T.translate('who_we.our_mission')}</h3>
-                        <T.p text="who_we.mission_value" />
-                      </li>
-                      <li>
-                        <h3>{T.translate('who_we.our_goal')}</h3>
-                        <T.p text="who_we.goal_values" />
                       </li>
                       <li>
                         <h3>{T.translate('who_we.we_offer')}</h3>
@@ -68,6 +47,36 @@ const WhoWe = () => {
                         <Link className="display-inline" to="/service/2"> {T.translate('who_we.packege_standart')}</Link>
                       </li>
                     </ul>
+                  </div>
+                </div>
+                <div className='col-md-6'>
+                  <div className='row'>
+                    <div className='col-md-12'>
+                      <div className='mu-about-right'>
+                        <ul>
+                          <li>
+                            <h3>{T.translate('who_we.our_benefits')}</h3>
+                            <T.p text="who_we.benefits_values_1" />
+                            <T.p text="who_we.benefits_values_2" />
+                            <T.p text="who_we.benefits_values_3" />
+                            <T.p text="who_we.benefits_values_4" />
+                          </li>
+                          <li>
+                            <h3>{T.translate('who_we.our_mission')}</h3>
+                            <T.p text="who_we.mission_value" />
+                          </li>
+                          <li>
+                            <h3>{T.translate('who_we.our_goal')}</h3>
+                            <T.p text="who_we.goal_values" />
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='row'>
+                    <div className='col-md-12'>
+                      <div className="img-nakaz"></div>
+                    </div>
                   </div>
                 </div>
               </div>

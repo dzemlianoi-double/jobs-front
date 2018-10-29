@@ -6,6 +6,7 @@ import Reviews from '../..//home/components/reviews';
 import ContactForm from './ContactForm';
 
 import { saveContacts } from '../actions';
+import img from '../../../assets/images/home/Viber-PNG.png';
 import T from '../../../store/translations';
 import MetaTitle from '../../utils/components/MetaTitle';
 
@@ -18,18 +19,6 @@ class Contacts extends Component {
     onSubmit: PropTypes.func.isRequired,
     social_links: PropTypes.object.isRequired
   };
-
-  renderNumbers = () => {
-    return Object.values(this.props.phone_nums).map((phone_number) => {
-      return (
-        <div className="row" key={`contacts-${phone_number.toString()}`}>
-          <div className="col-sm-12">
-            <a className="link-and-nums-contacts" href={'tel:' + phone_number}>{phone_number}</a>
-          </div>
-        </div>
-      );
-    });
-  }
 
   renderEmails = () => {
     return Object.values(this.props.emails).map((email) => {
@@ -99,7 +88,30 @@ class Contacts extends Component {
                       </div>
                     </div>
                     <div className="col-10 col-sm-10 self-d-flex">
-                      {this.renderNumbers()}
+                      <div className="fs-13 c-white numbers mr-10">
+                        <span className="fa mr-1 fa-phone"></span>
+                        <a href='tel:+380970507970'>+380970507970</a>
+                        <a href="https://api.whatsapp.com/send?phone=380970507970">
+                          <i className="ml-2 fs-18 c-green fa fa-whatsapp" aria-hidden="true"></i>
+                        </a>
+                        <a href="viber://chat?number=380970507970">
+                          <img src={img} className="ml-2 mb-1 w-18px viber-icon" />
+                        </a>
+                      </div>
+                      <div className="fs-13 c-white numbers mr-10">
+                        <span className="fa mr-1 fa-phone"></span>
+                        <a href='tel:+380734291700'>+380734291700</a>
+                        <a href="viber://chat?number=380734291700">
+                          <img src={img} className="ml-2 mb-1 w-18px viber-icon" />
+                        </a>
+                      </div>
+                      <div className="fs-13 c-white numbers mr-10">
+                        <span className="fa mr-1 fa-phone"></span>
+                        <a href='tel:+38099061339'>+380990613039</a>
+                        <a href="tg://resolve?domain=Interjobs">
+                          <i className="ml-2 fs-15 fa fa-telegram" aria-hidden="true"></i>
+                        </a>
+                      </div>
                     </div>
                   </div>
                   <div className="row mt-20">

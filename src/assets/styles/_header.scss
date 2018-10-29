@@ -116,7 +116,7 @@
   margin-left: 5%;
   .nav-numbers-block {
 		display: block;
-		a{
+		a {
 			display: inline-block;
 			padding: 0;
 			&:hover,&:focus {
@@ -126,6 +126,9 @@
 		}
 		.numbers {
 			display: inline;
+			.fa-telegram {
+				color: $strong-blue-5;
+			}
 		}
 	}
 	.nav-addresses-block {

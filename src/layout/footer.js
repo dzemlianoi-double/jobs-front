@@ -136,7 +136,7 @@ export default class Footer extends Component {
                           <span className="fa mr-1 fa-phone"></span>
                           <a href='tel:+380970507970'>+380970507970</a>
                           <a href="https://api.whatsapp.com/send?phone=380970507970">
-                            <i className="ml-2 fs-18 c-green fa fa-whatsapp" aria-hidden="true"></i>
+                            <i className="ml-2 fs-18 c-white fa fa-whatsapp" aria-hidden="true"></i>
                           </a>
                           <a href="viber://chat?number=380970507970">
                             <img src={img} className="ml-2 mb-1 w-18px viber-icon" />
@@ -153,7 +153,7 @@ export default class Footer extends Component {
                           <span className="fa mr-1 fa-phone"></span>
                           <a href='tel:+38099061339'>+380990613039</a>
                           <a href="tg://resolve?domain=Interjobs">
-                            <i className="ml-2 fs-15 fa fa-telegram" aria-hidden="true"></i>
+                            <i className="ml-2 fs-15 c-white fa fa-telegram" aria-hidden="true"></i>
                           </a>
                         </div>
                       </div>

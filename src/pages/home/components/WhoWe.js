@@ -5,7 +5,7 @@ import T from '../../../store/translations';
 
 const WhoWe = () => {
   return(
-    <section className='mu-about mt-80 mb-80'>
+    <section className='mu-about mt-80 mb-50'>
       <div className='container'>
         <div className='row'>
           <div className='col-md-12'>
@@ -22,7 +22,7 @@ const WhoWe = () => {
                 <div className='col-md-6'>
                   <div className='row'>
                     <div className='col-md-12'>
-                      <div className="img-certificate"></div>
+                      <div className="img-nakaz"></div>
                     </div>
                   </div>
                   <div className='mu-about-left mt-25'>
@@ -31,20 +31,6 @@ const WhoWe = () => {
                         <h3>{T.translate('who_we.we_provide')}</h3>
                         <T.p text="who_we.provide_values_1" />
                         <T.p text="who_we.provide_values_2" />
-                      </li>
-                      <li>
-                        <h3>{T.translate('who_we.we_offer')}</h3>
-                        <T.p text="who_we.offer_value" />
-                        <T.span text="who_we.offer_package_value_1" />
-                        <T.span text="who_we.more" />
-                        <Link className="display-inline" to="/service/26"> {T.translate('who_we.packege_profi')}</Link>
-                        <p>
-                          <T.span text="who_we.offer_package_value_2" />
-                          <Link className="display-inline" to="/service/25"> {T.translate('who_we.packege_biometric_passport')}</Link>
-                        </p>
-                        <T.span text="who_we.offer_package_value_3" />
-                        <T.span text="who_we.more" />
-                        <Link className="display-inline" to="/service/2"> {T.translate('who_we.packege_standart')}</Link>
                       </li>
                     </ul>
                   </div>
@@ -75,7 +61,25 @@ const WhoWe = () => {
                   </div>
                   <div className='row'>
                     <div className='col-md-12'>
-                      <div className="img-nakaz"></div>
+                      <div className="img-certificate"></div>
+                      <div className='mu-about-left mt-25'>
+                        <ul>
+                          <li>
+                            <h3>{T.translate('who_we.we_offer')}</h3>
+                            <T.p text="who_we.offer_value" />
+                            <T.span text="who_we.offer_package_value_1" />
+                            <T.span text="who_we.more" />
+                            <Link className="display-inline" to="/service/26"> {T.translate('who_we.packege_profi')}</Link>
+                            <p>
+                              <T.span text="who_we.offer_package_value_2" />
+                              <Link className="display-inline" to="/service/25"> {T.translate('who_we.packege_biometric_passport')}</Link>
+                            </p>
+                            <T.span text="who_we.offer_package_value_3" />
+                            <T.span text="who_we.more" />
+                            <Link className="display-inline" to="/service/2"> {T.translate('who_we.packege_standart')}</Link>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>

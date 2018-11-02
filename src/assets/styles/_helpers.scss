@@ -63,6 +63,14 @@
   color: $white;
 }
 
+.c-whatsapp {
+  color: $whatsapp-color;
+}
+
+.c-telegram {
+  color: $telegram-color;
+}
+
 .bgc-strong-blue-2 {
   background-color: $strong-blue-2;
 }
@@ -77,6 +85,10 @@
 
 .w-100 {
   width: 100%;
+}
+
+.w-18px {
+  width: 18px;
 }
 
 @font-face {
